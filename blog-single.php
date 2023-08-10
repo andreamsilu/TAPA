@@ -38,19 +38,19 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html"><span>TA</span>PA</a></h1>
+      <h1 class="logo me-auto"><a href="index.php"><span>TA</span>PA</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <!-- <a href="index.php" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.php">Home</a></li>
 
           <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="team.html">Team</a></li>
-              <li><a href="testimonials.html">Testimonials</a></li>
+              <li><a href="about.php">About Us</a></li>
+              <li><a href="team.php">Team</a></li>
+              <li><a href="testimonials.php">Testimonials</a></li>
               <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="#">Deep Drop Down 1</a></li>
@@ -63,11 +63,11 @@
             </ul>
           </li>
 
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="blog.html" class="active">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="services.php">Services</a></li>
+          <li><a href="portfolio.php">Portfolio</a></li>
+          <li><a href="pricing.php">Pricing</a></li>
+          <li><a href="blog.php" class="active">Blog</a></li>
+          <li><a href="contact.php">Contact</a></li>
 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -92,8 +92,8 @@
         <div class="d-flex justify-content-between align-items-center">
           <h2>Blog Single</h2>
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="blog.html">Blog</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="blog.php">Blog</a></li>
             <li>Blog Single</li>
           </ol>
         </div>
@@ -116,14 +116,14 @@
               </div>
 
               <h2 class="entry-title">
-                <a href="blog-single.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
+                <a href="blog-single.php">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
               </h2>
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.php">John Doe</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.php"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.php">12 Comments</a></li>
                 </ul>
               </div>
 
@@ -352,31 +352,31 @@
               <div class="sidebar-item recent-posts">
                 <div class="post-item clearfix">
                   <img src="assets/img/blog/blog-recent-1.jpg" alt="">
-                  <h4><a href="blog-single.html">Nihil blanditiis at in nihil autem</a></h4>
+                  <h4><a href="blog-single.php">Nihil blanditiis at in nihil autem</a></h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
                 </div>
 
                 <div class="post-item clearfix">
                   <img src="assets/img/blog/blog-recent-2.jpg" alt="">
-                  <h4><a href="blog-single.html">Quidem autem et impedit</a></h4>
+                  <h4><a href="blog-single.php">Quidem autem et impedit</a></h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
                 </div>
 
                 <div class="post-item clearfix">
                   <img src="assets/img/blog/blog-recent-3.jpg" alt="">
-                  <h4><a href="blog-single.html">Id quia et et ut maxime similique occaecati ut</a></h4>
+                  <h4><a href="blog-single.php">Id quia et et ut maxime similique occaecati ut</a></h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
                 </div>
 
                 <div class="post-item clearfix">
                   <img src="assets/img/blog/blog-recent-4.jpg" alt="">
-                  <h4><a href="blog-single.html">Laborum corporis quo dara net para</a></h4>
+                  <h4><a href="blog-single.php">Laborum corporis quo dara net para</a></h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
                 </div>
 
                 <div class="post-item clearfix">
                   <img src="assets/img/blog/blog-recent-5.jpg" alt="">
-                  <h4><a href="blog-single.html">Et dolores corrupti quae illo quod dolor</a></h4>
+                  <h4><a href="blog-single.php">Et dolores corrupti quae illo quod dolor</a></h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
                 </div>
 
