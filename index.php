@@ -63,7 +63,8 @@
 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+      </nav>
+      <!-- .navbar -->
 
       <div class="header-social-links d-flex">
         <a href="#" class="twitter"><i class="bu bi-twitter"></i></a>
