@@ -1,7 +1,7 @@
 <?php  include "titleIcon.php" ?>
 <body class="m-3 bg-gradient">
     
-<?php //include "header.php" ?>
+<?php include "header.php" ?>
 <link href="assets/css/style.css" rel="stylesheet">
 
   <main id="main" class="main">
