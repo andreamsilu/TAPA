@@ -32,9 +32,9 @@
 
 </head>
 <body class="mt-5">
+<?php include "header.php"?>
 
   <main>
-  <?php include "header.php"?>
 
 
     <!-- Profile registration Form -->
@@ -165,5 +165,5 @@
 </body>
 </html>
 
-<?php //include "footer.php" ?>
+<?php include "footer.php" ?>
 
