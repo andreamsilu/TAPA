@@ -31,10 +31,25 @@
 
 
 </head>
-<body class="mt-5">
+<body >
 <?php include "header.php"?>
 
   <main>
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Membership Registration</h2>
+          <ol>
+            <li><a href="index.php">Home</a></li>
+            <li>Membership Registration</li>
+          </ol>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Breadcrumbs -->
 
 
     <!-- Profile registration Form -->
@@ -150,7 +165,7 @@
                     </div>
 
                     <div class="text-center">
-                      <button type="submit" class="btn btn-primary">Finish Registration</button>
+                    <button type="submit" class="btn btn-primary"> <a href="login.php">Finish Registration</a> </button>
                     </div>
                     </div>
                   </form>
