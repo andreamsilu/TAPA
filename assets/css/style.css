@@ -1453,7 +1453,7 @@ section {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #111;
+  color: #0F718A;
 }
 
 .contact .info p {
@@ -1531,6 +1531,8 @@ section {
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {
   border-color: #0F718A;
+  background-color: #0F718A;
+  color: #fff;
 }
 
 .contact .php-email-form input {
@@ -2218,6 +2220,7 @@ section {
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
+  margin-top: 8px;
   border-radius: 4px;
   text-align: center;
   width: 36px;
