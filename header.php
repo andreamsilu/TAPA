@@ -4,7 +4,7 @@
 
       <!-- <h1 class="logo me-auto"><a href="index.php"><span>TA</span>PA</a></h1> -->
       <!-- Uncomment below if you prefer to use an image logo -->
-      <a href="index.php" class="logo me-auto me-lg-0"><img src="../assets/img/tapa.png" alt="" class="img-fluid"></a>
+      <a href="index.php" class="logo me-auto me-lg-0"><img src="assets/img/tapa.png" alt="" class="img-fluid"></a>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
@@ -13,9 +13,9 @@
           <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="about.php">About Us</a></li>
-              <li><a href="team.php">Leadership</a></li>
-              <li><a href="testimonials.php">Commitees</a></li>
-              <li><a href="testimonials.php">Zone & Division</a></li>
+              <li><a href="leadership.php">Leadership</a></li>
+              <li><a href="publication-resources.php">Commitees</a></li>
+              <li><a href="zones.php">Zone & Division</a></li>
             </ul>
           </li>
 
