@@ -137,7 +137,8 @@
         </div>
 
       </div>
-    </section><!-- End Services Section -->
+    </section>
+    <!-- End Services Section -->
 
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
@@ -249,7 +250,8 @@
         </div>
 
       </div>
-    </section><!-- End Portfolio Section -->
+    </section>
+    <!-- End Portfolio Section -->
 
     <!-- ======= Our Clients Section ======= -->
     <section id="clients" class="clients">
@@ -312,8 +314,10 @@
         </div>
 
       </div>
-    </section><!-- End Our Clients Section -->
+    </section>
+    <!-- End Our Clients Section -->
 
-  </main><!-- End #main -->
+  </main>
+  <!-- End #main -->
 
   <?php include "footer.php" ?>

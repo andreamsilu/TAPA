@@ -4,7 +4,7 @@
 
       <!-- <h1 class="logo me-auto"><a href="index.php"><span>TA</span>PA</a></h1> -->
       <!-- Uncomment below if you prefer to use an image logo -->
-      <a href="index.php" class="logo me-auto me-lg-0"><img src="assets/img/tapa.png" alt="" class="img-fluid"></a>
+      <a href="index.php" class="logo me-auto me-lg-0"><img src="../assets/img/tapa.png" alt="" class="img-fluid"></a>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
@@ -19,7 +19,7 @@
             </ul>
           </li>
 
-          <li><a href="services.php">Membership</a></li>
+          <li><a href="membership.php">Membership</a></li>
           <li><a href="publication-resources.php">Publication & resources</a></li>
           <li><a href="portfolio.php">Photo gallery</a></li>
           <li><a href="blog.php">Blog</a></li>
