@@ -9,26 +9,26 @@
         <h3>TAPA</h3>
         <p>
           A108 Adam Street <br>
-          New York, NY 535022<br>
-          United States <br><br>
-          <strong>Phone:</strong> +1 5589 55488 55<br>
-          <strong>Email:</strong> info@example.com<br>
+          P.O.BOX 35417,<br> Dar es Salaam<br>
+          Tanzania <br><br>
+          <strong>Phone:</strong> +255 5589 55488 55<br>
+          <strong>Email:</strong> info@tapa.or.tz<br>
         </p>
       </div>
 
       <div class="col-lg-2 col-md-6 footer-links">
         <h4>Useful Links</h4>
         <ul>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="index.php">Home</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="about.php">About us</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="membership.php">Membership</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="publication-resources.php">Publication</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="portifolio.php">Photo & gallery</a></li>
         </ul>
       </div>
 
       <div class="col-lg-3 col-md-6 footer-links">
-        <h4>Our Services</h4>
+        <h4>TAPA activities</h4>
         <ul>
           <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
           <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>

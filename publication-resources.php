@@ -42,7 +42,7 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6">
-            <div class="box">
+            <div class="box fadeIn">
               <h4>TAPA CONSTITUTION</h4>
               <!-- <h4><sup>$</sup>0<span> / month</span></h4> -->
               <ul>

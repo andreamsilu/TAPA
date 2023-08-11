@@ -1372,22 +1372,22 @@ section {
   padding: 40px;
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
   position: relative;
-  background: #fff;
+  background: #0F718A;
 }
 
 .testimonials .testimonial-item .testimonial-img {
   width: 90px;
-  border-radius: 50px;
+  border-radius: 0px;
   border: 6px solid #fff;
   float: left;
   margin: 0 10px 0 0;
 }
 
-.testimonials .testimonial-item h3 {
-  font-size: 18px;
+.testimonials .testimonial-item h2 {
+  font-size: 28px;
   font-weight: bold;
   margin: 10px 0 5px 0;
-  color: #111;
+  color: #FFF;
 }
 
 .testimonials .testimonial-item h4 {
@@ -1419,6 +1419,7 @@ section {
   font-style: italic;
   margin: 15px 0 0 0;
   padding: 0;
+  color: #FFF;
 }
 
 /*--------------------------------------------------------------

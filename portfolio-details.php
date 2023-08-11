@@ -14,7 +14,7 @@
 </head>
 
 <body>
-<?php include "header.php" ?>
+<?php //include "header.php" ?>
 
 
   <main id="main">
@@ -33,7 +33,8 @@
         </div>
 
       </div>
-    </section><!-- End Breadcrumbs -->
+    </section>
+    <!-- End Breadcrumbs -->
 
     <!-- ======= Portfolio Details Section ======= -->
     <section id="portfolio-details" class="portfolio-details">
@@ -46,15 +47,15 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-1.jpg" alt="">
+                  <img src="assets/img/tapaImages/Sustain Digital-14 (1).jpg" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-2.jpg" alt="">
+                  <img src="assets/img/tapaImages/Sustain Digital-14.jpg" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-3.jpg" alt="">
+                  <img src="assets/img/tapaImages/Sustain Digital-15.jpg" alt="">
                 </div>
 
               </div>
