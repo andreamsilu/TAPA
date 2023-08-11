@@ -29,17 +29,21 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
- 
+
 </head>
 <body class="mt-5">
-<?php include "header.php" ?>
 
-  <!-- <main> -->
+  <main>
+  <?php include "header.php"?>
 
 
     <!-- Profile registration Form -->
-    <form class="m-5 w-50">
-                    <div class="row m-5">
+    <!-- <div class="container-fluid"> -->
+    <form class="m-5 w-70 align-center">
+      <div class="row">
+        <div class="col-md-6">
+                    <div class="row">
+                      <div class="col-md-6">
                       <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
                       <div class="col-md-8 col-lg-9">
                         <img src="assets/img/profile-img.jpg" alt="Profile">
@@ -64,6 +68,17 @@
                       </div>
                     </div>
 
+                    <div class="row mb-3">
+                      <label for="cv" class="col-md-4 col-lg-3 col-form-label">upload cv</label>
+                      <div class="col-md-8 col-lg-9">
+                        <!-- <textarea name="cv" class="form-control" id="cv" ></textarea> -->
+                        <input type="file" name="cv" id="cv" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+
+                  <div class="col-md-6">
                     <div class="row mb-3">
                       <label for="company" class="col-md-4 col-lg-3 col-form-label">Company</label>
                       <div class="col-md-8 col-lg-9">
@@ -137,15 +152,18 @@
                     <div class="text-center">
                       <button type="submit" class="btn btn-primary">Finish Registration</button>
                     </div>
+                    </div>
                   </form>
+              </div>
                   <!-- End Profile registration Form -->
 
 
+    </div>
     </div>
   </main>
   <!-- End #main -->
 </body>
 </html>
- 
+
 <?php //include "footer.php" ?>
 

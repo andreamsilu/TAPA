@@ -15,7 +15,7 @@
 </head>
 
 <body>
-<?php include "header.php" ?>
+<?php //include "header.php" ?>
 
 
   <main id="main">
@@ -25,7 +25,7 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>About</h2>
+          <h2>About TAPA</h2>
           <ol>
             <li><a href="index.php">Home</a></li>
             <li>About</li>
@@ -33,7 +33,8 @@
         </div>
 
       </div>
-    </section><!-- End Breadcrumbs -->
+    </section>
+    <!-- End Breadcrumbs -->
 
     <!-- ======= About Us Section ======= -->
     <section id="about-us" class="about-us">
@@ -41,7 +42,7 @@
 
         <div class="row content">
           <div class="col-lg-6" data-aos="fade-right">
-            <h2>Eum ipsam laborum deleniti velitena</h2>
+            <h2>TANZANIA PSYCHOLOGICAL ASSOCIATION</h2>
             <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assum perenda sruen jonee trave</h3>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left">
@@ -63,14 +64,15 @@
         </div>
 
       </div>
-    </section><!-- End About Us Section -->
+    </section>
+    <!-- End About Us Section -->
 
     <!-- ======= Our Team Section ======= -->
     <section id="team" class="team section-bg">
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
-          <h2>Our <strong>Team</strong></h2>
+          <h2>TAPA <strong>Leadership</strong></h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
@@ -89,7 +91,7 @@
               </div>
               <div class="member-info">
                 <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
+                <span>Tapa President</span>
               </div>
             </div>
           </div>

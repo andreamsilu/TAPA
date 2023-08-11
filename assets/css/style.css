@@ -1170,6 +1170,13 @@ section {
   border-radius: 5px;
   position: relative;
   overflow: hidden;
+  transition-duration: 0.3s;
+}
+.pricing .box:hover {
+  /* background: #0F718A; */
+  transition: 0.3s;
+  transform-style:preserve-3d;
+  
 }
 
 .pricing h3 {
@@ -1183,7 +1190,7 @@ section {
 }
 
 .pricing h4 {
-  font-size: 36px;
+  font-size: 25px;
   color: #0F718A;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
@@ -1222,8 +1229,8 @@ section {
 }
 
 .pricing ul .na {
-  color: #ccc;
-  text-decoration: line-through;
+  /* color: #ccc; */
+  text-decoration: 0;
 }
 
 .pricing .btn-wrap {

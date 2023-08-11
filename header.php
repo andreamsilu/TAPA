@@ -22,7 +22,7 @@
           <li><a href="membership.php">Membership</a></li>
           <li><a href="publication-resources.php">Publication & resources</a></li>
           <li><a href="portfolio.php">Photo gallery</a></li>
-          <li><a href="blog.php">Blog</a></li>
+          <!-- <li><a href="blog.php">Blog</a></li> -->
           <li><a href="contact.php">Contact</a></li>
 
         </ul>

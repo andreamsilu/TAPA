@@ -10,11 +10,11 @@
   <meta content="" name="keywords">
 
   <?php include "titleIcon.php" ?>
+  <?php //include "header.php" ?>
 
 </head>
 
 <body>
-<?php include "header.php" ?>
 
 
   <main id="main">
@@ -24,7 +24,7 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Pricing</h2>
+          <h2>Publication & Resources</h2>
           <ol>
             <li><a href="index.php">Home</a></li>
             <li>Publications & Resources</li>
@@ -32,7 +32,8 @@
         </div>
 
       </div>
-    </section><!-- End Breadcrumbs -->
+    </section>
+    <!-- End Breadcrumbs -->
 
     <!-- ======= Pricing Section ======= -->
     <section id="pricing" class="pricing">
@@ -42,8 +43,8 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="box">
-              <h3>Free</h3>
-              <h4><sup>$</sup>0<span> / month</span></h4>
+              <h4>TAPA CONSTITUTION</h4>
+              <!-- <h4><sup>$</sup>0<span> / month</span></h4> -->
               <ul>
                 <li>Aida dere</li>
                 <li>Nec feugiat nisl</li>
@@ -52,15 +53,15 @@
                 <li class="na">Massa ultricies mi</li>
               </ul>
               <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
+                <a href="#" class="btn-buy">Read now</a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
             <div class="box featured">
-              <h3>Business</h3>
-              <h4><sup>$</sup>19<span> / month</span></h4>
+              <h4>MEMBERSHIP POLICY</h4>
+              <!-- <h4><sup>$</sup>19<span> / month</span></h4> -->
               <ul>
                 <li>Aida dere</li>
                 <li>Nec feugiat nisl</li>
@@ -69,15 +70,15 @@
                 <li class="na">Massa ultricies mi</li>
               </ul>
               <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
+                <a href="#" class="btn-buy">Read the policy</a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
             <div class="box">
-              <h3>Developer</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
+              <h4>2023 AGM FINAL REPORT</h4>
+              <!-- <h4><sup>$</sup>29<span> / month</span></h4> -->
               <ul>
                 <li>Aida dere</li>
                 <li>Nec feugiat nisl</li>
@@ -86,16 +87,16 @@
                 <li>Massa ultricies mi</li>
               </ul>
               <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
+                <a href="#" class="btn-buy">Read the Report</a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
             <div class="box">
-              <span class="advanced">Advanced</span>
-              <h3>Ultimate</h3>
-              <h4><sup>$</sup>49<span> / month</span></h4>
+              <span class="advanced">New Updates</span>
+              <h4>THE UPCOMING EVENTS</h4>
+              <!-- <h4><sup>$</sup>49<span> / month</span></h4> -->
               <ul>
                 <li>Aida dere</li>
                 <li>Nec feugiat nisl</li>
@@ -104,7 +105,7 @@
                 <li>Massa ultricies mi</li>
               </ul>
               <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
+                <a href="#" class="btn-buy">Check Coming events</a>
               </div>
             </div>
           </div>
@@ -112,7 +113,8 @@
         </div>
 
       </div>
-    </section><!-- End Pricing Section -->
+    </section>
+    <!-- End Pricing Section -->
 
     <!-- ======= Frequently Asked Questions Section ======= -->
     <section id="faq" class="faq section-bg">
@@ -173,7 +175,8 @@
         </div>
 
       </div>
-    </section><!-- End Frequently Asked Questions Section -->
+    </section>
+    <!-- End Frequently Asked Questions Section -->
 
   </main><!-- End #main -->
 

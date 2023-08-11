@@ -1,22 +1,26 @@
 <?php  include "titleIcon.php" ?>
 <body class="m-3 bg-gradient">
     
-<?php include "header.php" ?>
+<?php //include "header.php" ?>
 <link href="assets/css/style.css" rel="stylesheet">
 
   <main id="main" class="main">
 
-    <div class="pagetitle">
-      <h1>Profile</h1>
-      <nav>
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.php">dashboard</a></li>
-          <li class="breadcrumb-item">Users</li>
-          <li class="breadcrumb-item active">Profile</li>
-        </ol>
-      </nav>
-    </div>
-    <!-- End Page Title -->
+   <!-- ======= Breadcrumbs ======= -->
+   <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Practioner Profile</h2>
+          <ol>
+            <li><a href="index.php">Home</a></li>
+            <li>Practioner Profile</li>
+          </ol>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Breadcrumbs -->
 
     <section class="section profile">
       <div class="row">
