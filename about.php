@@ -42,7 +42,7 @@
 
         <div class="row content">
           <div class="col-lg-6" data-aos="fade-right">
-            <h2>TANZANIA PSYCHOLOGICAL ASSOCIATION</h2>
+            <h2 style="color: #0F718A;">TANZANIA PSYCHOLOGICAL ASSOCIATION</h2>
             <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assum perenda sruen jonee trave</h3>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left">
@@ -153,13 +153,15 @@
         </div>
 
       </div>
-    </section><!-- End Our Team Section -->
+    </section>
+    <!-- End Our Team Section -->
 
     <!-- ======= Our Skills Section ======= -->
-    <section id="skills" class="skills">
+    <!-- <section id="skills" class="skills">
       <div class="container">
 
-        <div class="section-title" data-aos="fade-up">
+        
+      <div class="section-title" data-aos="fade-up">
           <h2>Our <strong>Skills</strong></h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
@@ -219,10 +221,11 @@
         </div>
 
       </div>
-    </section><!-- End Our Skills Section -->
+    </section> -->
+    <!-- End Our Skills Section -->
 
     <!-- ======= Our Clients Section ======= -->
-    <section id="clients" class="clients">
+    <!-- <section id="clients" class="clients">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -282,8 +285,10 @@
         </div>
 
       </div>
-    </section><!-- End Our Clients Section -->
+    </section> -->
+    <!-- End Our Clients Section -->
 
-  </main><!-- End #main -->
+  </main>
+  <!-- End #main -->
 
   <?php include "footer.php" ?>

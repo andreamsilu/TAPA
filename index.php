@@ -54,8 +54,11 @@
     <!-- ======= Services Section ======= -->
     <section id="services" class="services section-bg">
       <div class="container" data-aos="fade-up">
+      <!-- <h2>TAPA ACTIVITIES</h2> -->
 
         <div class="row">
+        <h2 style="color: #0F718A; text-align:center; margin-bottom:50px;">TAPA SERVICES AND ACTIVITIES</h2>
+
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box iconbox-blue">
               <div class="icon">
