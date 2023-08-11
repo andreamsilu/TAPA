@@ -10,13 +10,10 @@
   <meta content="" name="keywords">
 
   <?php include "titleIcon.php" ?>
-
-  
 </head>
 
 <body>
 <?php include "header.php" ?>
-
 
   <main id="main">
 
