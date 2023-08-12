@@ -88,7 +88,7 @@
                       </div>
                     </div>
                     <div class="col-12">
-                      <button class="btn btn-primary w-100" type="submit"><a href="profile.php">Login</a></button>
+                      <button class="btn  w-100" style="background:#0F718A;" type="submit"><a href="profile.php" class="text-white">Login</a></button>
                     </div>
                     <div class="col-12">
                       <p class="small mb-0">Don't have account? <a href="registration.php">Create an account</a></p>
