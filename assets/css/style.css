@@ -2244,7 +2244,7 @@ section {
 .profile .profile-card h2 {
   font-size: 24px;
   font-weight: 700;
-  color: #2c384e;
+  color: #0F718A;
   margin: 10px 0 0 0;
 }
 
@@ -2255,14 +2255,15 @@ section {
 .profile .profile-card .social-links a {
   font-size: 20px;
   display: inline-block;
-  color: rgba(1, 41, 112, 0.5);
+  color: #0F718A;
   line-height: 0;
   margin-right: 10px;
   transition: 0.3s;
 }
 
 .profile .profile-card .social-links a:hover {
-  color: #012970;
+  background: #0F718A;
+  color:white;
 }
 
 .profile .profile-overview .row {
@@ -2271,19 +2272,26 @@ section {
 }
 
 .profile .profile-overview .card-title {
-  color: #012970;
+  color: #0F718A;
 }
 
 .profile .profile-overview .label {
   font-weight: 600;
-  color: rgba(1, 41, 112, 0.6);
+  color: #0F718A;
 }
 
 .profile .profile-edit label {
   font-weight: 600;
-  color: rgba(1, 41, 112, 0.6);
+  color: #0F718A;
 }
 
 .profile .profile-edit img {
   max-width: 120px;
+}
+.profile  .btn{
+  background: #0F718A;
+  border: 0em;
+}
+.profile  .btn:hover{
+  background: #5dceea;
 }
