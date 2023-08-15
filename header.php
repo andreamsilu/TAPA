@@ -14,7 +14,7 @@
             <ul>
               <li><a href="about.php">About Us</a></li>
               <li><a href="leadership.php">Leadership</a></li>
-              <li><a href="publication-resources.php">Commitees</a></li>
+              <li><a href="commitees.php">Commitees</a></li>
               <li><a href="zones.php">Zone & Division</a></li>
             </ul>
           </li>

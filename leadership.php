@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Team - TAPA </title>
+  <title>Leadership - TAPA </title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -26,22 +26,23 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Team</h2>
+          <h2>Leadership</h2>
           <ol>
             <li><a href="index.php">Home</a></li>
-            <li>Team</li>
+            <li>Leadership</li>
           </ol>
         </div>
 
       </div>
-    </section><!-- End Breadcrumbs -->
+    </section>
+    <!-- End Breadcrumbs -->
 
     <!-- ======= Our Team Section ======= -->
     <section id="team" class="team section-bg">
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
-          <h2>Our <strong>Team</strong></h2>
+          <h2>TAPA <strong>Leaders</strong></h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
@@ -122,7 +123,8 @@
         </div>
 
       </div>
-    </section><!-- End Our Team Section -->
+    </section>
+    <!-- End Our Team Section -->
 
   </main><!-- End #main -->
   <?php include "footer.php" ?>

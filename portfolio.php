@@ -41,9 +41,9 @@
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
+              <li data-filter=".filter-app">AGM 2021</li>
+              <li data-filter=".filter-card">AGM 2022</li>
+              <li data-filter=".filter-web">AGM 2023</li>
             </ul>
           </div>
         </div>
