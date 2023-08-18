@@ -2314,7 +2314,7 @@ section {
   display: block;
   font-size: 28px;
   font-weight: 700;
-  color: rgb(27,20,100);
+  color:#0F718A ;
 }
 
 .why-us .box h4 {
@@ -2333,7 +2333,7 @@ section {
 }
 
 .why-us .box:hover {
-  background: rgb(27,20,100);
+  background: #0F718A;
   padding: 30px 30px 70px 30px;
   box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
 }
