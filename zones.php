@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<header>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -13,7 +13,7 @@
 
 
   
-</head>
+</header>
 
 <body>
 
@@ -48,9 +48,9 @@
             <div class="testimonial-item">
             <h2 >SOUTHERN ZONE</h2>
 
-              <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+              <img src="assets/img/tapaImages/Sustain Digital-11.jpg" class="testimonial-img" alt=""><br><br><br>
               <h3>Fr.Hugo Lungu</h3>
-              <h4>Zone&amp; Head</h4>
+              <h4>Zone&amp; Leader</h4><br>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                 Iringa,Njombe,Mbeya,Rukwa,Songwe,Ruvuma
@@ -65,7 +65,7 @@
 
               <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
               <h3>Isack Kimario</h3>
-              <h4>Zone Head</h4>
+              <h4>Zone Leader</h4><br>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                 Arusha, Kilimanjaro, Tanga, Manyara
@@ -80,7 +80,7 @@
 
               <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
               <h3>Alex Ndagabwene</h3>
-              <h4>Zone Head</h4>
+              <h4>Zone Leader</h4><br>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                 Dar es Salaam, Morogoro, Pwani
@@ -95,7 +95,7 @@
 
               <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
               <h3>Shabani Mnkai</h3>
-              <h4>Zone Head</h4>
+              <h4>Zone Leader</h4> <br>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                 Singida, Dodoma, Kigoma, Tabora
@@ -110,7 +110,7 @@
 
               <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
               <h3>Dr. Joel Joshua</h3>
-              <h4>Zone Head</h4>
+              <h4>Zone Leader</h4><br>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                 Mwanza, Shinyanga, Mara, Kagera
@@ -125,8 +125,7 @@
 
               <img src="assets/img/testimonials/testimonials-6.jpg" class="testimonial-img" alt="">
               <h3>Boniphace David</h3>
-              <h4>Zone Head</h4>
-              <div class="row">
+              <h4>Zone Leader</h4><br>
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                 Lindi, Mtwara, Zanzibar
@@ -142,5 +141,48 @@
     </section>
     <!-- End Testimonials Section -->
 
-  </main><!-- End #main -->
+    
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>TAPA <span>DIVISIONS</span></h2>
+          <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4">
+            <div class="box">
+              <span>01</span>
+              <h4>Lorem Ipsum</h4>
+              <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box">
+              <span>02</span>
+              <h4>Repellat Nihil</h4>
+              <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box">
+              <span>03</span>
+              <h4> Ad ad velit qui</h4>
+              <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End Why Us Section -->
+
+  </main>
+  <!-- End #main -->
   <?php include "footer.php" ?>
