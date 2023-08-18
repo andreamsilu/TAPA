@@ -148,68 +148,69 @@
 
         <div class="section-title">
           <h2>TAPA <span>DIVISIONS</span></h2>
-          <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+          <!-- <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p> -->
         </div>
 
         <div class="row">
 
           <div class="col-lg-3">
             <div class="box">
-              <span>01</span>
-              <h4>Lorem Ipsum</h4>
+              <span>General Psychology</span>
               <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+              <h4>Mallewo Jesusa</h4>
             </div>
           </div>
 
           <div class="col-lg-3 mt-4 mt-lg-0">
             <div class="box">
-              <span>02</span>
-              <h4>Repellat Nihil</h4>
+              <span>Clinical Psychology</span>
               <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
+              <h4>Alex Ndagabwene</h4>
             </div>
           </div>
 
           <div class="col-lg-3 mt-4 mt-lg-0">
             <div class="box">
-              <span>03</span>
-              <h4> Ad ad velit qui</h4>
+              <span>Social Psychology</span>
               <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
+              <h4>Dr.Lwimiko Sanga</h4>
             </div>
           </div>
 
           <div class="col-lg-3 mt-4 mt-lg-0">
             <div class="box">
-              <span>03</span>
-              <h4> Ad ad velit qui</h4>
+              <span>Educational Psychology</span>
               <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
+              <h4> Dr.Upendo Biswalo</h4>
             </div>
           </div>
 
         </div>
 
-        <div class="row">
+        <div class="row mt-5">
 
           <div class="col-lg-4">
             <div class="box">
-              <span>01</span>
-              <h4>Lorem Ipsum</h4>
+              <span>Counseling Psychology</span>
               <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+              <h4>Dr.Bernadetha Rushahu</h4>
+
             </div>
           </div>
 
           <div class="col-lg-4 mt-4 mt-lg-0">
             <div class="box">
-              <span>02</span>
-              <h4>Repellat Nihil</h4>
+              <span>Developmental Psychology</span>
               <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
+              <h4>Hussein Mshunga</h4>
             </div>
           </div>
 
           <div class="col-lg-4 mt-4 mt-lg-0">
             <div class="box">
-              <span>03</span>
-              <h4> Ad ad velit qui</h4>
-              <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
+              <span>Organizational & Cognitive Psychology</span>
+              <p class="pt-4">Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
+              <h4 class="pt-4"> Alex Kamugisha</h4>
             </div>
           </div>
         </div>
