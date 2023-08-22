@@ -19,7 +19,7 @@
             </ul>
           </li>
 
-          <li class="dropdown"><a href="membership.php"><span>Membership</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href=""><span>Membership</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="login.php">Login</a></li>
               <li><a href="registration.php">Register</a></li>
