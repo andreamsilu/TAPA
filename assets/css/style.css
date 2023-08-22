@@ -1429,7 +1429,7 @@ section {
 # Contact
 --------------------------------------------------------------*/
 .contact .info-wrap {
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 15px #0F718A;
   padding: 30px;
 }
 
@@ -1473,7 +1473,7 @@ section {
 
 .contact .php-email-form {
   width: 100%;
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 24px 0 #0F718A;
   padding: 30px;
   background: #fff;
 }
