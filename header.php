@@ -19,7 +19,16 @@
             </ul>
           </li>
 
-          <li><a href="membership.php">Membership</a></li>
+          <li class="dropdown"><a href="membership.php"><span>Membership</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="login.php">Login</a></li>
+              <li><a href="registration.php">Register</a></li>
+              <li><a href="membership.php">Search Practitioner</a></li>
+              <!-- <li><a href="zones.php">Zone & Division</a></li> -->
+            </ul>
+          </li>
+
+          <!-- <li><a href="membership.php">Membership</a></li> -->
           <li><a href="publication-resources.php">Publication & resources</a></li>
           <li><a href="photo-gallery.php">Photo gallery</a></li>
           <!-- <li><a href="blog.php">Blog</a></li> -->
