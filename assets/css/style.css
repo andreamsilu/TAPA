@@ -1525,17 +1525,20 @@ section {
 
 .contact .php-email-form input,
 .contact .php-email-form textarea {
-  border-radius: 0;
   box-shadow: none;
   font-size: 14px;
   border-radius: 4px;
+  border:#0F718A 2px solid;
+
 }
 
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {
+  border:#0F718A 2px solid;
   border-color: #0F718A;
-  background-color: #0F718A;
   color: #fff;
+  transition-delay: 0.5s;
+  transition: 0.4s;
 }
 
 .contact .php-email-form input {
