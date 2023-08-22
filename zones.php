@@ -43,68 +43,67 @@
       <div class="container">
 
         <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up">
-            <div class="testimonial-item">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-item mt-4 mt-lg-0">
             <h2 >SOUTHERN ZONE</h2>
-
-              <img src="assets/img/tapaImages/Sustain Digital-11.jpg" class="testimonial-img" alt=""><br><br><br>
+              <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
               <h3>Fr.Hugo Lungu</h3>
-              <h4>Zone&amp; Leader</h4><br>
+              <h4>Zone Leader</h4><br>
               <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
                 Iringa,Njombe,Mbeya,Rukwa,Songwe,Ruvuma
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                <!-- <i class="bx bxs-quote-alt-right quote-icon-right"></i> -->
               </p>
             </div>
           </div>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="testimonial-item mt-4 mt-lg-0">
             <h2 >NORTHERN ZONE</h2>
-
               <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
               <h3>Isack Kimario</h3>
               <h4>Zone Leader</h4><br>
               <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
                 Arusha, Kilimanjaro, Tanga, Manyara
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                <!-- <i class="bx bxs-quote-alt-right quote-icon-right"></i> -->
               </p>
             </div>
           </div>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
             <div class="testimonial-item mt-4">
             <h2 >EASTERN ZONE</h2>
-
               <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
               <h3>Alex Ndagabwene</h3>
-              <h4>Zone Leader</h4><br>
+              <h4>Zone Leader</h4> <br>
               <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
                 Dar es Salaam, Morogoro, Pwani
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                <!-- <i class="bx bxs-quote-alt-right quote-icon-right"></i> -->
               </p>
             </div>
           </div>
+        </div>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
             <div class="testimonial-item mt-4">
-            <h2 >WEST-CANTRAL ZONE</h2>
+            <h2 >WESTERN-CENTRAL ZONE</h2>
 
               <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
               <h3>Shabani Mnkai</h3>
-              <h4>Zone Leader</h4> <br>
+              <h4>Zone Leader</h4> 
               <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
                 Singida, Dodoma, Kigoma, Tabora
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                <!-- <i class="bx bxs-quote-alt-right quote-icon-right"></i> -->
               </p>
             </div>
           </div>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
             <div class="testimonial-item mt-4">
             <h2 >LAKE ZONE</h2>
 
@@ -112,14 +111,14 @@
               <h3>Dr. Joel Joshua</h3>
               <h4>Zone Leader</h4><br>
               <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
                 Mwanza, Shinyanga, Mara, Kagera
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                <!-- <i class="bx bxs-quote-alt-right quote-icon-right"></i> -->
               </p>
             </div>
           </div>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="500">
             <div class="testimonial-item mt-4">
             <h2 >COASTAL ZONE</h2>
 
@@ -127,9 +126,9 @@
               <h3>Boniphace David</h3>
               <h4>Zone Leader</h4><br>
               <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
                 Lindi, Mtwara, Zanzibar
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                <!-- <i class="bx bxs-quote-alt-right quote-icon-right"></i> -->
               </p>
               </div>
             </div>
@@ -209,8 +208,8 @@
           <div class="col-lg-4 mt-4 mt-lg-0">
             <div class="box">
               <span>Organizational & Cognitive Psychology</span>
-              <p class="pt-4">Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
-              <h4 class="pt-4"> Alex Kamugisha</h4>
+              <p class="">Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
+              <h4 class=""> Alex Kamugisha</h4>
             </div>
           </div>
         </div>
