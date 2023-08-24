@@ -2302,6 +2302,26 @@ section {
   background: #5dceea;
 }
 
+/* Your existing CSS styles */
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+  /* Adjust your styles here */
+  .col-xl-4 {
+      width: 100%;
+  }
+
+  .col-xl-8 {
+      width: 100%;
+      margin-top: 20px; /* Add some spacing between columns */
+  }
+
+  /* Adjust other styles as needed */
+}
+
+/* More media queries for different screen sizes */
+
+
 
 /*--------------------------------------------------------------
 # Divisions
