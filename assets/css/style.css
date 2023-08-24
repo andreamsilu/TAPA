@@ -1536,7 +1536,7 @@ section {
 .contact .php-email-form textarea:focus {
   border:#0F718A 2px solid;
   border-color: #0F718A;
-  color: #fff;
+  color: #000;
   transition-delay: 0.5s;
   transition: 0.4s;
 }
