@@ -30,11 +30,11 @@
       <div class="col-lg-3 col-md-6 footer-links">
         <h4>TAPA activities</h4>
         <ul>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="#">Advocacy</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="#">Research</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="#">Ethics and Standards</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="#">Continuing Education </a></li>
+          <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li> -->
         </ul>
       </div>
 
