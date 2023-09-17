@@ -27,10 +27,10 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Zone & Division</h2>
+          <h2>Branches & Division</h2>
           <ol>
             <li><a href="index.php">Home</a></li>
-            <li>Zone & Division</li>
+            <li>Branches & Division</li>
           </ol>
         </div>
 
@@ -45,10 +45,10 @@
         <div class="row">
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="testimonial-item mt-4 mt-lg-0">
-            <h2 >SOUTHERN ZONE</h2>
+            <h2 >SOUTHERN BRANCH</h2>
               <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
               <h3>Fr.Hugo Lungu</h3>
-              <h4>Zone Leader</h4><br>
+              <h4>Branch Leader</h4><br>
               <p>
                 <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
                 Iringa,Njombe,Mbeya,Rukwa,Songwe,Ruvuma
@@ -60,10 +60,10 @@
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="testimonial-item mt-4 mt-lg-0">
-            <h2 >NORTHERN ZONE</h2>
+            <h2 >NORTHERN BRANCH</h2>
               <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
               <h3>Isack Kimario</h3>
-              <h4>Zone Leader</h4><br>
+              <h4>Branch Leader</h4><br>
               <p>
                 <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
                 Arusha, Kilimanjaro, Tanga, Manyara
@@ -74,10 +74,10 @@
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
             <div class="testimonial-item mt-4">
-            <h2 >EASTERN ZONE</h2>
+            <h2 >EASTERN BRANCH</h2>
               <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
               <h3>Alex Ndagabwene</h3>
-              <h4>Zone Leader</h4> <br>
+              <h4>Branch Leader</h4> <br>
               <p>
                 <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
                 Dar es Salaam, Morogoro, Pwani
@@ -90,11 +90,11 @@
         <div class="row">
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
             <div class="testimonial-item mt-4">
-            <h2 >WESTERN-CENTRAL ZONE</h2>
+            <h2 >WESTERN-CENTRAL BRANCH</h2>
 
               <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
               <h3>Shabani Mnkai</h3>
-              <h4>Zone Leader</h4> 
+              <h4>Branch Leader</h4> 
               <p>
                 <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
                 Singida, Dodoma, Kigoma, Tabora
@@ -105,11 +105,11 @@
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
             <div class="testimonial-item mt-4">
-            <h2 >LAKE ZONE</h2>
+            <h2 >LAKE BRANCH</h2>
 
               <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
               <h3>Dr. Joel Joshua</h3>
-              <h4>Zone Leader</h4><br>
+              <h4>Branch Leader</h4><br>
               <p>
                 <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
                 Mwanza, Shinyanga, Mara, Kagera
@@ -120,11 +120,11 @@
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="500">
             <div class="testimonial-item mt-4">
-            <h2 >COASTAL ZONE</h2>
+            <h2 >COASTAL BRANCH</h2>
 
               <img src="assets/img/testimonials/testimonials-6.jpg" class="testimonial-img" alt="">
               <h3>Boniphace David</h3>
-              <h4>Zone Leader</h4><br>
+              <h4>Branch Leader</h4><br>
               <p>
                 <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
                 Lindi, Mtwara, Zanzibar
@@ -140,83 +140,7 @@
     </section>
     <!-- End Testimonials Section -->
 
-    
-    <!-- ======= divisions ======= -->
-    <section id="why-us" class="why-us">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>TAPA <span>DIVISIONS</span></h2>
-          <!-- <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p> -->
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-3">
-            <div class="box">
-              <span>General Psychology</span>
-              <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
-              <h4>Mallewo Jesusa</h4>
-            </div>
-          </div>
-
-          <div class="col-lg-3 mt-4 mt-lg-0">
-            <div class="box">
-              <span>Clinical Psychology</span>
-              <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
-              <h4>Alex Ndagabwene</h4>
-            </div>
-          </div>
-
-          <div class="col-lg-3 mt-4 mt-lg-0">
-            <div class="box">
-              <span>Social Psychology</span>
-              <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
-              <h4>Dr.Lwimiko Sanga</h4>
-            </div>
-          </div>
-
-          <div class="col-lg-3 mt-4 mt-lg-0">
-            <div class="box">
-              <span>Educational Psychology</span>
-              <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
-              <h4> Dr.Upendo Biswalo</h4>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="row mt-5">
-
-          <div class="col-lg-4">
-            <div class="box">
-              <span>Counseling Psychology</span>
-              <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
-              <h4>Dr.Bernadetha Rushahu</h4>
-
-            </div>
-          </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box">
-              <span>Developmental Psychology</span>
-              <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
-              <h4>Hussein Mshunga</h4>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box">
-              <span>Organizational & Cognitive Psychology</span>
-              <p class="">Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
-              <h4 class=""> Alex Kamugisha</h4>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <!-- End Why Us Section -->
+    <?php include "division.php" ?>
 
   </main>
   <!-- End #main -->
