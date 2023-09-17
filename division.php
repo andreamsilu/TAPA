@@ -15,7 +15,7 @@
             <div class="box">
               <span>General Psychology</span>
               <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
-              <h4>Mallewo Jesusa</h4>
+              <h4>Albano Michael</h4>
             </div>
           </div>
 
@@ -31,7 +31,7 @@
             <div class="box">
               <span>Social Psychology</span>
               <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
-              <h4>Dr.Lwimiko Sanga</h4>
+              <h4>Sweetbert Anselmi</h4>
             </div>
           </div>
 
@@ -51,7 +51,7 @@
             <div class="box">
               <span>Counseling Psychology</span>
               <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
-              <h4>Dr.Bernadetha Rushahu</h4>
+              <h4>Ethel Mabula</h4>
 
             </div>
           </div>
@@ -60,7 +60,7 @@
             <div class="box">
               <span>Developmental Psychology</span>
               <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
-              <h4>Hussein Mshunga</h4>
+              <h4>Pateline Marcel</h4>
             </div>
           </div>
 
