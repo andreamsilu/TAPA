@@ -8,7 +8,7 @@
       <div class="col-lg-3 col-md-6 footer-contact">
         <h3>TAPA</h3>
         <p>
-          A108 Adam Street <br>
+        Esaurp Village, Near Mlimani City <br>
           P.O.BOX 35417,<br> Dar es Salaam<br>
           Tanzania <br><br>
           <strong>Phone:</strong> +255 719 911 575<br>

@@ -41,7 +41,7 @@
 
         <div class="row">
 
-          <div class="col-lg-3 col-md-6">
+          <div class="col-lg-4 col-md-6">
             <div class="box fadeIn">
               <h4>TAPA CONSTITUTION</h4>
               <!-- <h4><sup>$</sup>0<span> / month</span></h4> -->
@@ -58,11 +58,11 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
+          <!-- <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
             <div class="box featured">
               <h4>MEMBERSHIP POLICY</h4>
-              <!-- <h4><sup>$</sup>19<span> / month</span></h4> -->
-              <ul>
+               <h4><sup>$</sup>19<span> / month</span></h4> -->
+              <!-- <ul>
                 <li>Aida dere</li>
                 <li>Nec feugiat nisl</li>
                 <li>Nulla at volutpat dola</li>
@@ -73,11 +73,11 @@
                 <a href="#" class="btn-buy">Read the policy</a>
               </div>
             </div>
-          </div>
+          </div> --> 
 
-          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+          <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
             <div class="box">
-              <h4>2023 AGM FINAL REPORT</h4>
+              <h4>CODE OF CONDUCT</h4>
               <!-- <h4><sup>$</sup>29<span> / month</span></h4> -->
               <ul>
                 <li>Aida dere</li>
@@ -87,13 +87,13 @@
                 <li>Massa ultricies mi</li>
               </ul>
               <div class="btn-wrap">
-                <a href="#" class="btn-buy">Read the Report</a>
+                <a href="#" class="btn-buy">Read Now</a>
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+          <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
             <div class="box">
-              <span class="advanced">New Updates</span>
+              <span class="advanced">NEW UPDATES</span>
               <h4>THE UPCOMING EVENTS</h4>
               <!-- <h4><sup>$</sup>49<span> / month</span></h4> -->
               <ul>
