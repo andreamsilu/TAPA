@@ -54,67 +54,67 @@
 
     <!-- Profile registration Form -->
     <!-- <div class="container-fluid"> -->
-    <form class="m-5 w-70 align-center">
+    <form action="forms/register.php" method="POST" class="m-5 w-70 align-center">
       <!-- <div class="row"> -->
         <!-- <div class="col-md-6"> -->
                     <div class="row">
                       <div class="col-md-6">
 
-                      <div class="row mb-3">
+                      <!-- <div class="row mb-3"> -->
                       <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full Name</label>
                       <div class="col-md-8 col-lg-9">
                         <input name="fullName" type="text" class="form-control" id="fullName" value="">
                       </div>
-                       </div>
+                       <!-- </div> -->
 
-                       <div class="row mb-3">
+                       <!-- <div class="row mb-3"> -->
                       <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
                       <div class="col-md-8 col-lg-9">
                         <input name="email" type="email" class="form-control" id="Email" value="">
                       </div>
-                    </div>
+                    <!-- </div> -->
 
-                    <div class="row mb-3">
+                    <!-- <div class="row mb-3"> -->
                       <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Phone</label>
                       <div class="col-md-8 col-lg-9">
                         <input name="phone" type="text" class="form-control" id="Phone" value="">
                       </div>
-                    </div>
+                    <!-- </div> -->
 
-                    <div class="row mb-3">
-                      <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Postal code</label>
+                    <!-- <div class="row mb-3"> -->
+                      <!-- <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Postal code</label>
                       <div class="col-md-8 col-lg-9">
                         <input name="fullName" type="text" class="form-control" id="fullName" value="">
-                      </div>
-                    </div>
+                      </div> -->
+                    <!-- </div> -->
 
-                    <div class="row mb-3">
+                    <!-- <div class="row mb-3"> -->
                       <label for="profilepic" class="col-md-4 col-lg-3 col-form-label">Upload profile Picture</label>
                       <div class="col-md-8 col-lg-9">
                         <input name="profilepic" type="file" class="form-control" id="profilepic" value="">
                       </div>
-                    </div>
+                    <!-- </div> -->
 
-                    <div class="row mb-3">
-                      <label for="birthdate" class="col-md-4 col-lg-3 col-form-label">Birth Date</label>
+                    <!-- <div class="row mb-3"> -->
+                      <label for="region" class="col-md-4 col-lg-3 col-form-label">Region</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="birthdate" type="date" class="form-control" id="birthdate" value="">
+                        <input name="region" type="text" class="form-control" id="region" value="">
                       </div>
-                    </div>
+                    <!-- </div> -->
 
-                    <div class="row mb-3">
-                      <label for="regdate" class="col-md-4 col-lg-3 col-form-label">Registration Date</label>
+                    <!-- <div class="row mb-3"> -->
+                      <label for="address" class="col-md-4 col-lg-3 col-form-label">Address</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="regdate" type="date" class="form-control" id="regdate" value="">
+                        <input name="address" type="text" class="form-control" id="address" value="">
                       </div>
-                    </div>
+                    <!-- </div> -->
 
-                    <div class="row mb-3">
+                    <!-- <div class="row mb-3"> -->
                       <label for="about" class="col-md-4 col-lg-3 col-form-label">About Yourself</label>
                       <div class="col-md-8 col-lg-9">
                         <textarea name="about" class="form-control" id="about" style="height: 100px"></textarea>
                       </div>
-                    </div>
+                    <!-- </div> -->
 
                   </div>
 
@@ -124,79 +124,88 @@
 
                    
 
-                    <div class="row mb-3">
-                      <label for="cv" class="col-md-4 col-lg-3 col-form-label">upload cv</label>
+                    <!-- <div class="row mb-3"> -->
+                      <label for="education_level" class="col-md-4 col-lg-3 col-form-label">Education_level</label>
                       <div class="col-md-8 col-lg-9">
                         <!-- <textarea name="cv" class="form-control" id="cv" ></textarea> -->
-                        <input type="file" name="cv" id="cv" class="form-control">
+                        <input type="text" name="education_level" id="education_level" class="form-control">
                       </div>
-                    </div>
+                    <!-- </div> -->
                   <!-- </div>
                   </div> -->
 
-                    <div class="row mb-3">
-                      <label for="education_level" class="col-md-4 col-lg-3 col-form-label">Education level</label>
+                    <!-- <div class="row mb-3"> -->
+                      <label for="awards" class="col-md-4 col-lg-3 col-form-label">Awards</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="education_level" type="text" class="form-control" id="education_level" value="">
+                        <input name="awards" type="text" class="form-control" id="awards" value="">
                       </div>
-                    </div>
+                    <!-- </div> -->
 
-                    <div class="row mb-3">
-                      <label for="specialization" class="col-md-4 col-lg-3 col-form-label">Specialization</label>
+                    <!-- <div class="row mb-3"> -->
+                      <label for="institution" class="col-md-4 col-lg-3 col-form-label">Institution</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="specialization" type="text" class="form-control" id="specialization" value="">
+                        <input name="institution" type="text" class="form-control" id="institution" value="">
                       </div>
-                    </div>
+                    <!-- </div> -->
 
-                    <div class="row mb-3">
-                      <label for="region" class="col-md-4 col-lg-3 col-form-label">Region</label>
+                    <!-- <div class="row mb-3"> -->
+                    <label for="position" class="col-md-4 col-lg-3 col-form-label">Position</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="region" type="text" class="form-control" id="region" value="">
+                        <input name="position" type="text" class="form-control" id="position" value="">
                       </div>
-                    </div>
+                    <!-- </div> -->
 
-                    <div class="row mb-3">
-                      <label for="Address" class="col-md-4 col-lg-3 col-form-label">Address</label>
+                    <!-- <div class="row mb-3"> -->
+                      <label for="working_at" class="col-md-4 col-lg-3 col-form-label">Current job</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="address" type="text" class="form-control" id="Address" value="">
+                        <input name="working_at" type="text" class="form-control" id="working_at" value="">
                       </div>
-                    </div>
+                    <!-- </div> -->
+
+                    <!-- <div class="row mb-3"> -->
+                      <label for="position" class="col-md-4 col-lg-3 col-form-label">Position</label>
+                      <div class="col-md-8 col-lg-9">
+                        <input name="position" type="text" class="form-control" id="position" value="">
+                      </div>
+                    <!-- </div> -->
 
                     
 
                     
 
-                    <div class="row mb-3">
-                      <label for="Twitter" class="col-md-4 col-lg-3 col-form-label">Twitter Profile</label>
+                    <!-- <div class="row mb-3"> -->
+                      <!-- <label for="Twitter" class="col-md-4 col-lg-3 col-form-label">Twitter Profile</label>
                       <div class="col-md-8 col-lg-9">
                         <input name="twitter" type="text" class="form-control" id="Twitter" value="">
-                      </div>
-                    </div>
+                      </div> -->
+                    <!-- </div> -->
 
-                    <div class="row mb-3">
-                      <label for="Facebook" class="col-md-4 col-lg-3 col-form-label">Facebook Profile</label>
+                    <!-- <div class="row mb-3"> -->
+                      <!-- <label for="Facebook" class="col-md-4 col-lg-3 col-form-label">Facebook Profile</label>
                       <div class="col-md-8 col-lg-9">
                         <input name="facebook" type="text" class="form-control" id="Facebook" value="">
-                      </div>
-                    </div>
+                      </div> -->
+                    <!-- </div> -->
 
-                    <div class="row mb-3">
-                      <label for="Instagram" class="col-md-4 col-lg-3 col-form-label">Instagram Profile</label>
+                    <!-- <div class="row mb-3"> -->
+                      <!-- <label for="Instagram" class="col-md-4 col-lg-3 col-form-label">Instagram Profile</label>
                       <div class="col-md-8 col-lg-9">
                         <input name="instagram" type="text" class="form-control" id="Instagram" value="">
-                      </div>
-                    </div>
+                      </div> -->
+                    <!-- </div> -->
 
-                    <div class="row mb-3">
-                      <label for="Linkedin" class="col-md-4 col-lg-3 col-form-label">Linkedin Profile</label>
+                    <!-- <div class="row mb-3"> -->
+                      <!-- <label for="Linkedin" class="col-md-4 col-lg-3 col-form-label">Linkedin Profile</label>
                       <div class="col-md-8 col-lg-9">
                         <input name="linkedin" type="text" class="form-control" id="Linkedin" value="">
-                      </div>
-                    </div>
-
+                      </div> -->
+                    <!-- </div> -->
+                    <br><br>
+                     <div class="row">
                     <div class="text-center">
-                    <button type="submit" class="btn " style="background:#0F718A;"> <a href="login.php" class="text-white">Finish Registration</a> </button>
+                    <button type="submit" class="btn " style="background:#0F718A;"> <a href="" class="text-white">Finish Registration</a> </button>
                     </div>
+                     </div>
 
                   </div>
                 
