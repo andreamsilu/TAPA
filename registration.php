@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Registration -TAPA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration - TAPA</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
   <!-- Favicons -->
   <link href="assets/img/tapa.png" rel="icon">
   <link href="assets/img/tapa.png" rel="apple-touch-icon">
-
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -25,20 +20,16 @@
   <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
-
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
-
 </head>
-<body >
-<?php include "header.php"?>
+<body>
+  <?php include "header.php" ?>
 
   <main>
-    <!-- ======= Breadcrumbs ======= -->
+    <!-- Breadcrumbs -->
     <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
-
         <div class="d-flex justify-content-between align-items-center">
           <h2>Membership Registration</h2>
           <ol>
@@ -46,180 +37,67 @@
             <li>Membership Registration</li>
           </ol>
         </div>
-
       </div>
     </section>
     <!-- End Breadcrumbs -->
 
-
     <!-- Profile registration Form -->
-    <!-- <div class="container-fluid"> -->
-    <form action="forms/register.php" method="POST" class="m-5 w-70 align-center">
-      <!-- <div class="row"> -->
-        <!-- <div class="col-md-6"> -->
-                    <div class="row">
-                      <div class="col-md-6">
+    <form action="forms/register.php" method="POST" class="m-5 w-70 align-center" enctype="multipart/form-data">
+      <div class="row">
+        <div class="col-md-6">
+          <label for="fullName" class="col-form-label">Full Name</label>
+          <input name="fullName" type="text" class="form-control" id="fullName" value="">
 
-                      <!-- <div class="row mb-3"> -->
-                      <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full Name</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="fullName" type="text" class="form-control" id="fullName" value="">
-                      </div>
-                       <!-- </div> -->
+          <label for="Email" class="col-form-label">Email</label>
+          <input name="email" type="email" class="form-control" id="Email" value="">
 
-                       <!-- <div class="row mb-3"> -->
-                      <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="email" type="email" class="form-control" id="Email" value="">
-                      </div>
-                    <!-- </div> -->
+          <label for="Phone" class="col-form-label">Phone</label>
+          <input name="phone" type="text" class="form-control" id="Phone" value="">
 
-                    <!-- <div class="row mb-3"> -->
-                      <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Phone</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="phone" type="text" class="form-control" id="Phone" value="">
-                      </div>
-                    <!-- </div> -->
+          <label for="password" class="col-form-label">Password</label>
+          <input name="password" type="password" class="form-control" id="password" value="">
 
-                    <!-- <div class="row mb-3"> -->
-                      <!-- <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Postal code</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="fullName" type="text" class="form-control" id="fullName" value="">
-                      </div> -->
-                    <!-- </div> -->
+          <label for="profilepic" class="col-form-label">Upload Profile Picture</label>
+          <input name="profilepic" type="file" class="form-control" id="profilepic">
 
-                    <!-- <div class="row mb-3"> -->
-                      <label for="profilepic" class="col-md-4 col-lg-3 col-form-label">Upload profile Picture</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="profilepic" type="file" class="form-control" id="profilepic" value="">
-                      </div>
-                    <!-- </div> -->
+          <label for="region" class="col-form-label">Region</label>
+          <input name="region" type="text" class="form-control" id="region" value="">
 
-                    <!-- <div class="row mb-3"> -->
-                      <label for="region" class="col-md-4 col-lg-3 col-form-label">Region</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="region" type="text" class="form-control" id="region" value="">
-                      </div>
-                    <!-- </div> -->
+          <label for="address" class="col-form-label">Address</label>
+          <input name="address" type="text" class="form-control" id="address" value="">
 
-                    <!-- <div class="row mb-3"> -->
-                      <label for="address" class="col-md-4 col-lg-3 col-form-label">Address</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="address" type="text" class="form-control" id="address" value="">
-                      </div>
-                    <!-- </div> -->
+          <label for="about" class="col-form-label">About Yourself</label>
+          <textarea name="about" class="form-control" id="about" style="height: 100px"></textarea>
+        </div>
 
-                    <!-- <div class="row mb-3"> -->
-                      <label for="about" class="col-md-4 col-lg-3 col-form-label">About Yourself</label>
-                      <div class="col-md-8 col-lg-9">
-                        <textarea name="about" class="form-control" id="about" style="height: 100px"></textarea>
-                      </div>
-                    <!-- </div> -->
+        <div class="col-md-6">
+          <label for="education_level" class="col-form-label">Education Level</label>
+          <input type="text" name="education_level" id="education_level" class="form-control">
 
-                  </div>
+          <label for="awards" class="col-form-label">Awards</label>
+          <input name="awards" type="text" class="form-control" id="awards" value="">
 
+          <label for="institution" class="col-form-label">Institution</label>
+          <input name="institution" type="text" class="form-control" id="institution" value="">
 
+          <label for="working_at" class="col-form-label">Current Job</label>
+          <input name="working_at" type="text" class="form-control" id="working_at" value="">
 
-                  <div class="col-md-6">
+          <label for="position" class="col-form-label">Position</label>
+          <input name="position" type="text" class="form-control" id="position" value="">
 
-                   
-
-                    <!-- <div class="row mb-3"> -->
-                      <label for="education_level" class="col-md-4 col-lg-3 col-form-label">Education_level</label>
-                      <div class="col-md-8 col-lg-9">
-                        <!-- <textarea name="cv" class="form-control" id="cv" ></textarea> -->
-                        <input type="text" name="education_level" id="education_level" class="form-control">
-                      </div>
-                    <!-- </div> -->
-                  <!-- </div>
-                  </div> -->
-
-                    <!-- <div class="row mb-3"> -->
-                      <label for="awards" class="col-md-4 col-lg-3 col-form-label">Awards</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="awards" type="text" class="form-control" id="awards" value="">
-                      </div>
-                    <!-- </div> -->
-
-                    <!-- <div class="row mb-3"> -->
-                      <label for="institution" class="col-md-4 col-lg-3 col-form-label">Institution</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="institution" type="text" class="form-control" id="institution" value="">
-                      </div>
-                    <!-- </div> -->
-
-                    <!-- <div class="row mb-3"> -->
-                    <label for="position" class="col-md-4 col-lg-3 col-form-label">Position</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="position" type="text" class="form-control" id="position" value="">
-                      </div>
-                    <!-- </div> -->
-
-                    <!-- <div class="row mb-3"> -->
-                      <label for="working_at" class="col-md-4 col-lg-3 col-form-label">Current job</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="working_at" type="text" class="form-control" id="working_at" value="">
-                      </div>
-                    <!-- </div> -->
-
-                    <!-- <div class="row mb-3"> -->
-                      <label for="position" class="col-md-4 col-lg-3 col-form-label">Position</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="position" type="text" class="form-control" id="position" value="">
-                      </div>
-                    <!-- </div> -->
-
-                    
-
-                    
-
-                    <!-- <div class="row mb-3"> -->
-                      <!-- <label for="Twitter" class="col-md-4 col-lg-3 col-form-label">Twitter Profile</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="twitter" type="text" class="form-control" id="Twitter" value="">
-                      </div> -->
-                    <!-- </div> -->
-
-                    <!-- <div class="row mb-3"> -->
-                      <!-- <label for="Facebook" class="col-md-4 col-lg-3 col-form-label">Facebook Profile</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="facebook" type="text" class="form-control" id="Facebook" value="">
-                      </div> -->
-                    <!-- </div> -->
-
-                    <!-- <div class="row mb-3"> -->
-                      <!-- <label for="Instagram" class="col-md-4 col-lg-3 col-form-label">Instagram Profile</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="instagram" type="text" class="form-control" id="Instagram" value="">
-                      </div> -->
-                    <!-- </div> -->
-
-                    <!-- <div class="row mb-3"> -->
-                      <!-- <label for="Linkedin" class="col-md-4 col-lg-3 col-form-label">Linkedin Profile</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="linkedin" type="text" class="form-control" id="Linkedin" value="">
-                      </div> -->
-                    <!-- </div> -->
-                    <br><br>
-                     <div class="row">
-                    <div class="text-center">
-                    <button type="submit" class="btn " style="background:#0F718A;"> <a href="" class="text-white">Finish Registration</a> </button>
-                    </div>
-                     </div>
-
-                  </div>
-                
-                  </form>
-              </div>
-                  <!-- End Profile registration Form -->
-
-
-    </div>
-    </div>
+          <br><br>
+          <div class="row">
+            <div class="text-center">
+              <button type="submit" name="submit" class="btn" style="background:#0F718A;"><a href="" class="text-white">Finish Registration</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <!-- End Profile registration Form -->
   </main>
-  <!-- End #main -->
+
+  <?php include "footer.php" ?>
 </body>
 </html>
-
-<?php include "footer.php"?>
-
