@@ -1212,7 +1212,7 @@ section {
 .pricing ul {
   padding: 0;
   list-style: none;
-  color: #4d4643;
+  color: #000;
   text-align: center;
   line-height: 20px;
   font-size: 14px;
@@ -2370,3 +2370,62 @@ section {
 }
 
 /*--------------------------------------------------------------
+commitees styles
+
+/* Style the cards */
+.box {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 1px 15px #0F718A;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Style the card titles */
+.box h4 {
+  font-size: 24px;
+  color: #000;
+}
+
+.box p {
+  font-size: 16px;
+  color: #000;
+}
+
+/* Add background images and set their opacity to 0 */
+.card-1 {
+  /* background-image: url('assets/img/team/team-3.jpg'); */
+  background-color: #0F718A;
+}
+
+.card-2 {
+  background-image: url('assets/img/team/team-3.jpg');
+}
+
+.card-3 {
+  background-image: url('assets/img/tapaImages/Sustain Digital-33 (1).jpgg');
+}
+
+.card-4 {
+  background-image: url('path-to-your-image-2.jpg');
+}
+
+.card-5 {
+  background-image: url('path-to-your-image-2.jpg');
+}
+
+.card-6 {
+  background-image: url('path-to-your-image-2.jpg');
+}
+ 
+/* Add similar styles for other cards */
+/* Adjust background image paths and class names accordingly */
+
+/* When hovering, increase opacity and add a slight shadow */
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 15px #0F718A;
+  opacity: 0;
+}

@@ -19,151 +19,147 @@
 <?php include "header.php" ?>
   
 
-  <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
+<main id="main">
 
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Leadership</h2>
-          <ol>
-            <li><a href="index.php">Home</a></li>
-            <li>Leadership</li>
-          </ol>
-        </div>
 
-      </div>
-    </section>
-    <!-- End Breadcrumbs -->
+<!-- ======= Our Team Section ======= -->
+<section id="team" class="team section-bg">
+  <div class="container">
 
-    <!-- ======= Our Team Section ======= -->
-    <section id="team" class="team section-bg">
-      <div class="container">
+    <div class="section-title" data-aos="fade-up">
+      <h2>TAPA <strong>Leaders</strong></h2>
+      <p>Prominent individuals within the TAPA organization who hold influential roles and responsibilities.</p>
+    </div>
 
-        <div class="section-title" data-aos="fade-up">
-          <h2>TAPA <strong>Leaders</strong></h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up">
-              <div class="member-img">
-                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Magolanga Shagembe</h4>
-                <span>President</span>
-              </div>
+    <div class="row">
+      <!-- First Row -->
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <!-- Member 1 -->
+        <div class="member" data-aos="fade-up">
+          <div class="member-img">
+            <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+            <div class="social">
+              <a href=""><i class="bi bi-twitter"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Hussein Mshunga</h4>
-                <span>Vice President</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="200">
-              <div class="member-img">
-                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Deogratius Ramale</h4>
-                <span>General Secretary</span>
-              </div>
-            </div>
+          <div class="member-info">
+            <h4>Magolanga Shagembe</h4>
+            <span>President</span>
           </div>
         </div>
-
-       <div class="row">
-         <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="300">
-              <div class="member-img">
-                <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Eunice Kitenge</h4>
-                <span>Deputy General Secretary</span>
-              </div>
-            </div>
-          </div>
-        
-
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="300">
-              <div class="member-img">
-                <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Dr. Bertha Losioki</h4>
-                <span>Treasurer</span>
-              </div>
-            </div>
-          </div>
-         
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="300">
-              <div class="member-img">
-                <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Dr. Chris Mauki</h4>
-                <span>EXCOM Advisor</span>
-              </div>
-            </div>
-          </div>
       </div>
-      </div>
-    </section>
-    <!-- End Our Team Section -->
 
-  </main><!-- End #main -->
+      <!-- Member 2 -->
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <div class="member" data-aos="fade-up" data-aos-delay="100">
+          <div class="member-img">
+            <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+            <div class="social">
+              <a href=""><i class="bi bi-twitter"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>Hussein Mshunga</h4>
+            <span>Vice President</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Member 3 -->
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <div class="member" data-aos="fade-up" data-aos-delay="200">
+          <div class="member-img">
+            <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+            <div class="social">
+              <a href=""><i class="bi bi-twitter"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>Deogratius Ramale</h4>
+            <span>General Secretary</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End First Row -->
+
+    <!-- Second Row -->
+    <div class="row">
+      <!-- Member 4 -->
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <div class="member" data-aos="fade-up" data-aos-delay="300">
+          <div class="member-img">
+            <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+            <div class="social">
+              <a href=""><i class="bi bi-twitter"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>Eunice Kitenge</h4>
+            <span>Deputy General Secretary</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Member 5 -->
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <div class="member" data-aos="fade-up" data-aos-delay="400">
+          <div class="member-img">
+            <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+            <div class="social">
+              <a href=""><i class="bi bi-twitter"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>Dr. Bertha Losioki</h4>
+            <span>Treasurer</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Member 6 -->
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <div class="member" data-aos="fade-up" data-aos-delay="500">
+          <div class="member-img">
+            <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+            <div class="social">
+              <a href=""><i class="bi bi-twitter"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>Dr. Chris Mauki</h4>
+            <span>EXCOM Advisor</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Second Row -->
+
+  </div>
+</section>
+<!-- End Our Team Section -->
+
+</main>
+<!-- End #main -->
+
+
   <?php include "footer.php" ?>

@@ -49,7 +49,7 @@ if ($_SERVER["submit"] == "POST") {
         // Insert the new user into the database using prepared statement
         $sql = "INSERT INTO members (name, email, phone, profile_pic, region, address, about, education_level, awards, institution, working_at, position, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sssssssssssss", $username, $email, $phone, $profile_pic, $region, $address, $about, $education_level, $awards, $institution, $working_at, $position, $password);
+        $stmt->bind_param("sssssssssssss", $username, $email, $phone,$password, $profile_pic, $region, $address, $about, $education_level, $awards, $institution, $working_at, $position);
         
         if ($stmt->execute()) {
             echo "Registration successful!";
