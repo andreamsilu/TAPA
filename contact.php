@@ -53,7 +53,7 @@
                 <div class="col-lg-4 info">
                   <i class="bi bi-geo-alt"></i>
                   <h4>Location:</h4>
-                  <p>A108 Adam Street<br>Dar es Salaam, Tanzania</p>
+                  <p>Esaurp Village, Near Mlimani City<br>Dar es Salaam, Tanzania</p>
                 </div>
 
                 <div class="col-lg-4 info mt-4 mt-lg-0">

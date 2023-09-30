@@ -1,7 +1,7 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
-    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div id="heroCarousel" data-bs-interval="3000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
       <div class="carousel-inner" role="listbox">
 
@@ -9,8 +9,9 @@
         <div class="carousel-item active" style="background-image: url(assets/img/tapaImages/slide-1.jpg);">
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
-              <h2><span>TANZANIA PSYCHOLOGICAL ASSOCIATION</span></h2>
-              <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+              <h2><span>Latest updates</span></h2>
+              <h3>TAPA  Launches Student Mentorship Program</h3>
+              <p>TAPA introduces a mentorship program to support the next generation of psychologists and promote excellence in the field.</p>
               <div class="text-center"><a href="about.php" class="btn-get-started">Read More</a></div>
             </div>
           </div>
@@ -21,18 +22,22 @@
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
               <h2>Latest updates</h2>
-              <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+              <h3>TAPA Partners with NGOs to Support Trauma Survivors:</h3>
+              <p>TAPA collaborates with local non-governmental organizations to provide counseling and support services to individuals affected by trauma and disasters.</p>
               <div class="text-center"><a href="about.php" class="btn-get-started">Read More</a></div>
             </div>
           </div>
         </div>
 
         <!-- Slide 3 -->
-        <div class="carousel-item" style="background-image: url(assets/img/tapaImages/slide-3.jpg);">
+        <div class="carousel-item" style="background-image: url(assets/img/team/IMG_0360.JPG);">
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
               <h2>Upcoming Events</h2>
-              <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+              <h3> Marks World Mental Health Day with Awareness Campaign</h3>
+              <p>TAPA joins the global community in raising awareness about mental health on World Mental Health Day through educational events and initiatives.
+
+</p>
               <div class="text-center"><a href="about.php" class="btn-get-started">Read More</a></div>
             </div>
           </div>
