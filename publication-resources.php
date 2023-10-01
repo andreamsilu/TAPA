@@ -35,7 +35,7 @@
     </section>
     <!-- End Breadcrumbs -->
 
-    <!-- ======= Pricing Section ======= -->
+    <!-- ======= publication Section ======= -->
     <section id="pricing" class="pricing">
       <div class="container" data-aos="fade-up">
 
@@ -44,50 +44,25 @@
           <div class="col-lg-4 col-md-6">
             <div class="box fadeIn">
               <h4>TAPA CONSTITUTION</h4>
+
+              <p>TAPA Constitution is a foundational document that outlines the organization's structure, governance, and mission, ensuring transparent and accountable operations.</p>
               <!-- <h4><sup>$</sup>0<span> / month</span></h4> -->
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li class="na">Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
               <div class="btn-wrap">
                 <a href="#" class="btn-buy">Read now</a>
               </div>
             </div>
           </div>
 
-          <!-- <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
-            <div class="box featured">
-              <h4>MEMBERSHIP POLICY</h4>
-               <h4><sup>$</sup>19<span> / month</span></h4> -->
-              <!-- <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Read the policy</a>
-              </div>
-            </div>
-          </div> --> 
+  
 
           <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-            <div class="box">
+            <div class="box" style="background-image: url();">
               <h4>CODE OF CONDUCT</h4>
               <!-- <h4><sup>$</sup>29<span> / month</span></h4> -->
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
-              </ul>
+              <p>The TAPA Code of Ethics defines the ethical expectations for members, ensuring professionalism, integrity, and the well-being of clients in the field of psychology and mental health services in Tanzania. </p>
+              
               <div class="btn-wrap">
-                <a href="#" class="btn-buy">Read Now</a>
+                <a href="assets/ethics-code.pdf" class="btn-buy">Read Now</a>
               </div>
             </div>
           </div>
@@ -95,14 +70,15 @@
             <div class="box">
               <span class="advanced">NEW UPDATES</span>
               <h4>THE UPCOMING EVENTS</h4>
+              <p>We're excited to keep you updated on our latest company developments, including announcements and events. Check back here for updates so you don't miss a thing. Your ongoing support means a lot, and we can't wait to share what's coming soon!</p>
               <!-- <h4><sup>$</sup>49<span> / month</span></h4> -->
-              <ul>
+              <!-- <ul>
                 <li>Aida dere</li>
                 <li>Nec feugiat nisl</li>
                 <li>Nulla at volutpat dola</li>
                 <li>Pharetra massa</li>
                 <li>Massa ultricies mi</li>
-              </ul>
+              </ul> -->
               <div class="btn-wrap">
                 <a href="#" class="btn-buy">Check Coming events</a>
               </div>
