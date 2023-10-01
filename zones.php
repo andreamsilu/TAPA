@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Testimonials - TAPA </title>
+  <title>Branches&Division </title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -38,71 +38,73 @@
     </section>
     <!-- End Breadcrumbs -->
 
-    <!-- ======= Testimonials Section ======= -->
+    <!-- ======= zones/branches Section ======= -->
 
-    <section id="testimonials" class="testimonials section-bg">
+
+<section id="testimonials" class="testimonials section-bg">
     <h2 style="text-align: center;">TAPA <span>BRANCHES</span></h2>
 
-      <div class="container">
+    <div class="container">
 
         <div class="row">
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="testimonial-item mt-4 mt-lg-0">
-            <h2 >SOUTHERN BRANCH</h2>
-              <img src="assets/img/tapa/person1.png" class="testimonial-img" alt="">
-              <h3>Fr.Hugo Lungu</h3>
-              <h4>Branch Leader</h4><br>
-              <p>
-                <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
-                Iringa,Njombe,Mbeya,Rukwa,Songwe,Ruvuma
-                <!-- <i class="bx bxs-quote-alt-right quote-icon-right"></i> -->
-              </p>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="testimonial-item mt-4 mt-lg-0">
+                    <h2>SOUTHERN BRANCH</h2>
+                    <img src="assets/img/tapa/person1.png" class="testimonial-img" alt="">
+                    <h3>Fr.Hugo Lungu</h3>
+                    <h4>Branch Leader</h4>
+                    <h4>
+                        <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
+                        Iringa, Njombe, Mbeya, Rukwa, Songwe, Ruvuma
+                        <!-- <i class="bx bxs-quote-alt-right quote-icon-right"></i> -->
+                    </h4>
+                </div>
             </div>
-          </div>
 
 
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="testimonial-item mt-4 mt-lg-0">
-            <h2 >NORTHERN BRANCH</h2>
-              <img src="assets/img/tapa/person1.png" class="testimonial-img" alt="">
-              <h3>Isack Kimario</h3>
-              <h4>Branch Leader</h4><br>
-              <p>
-                <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
-                Arusha, Kilimanjaro, Tanga, Manyara
-                <!-- <i class="bx bxs-quote-alt-right quote-icon-right"></i> -->
-              </p>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="testimonial-item mt-4 mt-lg-0">
+                    <h2>NORTHERN BRANCH</h2>
+                    <img src="assets/img/tapa/person1.png" class="testimonial-img" alt="">
+                    <h3>Isack Kimario</h3>
+                    <h4>Branch Leader</h4>
+                    <h4>
+                        <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
+                        Arusha, Kilimanjaro, Tanga, Manyara
+                        <!-- <i class="bx bxs-quote-alt-right quote-icon-right"></i> -->
+                    </h4>
+                </div>
             </div>
-          </div>
 
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="testimonial-item mt-4">
-            <h2 >EASTERN BRANCH</h2>
-              <img src="assets/img/tapa/person1.png" class="testimonial-img" alt="">
-              <h3>Alex Ndagabwene</h3>
-              <h4>Branch Leader</h4> <br>
-              <p>
-                <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
-                Dar es Salaam, Morogoro, Pwani
-                <!-- <i class="bx bxs-quote-alt-right quote-icon-right"></i> -->
-              </p>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="testimonial-item mt-4 mt-lg-0">
+                    <h2>EASTERN BRANCH</h2>
+                    <img src="assets/img/tapa/person1.png" class="testimonial-img" alt="">
+                    <h3>Alex Ndagabwene</h3>
+                    <h4>Branch Leader</h4> 
+                    <h4>
+                        <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
+                        Dar es Salaam, Morogoro, h4wani
+                        <!-- <i class="bx bxs-quote-alt-right quote-icon-right"></i> -->
+                    </h4>
+                </div>
             </div>
-          </div>
         </div>
+    
+
 
         <div class="row">
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
             <div class="testimonial-item mt-4">
             <h2 >WESTERN-CENTRAL </h2>
-
               <img src="assets/img/tapa/person1.png" class="testimonial-img" alt="">
               <h3>Shabani Mnkai</h3>
               <h4>Branch Leader</h4> 
-              <p>
+              <h4>
                 <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
                 Singida, Dodoma, Kigoma, Tabora
                 <!-- <i class="bx bxs-quote-alt-right quote-icon-right"></i> -->
-              </p>
+              </h4>
             </div>
           </div>
 
@@ -112,27 +114,26 @@
 
               <img src="assets/img/tapa/person1.png" class="testimonial-img" alt="">
               <h3>Dr. Joel Joshua</h3>
-              <h4>Branch Leader</h4><br>
-              <p>
+              <h4>Branch Leader</h4>
+              <h4>
                 <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
                 Mwanza, Shinyanga, Mara, Kagera
                 <!-- <i class="bx bxs-quote-alt-right quote-icon-right"></i> -->
-              </p>
+              </h4>
             </div>
           </div>
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="500">
             <div class="testimonial-item mt-4">
             <h2 >COASTAL BRANCH</h2>
-
               <img src="assets/img/tapa/person1.png" class="testimonial-img" alt="">
               <h3>Boniphace David</h3>
-              <h4>Branch Leader</h4><br>
-              <p>
+              <h4>Branch Leader</h4>
+              <h4>
                 <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
                 Lindi, Mtwara, Zanzibar
                 <!-- <i class="bx bxs-quote-alt-right quote-icon-right"></i> -->
-              </p>
+              </h4>
               </div>
             </div>
           </div>

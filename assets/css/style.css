@@ -77,7 +77,7 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 15px #0F718A;
 }
 
 #header .logo {
@@ -99,7 +99,8 @@ h6 {
 }
 
 #header .logo img {
-  max-height: 90px;
+  /* max-height: 30px; */
+  width: 40%;
 }
 
 /*--------------------------------------------------------------
@@ -108,10 +109,12 @@ h6 {
 .header-social-links {
   margin-left: 20px;
   border-left: 1px solid #c4c4c4;
+  padding-top: 20px;
+  font-size: 25px;
 }
 
 .header-social-links a {
-  color: #a0a0a0;
+  color: #15A9E5;
   display: inline-block;
   line-height: 0px;
   transition: 0.3s;
@@ -124,12 +127,14 @@ h6 {
 
 .header-social-links a:hover {
   color: #0F718A;
+  transition: 0.3s;
 }
 
 @media (max-width: 768px) {
   .header-social-links {
     padding: 0 15px 0 0;
     border-left: 0;
+    color: #0F718A;
   }
 }
 
@@ -639,6 +644,8 @@ section {
   padding: 70px 20px 40px 20px;
   transition: all ease-in-out 0.3s;
   background: #fff;
+  box-shadow: 1px 1px 1px 1px #0F718A;
+
 
 }
 
@@ -690,7 +697,7 @@ section {
 
 .services .icon-box:hover {
   border-color: #fff;
-  box-shadow: 10px 10px 35px 10px #0F718A;
+  box-shadow: 0px 0px 35px 0px #0F718A;
 }
 
 .services .iconbox-blue i {
@@ -1367,7 +1374,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Testimonials
+# zones/branches
 --------------------------------------------------------------*/
 .testimonials .testimonials-carousel,
 .testimonials .testimonials-slider {
@@ -1377,9 +1384,11 @@ section {
 .testimonials .testimonial-item {
   box-sizing: content-box;
   padding: 40px;
-  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 2px 12px #0F718A;
   position: relative;
-  background: #0F718A;
+  background: #fff;
+  height: 450px;
+  /* color: #000; */
 }
 
 .testimonials .testimonial-item .testimonial-img {
@@ -1394,7 +1403,7 @@ section {
   font-size: 28px;
   font-weight: bold;
   margin: 10px 0 5px 0;
-  color: #FFF;
+  color: #0F718A;
 }
 
 .testimonials .testimonial-item h4 {
