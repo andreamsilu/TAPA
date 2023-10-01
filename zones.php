@@ -39,14 +39,17 @@
     <!-- End Breadcrumbs -->
 
     <!-- ======= Testimonials Section ======= -->
+
     <section id="testimonials" class="testimonials section-bg">
+    <h2 style="text-align: center;">TAPA <span>BRANCHES</span></h2>
+
       <div class="container">
 
         <div class="row">
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="testimonial-item mt-4 mt-lg-0">
             <h2 >SOUTHERN BRANCH</h2>
-              <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+              <img src="assets/img/tapa/person1.png" class="testimonial-img" alt="">
               <h3>Fr.Hugo Lungu</h3>
               <h4>Branch Leader</h4><br>
               <p>
@@ -61,7 +64,7 @@
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="testimonial-item mt-4 mt-lg-0">
             <h2 >NORTHERN BRANCH</h2>
-              <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+              <img src="assets/img/tapa/person1.png" class="testimonial-img" alt="">
               <h3>Isack Kimario</h3>
               <h4>Branch Leader</h4><br>
               <p>
@@ -75,7 +78,7 @@
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
             <div class="testimonial-item mt-4">
             <h2 >EASTERN BRANCH</h2>
-              <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+              <img src="assets/img/tapa/person1.png" class="testimonial-img" alt="">
               <h3>Alex Ndagabwene</h3>
               <h4>Branch Leader</h4> <br>
               <p>
@@ -90,9 +93,9 @@
         <div class="row">
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
             <div class="testimonial-item mt-4">
-            <h2 >WESTERN-CENTRAL BRANCH</h2>
+            <h2 >WESTERN-CENTRAL </h2>
 
-              <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+              <img src="assets/img/tapa/person1.png" class="testimonial-img" alt="">
               <h3>Shabani Mnkai</h3>
               <h4>Branch Leader</h4> 
               <p>
@@ -107,7 +110,7 @@
             <div class="testimonial-item mt-4">
             <h2 >LAKE BRANCH</h2>
 
-              <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+              <img src="assets/img/tapa/person1.png" class="testimonial-img" alt="">
               <h3>Dr. Joel Joshua</h3>
               <h4>Branch Leader</h4><br>
               <p>
@@ -122,7 +125,7 @@
             <div class="testimonial-item mt-4">
             <h2 >COASTAL BRANCH</h2>
 
-              <img src="assets/img/testimonials/testimonials-6.jpg" class="testimonial-img" alt="">
+              <img src="assets/img/tapa/person1.png" class="testimonial-img" alt="">
               <h3>Boniphace David</h3>
               <h4>Branch Leader</h4><br>
               <p>

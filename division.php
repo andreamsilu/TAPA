@@ -14,32 +14,32 @@
           <div class="col-lg-3">
             <div class="box">
               <span>General Psychology</span>
-              <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
-              <h4>Albano Michael</h4>
+              <p>TAPA's General Psychology Division provides a foundational understanding of psychology, helping members explore various branches like clinical, counseling, or research.</p>
+              <!-- <h4>Albano Michael</h4> -->
             </div>
           </div>
 
           <div class="col-lg-3 mt-4 mt-lg-0">
             <div class="box">
               <span>Clinical Psychology</span>
-              <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
-              <h4>Alex Ndagabwene</h4>
+              <p>TAPA's Clinical Psychology Division provides specialized training in assessment, diagnosis, and therapy, preparing members for clinical practice.</p>
+              <!-- <h4>Alex Ndagabwene</h4> -->
             </div>
           </div>
 
           <div class="col-lg-3 mt-4 mt-lg-0">
             <div class="box">
               <span>Social Psychology</span>
-              <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
-              <h4>Sweetbert Anselmi</h4>
+              <p>The Social Psychology Division at TAPA focuses on understanding how individuals are influenced by social factors and their impact on society.</p>
+              <!-- <h4>Sweetbert Anselmi</h4> -->
             </div>
           </div>
 
           <div class="col-lg-3 mt-4 mt-lg-0">
             <div class="box">
               <span>Educational Psychology</span>
-              <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
-              <h4> Dr.Upendo Biswalo</h4>
+              <p>The Educational Psychology Division at TAPA is dedicated to enhancing educational practices by applying psychological principles to learning and instruction.</p>
+              <!-- <h4> Dr.Upendo Biswalo</h4> -->
             </div>
           </div>
 
@@ -50,8 +50,8 @@
           <div class="col-lg-4">
             <div class="box">
               <span>Counseling Psychology</span>
-              <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
-              <h4>Ethel Mabula</h4>
+              <p>TAPA's Counseling Psychology Division focuses on promoting mental health and well-being through counseling services, emphasizing a holistic and person-centered approach.</p>
+              <!-- <h4>Ethel Mabula</h4> -->
 
             </div>
           </div>
@@ -59,16 +59,16 @@
           <div class="col-lg-4 mt-4 mt-lg-0">
             <div class="box">
               <span>Developmental Psychology</span>
-              <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
-              <h4>Pateline Marcel</h4>
+              <p>TAPA's Developmental Psychology Division concentrates on understanding human growth and development across the lifespan, addressing various aspects from infancy to late adulthood.</p>
+              <!-- <h4>Pateline Marcel</h4> -->
             </div>
           </div>
 
           <div class="col-lg-4 mt-4 mt-lg-0">
             <div class="box">
               <span>Organizational & Cognitive Psychology</span>
-              <p class="">Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
-              <h4 class=""> Alex Kamugisha</h4>
+              <p class="">The Organizational & Cognitive Psychology Division within TAPA focuses on studying human behavior in work environments and the cognitive processes that influence it.</p>
+              <!-- <h4 class=""> Alex Kamugisha</h4> -->
             </div>
           </div>
         </div>

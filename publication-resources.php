@@ -46,6 +46,8 @@
               <h4>TAPA CONSTITUTION</h4>
 
               <p>TAPA Constitution is a foundational document that outlines the organization's structure, governance, and mission, ensuring transparent and accountable operations.</p>
+              <br>
+              
               <!-- <h4><sup>$</sup>0<span> / month</span></h4> -->
               <div class="btn-wrap">
                 <a href="#" class="btn-buy">Read now</a>
@@ -59,10 +61,10 @@
             <div class="box" style="background-image: url();">
               <h4>CODE OF CONDUCT</h4>
               <!-- <h4><sup>$</sup>29<span> / month</span></h4> -->
-              <p>The TAPA Code of Ethics defines the ethical expectations for members, ensuring professionalism, integrity, and the well-being of clients in the field of psychology and mental health services in Tanzania. </p>
-              
+              <p>The TAPA Code of Ethics sets ethical standards for members, prioritizing professionalism, integrity, and client well-being in Tanzanian psychology and mental health services. </p>
+              <br>
               <div class="btn-wrap">
-                <a href="assets/ethics-code.pdf" class="btn-buy">Read Now</a>
+              <a href="assets/ethics-code.pdf" class="btn-buy" target="_blank">Read Now</a>
               </div>
             </div>
           </div>
@@ -70,7 +72,9 @@
             <div class="box">
               <span class="advanced">NEW UPDATES</span>
               <h4>THE UPCOMING EVENTS</h4>
-              <p>We're excited to keep you updated on our latest company developments, including announcements and events. Check back here for updates so you don't miss a thing. Your ongoing support means a lot, and we can't wait to share what's coming soon!</p>
+              <p>We can't wait to share upcoming company news, events, and announcements with you. Your continued support means the world to us, and we're excited to keep you in the loop!
+              </p>
+              <br>
               <!-- <h4><sup>$</sup>49<span> / month</span></h4> -->
               <!-- <ul>
                 <li>Aida dere</li>

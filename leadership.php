@@ -23,7 +23,7 @@
 <main id="main">
 
 
-<!-- ======= Our Team Section ======= -->
+<!-- ======= Our leadership Section ======= -->
 <section id="team" class="team section-bg">
   <div class="container">
 
@@ -57,7 +57,7 @@
       <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
         <div class="member" data-aos="fade-up" data-aos-delay="100">
           <div class="member-img">
-            <img src="assets/img/tapa/hussein-mshunga.png" class="img-fluid" alt="">
+            <img src="assets/img/tapa/hussen.png" class="img-fluid" alt="">
             <div class="social">
               <a href=""><i class="bi bi-twitter"></i></a>
               <a href=""><i class="bi bi-facebook"></i></a>
@@ -76,7 +76,7 @@
       <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
         <div class="member" data-aos="fade-up" data-aos-delay="200">
           <div class="member-img">
-            <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+            <img src="assets/img/tapa/person1.png" class="img-fluid" alt="">
             <div class="social">
               <a href=""><i class="bi bi-twitter"></i></a>
               <a href=""><i class="bi bi-facebook"></i></a>
@@ -156,7 +156,7 @@
 
   </div>
 </section>
-<!-- End Our Team Section -->
+<!-- End Our leadership Section -->
 
 </main>
 <!-- End #main -->
