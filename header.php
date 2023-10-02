@@ -8,7 +8,9 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
+          <!-- <li><a href="index.php" class="active">Home</a></li> -->
           <li><a href="index.php" class="active">Home</a></li>
+
 
           <li class="dropdown"><a href=""><span>Membership</span> <i class="bi bi-chevron-down"></i></a>
             <ul>

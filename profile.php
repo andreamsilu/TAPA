@@ -1,27 +1,105 @@
+<?php
+session_start();
+include('connection.php'); // Include your database connection script
+
+// Check if the user is logged in
+if (!isset($_SESSION['user_id'])) {
+  // Redirect to the login page if not logged in
+  header("Location: login.php"); // Replace with your login page URL
+  exit();
+}
+
+// Fetch user details based on their session user_id
+$user_id = $_SESSION['user_id'];
+$sql = "SELECT firstname, lastname, email, phone, address, about FROM members WHERE id=?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $user_id);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($result->num_rows === 1) {
+  $row = $result->fetch_assoc();
+  $firstname = $row["firstname"];
+  $lastname = $row["lastname"];
+  $email = $row["email"];
+  $phone = $row["phone"];
+  $address = $row["address"];
+  $about = $row["about"];
+} else {
+  // Handle the case where the user's details couldn't be retrieved
+  // You can redirect to an error page or display an error message
+  echo "User details not found.";
+  exit();
+}
+
+$stmt->close();
+
+// Check if the edit form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["editProfile"])) {
+  // Process the form data for editing
+  $newFirstname = sanitizeInput($_POST["newFirstname"]);
+  $newLastname = sanitizeInput($_POST["newLastname"]);
+  $newEmail = sanitizeInput($_POST["newEmail"]);
+  $newPhone = sanitizeInput($_POST["newPhone"]);
+  $newAddress = sanitizeInput($_POST["newAddress"]);
+  $newAbout = sanitizeInput($_POST["newAbout"]);
+
+  // Update user details in the database
+  $updateSql = "UPDATE members SET firstname=?, lastname=?, email=?, phone=?, address=?, about=? WHERE id=?";
+  $updateStmt = $conn->prepare($updateSql);
+  $updateStmt->bind_param("ssssssi", $newFirstname, $newLastname, $newEmail, $newPhone, $newAddress, $newAbout, $user_id);
+
+  if ($updateStmt->execute()) {
+    // Update successful, refresh the page
+    $successMessage = "login succesfull";
+    header("Location: profile.php");
+    exit();
+  } else {
+    // Handle the case where the update fails
+    $editError = "Error updating user details.";
+  }
+
+  $updateStmt->close();
+}
+
+// Function to sanitize user input
+function sanitizeInput($data)
+{
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+?>
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<?php  include "titleIcon.php" ?>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <?php include "titleIcon.php" ?>
+
 <body class="m-3 bg-gradient">
-    
-<?php include "header.php" ?>
-<link href="assets/css/style.css" rel="stylesheet">
+
+  <?php include "header.php" ?>
+  <link href="assets/css/style.css" rel="stylesheet">
 
   <main id="main" class="main">
 
-   <!-- ======= Breadcrumbs ======= -->
-   <section id="breadcrumbs" class="breadcrumbs">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Practioner Profile</h2>
+          <h2>Member Profile</h2>
           <ol>
             <li><a href="index.php">Home</a></li>
-            <li>Practioner Profile</li>
+            <li>Member Profile</li>
           </ol>
         </div>
 
@@ -37,14 +115,9 @@
             <div class="card-body profile-card  pt-4 d-flex flex-column align-items-center">
 
               <img src="assets/img/team/team-1.jpg" alt="Profile" style="max-width: 120px;" class="rounded-circle ">
-              <h2>Kevin Anderson</h2>
-              <h3>Web Designer</h3>
-              <div class="social-links mt-2">
-                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-              </div>
+              <h2><?php echo $firstname . " " . $lastname ?></h2>
+              <h3><?php //echo $job 
+                  ?></h3>
             </div>
           </div>
 
@@ -83,46 +156,35 @@
                   <h5 class="card-title">Profile Details</h5>
 
                   <div class="row">
-                    <div class="col-lg-3 col-md-4 label ">Full Name</div>
-                    <div class="col-lg-9 col-md-8">Kevin Anderson</div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Company</div>
-                    <div class="col-lg-9 col-md-8">Lueilwitz, Wisoky and Leuschke</div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Job</div>
-                    <div class="col-lg-9 col-md-8">Web Designer</div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Country</div>
-                    <div class="col-lg-9 col-md-8">USA</div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Address</div>
-                    <div class="col-lg-9 col-md-8">A108 Adam Street, New York, NY 535022</div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Phone</div>
-                    <div class="col-lg-9 col-md-8">(436) 486-3538 x29071</div>
+                    <div class="col-lg-3 col-md-4 label ">Full name</div>
+                    <div class="col-lg-9 col-md-8"> <?php echo $firstname . " " . $lastname; ?></div>
                   </div>
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">Email</div>
-                    <div class="col-lg-9 col-md-8">k.anderson@example.com</div>
+                    <div class="col-lg-9 col-md-8"><?php echo $email; ?></div>
                   </div>
 
+                  <div class="row">
+                    <div class="col-lg-3 col-md-4 label">Phone</div>
+                    <div class="col-lg-9 col-md-8"><?php echo $phone; ?></div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-3 col-md-4 label">Address</div>
+                    <div class="col-lg-9 col-md-8"><?php echo $address; ?></div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-3 col-md-4 label">About me</div>
+                    <div class="col-lg-9 col-md-8"><?php echo $about; ?></div>
+                  </div>
                 </div>
 
                 <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
                   <!-- Profile Edit Form -->
-                  <form>
+                  <form method="POST" action="profile.php">
                     <div class="row mb-3">
                       <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
                       <div class="col-md-8 col-lg-9">
@@ -135,94 +197,105 @@
                     </div>
 
                     <div class="row mb-3">
-                      <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full Name</label>
+                      <label for="firstname" class="col-md-4 col-lg-3 col-form-label">First name</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="fullName" type="text" class="form-control" id="fullName" value="Kevin Anderson">
+                        <input name="firstname" type="text" class="form-control" id="firstname" value="<?php echo $firstname; ?>">
+                      </div>
+                    </div>
+
+                    <div class="row mb-3">
+                      <label for="lastname" class="col-md-4 col-lg-3 col-form-label">Last name</label>
+                      <div class="col-md-8 col-lg-9">
+                        <input name="lastname" type="text" class="form-control" id="lastname" value="<?php echo $lastname; ?>">
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="about" class="col-md-4 col-lg-3 col-form-label">About</label>
                       <div class="col-md-8 col-lg-9">
-                        <textarea name="about" class="form-control" id="about" style="height: 100px">Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.</textarea>
+                        <textarea name="about" class="form-control" id="about" style="height: 100px"><?php echo $about; ?></textarea>
                       </div>
                     </div>
 
                     <div class="row mb-3">
-                      <label for="company" class="col-md-4 col-lg-3 col-form-label">Company</label>
+                      <label for="organization" class="col-md-4 col-lg-3 col-form-label">Organization</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="company" type="text" class="form-control" id="company" value="Lueilwitz, Wisoky and Leuschke">
+                        <input name="neworganization" type="text" class="form-control" id="organization" value="<?php echo $organization; ?>">
                       </div>
                     </div>
 
                     <div class="row mb-3">
-                      <label for="Job" class="col-md-4 col-lg-3 col-form-label">Job</label>
+                      <label for="job" class="col-md-4 col-lg-3 col-form-label">Job</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="job" type="text" class="form-control" id="Job" value="Web Designer">
+                        <input name="newJob" type="text" class="form-control" id="job" value="<?php echo $job; ?>">
                       </div>
                     </div>
 
                     <div class="row mb-3">
-                      <label for="Country" class="col-md-4 col-lg-3 col-form-label">Country</label>
+                      <label for="country" class="col-md-4 col-lg-3 col-form-label">Country</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="country" type="text" class="form-control" id="Country" value="USA">
+                        <input name="newCountry" type="text" class="form-control" id="country" value="<?php echo $country; ?>">
                       </div>
                     </div>
 
                     <div class="row mb-3">
-                      <label for="Address" class="col-md-4 col-lg-3 col-form-label">Address</label>
+                      <label for="address" class="col-md-4 col-lg-3 col-form-label">Address</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="address" type="text" class="form-control" id="Address" value="A108 Adam Street, New York, NY 535022">
+                        <input name="newAddress" type="text" class="form-control" id="address" value="<?php echo $address; ?>">
                       </div>
                     </div>
 
                     <div class="row mb-3">
-                      <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Phone</label>
+                      <label for="phone" class="col-md-4 col-lg-3 col-form-label">Phone</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="phone" type="text" class="form-control" id="Phone" value="(436) 486-3538 x29071">
+                        <input name="newPhone" type="text" class="form-control" id="phone" value="<?php echo $phone; ?>">
                       </div>
                     </div>
 
                     <div class="row mb-3">
-                      <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
+                      <label for="email" class="col-md-4 col-lg-3 col-form-label">Email</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="email" type="email" class="form-control" id="Email" value="k.anderson@example.com">
+                        <input name="newEmail" type="email" class="form-control" id="email" value="<?php echo $email; ?>">
                       </div>
                     </div>
 
-                    <div class="row mb-3">
-                      <label for="Twitter" class="col-md-4 col-lg-3 col-form-label">Twitter Profile</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="twitter" type="text" class="form-control" id="Twitter" value="https://twitter.com/#">
-                      </div>
-                    </div>
+                    <!-- <div class="row mb-3">
+    <label for="twitter" class="col-md-4 col-lg-3 col-form-label">Twitter Profile</label>
+    <div class="col-md-8 col-lg-9">
+      <input name="newTwitter" type="text" class="form-control" id="twitter" value="<?php //echo $twitter; 
+                                                                                    ?>">
+    </div>
+  </div>
 
-                    <div class="row mb-3">
-                      <label for="Facebook" class="col-md-4 col-lg-3 col-form-label">Facebook Profile</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="facebook" type="text" class="form-control" id="Facebook" value="https://facebook.com/#">
-                      </div>
-                    </div>
+  <div class="row mb-3">
+    <label for="facebook" class="col-md-4 col-lg-3 col-form-label">Facebook Profile</label>
+    <div class="col-md-8 col-lg-9">
+      <input name="newFacebook" type="text" class="form-control" id="facebook" value="<?php //echo $facebook; 
+                                                                                      ?>">
+    </div>
+  </div>
 
-                    <div class="row mb-3">
-                      <label for="Instagram" class="col-md-4 col-lg-3 col-form-label">Instagram Profile</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="instagram" type="text" class="form-control" id="Instagram" value="https://instagram.com/#">
-                      </div>
-                    </div>
+  <div class="row mb-3">
+    <label for="instagram" class="col-md-4 col-lg-3 col-form-label">Instagram Profile</label>
+    <div class="col-md-8 col-lg-9">
+      <input name="newInstagram" type="text" class="form-control" id="instagram" value="<?php //echo $instagram; 
+                                                                                        ?>">
+    </div>
+  </div>
 
-                    <div class="row mb-3">
-                      <label for="Linkedin" class="col-md-4 col-lg-3 col-form-label">Linkedin Profile</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="linkedin" type="text" class="form-control" id="Linkedin" value="https://linkedin.com/#">
-                      </div>
-                    </div>
+  <div class="row mb-3">
+    <label for="linkedin" class="col-md-4 col-lg-3 col-form-label">LinkedIn Profile</label>
+    <div class="col-md-8 col-lg-9">
+      <input name="newLinkedin" type="text" class="form-control" id="linkedin" value="<?php //echo $linkedin; 
+                                                                                      ?>">
+    </div>
+  </div> -->
 
                     <div class="text-center">
-                      <button type="submit" class="btn btn-primary">Save Changes</button>
+                      <button type="submit" class="btn btn-primary" name="editProfile">Save Changes</button>
                     </div>
                   </form>
-                  <!-- End Profile Edit Form -->
+
 
                 </div>
 
@@ -232,7 +305,7 @@
                   <form>
 
                     <div class="row mb-3">
-                      <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Email Notifications</label>
+                      <label for="fullname" class="col-md-4 col-lg-3 col-form-label">Email Notifications</label>
                       <div class="col-md-8 col-lg-9">
                         <div class="form-check">
                           <input class="form-check-input" type="checkbox" id="changesMade" checked>
@@ -266,12 +339,11 @@
                     </div>
                   </form>
                   <!-- End settings Form -->
-
                 </div>
 
                 <div class="tab-pane fade pt-3" id="profile-change-password">
                   <!-- Change Password Form -->
-                  <form>
+                  <form action="profile/change-password.php" method="POST" >
 
                     <div class="row mb-3">
                       <label for="currentPassword" class="col-md-4 col-lg-3 col-form-label">Current Password</label>
@@ -290,7 +362,7 @@
                     <div class="row mb-3">
                       <label for="renewPassword" class="col-md-4 col-lg-3 col-form-label">Re-enter New Password</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="renewpassword" type="password" class="form-control" id="renewPassword">  
+                        <input name="renewpassword" type="password" class="form-control" id="renewPassword">
                       </div>
                     </div>
 
@@ -299,9 +371,7 @@
                     </div>
                   </form>
                   <!-- End Change Password Form -->
-
                 </div>
-
               </div>
               <!-- End Bordered Tabs -->
 
@@ -315,5 +385,5 @@
   </main>
   <!-- End #main -->
 
-  </body>
+</body>
 <?php include "footer.php" ?>

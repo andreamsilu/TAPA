@@ -85,7 +85,7 @@
                
               <div class="col-md-6 form-group">
                   <label for="firstName" class="col-form-label">Full Name</label>
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your first name" required>
+                  <input type="text" name="firstname" class="form-control" id="name" placeholder="Your first name" required>
                 </div>
 
                 <div class="col-md-6 form-group">
