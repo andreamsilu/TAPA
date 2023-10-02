@@ -30,6 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Check the request method
 
         if ($stmt->execute()) {
             echo "Registration successful!";
+            header("Location:login.php");
         } else {
             echo "Error: " . $stmt->error;
         }

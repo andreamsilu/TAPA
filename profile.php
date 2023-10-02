@@ -113,12 +113,22 @@ function sanitizeInput($data)
 
           <div class="card">
             <div class="card-body profile-card  pt-4 d-flex flex-column align-items-center">
-
-              <img src="assets/img/team/team-1.jpg" alt="Profile" style="max-width: 120px;" class="rounded-circle ">
+              <h2 class="text-center">Personal information</h2>
+              <img src="https://via.placeholder.com/120" alt="Default Avatar" style="max-width: 120px;" class="rounded-circle">
               <h2><?php echo $firstname . " " . $lastname ?></h2>
-              <h3><?php //echo $job 
-                  ?></h3>
+
+              <h3> <span>Full Name:</span><?php echo $firstname . " " . $lastname ?></h3>
+              <h3> <span>Email:</span><?php echo $email ?></h3>
+              <h3> <span>Phone:</span><?php echo $phone ?></h3>
+              <h3> <span>Address:</span><?php echo $address ?></h3>
+
+
+
+
             </div>
+
+
+
           </div>
 
         </div>
@@ -131,15 +141,19 @@ function sanitizeInput($data)
               <ul class="nav nav-tabs nav-tabs-bordered">
 
                 <li class="nav-item">
-                  <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Overview</button>
+                  <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-education">Education</button>
                 </li>
 
                 <li class="nav-item">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Edit Profile</button>
+                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Certification&Awards</button>
                 </li>
 
                 <li class="nav-item">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-settings">Settings</button>
+                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#member-fee">Membership Fee</button>
+                </li>
+
+                <li class="nav-item">
+                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#cvTabsContent">My cv</button>
                 </li>
 
                 <li class="nav-item">
@@ -148,36 +162,82 @@ function sanitizeInput($data)
 
               </ul>
               <div class="tab-content pt-2">
+                <div class="tab-pane fade show active profile-education" id="profile-education">
+                  <div class="container mt-5">
+                    <div class="container mt-5">
+                      <div class="container mt-5">
+                        <div class="card">
+                          <div class="card-body text-center">
+                            <h5 class="card-title"><i class="bi bi-graduation-cap"></i> Education</h5>
+                            <button class="btn btn-primary" id="openModalButton">ADD</button>
+                            <button class="btn btn-gradient" id="openModalButton">Edit</button>
+                          </div>
+                        </div>
+                      </div>
 
-                <div class="tab-pane fade show active profile-overview" id="profile-overview">
-                  <h5 class="card-title">About</h5>
-                  <p class="small fst-italic">Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.</p>
-
-                  <h5 class="card-title">Profile Details</h5>
-
-                  <div class="row">
-                    <div class="col-lg-3 col-md-4 label ">Full name</div>
-                    <div class="col-lg-9 col-md-8"> <?php echo $firstname . " " . $lastname; ?></div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Email</div>
-                    <div class="col-lg-9 col-md-8"><?php echo $email; ?></div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Phone</div>
-                    <div class="col-lg-9 col-md-8"><?php echo $phone; ?></div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Address</div>
-                    <div class="col-lg-9 col-md-8"><?php echo $address; ?></div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-lg-3 col-md-4 label">About me</div>
-                    <div class="col-lg-9 col-md-8"><?php echo $about; ?></div>
+                      <!-- Modal -->
+                      <div class="modal" id="educationModal" tabindex="-1" role="dialog" aria-labelledby="educationModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="educationModalLabel"> <i class="bi bi-graduation-cap"></i>Add Education Information</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <!-- Your education information form goes here -->
+                              <div class="container mt-5">
+                                <form>
+                                  <div class="form-group">
+                                    <label for="courseTitle"><span> <i class="fas fa-graduation-cap"></i></span> Title</label>
+                                    <input type="text" class="form-control" id="courseTitle" placeholder="E.g. BSc in Engineering">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="qualificationCategory">Qualification Category</label>
+                                    <select class="form-control" id="qualificationCategory">
+                                      <option value="Accounting - H011, H411">Accounting - H011, H411</option>
+                                      <option value="Accounting and Business Administration">Accounting and Business Administration</option>
+                                      <!-- Add more options here -->
+                                    </select>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="level">Level</label>
+                                    <input type="text" class="form-control" id="level">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="countryOfInstitution">Country of Institution</label>
+                                    <input type="text" class="form-control" id="countryOfInstitution">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="institution">Institution</label>
+                                    <input type="text" class="form-control" id="institution">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="startDate">Start Date</label>
+                                    <input type="date" class="form-control" id="startDate">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="endDate">End Date</label>
+                                    <input type="date" class="form-control" id="endDate">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="currentlyStudyingAt">Currently Studying At</label>
+                                    <input type="text" class="form-control" id="currentlyStudyingAt">
+                                  </div>
+                                  <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary">Save</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
                   </div>
                 </div>
 
@@ -299,51 +359,110 @@ function sanitizeInput($data)
 
                 </div>
 
-                <div class="tab-pane fade pt-3" id="profile-settings">
+                <div class="tab-pane fade pt-3" id="member-fee">
 
                   <!-- Settings Form -->
-                  <form>
+                  <div class="container mt-5">
+  <!-- Tab Structure -->
+  <ul class="nav nav-tabs" id="feeTabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="fee-tab" data-toggle="tab" href="#fee" role="tab" aria-controls="fee" aria-selected="true">Membership Fee</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="payment-tab" data-toggle="tab" href="#payment" role="tab" aria-controls="payment" aria-selected="false">Payment Status</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="add-payment-tab" data-toggle="tab" href="#add-payment" role="tab" aria-controls="add-payment" aria-selected="false">Add Payment</a>
+    </li>
+  </ul>
+  <div class="tab-content" id="feeTabsContent">
+    <!-- Membership Fee Tab Pane -->
+    <div class="tab-pane fade show active" id="fee" role="tabpanel" aria-labelledby="fee-tab">
+      <div class="container">
+        <h2 class="mt-4">Membership Fee Page</h2>
+        <hr>
+        <h3>Membership Fee Details</h3>
+        <p>Membership Type: Premium</p>
+        <p>Fee Amount: $100 per year</p>
+        <p>Payment Due Date: January 15th</p>
+        <!-- Add more membership fee details here -->
+      </div>
+    </div>
+    <!-- Payment Status Tab Pane -->
+    <div class="tab-pane fade" id="payment" role="tabpanel" aria-labelledby="payment-tab">
+      <div class="container">
+        <h2 class="mt-4">Payment Status</h2>
+        <hr>
+        <p>Payment Status: Paid</p>
+        <p>Payment Date: January 10th</p>
+        <!-- Add more payment status details here -->
+      </div>
+    </div>
+    <!-- Add Payment Tab Pane -->
+    <div class="tab-pane fade" id="add-payment" role="tabpanel" aria-labelledby="add-payment-tab">
+      <div class="container">
+        <h2 class="mt-4">Add Payment</h2>
+        <hr>
+        <!-- Payment form goes here -->
+        <form>
+          <div class="form-group">
+            <label for="paymentAmount">Payment Amount</label>
+            <input type="text" class="form-control" id="paymentAmount" placeholder="Enter payment amount">
+          </div>
+          <div class="form-group">
+            <label for="paymentDate">Payment Date</label>
+            <input type="date" class="form-control" id="paymentDate">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit Payment</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- End of Tab Structure -->
+</div>
 
-                    <div class="row mb-3">
-                      <label for="fullname" class="col-md-4 col-lg-3 col-form-label">Email Notifications</label>
-                      <div class="col-md-8 col-lg-9">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="changesMade" checked>
-                          <label class="form-check-label" for="changesMade">
-                            Changes made to your account
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="newProducts" checked>
-                          <label class="form-check-label" for="newProducts">
-                            Information on new products and services
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="proOffers">
-                          <label class="form-check-label" for="proOffers">
-                            Marketing and promo offers
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="securityNotify" checked disabled>
-                          <label class="form-check-label" for="securityNotify">
-                            Security alerts
-                          </label>
+
+                      <!-- End settings Form -->
+                    </div>
+
+                    <div class="tab-pane fade pt-3" id="cvTabsContent">
+                      <div class="tab-pane fade show active" id="cv" role="tabpanel" aria-labelledby="cv-tab">
+                        <div class="container">
+                          <h2 class="mt-4">Curriculum Vitae (CV)</h2>
+                          <hr>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <h3>Personal Information</h3>
+                              <p>Name: <?php echo $firstname . " " . $lastname ?></p>
+                              <p>Email: <?php echo $email ?></p>
+                              <p>Phone: <?php echo $phone ?></p>
+                              <p>Address: <?php echo $address ?></p>
+                            </div>
+                            <div class="col-md-6">
+                              <img src="https://via.placeholder.com/120" alt="Default Avatar" style="max-width: 120px; margin-left:150px;margin-top:50px" class="avatar">
+                            </div>
+                          </div>
+                          <hr>
+                          <h3>Education</h3>
+                          <p>BSc in Engineering</p>
+                          <p>University of Example</p>
+                          <p>Graduated: 2020</p>
+                          <!-- Add more education details here -->
+                          <hr>
+                          <h3>Work Experience</h3>
+                          <p>Software Engineer</p>
+                          <p>Example Company</p>
+                          <p>Duration: 2018-2021</p>
+                          <!-- Add more work experience details here -->
                         </div>
                       </div>
                     </div>
-
-                    <div class="text-center">
-                      <button type="submit" class="btn btn-primary">Save Changes</button>
-                    </div>
-                  </form>
-                  <!-- End settings Form -->
                 </div>
+
 
                 <div class="tab-pane fade pt-3" id="profile-change-password">
                   <!-- Change Password Form -->
-                  <form action="profile/change-password.php" method="POST" >
+                  <form action="profile/change-password.php" method="POST">
 
                     <div class="row mb-3">
                       <label for="currentPassword" class="col-md-4 col-lg-3 col-form-label">Current Password</label>
@@ -386,4 +505,24 @@ function sanitizeInput($data)
   <!-- End #main -->
 
 </body>
-<?php include "footer.php" ?>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+  // Add an event listener to open the modal when the button is clicked
+  document.getElementById("openModalButton").addEventListener("click", function() {
+    document.getElementById("educationModal").style.display = "block"; // Display the modal
+  });
+
+  // Close the modal when the close button or backdrop is clicked
+  document.querySelector(".modal .close").addEventListener("click", function() {
+    document.getElementById("educationModal").style.display = "none";
+  });
+
+  // Close the modal when the "Close" button is clicked
+  document.querySelector(".modal-footer .btn-secondary").addEventListener("click", function() {
+    document.getElementById("educationModal").style.display = "none";
+  });
+</script>
+<?php //include "footer.php" 
+
+?>
