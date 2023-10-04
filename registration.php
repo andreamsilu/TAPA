@@ -46,7 +46,7 @@
 
     <section id="contact" class="contact">
       <div class="container">
-      <h1 style="text-align: center;">Getting started as TAPA member</h1>
+      <h1 class="text-center">Getting started as TAPA member</h1>
 
         <!-- <div class="row justify-content-center" data-aos="fade-up"> -->
 
@@ -105,7 +105,7 @@
 
                 <div class="col-md-6 form-group mt-3 mt-md-0">
                 <label for="password" class="col-form-label">Password</label>
-                  <input type="password" class="form-control" name="password" id="password" placeholder="Your passw0rd" required>
+                  <input type="password" class="form-control" name="password" id="password" placeholder="Your password" required>
                 </div>
 
                 <div class="col-md-6 form-group mt-3 mt-md-0">
