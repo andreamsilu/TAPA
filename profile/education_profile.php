@@ -1,76 +1,128 @@
-<div class="container mt-5">
-    <div class="container mt-5">
-        <div class="container mt-5">
-            <div class="card">
-                <div class="card-body text-center">
-                    <h5 class="card-title"><i class="bi bi-graduation-cap"></i> Education</h5>
-                    <button class="btn btn-primary" id="openModalButton">ADD</button>
-                    <button class="btn btn-gradient" id="openModalButton">Edit</button>
-                </div>
-            </div>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
 
-        <!-- Modal -->
-        <div class="modal" id="educationModal" tabindex="-1" role="dialog" aria-labelledby="educationModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="educationModalLabel"> <i class="bi bi-graduation-cap"></i>Add Education Information</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Style for the form (initially hidden) */
+        #EducationForm {
+            display: none;
+        }
+
+        #container {
+            box-shadow: 10px 20px 30px blue;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-0 p-3">
+        <row class="justify-content-center">
+            <div class="card text-center w-80">
+                <div class="card-header">
+                    <i class="fa-solid fa-graduation-cap" style="color: #1e4d9f; text-align:left;"></i>Education
+                </div>
+                <div class="card-body">
+                    <!-- "Add" button with onclick event to show the form -->
+                    <button class="btn btn-primary" onclick="showEducationForm()">Add</button>
+
+                    <!-- Education and Awards Form (Initially hidden) -->
+                    <!-- Education Form -->
+                    <form id="EducationForm">
+                        <!-- Close button to close the form -->
+                        <button type="button" class="close" aria-label="Close" onclick="closeEducationForm()">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                    </div>
-                    <div class="modal-body">
-                        <!-- Your education information form goes here -->
-                        <div class="container mt-5">
-                            <form>
-                                <div class="form-group">
-                                    <label for="courseTitle"><span> <i class="fas fa-graduation-cap"></i></span> Title</label>
-                                    <input type="text" class="form-control" id="courseTitle" placeholder="E.g. BSc in Engineering">
-                                </div>
-                                <div class="form-group">
-                                    <label for="qualificationCategory">Qualification Category</label>
-                                    <select class="form-control" id="qualificationCategory">
-                                        <option value="Accounting - H011, H411">Accounting - H011, H411</option>
-                                        <option value="Accounting and Business Administration">Accounting and Business Administration</option>
-                                        <!-- Add more options here -->
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="level">Level</label>
-                                    <input type="text" class="form-control" id="level">
-                                </div>
-                                <div class="form-group">
-                                    <label for="countryOfInstitution">Country of Institution</label>
-                                    <input type="text" class="form-control" id="countryOfInstitution">
-                                </div>
-                                <div class="form-group">
-                                    <label for="institution">Institution</label>
-                                    <input type="text" class="form-control" id="institution">
-                                </div>
-                                <div class="form-group">
-                                    <label for="startDate">Start Date</label>
-                                    <input type="date" class="form-control" id="startDate">
-                                </div>
-                                <div class="form-group">
-                                    <label for="endDate">End Date</label>
-                                    <input type="date" class="form-control" id="endDate">
-                                </div>
-                                <div class="form-group">
-                                    <label for="currentlyStudyingAt">Currently Studying At</label>
-                                    <input type="text" class="form-control" id="currentlyStudyingAt">
-                                </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </form>
+                        <hr style="border: 2px solid #15A9E5; margin: 20px 0;">
+                        <br>
+                        <div class="form-group">
+                            <label for="qualificationCategory">Qualification Category</label>
+                            <select class="form-control" id="qualificationCategory">
+                                <option value="Accounting - H011, H411">Accounting - H011, H411</option>
+                                <option value="Accounting and Business Administration">Accounting and Business Administration</option>
+                                <!-- Add more options here -->
+                            </select>
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save</button>
-                    </div>
+                        <div class="form-group">
+                            <label for="level">Level</label>
+                            <input type="text" class="form-control" id="level">
+                        </div>
+                        <div class="form-group">
+                            <label for="countryOfInstitution">Country of Institution</label>
+                            <input type="text" class="form-control" id="countryOfInstitution">
+                        </div>
+                        <div class="form-group">
+                            <label for="institution">Institution</label>
+                            <input type="text" class="form-control" id="institution">
+                        </div>
+                        <div class="form-group">
+                            <label for="startDate">Start Date</label>
+                            <input type="date" class="form-control" id="startDate">
+                        </div>
+                        <div class="form-group">
+                            <label for="endDate">End Date</label>
+                            <input type="date" class="form-control" id="endDate">
+                        </div>
+                        <div class="form-group">
+                            <label for="currentlyStudyingAt">Currently Studying At</label>
+                            <input type="text" class="form-control" id="currentlyStudyingAt">
+                        </div>
+                        <!-- Cancel button to cancel and close the form -->
+                        <button type="button" class="btn btn-secondary" onclick="closeEducationForm()">Cancel</button>
+                        <!-- Submit button to submit the form -->
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
+
+                    <style>
+                        /* CSS styles to align labels to the left (start) of form fields */
+                        form {
+                            display: flex;
+                            flex-direction: column;
+                        }
+
+                        .form-group {
+                            display: flex;
+                            flex-direction: column;
+                            margin-bottom: 10px;
+                        }
+
+                        label {
+                            margin-bottom: 5px;
+                            text-align: left;
+                        }
+
+                        .form-control {
+                            width: 100%;
+                        }
+                    </style>
+
+
                 </div>
             </div>
-        </div>
+        </row>
     </div>
-    <br>
-</div>
+
+    <!-- Include Bootstrap JS and jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Function to show the Education form
+        function showEducationForm() {
+            document.getElementById("EducationForm").style.display = "block";
+        }
+
+        // Function to close the Education form
+        function closeEducationForm() {
+            document.getElementById("EducationForm").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
