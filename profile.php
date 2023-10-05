@@ -67,6 +67,7 @@ include('myprofile.php'); // Include your backend script
                   <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-change-password">Change Password</button>
                 </li>
               </ul>
+              
               <!-- =======================================education profile``===================================================== -->
               <div class="tab-content pt-2">
                 <div class="tab-pane fade show active profile-education" id="profile-education">
