@@ -1,5 +1,5 @@
 <?php
-include('myprofile.php'); // Include your backend script
+include('forms/myprofile.php'); // Include your backend script
 ?>
 
 <!DOCTYPE html>

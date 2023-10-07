@@ -11,7 +11,7 @@
                 <p>Address: <?php echo $address ?></p>
             </div>
             <div class="col-md-6">
-                <img src="https://via.placeholder.com/120" alt="Default Avatar" style="max-width: 120px; margin-left:150px;margin-top:50px" class="avatar">
+                <img src="forms/uploads/<?php echo $profile_pic ?>" alt="Default Avatar" style="max-width: 120px; margin-left:150px;margin-top:50px" class="avatar">
             </div>
         </div>
         <hr>

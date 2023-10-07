@@ -80,7 +80,7 @@
 
         <div class="row mt-2 justify-content-center" data-aos="fade-up">
           <div class="col-lg-10">
-            <form action="register.php" method="post" role="form" class="php-email-form">
+            <form action="forms/register.php" method="post" role="form" class="php-email-form">
               <div class="row">
                
               <div class="col-md-6 form-group">
@@ -116,6 +116,10 @@
               <div class="form-group mt-3">
               <label for="address" class="col-form-label">Address</label>
                 <input type="text" class="form-control" name="address" id="addrress" placeholder="address" required>
+              </div>
+              <div class="form-group mt-3">
+              <label for="profile_pic" class="col-form-label">profile picture</label>
+                <input type="file" class="form-control" name="profile_pic" id="profile_pic" placeholder="profile_pic" required>
               </div>
 
               <div class="form-group mt-3">
