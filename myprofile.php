@@ -3,15 +3,15 @@ session_start();
 include('connection.php'); // Include your database connection script
 
 // Check if the user is logged in
-if (!isset($_SESSION['user_id'])) {
+if (!isset($_SESSION['member_id'])) {
   // Redirect to the login page if not logged in
   header("Location: login.php"); // Replace with your login page URL
   exit();
 }
 
 // Fetch user details based on their session user_id
-$user_id = $_SESSION['user_id'];
-$sql = "SELECT firstname, lastname, email, phone, address, about FROM members WHERE id=?";
+$user_id = $_SESSION['member_id'];
+$sql = "SELECT firstname, lastname, email, phone, address, about FROM members WHERE member_id=?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $user_id);
 $stmt->execute();

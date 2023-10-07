@@ -117,6 +117,17 @@
               <label for="address" class="col-form-label">Address</label>
                 <input type="text" class="form-control" name="address" id="addrress" placeholder="address" required>
               </div>
+
+              <div class="form-group mt-3">
+                                <label for="membership_type" class="col-form-label">Select Membership category</label>
+                                <select class="form-control" id="membership_type"  name="membership_type"required>
+                                    <option value="" disabled selected>Select membership category</option>
+                                    <option value="student">Student Member</option>
+                                    <option value="assiciate">Associate Mamber</option>
+                                    <option value="affiliate">Affiliate Member</option>
+                                    <option value="foreignAffiliate">Foreign Affiliate Member</option>
+                                </select>
+                            </div>
               <div class="form-group mt-3">
               <label for="about" class="col-form-label">Tell about yourself</label>
                 <textarea class="form-control" name="about" rows="3" placeholder="about" required></textarea>

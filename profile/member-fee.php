@@ -1,3 +1,5 @@
+
+
 <!-- Settings Form -->
 <div class="container mt-0 p-3">
   <!-- Tab Structure -->
@@ -31,7 +33,7 @@
         <h3 class="mt-4">Payment Status</h3>
         <hr>
         <p>Payment Status: Paid</p>
-        <p>Payment Date: January 10th</p>
+        <p>Payment Date: <?php echo date("hr") ?> </p>
         <!-- Add more payment status details here -->
       </div>
     </div>
@@ -45,24 +47,28 @@
                         <h3 class="text-center">Make a Payment</h3>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form method="post" action="forms/fee-payment.php">
                             <div class="form-group">
                                 <label for="paymentAmount">Payment Amount</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">$</span>
                                     </div>
-                                    <input type="number" step="0.01" class="form-control" id="paymentAmount" placeholder="Enter payment amount" required>
+                                    <input type="number" step="0.01" class="form-control"name="paymentAmount"  id="paymentAmount" placeholder="Enter payment amount" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="paymentDate">Payment Date</label>
-                                <input type="date" class="form-control" id="paymentDate" required>
+                                <input type="date" class="form-control" name="paymentDate" id="paymentDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="dueDate">Due Date</label>
+                                <input type="date" class="form-control" name="dueDate" id="dueDate" required>
                             </div>
                             
                             <div class="form-group">
                                 <label for="paymentMethod">Select Payment Method</label>
-                                <select class="form-control" id="paymentMethod" required>
+                                <select class="form-control" id="paymentMethod"  name="paymentMethod"required>
                                     <option value="" disabled selected>Select payment method</option>
                                     <option value="mpesa">M-Pesa</option>
                                     <option value="tigopesa">Tigo Pesa</option>
@@ -72,7 +78,17 @@
                             </div>
                             <div class="form-group">
                                 <label for="phoneNumber">Phone Number</label>
-                                <input type="tel" class="form-control" id="phoneNumber" placeholder="Enter your phone number" required>
+                                <input type="tel" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="Enter your phone number" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="membership_type">Select Membership category</label>
+                                <select class="form-control" id="membership_type"  name="membership_type"required>
+                                    <option value="" disabled selected>Select membership category</option>
+                                    <option value="student">Student Member</option>
+                                    <option value="assiciate">Associate Mamber</option>
+                                    <option value="affiliate">Affiliate Member</option>
+                                    <option value="foreignAffiliate">Foreign Affiliate Member</option>
+                                </select>
                             </div>
 
                             <button type="submit" class="btn btn-primary btn-block">Submit Payment</button>
