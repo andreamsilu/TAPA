@@ -17,8 +17,8 @@
             <h2 class="text-center mb-4">Personal Information</h2>
             <div class="profile-image">
                 <!-- <img src="https://via.placeholder.com/120" alt="Default Avatar" class="rounded-circle img-thumbnail"> -->
-                <img src= "forms/uploads/<?php echo $profile_pic ?>" alt="Default Avatar" class="rounded-circle img-thumbnail">
-                            </div>
+                <img src="forms/uploads/<?php echo $profile_pic ?>" alt="Default Avatar" class="rounded-circle img-thumbnail">
+            </div>
             <div class="profile-details mt-4">
                 <h2 class="text-center"><?php echo $firstname . " " . $lastname ?></h2>
                 <div class="profile-info">
@@ -57,7 +57,7 @@
                     <!-- Add this form below the displayed information -->
                     <form id="editProfileForm">
                         <div class="row">
-                        <div class="  -group">
+                            <div class="  -group">
                                 <label for="profilepic">Profile picture:</label>
                                 <input type="file" class="form-control" id="profilepic" name="profilepic" placeholder="upload profile pic" value="forms/uploads/<?php echo $profile_pic  ?>">
                             </div>
@@ -83,14 +83,28 @@
                                 <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter Phone" value="<?php echo $phone ?>">
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="address">Address:</label>
+                                <input type="text" class="form-control" id="address" name="address" placeholder="Enter Address" value="<?php echo $address ?>">
+                            </div>
+                            <div class="col-md-6 alertform-group">
+                                <label for="membership_type" class="col-form-label">Select Membership category</label>
+                                <select class="form-control" id="membership_type" name="membership_type" required>
+                                    <option value="" disabled selected>Select membership category</option>
+                                    <option value="student">Student Member</option>
+                                    <option value="assiciate">Associate Mamber</option>
+                                    <option value="affiliate">Affiliate Member</option>
+                                    <option value="foreignAffiliate">Foreign Affiliate Member</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="form-group">
-                            <label for="address">Address:</label>
-                            <input type="text" class="form-control" id="address" name="address" placeholder="Enter Address" value="<?php echo $address ?>">
+                            <label for="about" class="col-form-label">Tell about yourself</label>
+                            <textarea class="form-control" name="about" rows="2" placeholder="about" required></textarea>
                         </div>
                     </form>
-
                 </div>
-
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="closeEditInformationForm()">Close</button>
                     <button type="button" class="btn btn-primary">Save Changes</button>

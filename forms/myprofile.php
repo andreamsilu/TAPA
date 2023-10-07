@@ -35,41 +35,5 @@ if ($result->num_rows === 1) {
 }
 
 $stmt->close();
-
-// Check if the edit form is submitted
-// if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["editProfile"])) {
-//   // Process the form data for editing
-//   $newFirstname = sanitizeInput($_POST["newFirstname"]);
-//   $newLastname = sanitizeInput($_POST["newLastname"]);
-//   $newEmail = sanitizeInput($_POST["newEmail"]);
-//   $newPhone = sanitizeInput($_POST["newPhone"]);
-//   $newAddress = sanitizeInput($_POST["newAddress"]);
-//   $newAbout = sanitizeInput($_POST["newAbout"]);
-
-//   // Update user details in the database
-//   $updateSql = "UPDATE members SET firstname=?, lastname=?, email=?, phone=?, address=?, about=? WHERE id=?";
-//   $updateStmt = $conn->prepare($updateSql);
-//   $updateStmt->bind_param("ssssssi", $newFirstname, $newLastname, $newEmail, $newPhone, $newAddress, $newAbout, $user_id);
-
-//   if ($updateStmt->execute()) {
-//     // Update successful, refresh the page
-//     $successMessage = "login succesfull";
-//     header("Location: profile.php");
-//     exit();
-//   } else {
-//     // Handle the case where the update fails
-//     $editError = "Error updating user details.";
-//   }
-
-//   $updateStmt->close();
-// }
-
-// Function to sanitize user input
-// function sanitizeInput($data)
-// {
-//   $data = trim($data);
-//   $data = stripslashes($data);
-//   $data = htmlspecialchars($data);
-//   return $data;
-// }
+$conn->close();
 ?>
