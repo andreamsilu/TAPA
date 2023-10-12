@@ -1,4 +1,5 @@
-<div class="tab-pane fade show active" id="cv" role="tabpanel" aria-labelledby="cv-tab">
+<?php //include("forms/list-certificate.php") ?>
+ <div class="tab-pane fade show active" id="cv" role="tabpanel" aria-labelledby="cv-tab">
     <div class="container">
         <h2 class="mt-4">Curriculum Vitae (CV)</h2>
         <hr>
@@ -11,7 +12,7 @@
                 <p>Address: <?php echo $address ?></p>
             </div>
             <div class="col-md-6">
-                <img src="forms/uploads/<?php echo $profile_pic ?>" alt="Default Avatar" style="max-width: 120px; margin-left:150px;margin-top:50px" class="avatar">
+                <img src="/opt/lampp/htdocs/websites/TAPA/forms/uploads<?php echo $profile_pic ?>" alt="Default Avatar" style="max-width: 120px; margin-left:150px;margin-top:50px" class="avatar">
             </div>
         </div>
         <hr>
@@ -26,5 +27,17 @@
         <p>Example Company</p>
         <p>Duration: 2018-2021</p>
         <!-- Add more work experience details here -->
+
+
+
+<hr>
+        <h3>Certification</h3>
+        <p><? echo $title ?></p>
+        <p><? echo $category ?></p>
+        <p><? echo $institution ?></p>
+        <p><? echo $completion_year ?></p>
+        <p><? echo $certificate_link ?></p>
+
+
     </div>
 </div>

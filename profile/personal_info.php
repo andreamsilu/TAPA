@@ -93,7 +93,7 @@
                                 <select class="form-control" id="membership_type" name="membership_type" required>
                                     <option value="" disabled selected>Select membership category</option>
                                     <option value="student">Student Member</option>
-                                    <option value="assiciate">Associate Mamber</option>
+                                    <option value="associate">Associate Member</option>
                                     <option value="affiliate">Affiliate Member</option>
                                     <option value="foreignAffiliate">Foreign Affiliate Member</option>
                                 </select>

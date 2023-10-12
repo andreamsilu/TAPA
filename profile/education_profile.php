@@ -41,15 +41,16 @@
                         <hr style="border: 2px solid #15A9E5; margin: 20px 0;">
                         <br>
                         <div class="form-group">
-                            <label for="qualificationCategory">Qualification Category</label>
+                            <label for="qualificationCategory">Education Category</label>
                             <select class="form-control" id="qualificationCategory">
+                            <option value="Psychology">Psychology</option>
                                 <option value="Accounting - H011, H411">Accounting - H011, H411</option>
                                 <option value="Accounting and Business Administration">Accounting and Business Administration</option>
                                 <!-- Add more options here -->
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="level">Level</label>
+                            <label for="level">Education Level</label>
                             <input type="text" class="form-control" id="level">
                         </div>
                         <div class="form-group">
@@ -57,20 +58,20 @@
                             <input type="text" class="form-control" id="countryOfInstitution">
                         </div>
                         <div class="form-group">
-                            <label for="institution">Institution</label>
+                            <label for="institution">UniversityInstitution</label>
                             <input type="text" class="form-control" id="institution">
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="startDate">Start Date</label>
                             <input type="date" class="form-control" id="startDate">
                         </div>
                         <div class="form-group">
                             <label for="endDate">End Date</label>
                             <input type="date" class="form-control" id="endDate">
-                        </div>
+                        </div> -->
                         <div class="form-group">
-                            <label for="currentlyStudyingAt">Currently Studying At</label>
-                            <input type="text" class="form-control" id="currentlyStudyingAt">
+                            <label for="currentlyStudyingAt">Completion Year</label>
+                            <input type="year" class="form-control" id="currentlyStudyingAt">
                         </div>
                         <!-- Cancel button to cancel and close the form -->
                         <button type="button" class="btn btn-secondary" onclick="closeEducationForm()">Cancel</button>
@@ -90,18 +91,14 @@
                             flex-direction: column;
                             margin-bottom: 10px;
                         }
-
                         label {
                             margin-bottom: 5px;
                             text-align: left;
                         }
-
                         .form-control {
                             width: 100%;
                         }
                     </style>
-
-
                 </div>
             </div>
         </row>

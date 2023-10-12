@@ -19,47 +19,46 @@
     <div class="container mt-0 w-80 p-3">
         <div class="card text-center">
             <div class="card-header">
-            <i class="fa-solid fa-certificate"></i> Certification&Awards
+                <i class="fa-solid fa-certificate"></i> Certification&Awards
             </div>
             <div class="card-body">
                 <!-- "Add" button with onclick event to show the form -->
                 <button class="btn btn-primary" onclick="showCertificationForm()">Add</button>
 
                 <!-- Certification and Awards Form (Initially hidden) -->
-                <form id="certificationForm">
-                    <!-- Close button to close the form -->
+                <form id="certificationForm" action="forms/certificate.php" method="POST">
+                    <!-- Your form fields here -->
+
                     <button type="button" class="close" aria-label="Close" onclick="closeCertificationForm()">
                         <span aria-hidden="true">&times;</span>
                     </button>
                     <div class="form-group">
-                        <label for="title">Title:</label>
-                        <input type="text" class="form-control" id="title" placeholder="Enter title">
+                        <label for="title">Certification Title:</label>
+                        <input type="text" class="form-control" id="title" name="title" placeholder="Enter title" required>
                     </div>
                     <div class="form-group">
                         <label for="certificateCategory">Certificate Category:</label>
-                        <select class="form-control" id="certificateCategory">
-                            <option value="Certified Human Resource Manager">Certified Human Resource Manager</option>
+                        <select class="form-control" id="certificateCategory" name="certificateCategory" required>
+                            <option value="">--Select--</option>
+                            <option value="children psychologist">Certified psychologist for children</option>
                             <!-- Add more options here -->
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="countryOfInstitution">Country Of Institution:</label>
-                        <input type="text" class="form-control" id="countryOfInstitution" placeholder="Enter country of institution">
-                    </div>
-                    <div class="form-group">
                         <label for="institution">Institution:</label>
-                        <input type="text" class="form-control" id="institution" placeholder="Enter institution">
+                        <input type="text" class="form-control" id="institution" name="institution" placeholder="Enter institution" required>
                     </div>
                     <div class="form-group">
                         <label for="completionDate">Completion Date:</label>
-                        <input type="date" class="form-control" id="completionDate">
+                        <input type="date" class="form-control" id="completionDate" name="completionDate" required>
                     </div>
                     <div class="form-group">
-                        <label for="currentlyOngoing">Currently On-going:</label>
-                        <select class="form-control" id="currentlyOngoing">
-                            <option value="No">No</option>
-                            <option value="Yes">Yes</option>
-                        </select>
+                        <label for="certificationLink">Certification Link</label>
+                        <input type="text" class="form-control" id="certificationLink" name="certificationLink" placeholder="Enter certification link" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="certification_copy">Upload Certification</label>
+                        <input type="file" class="form-control" id="certification_copy" name="certification_copy" placeholder="Upload certificate copy" required>
                     </div>
                     <!-- Cancel button to cancel and close the form -->
                     <button type="button" class="btn btn-secondary" onclick="closeCertificationForm()">Cancel</button>

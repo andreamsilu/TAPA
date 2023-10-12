@@ -28,6 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
   if ($updateStmt->execute()) {
       // User details updated successfully
+      echo "personal information updated successifully";
       header("Location: profile.php"); // Redirect to the user's profile page
       exit();
   } else {
