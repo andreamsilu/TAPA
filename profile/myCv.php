@@ -12,8 +12,7 @@
                 <p>Address: <?php echo $address ?></p>
             </div>
             <div class="col-md-6">
-                <img src="/opt/lampp/htdocs/websites/TAPA/forms/uploads<?php echo $profile_pic ?>" alt="Default Avatar" style="max-width: 120px; margin-left:150px;margin-top:50px" class="avatar">
-            </div>
+            <img src="forms/uploads/<?php echo $profile_pic ?>" alt="Default Avatar" class="rounded-circle img-thumbnail">            </div>
         </div>
         <hr>
         <h3>Education</h3>
@@ -31,6 +30,7 @@
 
 
 <hr>
+<? include 'certificate.php' ?>
         <h3>Certification</h3>
         <p><? echo $title ?></p>
         <p><? echo $category ?></p>

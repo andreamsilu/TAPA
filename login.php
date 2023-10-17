@@ -1,12 +1,7 @@
 <?php include "forms/login-script.php" ?>
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -15,6 +10,7 @@
     <meta content="" name="keywords">
     <?php include "titleIcon.php" ?>
 </head>
+
 <body>
     <?php include "header.php" ?>
     <main>
@@ -38,7 +34,7 @@
                         <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
                             <div class="d-flex justify-content-center py-2">
                                 <a href="index.php" class="logo d-flex align-items-center  w-auto">
-                                    <img src="assets/img/tapa.png" alt="TAPA" width="40%" >
+                                    <!-- <img src="assets/img/tapa.png" alt="TAPA" width="40%" > -->
                                     <!-- <span class="d-none d-lg-block">TAPA</span> -->
                                 </a>
                             </div>
@@ -49,7 +45,7 @@
                                         <h5 class="card-title text-center pb-0 fs-4">Login to Your Account</h5>
                                         <!-- <p class="text-center small">Enter your username & password to login</p> -->
                                     </div>
-                                    <form method="post" action="login.php"> <!-- Replace "login.php" with your actual login script's filename -->
+                                    <form method="post" action="forms/login-script.php"> <!-- Replace "login.php" with your actual login script's filename -->
                                         <div class="col-md-12 form-group mt-3 mt-md-0">
                                             <label for="email" class="col-form-label">Email</label>
                                             <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
@@ -97,5 +93,6 @@
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
 <?php include "footer.php" ?>

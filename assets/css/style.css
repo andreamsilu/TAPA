@@ -1400,7 +1400,8 @@ section {
 }
 
 .testimonials .testimonial-item h2 {
-  font-size: 28px;
+  font-size: 28
+  px;
   font-weight: bold;
   margin: 10px 0 5px 0;
   color: #0F718A;

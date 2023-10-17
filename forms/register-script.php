@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 include("../connection.php");
-session_start();
+// include('sessions.php');
 
 try {
     // Check database connection
@@ -49,7 +49,7 @@ try {
 
     if ($stmt->execute()) {
         echo "Registration successful!";
-        header("Location: login.php");
+        header("Location: ../login.php");
     } else {
         throw new Exception("Error: " . $stmt->error);
     }

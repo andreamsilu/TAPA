@@ -80,7 +80,7 @@
 
         <div class="row mt-2 justify-content-center" data-aos="fade-up">
           <div class="col-lg-10">
-            <form action="forms/register.php" method="post" role="form" class="php-email-form">
+            <form action="forms/register-script.php" method="post" role="form" class="php-email-form">
               <div class="row">
                
               <div class="col-md-6 form-group">

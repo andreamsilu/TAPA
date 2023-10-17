@@ -2,8 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 include("../connection.php");
-session_start(); // Start the session if not already started.
-
+include('sessions.php');
 try {
     // Check database connection
     if ($conn->connect_error) {

@@ -15,8 +15,8 @@
 </head>
 
 <body>
-<?php include "header.php" ?>
-<?php include "hero.php" ?>
+  <?php include "header.php" ?>
+  <?php include "hero.php" ?>
 
   <main id="main">
 
@@ -31,7 +31,7 @@
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left">
             <p>
-            Tanzania Psychological Association is an organization that represents psychologists and professionals in the field of psychology in Tanzania. Its primary objectives typically include promoting the field of psychology, advancing the professional development of psychologists, and advocating for mental health and psychological well-being in the country.
+              Tanzania Psychological Association is an organization that represents psychologists and professionals in the field of psychology in Tanzania. Its primary objectives typically include promoting the field of psychology, advancing the professional development of psychologists, and advocating for mental health and psychological well-being in the country.
             </p>
             <ul>
               <li><i class="ri-check-double-line"></i>Proffessional development</li>
@@ -52,13 +52,13 @@
     <!-- ======= Services Section ======= -->
     <section id="services" class="services section-bg">
       <div class="container" data-aos="fade-up">
-      <!-- <h2>TAPA ACTIVITIES</h2> -->
+        <!-- <h2>TAPA ACTIVITIES</h2> -->
 
         <div class="row">
-        <h2 style="color: #0F718A; text-align:center; margin-bottom:50px;">TAPA SERVICES AND ACTIVITIES</h2>
+          <h2 style="color: #0F718A; text-align:center; margin-bottom:50px;">TAPA SERVICES AND ACTIVITIES</h2>
 
 
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box iconbox-orange ">
               <div class="icon">
                 <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -67,10 +67,10 @@
                 <i class="bx bx-file"></i>
               </div>
               <h4><a href="">Proffessional Development</a></h4>
-              <p>The association often aim to support the professional development of psychologists and related professionals. This  includes offering training opportunities, workshops, and conferences to enhance their skills and knowledge.</p>
+              <p>The association often aim to support the professional development of psychologists and related professionals. This includes offering training opportunities, workshops, and conferences to enhance their skills and knowledge.</p>
             </div>
           </div>
-        
+
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box iconbox-blue">
@@ -85,7 +85,7 @@
             </div>
           </div>
 
-          
+
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box iconbox-pink">
               <div class="icon">
@@ -141,7 +141,7 @@
             </div>
           </div>
         </div>
-          <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
+        <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box iconbox-teal">
               <div class="icon">
                 <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -154,14 +154,14 @@
             </div>
           </div> -->
 
-        </div>
+      </div>
 
       </div>
     </section>
     <!-- End Services Section -->
 
-     <!-- ======= Frequently Asked Questions Section ======= -->
-     <section id="faq" class="faq section-bg">
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -174,7 +174,7 @@
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">What is psychotherapy/counseling? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
                 <p>
-                Psychotherapy or counseling is a professional process that helps individuals explore and manage their emotions, thoughts, and behaviors to improve mental well-being.                </p>
+                  Psychotherapy or counseling is a professional process that helps individuals explore and manage their emotions, thoughts, and behaviors to improve mental well-being. </p>
               </div>
             </li>
 
@@ -182,7 +182,7 @@
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">How do I know if I need therapy? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                If you're experiencing persistent emotional distress, behavioral issues, or difficulties in daily functioning, it may be time to consider therapy.                </p>
+                  If you're experiencing persistent emotional distress, behavioral issues, or difficulties in daily functioning, it may be time to consider therapy. </p>
               </div>
             </li>
 
@@ -190,7 +190,7 @@
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">How do I choose the right therapist for me?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                Choose a therapist based on their expertise, approach, and how comfortable you feel discussing your concerns with them.                </p>
+                  Choose a therapist based on their expertise, approach, and how comfortable you feel discussing your concerns with them. </p>
               </div>
             </li>
 
@@ -198,7 +198,7 @@
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">What can I expect in my first therapy session?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                The first session involves getting to know each other, discussing your reasons for seeking therapy, and understanding the therapeutic process.                </p>
+                  The first session involves getting to know each other, discussing your reasons for seeking therapy, and understanding the therapeutic process. </p>
                 </p>
               </div>
             </li>
@@ -207,14 +207,16 @@
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">How long does therapy usually take? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                Therapy duration varies depending on your needs and progress, ranging from a few sessions to several months or more.              </div>
+                  Therapy duration varies depending on your needs and progress, ranging from a few sessions to several months or more.
+              </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="400">
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">What's the difference between a psychologist and a psychiatrist? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                Psychologists provide therapy and counseling, while psychiatrists can prescribe medication in addition to therapy            </li>
+                  Psychologists provide therapy and counseling, while psychiatrists can prescribe medication in addition to therapy
+            </li>
 
           </ul>
         </div>

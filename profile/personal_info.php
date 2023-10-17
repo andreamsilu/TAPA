@@ -1,4 +1,8 @@
-<?php include("forms/myprofile.php") ?>
+<?php 
+include("forms/myprofile.php");
+// include('sessions.php');
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">

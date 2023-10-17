@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   // Update the user's details in the database
   $updateSql = "UPDATE members SET firstname=?, lastname=?, email=?, phone=?, address=?,profile_pic?    about=?, membership_type=? WHERE member_id=?";
   $updateStmt = $conn->prepare($updateSql);
-  $updateStmt->bind_param("sssssssi", $newFirstname, $newLastname, $newEmail, $newPhone, $newAddress, $newAbout, $newMembershipType, $user_id);
+  $updateStmt->bind_param("sssssssi", $newFirstname, $newLastname, $newEmail, $newPhone, $newAddress, $newAbout, $newMembershipType, $member_id);
 
   if ($updateStmt->execute()) {
       // User details updated successfully

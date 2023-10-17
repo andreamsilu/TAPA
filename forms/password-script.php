@@ -1,7 +1,7 @@
 <?php
 // session_start();
 include('connection.php'); // Include your database connection script
-
+include('sessions.php');
 // Check if the user is logged in
 if (!isset($_SESSION['user_id'])) {
   // Redirect to the login page if not logged in
@@ -13,12 +13,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $currentPassword = $_POST["password"];
   $newPassword = $_POST["newpassword"];
   $reenteredPassword = $_POST["renewpassword"];
-  $user_id = $_SESSION['user_id'];
+  $member_id = $_SESSION['user_id'];
 
   // Retrieve the user's current password from the database
   $sql = "SELECT password FROM members WHERE id=?";
   $stmt = $conn->prepare($sql);
-  $stmt->bind_param("i", $user_id);
+  $stmt->bind_param("i", $member_id);
   $stmt->execute();
   $result = $stmt->get_result();
 
@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Update the user's password in the database
         $updateSql = "UPDATE members SET password=? WHERE id=?";
         $updateStmt = $conn->prepare($updateSql);
-        $updateStmt->bind_param("si", $newHashedPassword, $user_id);
+        $updateStmt->bind_param("si", $newHashedPassword, $member_id);
 
         if ($updateStmt->execute()) {
           echo "Password changed successfully!";
