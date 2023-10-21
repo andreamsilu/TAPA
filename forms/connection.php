@@ -3,8 +3,9 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// session_start();
+session_start();
 // $member_id = $_SESSION['member_id'];
+
 
 // Establish a database connection (replace with your database details)
 $servername = "localhost";

@@ -1,5 +1,8 @@
-<?php //include("forms/list-certificate.php") ?>
- <div class="tab-pane fade show active" id="cv" role="tabpanel" aria-labelledby="cv-tab">
+<?php 
+include("education/education_details.php") ;
+
+?>
+<div class="tab-pane fade show active" id="cv" role="tabpanel" aria-labelledby="cv-tab">
     <div class="container">
         <h2 class="mt-4">Curriculum Vitae (CV)</h2>
         <hr>
@@ -12,13 +15,16 @@
                 <p>Address: <?php echo $address ?></p>
             </div>
             <div class="col-md-6">
-            <img src="forms/uploads/<?php echo $profile_pic ?>" alt="Default Avatar" class="rounded-circle img-thumbnail">            </div>
+                <img src="forms/uploads/<?php echo $profile_pic ?>" alt="Default Avatar" class="rounded-circle img-thumbnail">
+            </div>
         </div>
         <hr>
         <h3>Education</h3>
-        <p>BSc in Engineering</p>
-        <p>University of Example</p>
-        <p>Graduated: 2020</p>
+        <p>Category: <?php echo $qualification_category ?></p>
+        <p>Education Level:<?php echo $level ?></p>
+        <p>Institution:<?php echo $institution ?></p>
+        <p>Completion year:<?php echo $completion_year ?></p>
+
         <!-- Add more education details here -->
         <hr>
         <h3>Work Experience</h3>
@@ -29,8 +35,8 @@
 
 
 
-<hr>
-<? include 'certificate.php' ?>
+        <hr>
+        <? include 'certificate.php' ?>
         <h3>Certification</h3>
         <p><? echo $title ?></p>
         <p><? echo $category ?></p>

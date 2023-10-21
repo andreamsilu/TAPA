@@ -1,7 +1,7 @@
 <?php
 // session_start();
 include('connection.php'); // Include your database connection script
-include('sessions.php');
+// include('sessions.php');
 // Check if the user is logged in
 if (!isset($_SESSION['user_id'])) {
   // Redirect to the login page if not logged in
@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $newHashedPassword = password_hash($newPassword, PASSWORD_BCRYPT);
 
         // Update the user's password in the database
-        $updateSql = "UPDATE members SET password=? WHERE id=?";
+        $updateSql = "UPDATE members SET password=? WHERE member_id=?";
         $updateStmt = $conn->prepare($updateSql);
         $updateStmt->bind_param("si", $newHashedPassword, $member_id);
 

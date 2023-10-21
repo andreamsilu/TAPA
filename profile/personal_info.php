@@ -1,6 +1,5 @@
 <?php 
 include("forms/myprofile.php");
-// include('sessions.php');
 ?>
 
 
@@ -20,7 +19,6 @@ include("forms/myprofile.php");
         <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
             <h2 class="text-center mb-4">Personal Information</h2>
             <div class="profile-image">
-                <!-- <img src="https://via.placeholder.com/120" alt="Default Avatar" class="rounded-circle img-thumbnail"> -->
                 <img src="forms/uploads/<?php echo $profile_pic ?>" alt="Default Avatar" class="rounded-circle img-thumbnail">
             </div>
             <div class="profile-details mt-4">
@@ -37,8 +35,8 @@ include("forms/myprofile.php");
                 <div class="d-flex justify-content-between mt-3">
                     <button onclick="showEditInformationForm()" type="button" class="btn btn-primary">
                         Edit <i class="  fa-solid fa-pen-to-square"></i></button>
-                    <button onclick="signOut()" type="button" class="btn btn-danger">
-                        Sign Out<i class="fas fa-sign-out-alt"></i>
+                    <button  type="button" class="btn btn-danger">
+                        <a href="forms/logout.php">Sign Out<i class="fas fa-sign-out-alt"></i></a>
                     </button>
                 </div>
             </div>
@@ -59,7 +57,7 @@ include("forms/myprofile.php");
                     <!-- Your edit profile form goes here -->
 
                     <!-- Add this form below the displayed information -->
-                    <form id="editProfileForm">
+                    <form id="editProfileForm"  action="../forms/edit-personal-info-script.php">
                         <div class="row">
                             <div class="  -group">
                                 <label for="profilepic">Profile picture:</label>
@@ -94,7 +92,7 @@ include("forms/myprofile.php");
                             </div>
                             <div class="col-md-6 alertform-group">
                                 <label for="membership_type" class="col-form-label">Select Membership category</label>
-                                <select class="form-control" id="membership_type" name="membership_type" required>
+                                <select class="form-control" id="membership_type" name="membership_type"  value="<?php echo $membership_type ?>" required>
                                     <option value="" disabled selected>Select membership category</option>
                                     <option value="student">Student Member</option>
                                     <option value="associate">Associate Member</option>
@@ -107,12 +105,13 @@ include("forms/myprofile.php");
                             <label for="about" class="col-form-label">Tell about yourself</label>
                             <textarea class="form-control" name="about" rows="2" placeholder="about" required></textarea>
                         </div>
+                        <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="closeEditInformationForm()">Close</button>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
                     </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="closeEditInformationForm()">Close</button>
-                    <button type="button" class="btn btn-primary">Save Changes</button>
-                </div>
+                
             </div>
         </div>
     </div>

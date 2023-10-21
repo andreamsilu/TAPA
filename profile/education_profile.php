@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- <!DOCTYPE html> -->
+<!-- <html lang="en"> -->
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Education</title>
+    
     <!-- Include Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -20,7 +18,7 @@
     </style>
 </head>
 
-<body>
+
     <div class="container mt-0 p-3">
         <row class="justify-content-center">
             <div class="card text-center w-80">
@@ -33,7 +31,7 @@
 
                     <!-- Education and Awards Form (Initially hidden) -->
                     <!-- Education Form -->
-                    <form id="EducationForm">
+                    <form id="EducationForm" action="education/education.php" method="post">
                         <!-- Close button to close the form -->
                         <button type="button" class="close" aria-label="Close" onclick="closeEducationForm()">
                             <span aria-hidden="true">&times;</span>
@@ -42,7 +40,7 @@
                         <br>
                         <div class="form-group">
                             <label for="qualificationCategory">Education Category</label>
-                            <select class="form-control" id="qualificationCategory">
+                            <select class="form-control" name="qualificationCategory" id="qualificationCategory">
                             <option value="Psychology">Psychology</option>
                                 <option value="Accounting - H011, H411">Accounting - H011, H411</option>
                                 <option value="Accounting and Business Administration">Accounting and Business Administration</option>
@@ -51,27 +49,17 @@
                         </div>
                         <div class="form-group">
                             <label for="level">Education Level</label>
-                            <input type="text" class="form-control" id="level">
+                            <input type="text" class="form-control" name="level" id="level">
                         </div>
+                        
                         <div class="form-group">
-                            <label for="countryOfInstitution">Country of Institution</label>
-                            <input type="text" class="form-control" id="countryOfInstitution">
+                            <label for="institution">University/Institution</label>
+                            <input type="text" class="form-control"  name="institution" id="institution">
                         </div>
-                        <div class="form-group">
-                            <label for="institution">UniversityInstitution</label>
-                            <input type="text" class="form-control" id="institution">
-                        </div>
-                        <!-- <div class="form-group">
-                            <label for="startDate">Start Date</label>
-                            <input type="date" class="form-control" id="startDate">
-                        </div>
-                        <div class="form-group">
-                            <label for="endDate">End Date</label>
-                            <input type="date" class="form-control" id="endDate">
-                        </div> -->
+                       
                         <div class="form-group">
                             <label for="currentlyStudyingAt">Completion Year</label>
-                            <input type="year" class="form-control" id="currentlyStudyingAt">
+                            <input type="year" class="form-control" name="currentlyStudyingAt" id="currentlyStudyingAt">
                         </div>
                         <!-- Cancel button to cancel and close the form -->
                         <button type="button" class="btn btn-secondary" onclick="closeEducationForm()">Cancel</button>
@@ -120,6 +108,5 @@
             document.getElementById("EducationForm").style.display = "none";
         }
     </script>
-</body>
 
-</html>
+

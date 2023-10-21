@@ -1,7 +1,3 @@
-<?php
-include('forms/myprofile.php'); // Include your backend script
-// include("forms/sessions.php");
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,20 +5,19 @@ include('forms/myprofile.php'); // Include your backend script
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
   <?php include "titleIcon.php" ?>
+  <link href="assets/css/style.css" rel="stylesheet">
+  <?php include "header.php";
+  include "forms/myprofile.php";
+
+  ?>
+</head>
 
 <body class="m-3 bg-gradient">
-
-  <?php include "header.php" ?>
-  <link href="assets/css/style.css" rel="stylesheet">
-
   <main id="main" class="main">
-
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
-
         <div class="d-flex justify-content-between align-items-center">
           <h2>Member Profile</h2>
           <ol>
@@ -30,7 +25,6 @@ include('forms/myprofile.php'); // Include your backend script
             <li>Member Profile</li>
           </ol>
         </div>
-
       </div>
     </section>
     <!-- End Breadcrumbs -->
@@ -38,103 +32,78 @@ include('forms/myprofile.php'); // Include your backend script
     <section class="section profile">
       <div class="row">
         <div class="col-xl-4">
-          <?php include("profile/personal_info.php") ?>
+          <?php include("profile/personal_info.php"); ?>
         </div>
-
 
         <!-- =============================================================================================== -->
         <div class="col-xl-8">
           <div class="card">
             <div class="card-body pt-3">
               <!-- Bordered Tabs -->
-              <ul class="nav nav-tabs nav-tabs-bordered">
+              <ul class="nav nav-tabs nav-tabs-bordered" id="profileTabs">
                 <li class="nav-item">
-                  <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-education">Education</button>
+                  <a class="nav-link active show" data-bs-toggle="tab" href="#profile-education">Education</a>
                 </li>
-
                 <li class="nav-item">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Certification&Awards</button>
+                  <a class="nav-link" data-bs-toggle="tab" href="#certificate">Certification & Awards</a>
                 </li>
-
                 <li class="nav-item">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#member-fee">Membership Fee</button>
+                  <a class="nav-link" data-bs-toggle="tab" href="#member-fee">Membership Fee</a>
                 </li>
-
                 <li class="nav-item">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#cvTabsContent">My cv</button>
+                  <a class="nav-link" data-bs-toggle="tab" href="#cv">My CV</a>
                 </li>
-
                 <li class="nav-item">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-change-password">Change Password</button>
+                  <a class="nav-link" data-bs-toggle="tab" href="#change-password">Change Password</a>
                 </li>
               </ul>
-              
-              <!-- =======================================education profile``===================================================== -->
+
+              <!-- =======================================education profile===================================================== -->
               <div class="tab-content pt-2">
-                <div class="tab-pane fade show active profile-education" id="profile-education">
-                <?php include("profile/education_profile.php") ?>
-           
+                <div class="tab-pane fade" id="profile-education">
+                  <?php include("profile/education_profile.php"); ?>
                 </div>
 
                 <!-- =================================certification&awards============================================ -->
-                <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
-
-                <?php include("profile/certificate_award.php") ?>
-                  
+                <div class="tab-pane fade" id="certificate">
+                  <?php include("profile/certificate_award.php"); ?>
                 </div>
 
                 <!-- =============================membership fee=========================================== -->
-                <div class="tab-pane fade pt-3" id="member-fee">
-                  <?php include("profile/member-fee.php") ?>
-
+                <div class="tab-pane fade" id="member-fee">
+                  <?php include("profile/member-fee.php"); ?>
                 </div>
 
-
                 <!-- ====================================member cv=================================================== -->
-                <div class="tab-pane fade pt-3" id="cvTabsContent">
-                <?php include("profile/myCv.php") ?>
-                  
-              </div>
+                <div class="tab-pane fade" id="cv">
+                  <?php  include("profile/myCv.php"); ?>
+                </div>
 
-              <!-- =========================change password=================================================================== -->
-              <div class="tab-pane fade pt-3" id="profile-change-password">
-              <?php include("profile/change-password.php") ?>
-
-               
-              <!-- End Change Password Form -->
+                <!-- =========================change password=================================================================== -->
+                <div class="tab-pane fade" id="change-password">
+                  <?php //include("profile/change-password.php"); ?>
+                  <h1>hello passw0rd</h1>
+                  <!-- End Change Password Form -->
+                </div>
               </div>
+              <!-- End Bordered Tabs -->
             </div>
-            <!-- End Bordered Tabs -->
-
           </div>
         </div>
-
-      </div>
       </div>
     </section>
-
   </main>
   <!-- End #main -->
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+  <script>
+    // Initialize the tab component
+    var profileTabs = new bootstrap.Tab(document.getElementById('profileTabs'));
+    profileTabs.show();
+  </script>
+
+  <?php include "footer.php"; ?>
 </body>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
-<script>
-  // Add an event listener to open the modal when the button is clicked
-  document.getElementById("openModalButton").addEventListener("click", function() {
-    document.getElementById("educationModal").style.display = "block"; // Display the modal
-  });
-
-  // Close the modal when the close button or backdrop is clicked
-  document.querySelector(".modal .close").addEventListener("click", function() {
-    document.getElementById("educationModal").style.display = "none";
-  });
-
-  // Close the modal when the "Close" button is clicked
-  document.querySelector(".modal-footer .btn-secondary").addEventListener("click", function() {
-    document.getElementById("educationModal").style.display = "none";
-  });
-</script>
-<?php //include "footer.php" 
-
-?>
+</html>

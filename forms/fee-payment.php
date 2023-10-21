@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 include("../connection.php");
-include('sessions.php');
+// include('sessions.php');
 try {
     // Check database connection
     if ($conn->connect_error) {

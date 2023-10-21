@@ -8,7 +8,7 @@ include('connection.php'); // Include your database connection script
    header("Location: login.php");// Replace with your login page URL
   exit();
  }
-
+  $member_id = $_SESSION['member_id'];
 // Handle the form submission to update user details
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
   // Retrieve updated values from the form
@@ -22,9 +22,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $newMembershipType = $_POST["membership_type"];
 
   // Update the user's details in the database
-  $updateSql = "UPDATE members SET firstname=?, lastname=?, email=?, phone=?, address=?,profile_pic?    about=?, membership_type=? WHERE member_id=?";
+  $updateSql = "UPDATE members SET firstname=?, lastname=?, email=?, phone=?, address=?,profile_pic?    about=?, membership_type=? WHERE member_id= $member_id";
   $updateStmt = $conn->prepare($updateSql);
-  $updateStmt->bind_param("sssssssi", $newFirstname, $newLastname, $newEmail, $newPhone, $newAddress, $newAbout, $newMembershipType, $member_id);
+  $updateStmt->bind_param("sssssss", $newFirstname, $newLastname, $newEmail, $newPhone, $newAddress, $newAbout, $newMembershipType, );
 
   if ($updateStmt->execute()) {
       // User details updated successfully

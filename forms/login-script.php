@@ -3,8 +3,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 include('connection.php'); // Include your database connection script
-include('sessions.php');
-// session_start();
+session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = sanitizeInput($_POST["email"]);
@@ -24,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Verify the password
         if (password_verify($password, $hashedPassword)) {
             // Password is correct
-            $_SESSION["member_id"] = $row["member_id"];
+            $_SESSION["member_id"] == $row["member_id"];
             header("Location: ../profile.php"); // Redirect to a protected page
             exit();
         } else {
