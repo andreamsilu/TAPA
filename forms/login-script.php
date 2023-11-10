@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Verify the password
         if (password_verify($password, $hashedPassword)) {
             // Password is correct
-            $_SESSION["member_id"] == $row["member_id"];
+            $_SESSION["member_id"] = $row["member_id"];
             header("Location: ../profile.php"); // Redirect to a protected page
             exit();
         } else {

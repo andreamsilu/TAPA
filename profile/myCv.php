@@ -1,5 +1,5 @@
 <?php 
-include("education/education_details.php") ;
+// include("education/education_details.php") ;
 
 ?>
 <div class="tab-pane fade show active" id="cv" role="tabpanel" aria-labelledby="cv-tab">

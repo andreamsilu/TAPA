@@ -37,8 +37,8 @@
     <!-- End Breadcrumbs -->
 
     <!-- ======= About Us Section ======= -->
-    <section id="about-us" class="about-us">
-      <div class="container" data-aos="fade-up">
+    <section id="about-us" class="about-us" style="background-image: url(assets/img/service-img/paper-brain-with-light-bulb.jpg);" >
+      <div class="container" data-aos="fade-up" >
 
         <div class="row content">
           <div class="col-lg-6" data-aos="fade-right">
@@ -81,9 +81,9 @@
       <!-- First Row -->
       <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
         <!-- Member 1 -->
-        <div class="member" data-aos="fade-up">
+        <div class="member" data-aos="fade-up" data-aos-delay="100">
           <div class="member-img">
-            <img src="assets/img/tapa/president.png" class="img-fluid" alt="">
+            <img src="assets/img/team/shagembe.png" class="img-fluid" alt="" width="800px">
             <div class="social">
               <a href=""><i class="bi bi-twitter"></i></a>
               <a href=""><i class="bi bi-facebook"></i></a>
@@ -92,7 +92,7 @@
             </div>
           </div>
           <div class="member-info">
-            <h4>Magolanga Shagembe</h4>
+            <h4>Shagembe Magolanga</h4>
             <span>President</span>
           </div>
         </div>
