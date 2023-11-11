@@ -12,7 +12,7 @@
           <li><a href="index.php" class="active">Home</a></li>
 
 
-          <li class="dropdown"><a href=""><span>Membership</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="membeship-category.php"><span>Membership</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="login.php">Login</a></li>
               <li><a href="registration.php">Register</a></li>

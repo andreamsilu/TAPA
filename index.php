@@ -26,15 +26,15 @@
 
         <div class="row content">
           <div class="col-lg-6" data-aos="fade-right">
-            <!-- <h2 style="color: #0F718A;">TANZANIA PSYCHOLOGICAL ASSOCIATION</h2> -->
+            <!-- <h2 style="color: #0F718A;">Tanzanian PSYCHOLOGICAL ASSOCIATION</h2> -->
             <!-- <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assum perenda sruen jonee trave</h3> -->
             <img src="assets/img/service-img/mental.png" alt="" width="350px">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left">
-          <h4 style="color: #0F718A;">TANZANIA PSYCHOLOGICAL ASSOCIATION</h4>
+          <h4 style="color: #0F718A;">TANZANIAN PSYCHOLOGICAL ASSOCIATION</h4>
 
             <p>
-              Tanzania Psychological Association is an organization that represents psychologists and professionals in the field of psychology in Tanzania. Its primary objectives typically include promoting the field of psychology, advancing the professional development of psychologists, and advocating for mental health and psychological well-being in the country.
+              Tanzanian Psychological Association is an organization that represents psychologists and professionals in the field of psychology in Tanzanian. Its primary objectives typically include promoting the field of psychology, advancing the professional development of psychologists, and advocating for mental health and psychological well-being in the country.
             </p>
             <ul>
               <li><i class="ri-check-double-line"></i>Proffessional development</li>
