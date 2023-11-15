@@ -38,7 +38,7 @@
         <!-- ======= publication Section ======= -->
         <section id="pricing" class="pricing" style=" background-image:url(assets/img/tapa/3918491.jpg)">
             <div class="container" data-aos="fade-up">
-                <h4 class="text-center">Choose your category to register as TAPA member</h4>
+                <h4 class="text-center">Select your category to register as TAPA member</h4>
                 <div class="row">
 
                     <div class="col-lg-4 col-md-6">
