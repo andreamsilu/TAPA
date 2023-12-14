@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration - TAPA</title>
+  <title>Register</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
   <!-- Favicons -->
@@ -175,8 +175,9 @@
               <div class="form-group mt-3">
                 <h5>Robot Confirmation</h5>
                 <label for="about" class="col-form-label">Confirm that you are not robot to continue with registration.....</label><br>
+                
+                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
               </div>
-
               <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
@@ -189,12 +190,11 @@
               </div>
             </form>
           </div>
-
         </div>
-
       </div>
     </section>
     <!-- End Contact Section -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 
 
