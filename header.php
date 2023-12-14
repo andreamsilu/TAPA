@@ -42,7 +42,7 @@
       <!-- .navbar -->
 
       <div class="d-flex nav-links">
-    <a href="login.php" class="nav-link">Login/ </a>
+    <a href="login.php" class="nav-link">Login/</a>
     <a href="membeship-category.php" class="nav-link">Registration</a>
 </div>
 
@@ -58,15 +58,16 @@
     </div>
    
 <style>
+
 .nav-links {
   align-self:end;
     display: flex;
     background-color: #0F718A;
-text-align: center;
-padding: 10px;
-margin-left: 20px;
-font-size: large;
-border-radius: 10px;
+  text-align: center;
+  padding: 2px;
+  margin-left: 20px;
+  font-size: large;
+  border-radius: 30px;
 }
 
 .nav-link {
@@ -89,7 +90,7 @@ border-radius: 10px;
     text-align: center;
 }
 
-.login-btn,
+/* .login-btn,
 .register-btn {
     display: inline-block;
     padding: 15px 30px;
@@ -99,11 +100,10 @@ border-radius: 10px;
     color: #fff;
     border-radius: 8px;
     background-color: #3498db; /* Change color as needed */
-}
 
-.register-btn {
+/* .register-btn {
     background-color: #2ecc71; /* Change color as needed */
-}
+
 </style>
   </header>
   <!-- End Header -->
