@@ -6,7 +6,7 @@
       <div class="carousel-inner" role="listbox">
 
         <!-- Slide 1 -->
-        <div class="carousel-item active" style="background-image: url(assets/img/tapa/tapa-fam.JPG);">
+        <div class="carousel-item active" style="background-image: url(assets/img/carousel-images/paper-brain-with-light-bulb.jpg);">
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
               <h2><span>Latest updates</span></h2>
@@ -18,7 +18,7 @@
         </div>
 
         <!-- Slide 2 -->
-        <div class="carousel-item" style="background-image: url(assets/img/team/IMG_0360.JPG); background-color:blue;">
+        <div class="carousel-item" style="background-image: url(assets/img/carousel-images/family-therapy.avif);">
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
               <h2>Latest updates</h2>
@@ -30,7 +30,7 @@
         </div>
 
         <!-- Slide 3 -->
-        <div class="carousel-item" style="background-image: url(assets/img/team/IMG_0360.JPG);">
+        <div class="carousel-item" style="background-image: url(assets/img/carousel-images/human-brain-with-many-flowers.jpg);">
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
               <h2>Upcoming Events</h2>

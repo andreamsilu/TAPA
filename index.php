@@ -28,7 +28,7 @@
           <div class="col-lg-6" data-aos="fade-right">
             <!-- <h2 style="color: #0F718A;">Tanzanian PSYCHOLOGICAL ASSOCIATION</h2> -->
             <!-- <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assum perenda sruen jonee trave</h3> -->
-            <img src="assets/img/service-img/mental.png" alt="" width="350px">
+            <img src="assets/img/carousel-images/3918491-removebg-preview.png" alt="" width="500px">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left">
           <h4 style="color: #0F718A;">TANZANIAN PSYCHOLOGICAL ASSOCIATION</h4>
