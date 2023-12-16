@@ -81,7 +81,13 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <?php 
+    include("header.php");
+    include("titleIcon.php");
+
+    
+    ?>
+    <!-- <nav class="navbar navbar-expand-lg navbar-light" style="background-color: cornflowerblue;"> -->
         <a class="navbar-brand" href="#">Your Logo</a>
 
         <!-- Toggler/collapsible Button for small screens -->

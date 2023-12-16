@@ -88,12 +88,12 @@
                             <div class="form-group">
                                 <div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" name="remember" id="remember" value="1" />
-                                    <label class="custom-control-label font-weight-normal" for="remember">Keep me logged in</label>
+                                    <label class="custom-control-label font-weight-normal" for="remember">Keep me signed in</label>
                                 </div>
                             </div>
                             <div class="form-action">
-                                <input type="submit" class="btn btn-transparent sign-in" value="Sign In">
-                                <a href="https://www.TAPA.co.tz/forgot-password" class="login-link float-right gray">Forgot Password?</a>
+                                <a href="profile.php"><input type="text" class="btn btn-transparent sign-in" value="Sign In"></a>
+                                <a href="forgot-password.php" class="login-link float-right gray">Forgot Password?</a>
                             </div>
                             <p class="gray">New to TAPA? <a href="membeship-category.php"
                                     class="gray btn font-blue small-font register-btn ml-sm-2">Register Now</a>

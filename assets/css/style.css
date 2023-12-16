@@ -5,6 +5,7 @@
 --------------------------------------------------------------*/
 body {
   /* font-family: "Open Sans", sans-serif; */
+  font-size: 14px;
   font-family:'Roboto',sans-serif;
   color: #4d4643;
   background-color: rgb(204, 204, 200);
@@ -1319,7 +1320,7 @@ section {
 
 .faq .faq-list li {
   padding: 20px;
-  background: #fff;
+  background: #0F718A;
   border-radius: 4px;
   position: relative;
 }
@@ -1341,7 +1342,7 @@ section {
   position: absolute;
   right: 0;
   left: 20px;
-  color: lightgray;
+  color: #0F718A;
 }
 
 .faq .faq-list .icon-show,
@@ -1367,7 +1368,8 @@ section {
 }
 
 .faq .faq-list a.collapsed:hover {
-  color: #0F718A;
+  color: #fff;
+  background-color: #0F718A;
 }
 
 .faq .faq-list a.collapsed .icon-show {
