@@ -10,8 +10,6 @@
   <meta content="" name="keywords">
 
   <?php include "titleIcon.php" ?>
-
-
 </head>
 
 <body>
@@ -237,7 +235,7 @@
     <!-- End Frequently Asked Questions Section -->
 
     <!-- ======= Our Clients Section ======= -->
-    <!-- <section id="clients" class="clients">
+     <section id="clients" class="clients">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -297,7 +295,7 @@
         </div>
 
       </div>
-    </section> -->
+    </section> 
     <!-- End Our Clients Section -->
 
   </main>
