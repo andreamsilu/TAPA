@@ -76,15 +76,15 @@
     }
 
     .overlay h2 {
-      color: #0F718A;
+      /* color: #0F718A; */
       /* margin-bottom: 1px; */
     }
 
     .overlay p {
       color: #333;
       font-size: 18px;
-      font-weight: 600;
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-weight: 300;
+      font-family: 'Roboto', sans-serif;
     }
 
     @keyframes carousel-slide {
@@ -103,7 +103,7 @@
     }
 
 
-    /* News section styles */
+    /*===== News section styles=====*/
     .owl-carousel .owl-item {
       margin-right: 10px;
     }
@@ -148,7 +148,7 @@
     }
 
 
-    /* Services Section */
+    /* =====Services Section=====*/
     .services {
       padding: 80px 0;
     }
@@ -158,7 +158,7 @@
       font-weight: 700;
       text-align: center;
       color: #0F718A;
-      margin-bottom: 50px;
+      margin-bottom: 10px;
     }
 
     .service-box {
@@ -318,7 +318,7 @@ include "header.php";
           <div class="overlay card">
             <div class="card-body">
               <h2 class="card-title">About TAPA</h2>
-              <p class="card-text">T Tanzanian Psychological Association is an organization that represents psychologists and professionals in the field of psychology in Tanzanian. Its primary objectives typically include promoting the field of psychology, advancing the professional development of psychologists, and advocating for mental health and psychological well-being in the country.
+              <p class="card-text">Tanzanian Psychological Association is an organization that represents psychologists and professionals in the field of psychology in Tanzanian. Its primary objectives typically include promoting the field of psychology, advancing the professional development of psychologists, and advocating for mental health and psychological well-being in the country.
               </p>
               <a href="#" class="btn ">Learn More</a>
             </div>
@@ -355,7 +355,7 @@ include "header.php";
             <h4>Workshop on Stress Management</h4>
             <p>Date: December 10, 2023</p>
             <p>The Tanzanian Psychological Association conducted a successful workshop focused on stress management techniques for professionals and the general public.</p>
-            <a href="#" class="btn ">Read More</a>
+            <a href="post_description.php" class="btn ">Read More</a>
           </div>
         </div>
       </div>
@@ -368,7 +368,7 @@ include "header.php";
             <h4>Webinar on Mental Health Awareness</h4>
             <p>Date: November 25, 2023</p>
             <p>Join our upcoming webinar on mental health awareness where experts will discuss the importance of mental well-being in today's society.</p>
-            <a href="#" class="btn ">Read More</a>
+            <a href="post_description.php" class="btn ">Read More</a>
           </div>
         </div>
       </div>
@@ -381,7 +381,7 @@ include "header.php";
             <h4>Research Conference 2023</h4>
             <p>Date: October 15, 2023</p>
             <p>Our annual research conference showcased the latest advancements and studies in the field of psychology. Participants had insightful discussions on various topics.</p>
-            <a href="#" class="btn ">Read More</a>
+            <a href="post_description.php" class="btn ">Read More</a>
           </div>
         </div>
       </div>
@@ -394,7 +394,7 @@ include "header.php";
             <h4>New Therapeutic Approaches</h4>
             <p>Date: September 28, 2023</p>
             <p>Discover the innovative therapeutic approaches introduced by the Psychological Association to aid individuals in their mental health journey.</p>
-            <a href="#" class="btn ">Read More</a>
+            <a href="post_description.php" class="btn ">Read More</a>
           </div>
         </div>
       </div>
@@ -407,7 +407,7 @@ include "header.php";
             <h4>Understanding Emotional Intelligence</h4>
             <p>Date: August 14, 2023</p>
             <p>Learn about emotional intelligence and its impact on mental well-being in our upcoming workshop.</p>
-            <a href="#" class="btn ">Read More</a>
+            <a href="post_description.php" class="btn ">Read More</a>
           </div>
         </div>
       </div>
@@ -420,7 +420,7 @@ include "header.php";
             <h4>Mental Health Awareness Month</h4>
             <p>Date: July 3, 2023</p>
             <p>Join us in observing Mental Health Awareness Month and explore the various activities lined up to promote mental health.</p>
-            <a href="#" class="btn ">Read More</a>
+            <a href="post_description.php" class="btn ">Read More</a>
           </div>
         </div>
       </div>
@@ -600,7 +600,7 @@ include "header.php";
   </section>
 
   <!-- ======= Our Clients Section ======= -->
-  <section id="clients" class="clients">
+   <section id="clients" class="clients">
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
@@ -660,7 +660,7 @@ include "header.php";
       </div>
 
     </div>
-  </section>
+  </section> 
   <!-- End Our Clients Section -->
 
 

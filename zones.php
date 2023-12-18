@@ -54,9 +54,7 @@
                     <h3>Fr.Hugo Lungu</h3>
                     <h4>Branch Leader</h4>
                     <h4>
-                        <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
                         Iringa, Njombe, Mbeya, Rukwa, Songwe, Ruvuma
-                        <!-- <i class="bx bxs-quote-alt-right quote-icon-right"></i> -->
                     </h4>
                 </div>
             </div>
@@ -69,9 +67,7 @@
                     <h3>Isack Kimario</h3>
                     <h4>Branch Leader</h4>
                     <h4>
-                        <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
                         Arusha, Kilimanjaro, Tanga, Manyara
-                        <!-- <i class="bx bxs-quote-alt-right quote-icon-right"></i> -->
                     </h4>
                 </div>
             </div>
@@ -83,15 +79,11 @@
                     <h3>Alex Ndagabwene</h3>
                     <h4>Branch Leader</h4> 
                     <h4>
-                        <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
-                        Dar es Salaam, Morogoro, h4wani
-                        <!-- <i class="bx bxs-quote-alt-right quote-icon-right"></i> -->
+                        Dar es Salaam, Morogoro, Pwani
                     </h4>
                 </div>
             </div>
         </div>
-    
-
 
         <div class="row">
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
@@ -101,9 +93,7 @@
               <h3>Shabani Mnkai</h3>
               <h4>Branch Leader</h4> 
               <h4>
-                <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
                 Singida, Dodoma, Kigoma, Tabora
-                <!-- <i class="bx bxs-quote-alt-right quote-icon-right"></i> -->
               </h4>
             </div>
           </div>
@@ -116,9 +106,7 @@
               <h3>Dr. Joel Joshua</h3>
               <h4>Branch Leader</h4>
               <h4>
-                <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
                 Mwanza, Shinyanga, Mara, Kagera
-                <!-- <i class="bx bxs-quote-alt-right quote-icon-right"></i> -->
               </h4>
             </div>
           </div>
@@ -130,9 +118,7 @@
               <h3>Boniphace David</h3>
               <h4>Branch Leader</h4>
               <h4>
-                <!-- <i class="bx bxs-quote-alt-left quote-icon-left"></i> -->
                 Lindi, Mtwara, Zanzibar
-                <!-- <i class="bx bxs-quote-alt-right quote-icon-right"></i> -->
               </h4>
               </div>
             </div>

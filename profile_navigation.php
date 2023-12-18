@@ -81,46 +81,46 @@
 </head>
 
 <body>
-    <?php 
+    <?php
     include("header.php");
     include("titleIcon.php");
 
-    
+
     ?>
     <!-- <nav class="navbar navbar-expand-lg navbar-light" style="background-color: cornflowerblue;"> -->
-        <a class="navbar-brand" href="#">Your Logo</a>
+    <a class="navbar-brand" href="#">Your Logo</a>
 
-        <!-- Toggler/collapsible Button for small screens -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <!-- Toggler/collapsible Button for small screens -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <div class="collapse navbar-collapse" id="navbarContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link 1</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link 2</a>
-                </li>
-                <!-- Other Links -->
-            </ul>
+    <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link 2</a>
+            </li>
+            <!-- Other Links -->
+        </ul>
 
-            <!-- Profile Avatar with Dropdown -->
-            <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-user-circle"></i> <!-- Default avatar icon from Font Awesome -->
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Profile</a>
-                        <a class="dropdown-item" href="#">Settings</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Logout</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
+        <!-- Profile Avatar with Dropdown -->
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user-circle"></i> <!-- Default avatar icon from Font Awesome -->
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Profile</a>
+                    <a class="dropdown-item" href="#">Settings</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Logout</a>
+                </div>
+            </li>
+        </ul>
+    </div>
     </nav>
 
 
@@ -153,6 +153,11 @@
             <nav class="col-lg-2 bg-light sidebar d-none d-lg-block">
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
+
+                        <li class="nav-item">
+                        <a class="navbar-brand" href="index.php"><img src="assets/img/tapa.png"  width="100px"></a>
+                        </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="#" onclick="showCardContent('content1')">
                                 <i class="fas fa-user mr-2"></i>Personal Information

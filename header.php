@@ -44,24 +44,33 @@
   .nav-links {
     align-self: end;
     display: flex;
-    background-color: #0F718A;
     text-align: center;
-    padding: 2px;
-    margin-left: 20px;
-    font-size: large;
+    padding: 4px;
+    margin-left: 0px;
+    font-size: 24px;
     border-radius: 30px;
+    border: #0F718A solid 2px;
+    /* background-color: #0F718A; */
+  }
+
+
+  .nav-links:hover{
+    background-color: #0F718A;
+    color: #fff;
   }
 
   .nav-link {
     display: inline-block;
-    margin-right: 5px;
+    /* margin-right: 5px; */
     text-decoration: none;
     color: #333;
-    font-weight: bold;
+    font-weight: 400;
+    padding: px;
   }
 
   .nav-link:hover {
-    color: white;
+    border-radius: 30px;
+    color: #fff;
     transform: none;
     transition-property: all;
   }
