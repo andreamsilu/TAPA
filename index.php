@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
-  <?php include("titleIcon.php");
+  <?php //include("titleIcon.php");
   ?>
   <style>
     /* General styles */
@@ -75,10 +75,7 @@
       text-align: center;
     }
 
-    .overlay h2 {
-      /* color: #0F718A; */
-      /* margin-bottom: 1px; */
-    }
+   
 
     .overlay p {
       color: #333;

@@ -4,7 +4,6 @@
 <div class="footer-top">
   <div class="container">
     <div class="row">
-
       <div class="col-lg-3 col-md-6 footer-contact">
         <h3>TAPA</h3>
         <p>
@@ -34,7 +33,6 @@
           <li><i class="bx bx-chevron-right"></i> <a href="#">Research</a></li>
           <li><i class="bx bx-chevron-right"></i> <a href="#">Ethics and Standards</a></li>
           <li><i class="bx bx-chevron-right"></i> <a href="#">Continuing Education </a></li>
-          <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li> -->
         </ul>
       </div>
 
@@ -45,7 +43,6 @@
           <input type="email" name="email"><input type="submit" value="Subscribe">
         </form>
       </div>
-
     <div class="  social-links ml-3 me-md-auto text-center text-md-start">
     <a href="https://x.com/tapa_tz?t=Xa40Dj9GacpBmaTJ863zqA&s=08" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="https://www.facebook.com/profile.php?id=100092108256995" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -59,7 +56,7 @@
 
 <div class="container d-md-flex py-4">
 
-   <div class="  social-links  me-md-auto text-center text-md-start">
+   <div class="social-links  me-md-auto text-center text-md-start">
   <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
     <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
     <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
@@ -69,7 +66,7 @@
 
   <div class="me-md-auto  text-center text-md-right pt-3 pt-md-0">
   <div class="copyright">
-      &copy; Copyright <strong><span>TAPA</span></strong>. All Rights Reserved
+      &copy; Copyrighttp://localhost/websites/TAPA/profile.phpht <strong><span>TAPA</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->
@@ -98,5 +95,4 @@
 <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>

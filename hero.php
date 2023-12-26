@@ -33,9 +33,7 @@
       color: #fff;
       padding: 60px;
       border-radius: 10% 10% 50% 50% / 0 0 0 0;
-      /* Creates a convex shape */
       background: linear-gradient(45deg, #0F718A, #095d72);
-      /* Gradient background */
     }
 
     .carousel-content h2 {
