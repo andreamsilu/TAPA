@@ -182,33 +182,42 @@
             </div>
 
             <div class="row">
-              <div class="col-md-6 form-group mt-3 mt-md-0">
-                <label for="licensure" class="col-form-label"> Licensure/Ethics <br> Are you licensed as a psychologist by a state or provincial psychology board outside of Tanzania?</label>
-                <input type="checkbox" name="yes_licensure" value="yes">
-                <label for="">Yes</label>
+              <div class="row">
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <label for="licensure" class="col-form-label"> Licensure/Ethics <br> Are you licensed as a psychologist by a state or provincial psychology board outside of Tanzania?</label>
+                  <div>
+                    <input type="radio" name="licensure" value="yes" id="licensure_yes" required>
+                    <label for="licensure_yes">Yes</label>
+                  </div>
+                  <div>
+                    <input type="radio" name="licensure" value="no" id="licensure_no" required>
+                    <label for="licensure_no">No</label>
+                  </div>
+                </div>
 
-                <input type="checkbox" name="no" value="no">
-                <label for="">No</label>
+                <div class="col-md-6 form-group">
+                  <label for="yes_licensure" class="col-form-label">If Yes, Mention below</label>
+                  <input type="text" name="yes_licensure" class="form-control" id="yes_licensure" placeholder="Your licensure" required>
+                </div>
               </div>
 
-              <div class="col-md-6 form-group">
-                <label for="yes_licensure" class="col-form-label">If Yes Mention below</label>
-                <input type="text" name="yes_licensure" class="form-control" id="yes_licensure" placeholder="Your licensure" required>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6 form-group mt-3 mt-md-0">
-                <label for="licensure" class="col-form-label"> Crimes <br> Have you at any time been convicted of a crime, sanctioned by any professional ethics body, licensing board, regulatory body, professional/scientific organization, or supervisory group for unethical behavior?</label>
-                <input type="checkbox" name="yes_crime" value="yes">
-                <label for="">Yes</label>
+              <div class="row">
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <label for="crimes" class="col-form-label"> Crimes <br> Have you at any time been convicted of a crime, sanctioned by any professional ethics body, licensing board, regulatory body, professional/scientific organization, or supervisory group for unethical behavior?</label>
+                  <div>
+                    <input type="radio" name="crime" value="yes" id="crime_yes" required>
+                    <label for="crime_yes">Yes</label>
+                  </div>
+                  <div>
+                    <input type="radio" name="crime" value="no" id="crime_no" required>
+                    <label for="crime_no">No</label>
+                  </div>
+                </div>
 
-                <input type="checkbox" name="crime_no" value="no" required>
-                <label for="">No</label>
-              </div>
-
-              <div class="col-md-6 form-group mt-3 mt-md-0">
-                <label for="yes_licensure" class="col-form-label">If Yes please explain below</label>
-                <textarea class="form-control" name="yes_crime" rows="3" placeholder="Explain your crime situation" required></textarea>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <label for="yes_crime" class="col-form-label">If Yes, please explain below</label>
+                  <textarea class="form-control" name="yes_crime" rows="3" placeholder="Explain your crime situation" required></textarea>
+                </div>
               </div>
 
               <div class="col-md-6 form-group mt-3">
