@@ -63,7 +63,7 @@
 
   .registration button[type="submit"] {
     color: #0F718A;
-    border: solid #0F718A 1px;
+    border: solid #0F718A 2px;
     border-radius: 8px;
     padding: 10px 20px;
     font-size: 18px;
@@ -105,6 +105,20 @@
     text-decoration: underline;
     color: #0c5b6d;
   }
+
+  .btn-terms {
+    color: #0c5b6d;
+    border: solid #0c5b6d 2px;
+    border-radius: 5px;
+
+  }
+
+  .btn-terms button[type=button]:hover {
+    color: #eee;
+    border: solid #0c5b6d 2px;
+    border-radius: 5px;
+    background-color: #0F718A;
+  }
 </style>
 
 <body>
@@ -131,7 +145,7 @@
         <h1 class="text-center">MEMBERSHIP REGISTRATION FORM</h1>
 
         <div class="row mt-2 justify-content-center" data-aos="fade-up">
-          <form action="forms/register-script.php" method="post" role="form" class="php-email-for">
+          <form action="forms/register-script.php" method="post" role="form" enctype="multipart/form-data">
             <div class="row">
               <div class="col-md-6 form-group">
                 <label for="fullname" class="col-form-label">Full Name</label>
@@ -220,40 +234,45 @@
                 </div>
               </div>
 
-              <div class="col-md-6 form-group mt-3">
+              <div class=" col-md-6 form-group mt-3 mt-md-0">
                 <label for="cv" class="col-form-label">Upload your CV</label>
-                <input type="file" class="form-control" name="cv" id="cv" placeholder="Upload your cv" required>
+                <input type="file" class="form-control" name="cv" id="cv" placeholder="Upload your cv" accept=".pdf,.doc,.docx" required>
+                <small class="text-muted">Accepted file formats: PDF, DOC, DOCX</small>
               </div>
 
-            </div>
-            <div class="row">
-              <div class="col-md-6 form-group mt-3 mt-md-0">
-                <label for="password" class="col-form-label">Password</label>
-                <input type="password" class="form-control" name="password" id="password" placeholder="Your password" required>
+              <div class="row">
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <label for="password" class="col-form-label">Password</label>
+                  <input type="password" class="form-control" name="password" id="password" placeholder="Your password" required minlength="8">
+                  <small class="text-muted">Minimum length: 8 characters</small>
+                </div>
+
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <label for="confirm-password" class="col-form-label">Confirm password</label>
+                  <input type="password" class="form-control" name="confirm-password" id="confirm-password" placeholder="Confirm password" required minlength="8">
+                </div>
               </div>
 
-              <div class="col-md-6 form-group mt-3 mt-md-0">
-                <label for="confirm-password" class="col-form-label">Confirm password</label>
-                <input type="password" class="form-control" name="confirm-password" id="confirm-password" placeholder="Confirm password" required>
+              <div class="form-group mt-3">
+                <button type="button" class="bt btn-terms" data-toggle="modal" data-target="#termsModal">
+                  Read the terms and condions
+                </button><br><br>
+                <input type="checkbox" name="crime_yes" value="yes"> I agree to the terms and condions
               </div>
-            </div>
-            <div class="form-group mt-3">
-              <label for="about" class="col-form-label"><a href="">Read and agree to the Terms and Conditions</a></label><br>
-              <input type="checkbox" name="crime_yes" value="yes"> I agree to the terms and condions
-            </div>
-            <div class="form-group mt-3">
-              <h5>Robot Confirmation</h5>
-              <label for="about" class="col-form-label">Confirm that you are not robot to continue with registration.....</label><br>
 
-              <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
-            </div>
-            <div class="text-center">
-              <button type="submit">Register</button>
-            </div>
+              <div class="form-group mt-3">
+                <h5>Robot Confirmation</h5>
+                <label for="" class="col-form-label">Confirm that you are not robot to continue with registration.....</label><br>
 
-            <div class="form-group mt-3">
-              <p class="large mb-0  text-center">Already have account? <a href="login.php">Login Now</a></p>
-            </div>
+                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+              </div>
+              <div class="text-center">
+                <button type="submit">Register</button>
+              </div>
+
+              <div class="form-group mt-3">
+                <p class="large mb-0" style="text-align: center; font-size:x-large">Already have account? <a href="login.php">Login Now</a></p>
+              </div>
           </form>
         </div>
       </div>
@@ -268,7 +287,56 @@
     <!-- End Profile registration Form -->
   </main>
 
+
+  <!-- Modal -->
+  <div class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Terms and Conditions</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p></strong>
+            Welcome to the Tanzania Association of Psychologists (TAPA) website. By accessing and using
+            this website, you accept and agree to comply with the following terms and conditions: <br>
+
+            <strong>Website Usage:</strong> The content provided on this website is for informational purposes only. It should not be considered as professional advice or a substitute for professional consultation with qualified psychologists or mental health professionals. <br>
+
+            <strong>Accuracy of Information: </strong>We strive to ensure the accuracy and reliability of the information presented on this website. However, we do not warrant the completeness, correctness, or suitability of the information for any purpose. <br>
+
+            <strong>User Responsibilities:</strong> Users of this website are responsible for their actions and the use of information obtained from the site. TAPA shall not be held liable for any direct or indirect damages resulting from the use or misuse of information provided herein. <br>
+
+            <strong>Intellectual Property: </strong>All content, including text, images, logos, and graphics on this website, is the property of TAPA and is protected by intellectual property laws. Unauthorized use, reproduction, or distribution of any content is strictly prohibited without prior written consent. <br>
+
+            <strong> Links to Third-Party Websites:</strong> This website may contain links to external websites for additional information. TAPA does not endorse or take responsibility for the content, accuracy, or security of these third-party websites. <br>
+
+            <strong> Privacy Policy:</strong> Your privacy is important to us. Please refer to our Privacy Policy for information on how we collect, use, and protect your personal data. <br>
+
+            <strong> Modification of Terms:</strong> TAPA reserves the right to modify or update these terms and conditions at any time without prior notice. Users are encouraged to review these terms periodically for any changes. <br>
+
+            <strong>Governing Law: </strong>These terms and conditions shall be governed by and construed in accordance with the laws of Tanzania. Any disputes arising from the use of this website shall be subject to the jurisdiction of Tanzanian courts. <br>
+
+
+            By accessing and using the TAPA website, you agree to abide by these terms and conditions. If you do not agree with any part of these terms, please refrain from using this website. <br>
+
+            For any inquiries or concerns regarding these terms and conditions, please contact us at <strong>info@tapa.or.tz</strong>
+          </p>
+          <!-- Include the terms and conditions content from the previous example -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <?php include "footer.php" ?>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>

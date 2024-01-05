@@ -1,48 +1,36 @@
-
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-include('connection.php'); // Include your database connection script
 session_start();
 
+include "connection.php";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = sanitizeInput($_POST["email"]);
-    $password = $_POST["password"];
+    $email = $_POST['login'];
+    $password = $_POST['password'];
 
-    // Retrieve the user record from the database based on the provided email
-    $sql = "SELECT member_id, email, password FROM members WHERE email=?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $result = $stmt->get_result();
+    // Query to fetch user details based on the provided email
+    $sql = "SELECT * FROM users WHERE email = '$email' LIMIT 1";
+    $result = mysqli_query($conn, $sql);
 
-    if ($result->num_rows === 1) {
-        $row = $result->fetch_assoc();
-        $hashedPassword = $row["password"];
+    if ($result && mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        $hashedPassword = $row['password'];
 
-        // Verify the password
+        // Verify the provided password with the hashed password from the database
         if (password_verify($password, $hashedPassword)) {
-            // Password is correct
-            $_SESSION["member_id"] = $row["member_id"];
-            header("Location: ../profile.php"); // Redirect to a protected page
+            // Password matches, create a session and redirect to a success page
+            $_SESSION['email'] = $email;
+            header("Location: ../profile_navigation.php"); // Redirect to a success page
             exit();
         } else {
-            $loginError = "Invalid email or password.";
-            echo $loginError;
+            // Incorrect password
+            $error = "Invalid credentials. Please try again.";
+            echo $error;
         }
-    } else {                                                                                                                                                                      
-        $loginError = "Invalid email or password.";
-        echo $loginError;
-
+    } else {
+        // User not found
+        $error = "User with this email does not exist.";
+        echo $error;
     }
-
-    $stmt->close();
 }
-
-function sanitizeInput($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}   
+mysqli_close($conn);
 ?>

@@ -82,61 +82,48 @@
 
 <body>
     <?php
-    include("header.php");
+    // include("header.php");
     include("titleIcon.php");
 
 
     ?>
-    <!-- <nav class="navbar navbar-expand-lg navbar-light" style="background-color: cornflowerblue;"> -->
-    <a class="navbar-brand" href="#">Your Logo</a>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #;">
+        <a class="navbar-brand" href="#">Your Logo</a>
 
-    <!-- Toggler/collapsible Button for small screens -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+        <!-- Toggler/collapsible Button for small screens -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse" id="navbarContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link 1</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link 2</a>
-            </li>
-            <!-- Other Links -->
-        </ul>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">updateProgressBar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">membership fees</a>
+                </li>
+                <!-- Other Links -->
+            </ul>
 
-        <!-- Profile Avatar with Dropdown -->
-        <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-user-circle"></i> <!-- Default avatar icon from Font Awesome -->
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Profile</a>
-                    <a class="dropdown-item" href="#">Settings</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Logout</a>
-                </div>
-            </li>
-        </ul>
-    </div>
+            <!-- Profile Avatar with Dropdown -->
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user-circle"></i> <!-- Default avatar icon from Font Awesome -->
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Profile</a>
+                        <a class="dropdown-item" href="#">Settings</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </nav>
 
 
-
-    <!-- <div class="box white text-center profile-edit">
-        <div class="cover-img">
-            <img src="https://www.example.com/cover-image.jpg" alt="Cover Image">
-        </div>
-        <div class="rounded-pic">
-            <img src="https://www.example.com/default-avatar.png" alt="Default Avatar">
-        </div>
-        <h3>Andrea Msilu</h3>
-        <p class="gray">Placeholder description</p>
-        <p class="gray mb-0">Additional info</p>
-        <a href="https://www.empower.co.tz/profile" class="btn btn-transparent">Edit Profile</a>
-    </div> -->
 
 
     <div class="container-fluid">
@@ -155,7 +142,7 @@
                     <ul class="nav flex-column">
 
                         <li class="nav-item">
-                        <a class="navbar-brand" href="index.php"><img src="assets/img/tapa.png"  width="100px"></a>
+                            <a class="navbar-brand" href="index.php"><img src="assets/img/tapa.png" width="100px"></a>
                         </li>
 
                         <li class="nav-item">
@@ -193,9 +180,33 @@
                                 <i class="fas fa-key mr-2"></i>Change password
                             </a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="<? logout() ?>">
+                                <i class="fas fa-sign-out-alt mr-2"></i>Logout
+                            </a>
+                        </li>
+
                     </ul>
                 </div>
             </nav>
+
+            <?php
+            session_start();
+
+            function logout()
+            {
+                // Unset all session variables
+                $_SESSION = [];
+
+                // Destroy the session
+                session_destroy();
+
+                // Redirect to a login page or any other page after logout
+                header("Location: login.php");
+                exit();
+            }
+            ?>
 
             <!-- Collapsible menu for smaller screens -->
             <nav class="col-12 d-lg-none">
