@@ -90,7 +90,7 @@
             <img src="assets/img/tapaImages/Sustain Digital-31.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>AGM 2021</h4>
-              <p>Web</p>
+              <p>Images</p>
               <a href="assets/img/tapaImages/Sustain Digital-32.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bi bi-camera"></i></a>
             </div>
           </div>

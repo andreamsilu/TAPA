@@ -68,14 +68,14 @@
           </div>
           <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
             <div class="box">
-              <span class="advanced">NEW UPDATES</span>
+              <!-- <span class="advanced">NEW UPDATES</span> -->
               <h4>THE UPCOMING EVENTS</h4>
-              <p>We can't wait to share upcoming company news, events, and announcements with you. Your continued support means the world to us, and we're excited to keep you in the loop!
+              <p>We can't wait to share upcoming organizational news, events, and announcements with you. Your continued support means the world to us, and we're excited to keep you in the loop!
               </p>
               <br>
 
               <div class="btn-wrap">
-                <a href="#" class="btn-buy">Check Coming events</a>
+                <!-- <a href="#" class="btn-buy">Check Coming events</a> -->
               </div>
             </div>
           </div>
