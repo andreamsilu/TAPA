@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
-  <?php //include("titleIcon.php");
+  <?php include("titleIcon.php");
   ?>
   <style>
     /* General styles */
@@ -20,9 +20,10 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      /* background-color: #0F718A; */
     }
 
-    .btn {
+    .btn a {
       border: #0F718A solid 2px;
       border-radius: 20px;
       color: #0F718A;
@@ -37,7 +38,7 @@
     .hero {
       position: relative;
       overflow: hidden;
-      height: 400px;
+      height: 500px;
       /* Adjust the height as needed */
     }
 
@@ -61,10 +62,10 @@
 
     .overlay {
       position: absolute;
-      top: 80%;
+      top:50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: rgba(265, 255, 255, 0.9);
+      background-color: rgba(265, 255, 255,0.7);
       /* Transparent background */
       width: 80%;
     }
@@ -95,7 +96,8 @@
     }
 
     .join-card {
-      background-color: rgba(265, 255, 255, 0.9);
+      background-color: rgba(255, 255, 255, 0.9);
+      background-color: #0F718A;
 
     }
 
@@ -317,17 +319,17 @@ include "header.php";
               <h2 class="card-title">About TAPA</h2>
               <p class="card-text">Tanzanian Psychological Association is an organization that represents psychologists and professionals in the field of psychology in Tanzanian. Its primary objectives typically include promoting the field of psychology, advancing the professional development of psychologists, and advocating for mental health and psychological well-being in the country.
               </p>
-              <a href="#" class="btn ">Learn More</a>
+              <a href="about.php" class="btn">Learn More</a>
             </div>
           </div>
 
         </div>
-        <div class="col-lg-6 p-0">
+        <div class="col-lg-5 p-0">
           <div class="card join-card">
             <div class="card-body">
               <h3>Membership in TAPA</h3>
               <p>Become a member of TAPA and be part of a community dedicated to advancing psychology.</p>
-              <a href="#membership" class="btn ">Learn More</a>
+              <a href="membeship-category.php" class="btn">Learn More</a>
             </div>
           </div>
         </div>
@@ -378,7 +380,7 @@ include "header.php";
             <h4>Research Conference 2023</h4>
             <p>Date: October 15, 2023</p>
             <p>Our annual research conference showcased the latest advancements and studies in the field of psychology. Participants had insightful discussions on various topics.</p>
-            <a href="post_description.php" class="btn ">Read More</a>
+            <a href="post_description.php" class="btn">Read More</a>
           </div>
         </div>
       </div>
@@ -597,7 +599,7 @@ include "header.php";
   </section>
 
   <!-- ======= Our Clients Section ======= -->
-   <section id="clients" class="clients">
+   <!-- <section id="clients" class="clients">
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
@@ -657,7 +659,7 @@ include "header.php";
       </div>
 
     </div>
-  </section> 
+  </section>  -->
   <!-- End Our Clients Section -->
 
 

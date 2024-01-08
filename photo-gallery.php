@@ -62,8 +62,8 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <img src="assets/img/tapaImages/Sustain Digital-3.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
+              <h4>AGM 2022</h4>
+              <p>Images</p>
               <a href="assets/img/tapaImages/Sustain Digital-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bi bi-camera"></i></a>
             </div>
           </div>

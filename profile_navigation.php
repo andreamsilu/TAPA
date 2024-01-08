@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -87,47 +91,48 @@
 
 
     ?>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #;">
-        <a class="navbar-brand" href="#">Your Logo</a>
+    
 
-        <!-- Toggler/collapsible Button for small screens -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbarContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">updateProgressBar</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">membership fees</a>
-                </li>
-                <!-- Other Links -->
-            </ul>
-
-            <!-- Profile Avatar with Dropdown -->
-            <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-user-circle"></i> <!-- Default avatar icon from Font Awesome -->
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Profile</a>
-                        <a class="dropdown-item" href="#">Settings</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Logout</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
 
 
 
 
     <div class="container-fluid">
         <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-green" style="background-color: aquamarine;">
+    <a class="navbar-brand" href="#">Your Logo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">updateProgressBar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">membership fees</a>
+            </li>
+            <!-- Other Links -->
+        </ul>
+
+        <!-- Profile Avatar with Dropdown -->
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user-circle"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Profile</a>
+                    <a class="dropdown-item" href="#">Settings</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Logout</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
 
             <!-- Collapsible menu for smaller screens -->
             <nav class="col-12 d-lg-none">
@@ -229,9 +234,15 @@
                             <button class="btn btn-primary" onclick="displayModal()"><i class="fas fa-plus"></i>Add</button>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Card Content for Link 1</h5>
-                            <p class="card-text">This is the card content for Link 1 displayed when Link 1 is clicked.</p>
-                            <button class="btn btn-secondary" onclick="displayEditPersonalInfoModal()"><i class="fas fa-pencil-alt"></i>Edit</button>
+                            <h5 class="card-title"><?php echo $row["fullname"]; ?></h5>
+                            <p class="card-text">
+                                Email: <?php echo $row["email"]; ?><br>
+                                Phone: <?php echo $row["phone"]; ?><br>
+                                <!-- Include additional fields as needed -->
+                            </p>
+                            <button class="btn btn-secondary" onclick="displayEditPersonalInfoModal()">
+                                <i class="fas fa-pencil-alt"></i>Edit
+                            </button>
                         </div>
                     </div>
                 </div>

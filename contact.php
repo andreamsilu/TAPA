@@ -8,6 +8,7 @@
   <title>Contact - TAPA </title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+  <link rel="stylesheet" href="assets/css/style.css">
 
   <?php include "titleIcon.php" ?>
 
