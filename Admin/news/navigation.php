@@ -19,13 +19,15 @@
             padding-top: 60px;
             /* Adjust according to your navbar height */
             background-color: #333;
+            color: #fff;
         }
 
         .sidebar a {
             padding: 10px 15px;
             display: block;
-            color: #333;
+            color: #fff;
             text-decoration: none;
+
         }
 
         .sidebar a:hover {
@@ -37,13 +39,22 @@
             /* background-color: #0F718A; */
             color: #0F718A;
         }
+
+        .dropdown-menu{
+            background-color: #333;
+            color: #fff;
+        } 
+
+        .nav-link{
+            color: white;
+        }
     </style>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="dashboard.php">TAPA</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand" href="index.php">TAPA</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -79,11 +90,11 @@
     <div class="container-fluid">
         <div class="row">
             <!-- Sidebar navigation -->
-            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <nav class="col-md-2 d-none d-md-block bg-dark sidebar">
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="../dashboard.php">Dashboard</a>
+                            <a class="nav-link" href="index.php">Dashboard</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="add_news.php">Add News</a>
@@ -94,12 +105,12 @@
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Membership
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="membership/member_list.php">Member List</a>
-                                <a class="dropdown-item" href="membership/membership_fees.php">Membership Fees</a>
+                                <a class="dropdown-item" href="member_list.php">Member List</a>
+                                <a class="dropdown-item" href="membership_fees.php">Membership Fees</a>
                             </div>
                         </li>
                     </ul>

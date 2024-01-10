@@ -2,34 +2,16 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+ob_start(); // Start output buffering
 
+// Rest of your code...
 
-// Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Database connection
-    include "../../forms/connection.php";
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    // Prepare and bind the UPDATE statement
-    $stmt = $conn->prepare("UPDATE news SET title=?, description=?, image_url=?, date=?, video_url=? WHERE id=?");
-    $stmt->bind_param("sssssi", $title, $description, $image_url, $date, $video_url, $id);
-
-    // Set parameters
-    $id = $_POST["id"];
-    $title = $_POST["title"];
-    $description = $_POST["description"];
-    $date = $_POST["date"];
-
-    // Handle file uploads for image and video URLs
-    $image_url = uploadFile('image_url', 'uploads/images/');
-    $video_url = uploadFile('video_url', 'uploads/videos/');
+    // Rest of your existing code...
 
     if ($stmt->execute()) {
-        header("Location: read_news.php?id=$id&success=1"); // Redirect to edit news form with success message
+        // Redirect to read_news.php with success message
+        header("Location: read_news.php?id=$id&success=1");
         exit();
     } else {
         echo "Error: " . $stmt->error;
@@ -38,6 +20,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->close();
     $conn->close();
 }
+
+ob_end_flush(); // Flush output buffer
+?>
+
 
 // Function to handle file uploads
 function uploadFile($fileKey, $targetDirectory)

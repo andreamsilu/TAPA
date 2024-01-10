@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_param("sssss", $title, $description, $image_file, $date, $video_file);
 
         if ($stmt->execute()) {
-            header("Location: dashboard.php"); // Redirect to add news form with success message
+            header("Location: index.php"); // Redirect to add news form with success message
             exit();
         } else {
             echo "Error: " . $stmt->error;
@@ -54,8 +54,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <?php include "navigation.php"; ?>
 
 <div class="container mt-5">
-    <h2>Add News</h2>
-    <form action="add_news.php" method="post" enctype="multipart/form-data">
+    <h2 class="text-center">Add News</h2>
+    <form action="add_news.php" method="post" enctype="multipart/form-data" style="margin:20px">
         <div class="form-group">
             <label for="title">Title:</label>
             <input type="text" class="form-control" id="title" name="title" required>
@@ -80,4 +80,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </form>
 </div>
 
-<? include "../footer.php"; ?>
+<?php include "footer.php"; ?>

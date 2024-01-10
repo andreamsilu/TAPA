@@ -28,28 +28,30 @@
                         <div class='card news-card'>";
         
                 // Check if video URL is available for this article
-                if (!empty($row['video_url'])) {
+                if (!empty($row['image_url'])) {
+                    echo "<img src='{$row['image_url']}' class='card-img-top' alt='News Image'>";
+
+                    
+                } else {
+                    // Display the image if no video URL is available
                     echo "<div class='embed-responsive embed-responsive-16by9'>
                             <video class='embed-responsive-item' controls>
                                 <source src='{$row['video_url']}' type='video/mp4'>
                                 Your browser does not support the video tag.
                             </video>
                         </div>";
-                } else {
-                    // Display the image if no video URL is available
-                    echo "<img src='{$row['image_url']}' class='card-img-top' alt='News Image'>";
                 }
         
                 echo "<div class='card-body'>
                         <h5 class='card-title'>{$row['title']}</h5>
                         <p class='card-text'>{$row['description']}</p>
                         <p class='card-text'><small class='text-muted'>{$row['date']}</small></p>
-                        <a href='news/edit_news.php?id={$row['id']}' class='btn btn-primary btn-sm mr-2'>Edit</a>
-                        <form action='news/delete_news.php' method='post' style='display: inline-block;'>
+                        <a href='edit_news.php?id={$row['id']}' class='btn btn-primary btn-sm mr-2'>Edit</a>
+                        <form action='delete_news.php' method='post' style='display: inline-block;'>
                             <input type='hidden' name='id' value='{$row['id']}'>
                             <button type='submit' class='btn btn-danger btn-sm' onclick='return confirm(\"Are you sure you want to delete this news article?\");'>Delete</button>
                         </form>
-                        <a href='news/full_news.php?id={$row['id']}' class='btn btn-secondary btn-sm'>Read More</a>
+                        <a href='full_news.php?id={$row['id']}' class='btn btn-secondary btn-sm'>Read More</a>
                     </div>
                 </div>
             </div>";
@@ -64,3 +66,4 @@
         ?>
     </div>
 </div>
+<?php include "footer.php"; ?>
