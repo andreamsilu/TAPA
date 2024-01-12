@@ -18,7 +18,7 @@ include "../../forms/connection.php";
       echo "<tbody>";
       while ($row = $result->fetch_assoc()) {
           echo "<tr>";
-          echo "<td><a href='view_member.php?id=" . $row['id'] . "'>" . $row['id'] . "</a></td>";
+          echo "<td><a href='view_member.php?id=" . $row['id'] . "'>" . $row['id'] . " view</a></td>";
           echo "<td>" . $row['fullname'] . "</td>";
           echo "<td>" . $row['email'] . "</td>";
           echo "<td>" . $row['phone'] . "</td>";
