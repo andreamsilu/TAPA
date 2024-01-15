@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $expirationDate = sanitizeData($_POST["expirationDate"]);
 
     // SQL query to insert data into the database
-    $sql = "INSERT INTO certification_info (certification_name, certification_authority, certification_date, expiration_date) 
+    $sql = "INSERT INTO certification (certification_name, certification_authority, certification_date, expiration_date) 
             VALUES ('$certificationName', '$certificationAuthority', '$certificationDate', '$expirationDate')";
 
     if ($conn->query($sql) === TRUE) {

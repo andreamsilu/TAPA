@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $languages = sanitizeData($_POST["languages"]);
 
     // SQL query to insert data into the database
-    $sql = "INSERT INTO your_table_name (gender, nationality, dob, country_residence, city_residence, license, languages) VALUES ('$gender', '$nationality', '$dob', '$countryResidence', '$cityResidence', '$license', '$languages')";
+    $sql = "INSERT INTO users (gender, nationality, dob, country_residence, city_residence, license, languages) VALUES ('$gender', '$nationality', '$dob', '$countryResidence', '$cityResidence', '$license', '$languages')";
 
     if ($conn->query($sql) === TRUE) {
         echo "Data saved successfully";

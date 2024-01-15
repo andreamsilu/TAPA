@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $expirationDate = sanitizeData($_POST["expirationDate"]);
 
     // Update data in the database
-    $sql = "UPDATE certification_info 
+    $sql = "UPDATE certification 
             SET certification_name = '$certificationName', 
                 certification_authority = '$certificationAuthority', 
                 certification_date = '$certificationDate', 
@@ -48,23 +48,12 @@ $conn->close();
 
 <div class="container mt-5">
   <?php
-  // Replace these values with your actual database credentials
-  $servername = "your_database_server";
-  $username = "your_username";
-  $password = "your_password";
-  $database = "your_database_name";
+   include "../forms/connection.php";
 
-  // Create connection
-  $conn = new mysqli($servername, $username, $password, $database);
-
-  // Check connection
-  if ($conn->connect_error) {
-      die("Connection failed: " . $conn->connect_error);
-  }
 
   // Get the record to be edited
   $certificationId = $_GET['id'];
-  $sql = "SELECT * FROM certification_info WHERE id = $certificationId";
+  $sql = "SELECT * FROM certification WHERE id = $certificationId";
   $result = $conn->query($sql);
 
   if ($result->num_rows > 0) {

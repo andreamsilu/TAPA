@@ -16,7 +16,7 @@
 
 
   // Fetch certification information from the database
-  $sql = "SELECT * FROM certification_info";
+  $sql = "SELECT * FROM certification";
   $result = $conn->query($sql);
 
   if ($result->num_rows > 0) {

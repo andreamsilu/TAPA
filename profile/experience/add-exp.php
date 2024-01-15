@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $jobDescription = sanitizeData($_POST["jobDescription"]);
 
     // SQL query to insert data into the database
-    $sql = "INSERT INTO work_experience (company_name, position, start_date, end_date, job_description) VALUES ('$companyName', '$position', '$startDate', '$endDate', '$jobDescription')";
+    $sql = "INSERT INTO experience (company_name, position, start_date, end_date, job_description) VALUES ('$companyName', '$position', '$startDate', '$endDate', '$jobDescription')";
 
     if ($conn->query($sql) === TRUE) {
         echo "Work experience saved successfully";

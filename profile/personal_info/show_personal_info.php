@@ -21,7 +21,7 @@
 
       // Get the user's information
       $userId = 1;  // Replace with the actual user ID
-      $sql = "SELECT * FROM your_table_name WHERE id = $userId";
+      $sql = "SELECT * FROM users WHERE id = $userId";
       $result = $conn->query($sql);
 
       if ($result->num_rows > 0) {

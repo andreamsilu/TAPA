@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $jobDescription = sanitizeData($_POST["jobDescription"]);
 
     // SQL query to update data in the database
-    $sql = "UPDATE work_experience SET company_name = '$companyName', position = '$position', start_date = '$startDate', end_date = '$endDate', job_description = '$jobDescription' WHERE id = $workExperienceId";
+    $sql = "UPDATE experience SET company_name = '$companyName', position = '$position', start_date = '$startDate', end_date = '$endDate', job_description = '$jobDescription' WHERE id = $workExperienceId";
 
     if ($conn->query($sql) === TRUE) {
         echo "Work experience updated successfully";

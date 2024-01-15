@@ -25,7 +25,7 @@
 
 
   // Get work experience information
-  $sql = "SELECT * FROM work_experience";
+  $sql = "SELECT * FROM experience";
   $result = $conn->query($sql);
 
   if ($result->num_rows > 0) {
@@ -57,6 +57,5 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
 </body>
 </html>

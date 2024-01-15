@@ -18,7 +18,7 @@
 
         // Get the record to be edited
         $recordId = $_GET['id'];
-        $sql = "SELECT * FROM your_table_name WHERE id = $recordId";
+        $sql = "SELECT * FROM users WHERE id = $recordId";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
