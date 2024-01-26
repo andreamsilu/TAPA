@@ -1,4 +1,4 @@
-<?php include "../navigation.php" ?>
+<?php include "navigation.php" ?>
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -26,15 +26,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Close connection
         $conn->close();
     }
-} else {
-    // Redirect or handle the case when the form is not submitted through a POST request
-    echo "Invalid request.";
+  
 }
+
 ?>
 
 <div class="container mt-5">
   <h2>Education Details</h2>
-  <form>
+  <form action="add_edu.php" method="post">
     <div class="form-group">
       <label for="awardSelect">Award</label>
       <select class="form-control" id="awardSelect" name="award">
@@ -55,4 +54,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </form>
 </div>
 
-<?php include "../footer.php" ?>
+<?php include "footer.php" ?>

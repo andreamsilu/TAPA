@@ -1,3 +1,4 @@
+<?php include "navigation.php" ?>
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve form data
@@ -18,6 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($conn->query($sql) === TRUE) {
             echo "<h3>Data has been successfully updated in the database!</h3>";
+            header("Location:show_edu.php");
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
@@ -25,23 +27,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Close connection
         $conn->close();
     }
-} else {
-    // Redirect or handle the case when the form is not submitted through a POST request
-    echo "Invalid request.";
 }
 ?>
 
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Edit Education Details</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
-<body>
 
 <div class="container mt-5">
   <h2>Edit Education Details</h2>
@@ -71,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if ($result->num_rows > 0) {
       $row = $result->fetch_assoc();
   ?>
-  <form method="post" action="update_data.php">
+  <form method="post" action="edit_edu.php">
     <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
     <div class="form-group">
       <label for="awardSelect">Award</label>
@@ -101,8 +89,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   ?>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+
+
+<?php include("footer.php") ?>

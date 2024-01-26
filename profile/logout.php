@@ -1,3 +1,5 @@
+<?php include "navigation.php" ?>
+
 <!-- Logout Modal -->
 <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -12,7 +14,7 @@
         <p>Are you sure you want to logout?</p>
       </div>
       <div class="modal-footer">
-        <bu<!-- Logout Modal -->
+        <!-- Logout Modal -->
 <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -54,3 +56,4 @@ tton type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button
     window.location.href = "/logout.php";
   }
 </script>
+<?php include "footer.php" ?>

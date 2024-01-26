@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php include("navigation.php") ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Form</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-</head>
-
-<body>
 
     <div class="container mt-5">
         <?php
@@ -107,6 +97,4 @@
         }
     </script>
 
-</body>
-
-</html>
+<?php include("footer.php") ?>

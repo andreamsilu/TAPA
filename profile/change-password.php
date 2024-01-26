@@ -1,3 +1,6 @@
+<?php include("navigation.php"); ?>
+
+
 <?php
    include "../forms/connection.php";
 
@@ -114,5 +117,5 @@ $conn->close();
   }
 </script>
 
-</body>
-</html>
+<?php include("foooter.php"); ?>
+

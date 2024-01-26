@@ -1,6 +1,14 @@
+<?php include "navigation.php" ?>
+
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "TAPA_DB";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Function to fetch progress based on your application's logic
 function fetchProgress() {
@@ -29,44 +37,29 @@ function fetchProgress() {
 $conn->close();
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Summary Page</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
+
 
 <div class="container mt-5">
   <h2>Summary Page</h2>
 
   <h3>Personal Information</h3>
-  <?php include 'fetch_personal_info.php'; ?>
+  <?php include '../profile/show_personal_info.php'; ?>
 
   <h3>Work Experience</h3>
-  <?php include 'fetch_work_experience.php'; ?>
+  <?php include '../profile/show-exp.php'; ?>
 
   <h3>Certification Information</h3>
-  <?php include 'fetch_certification_info.php'; ?>
+  <?php include '../profile/show-cert.php'; ?>
 
   <h3>Contact Information</h3>
-  <?php include 'fetch_contact_info.php'; ?>
+  <?php include '../profile/show-cont.php'; ?>
 
   <h3>Personal CV</h3>
-  <?php include 'fetch_personal_cv.php'; ?>
+  <?php include '../profile/show-cv.php'; ?>
 
   <h3>Progress</h3>
   <!-- Display progress based on your application's logic -->
-  <?php include 'progress.php'; ?>
+  <?php include '../profile/progress.php'; ?>
 </div>
 
-<!-- Bootstrap JS and jQuery -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-</body>
-</html>
+<?php include("footer.php") ?>

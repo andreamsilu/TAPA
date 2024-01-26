@@ -103,8 +103,8 @@
                                 Personal info
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="add_personal_info.php">Personal info</a>
-                                <a class="dropdown-item" href="show_info_info.php">Manage</a>
+                                <a class="dropdown-item" href="add_personal_info.php">Add</a>
+                                <a class="dropdown-item" href="show_personal_info.php">Manage</a>
                             </div>
                         </li>
 
@@ -123,7 +123,7 @@
                                 Education info
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="education/add_edu.php">Add Education</a>
+                                <a class="dropdown-item" href="add_edu.php">Add Education</a>
                                 <a class="dropdown-item" href="show_edu.php">Manage Education</a>
                             </div>
                         </li>
