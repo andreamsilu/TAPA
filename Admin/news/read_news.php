@@ -1,4 +1,4 @@
-<?php include "navigation.php"; ?>
+<?php // include "navigation.php"; ?>
 <style>
     /* Additional custom styles as needed */
     .news-card {
@@ -10,8 +10,12 @@
     <div class="row">
         <?php
         // Database connection
-        include "../../forms/connection.php";
-
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "TAPA_DB";
+        
+        $conn = new mysqli($servername, $username, $password, $dbname);
         // Check connection
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
@@ -29,7 +33,7 @@
         
                 // Check if video URL is available for this article
                 if (!empty($row['image_url'])) {
-                    echo "<img src='{$row['image_url']}' class='card-img-top' alt='News Image'>";
+                    echo "<img src='../{$row['image_url']}' class='card-img-top' alt='News Image'>";
 
                     
                 } else {
@@ -65,4 +69,4 @@
         ?>
     </div>
 </div>
-<?php include "footer.php"; ?>
+<?php //include "footer.php"; ?>

@@ -298,6 +298,7 @@ include "header.php";
 
 ?>
 
+
 <body>
 
   <!-- =====Hero section===== -->
@@ -343,10 +344,8 @@ include "header.php";
     <div class="section-title py-5">
       <h2>TAPA UPDATES</h2>
     </div>
-
-    <!-- <h2 style="text-align: center; color:#0F718A; padding:40px">TAPA updates</h2> -->
+<!-- 
     <div id="newsCarousel" class="owl-carousel owl-theme">
-      <!-- News Items -->
       <div class="item">
         <div class="news-item">
           <img src="assets/img/tapaImages/slide-1.jpg" alt="News 1">
@@ -358,8 +357,7 @@ include "header.php";
           </div>
         </div>
       </div>
-      <!-- Add more news items -->
-      <!-- News Items -->
+ 
       <div class="item">
         <div class="news-item">
           <img src="assets/img/tapaImages/slide-2.jpg" alt="News 2">
@@ -371,8 +369,7 @@ include "header.php";
           </div>
         </div>
       </div>
-      <!-- Add more news items -->
-      <!-- News Items -->
+   
       <div class="item">
         <div class="news-item">
           <img src="assets/img/tapaImages/slide-3.jpg" alt="News 3">
@@ -384,8 +381,7 @@ include "header.php";
           </div>
         </div>
       </div>
-      <!-- Add more news items -->
-      <!-- News Items -->
+   
       <div class="item">
         <div class="news-item">
           <img src="assets/img/tapaImages/Sustain Digital-2.jpg" alt="News 4">
@@ -397,8 +393,7 @@ include "header.php";
           </div>
         </div>
       </div>
-      <!-- Add more news items -->
-      <!-- News Items -->
+    
       <div class="item">
         <div class="news-item">
           <img src="assets/img/tapaImages/Sustain Digital-3.jpg" alt="News 5">
@@ -410,8 +405,6 @@ include "header.php";
           </div>
         </div>
       </div>
-      <!-- Add more news items -->
-      <!-- News Items -->
       <div class="item">
         <div class="news-item">
           <img src="assets/img/tapaImages/Sustain Digital-7.jpg" alt="News 6">
@@ -423,44 +416,11 @@ include "header.php";
           </div>
         </div>
       </div>
-      <!-- Add more news items -->
     </div>
-  </div>
+  </div> -->
   <!-- end of news -->
   <!--====== End of news section =====-->
-
-
-  <!-- <section id="about-us" class="about-us">
-  <div class="container" data-aos="fade-up">
-
-    <div class="row content">
-      <div class="col-lg-6" data-aos="fade-right">
-        <img src="assets/img/carousel-images/3918491-removebg-preview.png" alt="Tanzanian Psychological Association" width="500px">
-      </div>
-      <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left">
-        <h2 class="mb-4" style="color: #0F718A;">Tanzanian Psychological Association</h2>
-
-        <p class="mb-3">
-          The Tanzanian Psychological Association is dedicated to representing psychologists and professionals in the field within Tanzania. Our primary objectives are to promote psychology, advance the professional development of psychologists, and advocate for mental health and well-being in the country.
-        </p>
-        <p class="mb-3">
-          We strive to achieve these goals through initiatives such as:
-        </p>
-        <ul class="mb-4">
-          <li><i class="ri-check-double-line"></i> Professional development opportunities</li>
-          <li><i class="ri-check-double-line"></i> Advocacy for mental health</li>
-          <li><i class="ri-check-double-line"></i> Continuing education programs</li>
-        </ul>
-        <p>
-          At the Tanzanian Psychological Association, we are committed to fostering a community of professionals dedicated to improving mental health and psychological understanding within our society.
-        </p>
-      </div>
-    </div>
-
-  </div>
-</section> -->
-  <!-- End About Us Section -->
-
+ <?php include "Admin/news/read_news.php" ?>
 
   <!-- ======= Services Section ======= -->
   <section id="services" class="services section-bg">
