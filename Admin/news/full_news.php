@@ -18,9 +18,10 @@ if (isset($_GET['id'])) {
         $news = $result->fetch_assoc();
 
         // Display the news article details
-        ?>
+?>
         <!DOCTYPE html>
         <html>
+
         <head>
             <title><?php echo $news['title']; ?></title>
             <!-- Include necessary Bootstrap or CSS links -->
@@ -29,33 +30,43 @@ if (isset($_GET['id'])) {
                 /* Adjust styles for image or video */
                 .media-container {
                     max-width: 100%;
-                    height: auto;
+                    height: 700px;
+                    justify-content: center;
                 }
-            </style>
+            </style>    
         </head>
+
         <body>
             <!-- Navigation -->
-            <?php include "navigation.php"; ?>
+            <?php //include "navigation.php"; 
+            ?>
 
             <div class="container mt-5">
                 <h1><?php echo $news['title']; ?></h1>
-                <p><?php echo $news['description']; ?></p>
                 <p>Date: <?php echo $news['date']; ?></p>
-                
-                <!-- Display image or video -->
-                <?php
-                if (!empty($news['video_url'])) {
-                    echo "<div class='embed-responsive embed-responsive-16by9 media-container'>
-                            <video class='embed-responsive-item' controls>
+                <div class="row">
+                    <div class="col-md-6">
+                        <?php
+                        if (!empty($news['video_url'])) {
+                            echo "<div class='embed-responsive embed-responsive-16by9 media-container'>
+                            <video class='embed-responsive-item' width='550px'   controls>
                                 <source src='{$news['video_url']}' type='video/mp4'>
                                 Your browser does not support the video tag.
                             </video>
                         </div>";
-                } elseif (!empty($news['image_url'])) {
-                    echo "<img src='{$news['image_url']}' alt='News Image' class='img-fluid media-container'>";
-                }
-                ?>
-                
+                        } elseif (!empty($news['image_url'])) {
+                            echo "<img src='{$news['image_url']}' alt='News Image'  ' class='img-fluid media-container'>";
+                        }
+
+                        ?>
+                    </div>
+                    <div class="col-md-6">
+                        <p><?php echo $news['description']; ?></p>
+                    </div>
+                </div>
+                <!-- Display image or video -->
+
+
                 <!-- Add Edit and Delete buttons -->
                 <a href="edit_news.php?id=<?php echo $news['id']; ?>" class="btn btn-primary">Edit</a>
                 <a href="delete_news.php?id=<?php echo $news['id']; ?>" class="btn btn-danger">Delete</a>
@@ -66,8 +77,9 @@ if (isset($_GET['id'])) {
             <!-- Include necessary JavaScript or scripts -->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         </body>
+
         </html>
-        <?php
+<?php
     } else {
         echo "No news found with the provided ID.";
     }

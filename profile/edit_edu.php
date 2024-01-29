@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "UPDATE education SET award='$award', institution='$institution', year='$year' WHERE id=$id";
 
         if ($conn->query($sql) === TRUE) {
-            echo "<h3>Data has been successfully updated in the database!</h3>";
+            // echo "<h3>Data has been successfully updated in the database!</h3>";
             header("Location:show_edu.php");
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 <div class="container mt-5">
-  <h2>Edit Education Details</h2>
+  <!-- <h2>Edit Education Details</h2> -->
 
   <?php
   // Retrieve education details from the database based on the ID
@@ -88,7 +88,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $conn->close();
   ?>
 </div>
-
-
-
 <?php include("footer.php") ?>

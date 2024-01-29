@@ -9,6 +9,8 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-f6BQoo4W/2+n7va3l1F1K5pOH2j2apIvU/jq4NF94AfTtev6Bs5v0J5/V8mJv8aFgHvuy1bQe9iRzL1FmqU07Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
   <?php include "titleIcon.php" ?>
 
@@ -37,8 +39,46 @@
     </section>
     <!-- End Breadcrumbs -->
 
+    
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+            <div class="about-img">
+              <img src="assets/img/tapaImages/Sustain Digital-11.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+    <h3><i class="bi bi-university"></i> Tanzanian Psychological Association</h3>
+    <p class="fst-italic">
+        TAPA is a professional association of Tanzanian psychologists, that aims to advance Psychology as a science, profession, and a means of promoting human well-being.
+    </p>
+    
+    <h3><i class="bi bi-bullseye"></i> Mission</h3>
+    <p>
+        Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+        culpa qui officia deserunt mollit anim id est laborum
+    </p>
+    
+    <h3><i class="bi bi-eye"></i> Vision</h3>
+    <p>
+        Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+        culpa qui officia deserunt mollit anim id est laborum
+    </p>
+</div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End About Section -->
+
     <!-- ======= About Us Section ======= -->
-    <section id="about-us" class="about-us" style="background-image: url(assets/img/service-img/paper-brain-with-light-bulb.jpg);" >
+    <!-- <section id="about-us" class="about-us" style="background-image: url(assets/img/service-img/paper-brain-with-light-bulb.jpg);" >
       <div class="container" data-aos="fade-up" >
 
         <div class="row content">
@@ -58,19 +98,148 @@
               <li><i class="ri-check-double-line"></i> Ethics and Standards</li>
 
 
-            </ul>
+            </ul> -->
             <!-- <p class="fst-italic">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
               magna aliqua.
             </p> -->
+          <!-- </div>
+        </div>
+
+      </div>
+    </section> -->
+    <!-- End About Us Section -->
+     <!-- ======= Chefs Section ======= -->
+     <section id="chefs" class="chefs">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Our Leaders</h2>
+          <p>Prominent individuals within the TAPA organization who hold influential roles and responsibilities.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="zoom-in" data-aos-delay="100">
+              <img src="assets/img/team/shagembe.png" class="img-fluid chef-img" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Shagembe Magolanga</h4>
+                  <span>President</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="zoom-in" data-aos-delay="200">
+              <img src="assets/img/tapa/hussen.png" class="img-fluid chef-img" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Hussein Mshunga</h4>
+                  <span>Vice president</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="zoom-in" data-aos-delay="300">
+              <img src="assets/img/zones/Gs-removebg-preview.png" class="img-fluid chef-img" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Deogratius Ramale</h4>
+                  <span>General Scretary</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="zoom-in" data-aos-delay="100">
+              <img src="assets/img/tapa/eunice-kitenge.png" class="img-fluid chef-img" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Eunice Kitenge</h4>
+                  <span>Deputy General Secretary</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="zoom-in" data-aos-delay="200">
+              <img src="assets/img/tapa/bertha-lusioki.png" class="img-fluid chef-img" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Dr Bertha Lusioki</h4>
+                  <span>Treasurer</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="zoom-in" data-aos-delay="300">
+              <img src="assets/img/tapa/mauki2.png" class="img-fluid chef-img" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Dr.Chris mauki</h4>
+                  <span>Excom advisor</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>
     </section>
-    <!-- End About Us Section -->
+    <!-- End Chefs Section -->
+
 <!-- ======= Our leadership Section ======= -->
-<section id="team" class="team section-bg">
+<!-- <section id="team" class="team section-bg">
   <div class="container">
 
     <div class="section-title" data-aos="fade-up">
@@ -79,12 +248,10 @@
     </div>
 
     <div class="row">
-      <!-- First Row -->
       <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-        <!-- Member 1 -->
         <div class="member" data-aos="fade-up" data-aos-delay="100">
           <div class="member-img">
-            <img src="assets/img/team/shagembe.png" class="img-fluid" alt="" width="800px">
+            <img src="assets/img/tapa/eunice-kitenge.png" class="img-fluid" alt="" width="800px">
             <div class="social">
               <a href=""><i class="bi bi-twitter"></i></a>
               <a href=""><i class="bi bi-facebook"></i></a>
@@ -93,17 +260,16 @@
             </div>
           </div>
           <div class="member-info">
-            <h4>Shagembe Magolanga</h4>
-            <span>President</span>
+            <h4>Eunice Kitenge</h4>
+            <span>Deputy GS</span>
           </div>
         </div>
       </div>
 
-      <!-- Member 2 -->
       <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
         <div class="member" data-aos="fade-up" data-aos-delay="100">
           <div class="member-img">
-            <img src="assets/img/tapa/hussen.png" class="img-fluid" alt="">
+            <img src="assets/img/tapa/bertha-lusioki.png" class="img-fluid" alt="">
             <div class="social">
               <a href=""><i class="bi bi-twitter"></i></a>
               <a href=""><i class="bi bi-facebook"></i></a>
@@ -112,17 +278,16 @@
             </div>
           </div>
           <div class="member-info">
-            <h4>Hussein Mshunga</h4>
-            <span>Vice President</span>
+            <h4>Dr.Bertha Lusioki</h4>
+            <span>Treasurer</span>
           </div>
         </div>
       </div>
 
-      <!-- Member 3 -->
       <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
         <div class="member" data-aos="fade-up" data-aos-delay="200">
           <div class="member-img">
-            <img src="assets/img/tapa/person1.png" class="img-fluid" alt="">
+            <img src="assets/img/tapa/mauki2.png" class="img-fluid" alt="">
             <div class="social">
               <a href=""><i class="bi bi-twitter"></i></a>
               <a href=""><i class="bi bi-facebook"></i></a>
@@ -131,17 +296,14 @@
             </div>
           </div>
           <div class="member-info">
-            <h4>Deogratius Ramale</h4>
-            <span>General Secretary</span>
+            <h4>Dr.Chris mauki</h4>
+            <span>Excom advisor</span>
           </div>
         </div>
       </div>
     </div>
-    <!-- End First Row -->
 
-    <!-- Second Row -->
     <div class="row">
-      <!-- Member 4 -->
       <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
         <div class="member" data-aos="fade-up" data-aos-delay="300">
           <div class="member-img">
@@ -160,7 +322,6 @@
         </div>
       </div>
 
-      <!-- Member 5 -->
       <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
         <div class="member" data-aos="fade-up" data-aos-delay="400">
           <div class="member-img">
@@ -179,7 +340,6 @@
         </div>
       </div>
 
-      <!-- Member 6 -->
       <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
         <div class="member" data-aos="fade-up" data-aos-delay="500">
           <div class="member-img">
@@ -198,13 +358,11 @@
         </div>
       </div>
     </div>
-    <!-- End Second Row -->
 
   </div>
-</section>
+</section> -->
 <!-- End Our Team Section -->
     
-    <!-- End Our Team Section -->
 
     <!-- ======= Our Skills Section ======= -->
     <!-- <section id="skills" class="skills">

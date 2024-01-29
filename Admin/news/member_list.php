@@ -35,5 +35,4 @@ include "../../forms/connection.php";
   $conn->close();
   ?>
 </div>
-
 <? include "footer.php"; ?>

@@ -83,62 +83,58 @@
 
 <body>
 
-  <section id="hero">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-12">
-          <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <!-- ======= Hero Section ======= -->
+<section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
-            <div class="carousel-inner" role="listbox">
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
 
-              <!-- Slide 1 -->
-              <div class="carousel-item active" style="background-image: url('assets/img/carousel-images/paper-brain-with-light-bulb.jpg');">
-                <div class="carousel-content animate__animated animate__fadeInUp">
-                  <h2><span>Latest updates</span></h2>
-                  <h3>TAPA Launches Student Mentorship Program</h3>
-                  <p>TAPA introduces a mentorship program to support the next generation of psychologists and promote excellence in the field.</p>
-                  <div class="text-center"><a href="about.php" class="btn-get-started">Read More</a></div>
-                </div>
-              </div>
+      <div class="carousel-inner" role="listbox">
 
-              <!-- Slide 2 -->
-              <div class="carousel-item" style="background-image: url('assets/img/carousel-images/family-therapy.avif');">
-                <div class="carousel-content animate__animated animate__fadeInUp">
-                  <h2>Latest updates</h2>
-                  <h3>TAPA Partners with NGOs to Support Trauma Survivors:</h3>
-                  <p>TAPA collaborates with local non-governmental organizations to provide counseling and support services to individuals affected by trauma and disasters.</p>
-                  <div class="text-center"><a href="/about.php" class="btn-get-started">Read More</a></div>
-                </div>
-              </div>
-
-              <!-- Slide 3 -->
-              <div class="carousel-item" style="background-image: url('assets/img/carousel-images/human-brain-with-many-flowers.jpg');">
-                <div class="carousel-content animate__animated animate__fadeInUp">
-                  <h2>Upcoming Events</h2>
-                  <h3>Marks World Mental Health Day with Awareness Campaign</h3>
-                  <p>TAPA joins the global community in raising awareness about mental health on World Mental Health Day through educational events and initiatives.</p>
-                  <div class="text-center"><a href="/about.php" class="btn-get-started">Read More</a></div>
-                </div>
-              </div>
-
-              <!-- Add more slides as needed -->
-
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url(assets/img/tapaImages/slide-1.jpg)">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animated fadeInDown">Build spaces and empower <span>young people with skills development</span></h2>
+              <p class="animated fadeInUp">We work closely with communities, providing self-employment and life skills training through mentorship, leadership programs, research, nature expeditions, photography explorations, advocacy, and community outreach programs</p>
+              <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a>
             </div>
-
-            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-            </a>
-            <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
-              <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-            </a>
-
-            <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
-
           </div>
         </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item" style="background-image: url(assets/img/tapaImages/slide-2.jpg)">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animated fadeInDown">We use different methodologies with different partners to achieve our goals</h2>
+              <p class="animated fadeInUp">Our hard-working young people use innovative ways to help communities value their environment, Human rights and recognize the value of the ecosystem around them.</p>
+              <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item" style="background-image: url(assets/img/tapaImages/slide-3.jpg)">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animated fadeInDown">Loving relationships should permeate every aspect of organizational life.</h2>
+              <p class="animated fadeInUp">Equipping the youth with the knowledge and skills, and competence to act and drive sustainable change.</p>
+              <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a>
+            </div>
+          </div>
+        </div>
+
       </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
     </div>
-  </section>
+  </section><!-- End Hero --> 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="scripts.js"></script>

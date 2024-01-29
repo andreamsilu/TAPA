@@ -5,7 +5,12 @@ ini_set('display_errors', 1);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Database connection
-    include "../../forms/connection.php";
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "TAPA_DB";
+    
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
     // Check connection
     if ($conn->connect_error) {
@@ -30,14 +35,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         move_uploaded_file($_FILES["video_url"]["tmp_name"], $video_file)
     ) {
         // Prepare and bind the INSERT statement
-        $stmt = $conn->prepare("INSERT INTO news (title, description, image_url, date, video_url) VALUES (?, ?, ?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO nes (title, description, image_url, date, video_url) VALUES (?, ?, ?, ?, ?)");
         $stmt->bind_param("sssss", $title, $description, $image_file, $date, $video_file);
 
         if ($stmt->execute()) {
             header("Location: index.php"); // Redirect to add news form with success message
             exit();
         } else {
-            echo "Error: " . $stmt->error;
+            echo " <h1>Error:  </h1>" . $stmt->error;
         }
 
         $stmt->close();

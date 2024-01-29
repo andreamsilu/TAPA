@@ -44,20 +44,20 @@ $conn->close();
 
     <!-- Position -->
     <div class="form-group">
-      <label for="position">Position</label>
+      <label for="position">Job title/position</label>
       <input type="text" class="form-control" id="position" name="position" required>
     </div>
 
     <!-- Start Date -->
     <div class="form-group">
       <label for="startDate">Start Date</label>
-      <input type="text" class="form-control" id="startDate" name="startDate" placeholder="mm/dd/yyyy" required>
+      <input type="date" class="form-control" id="startDate" name="startDate" placeholder="mm/dd/yyyy" required>
     </div>
 
     <!-- End Date -->
     <div class="form-group">
       <label for="endDate">End Date</label>
-      <input type="text" class="form-control" id="endDate" name="endDate" placeholder="mm/dd/yyyy">
+      <input type="date" class="form-control" id="endDate" name="endDate" placeholder="mm/dd/yyyy">
     </div>
 
     <!-- Job Description -->

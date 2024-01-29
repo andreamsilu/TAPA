@@ -33,7 +33,7 @@
         
                 // Check if video URL is available for this article
                 if (!empty($row['image_url'])) {
-                    echo "<img src='../{$row['image_url']}' class='card-img-top' alt='News Image'>";
+                    echo "<img src='Admin/news/{$row['image_url']}' class='card-img-top' height='250px' width='250px' alt='News Image'>";
 
                     
                 } else {
@@ -55,7 +55,7 @@
                             <input type='hidden' name='id' value='{$row['id']}'>
                             <button type='submit' class='btn btn-danger btn-sm' onclick='return confirm(\"Are you sure you want to delete this news article?\");'>Delete</button>
                         </form>
-                        <a href='full_news.php?id={$row['id']}' class='btn btn-secondary btn-sm'>Read More</a>
+                        <a href='Admin/news/full_news.php?id={$row['id']}' class='btn btn-secondary btn-sm'>Read More</a>
                     </div>
                 </div>
             </div>";

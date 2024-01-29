@@ -35,83 +35,6 @@
       border-radius: 20px;
     }
 
-    .hero {
-      position: relative;
-      overflow: hidden;
-      height: 500px;
-      /* Adjust the height as needed */
-    }
-
-    .hero-carousel {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 200%;
-      /* Twice the width for two images */
-      height: 400px;
-      display: flex;
-      animation: carousel-slide 8s infinite linear;
-    }
-
-    .hero-carousel img {
-      width: 100%;
-      /* Half of the container for each image */
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .overlay {
-      position: absolute;
-      top:50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: rgba(265, 255, 255,0.7);
-      /* Transparent background */
-      width: 80%;
-    }
-
-    .overlay .card-body {
-      padding: 20px;
-      height: 300px;
-      text-align: center;
-    }
-
-   
-
-    .overlay p {
-      color: #333;
-      font-size: 18px;
-      font-weight: 300;
-      font-family: 'Roboto', sans-serif;
-    }
-
-    @keyframes carousel-slide {
-      0% {
-        transform: translateX(0);
-      }
-
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-
-    .join-card {
-      background-color: rgba(255, 255, 255, 0.9);
-      background-color: #0F718A;
-
-    }
-
-
-    /*===== News section styles=====*/
-    .owl-carousel .owl-item {
-      margin-right: 10px;
-    }
-
-    .owl-carousel .owl-item .item {
-      height: 300px;
-      /* Fixed height for all news items */
-      position: relative;
-    }
 
     .news-item {
       border: 1px solid #ccc;
@@ -294,15 +217,20 @@
 
 <?php
 include "header.php";
-//include "hero.php";
+// include "hero.php";
 
 ?>
 
 
 <body>
 
+<?php
+// include "header.php";
+include "hero.php";
+
+?>
   <!-- =====Hero section===== -->
-  <section class="hero">
+  <!-- <section class="hero">
     <div class="container-fluid">
       <div class="row position-relative">
         <div class="hero-carousel">
@@ -310,10 +238,10 @@ include "header.php";
           <img src="assets/img/carousel-images/advocacy-removebg-preview.png" alt="Image 2">
           <img src="assets/img/carousel-images/3918491-removebg-preview.png" alt="Image 2">
           <img src="assets/img/carousel-images/relationship-counseling-.avif" alt="">
-          <img src="assets/img/carousel-images/advocacy-removebg-preview.png" alt="Image 2">
+          <img src="assets/img/carousel-images/advocacy-removebg-preview.png" alt="Image 2"> -->
 
           <!-- Add more images as needed -->
-        </div>
+        <!-- </div>
         <div class="col-lg-6 d-flex align-items-center">
           <div class="overlay card">
             <div class="card-body">
@@ -336,7 +264,7 @@ include "header.php";
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
 
   <!--===== News section =====-->

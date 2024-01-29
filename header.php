@@ -152,14 +152,14 @@
           <a href="membeship-category.php"><span>Membership</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
             <li><a href="login.php">Login</a></li>
-            <li><a href="registration.php">Register</a></li>
+            <li><a href="membeship-category.php">Register</a></li>
           </ul>
         </li>
         <li class="dropdown">
           <a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
             <li><a href="about.php">About Us</a></li>
-            <li><a href="leadership.php">Leadership</a></li>
+            <!-- <li><a href="leadership.php">Leadership</a></li> -->
             <li><a href="commitees.php">Committees</a></li>
             <li><a href="zones.php">Zone & Division</a></li>
           </ul>
