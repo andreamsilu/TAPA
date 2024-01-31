@@ -101,7 +101,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="read_news.php">Fetch All News</a>
+                            <a class="nav-link" href="show_news.php">Fetch All News</a>
                         </li>
 
                         <li class="nav-item dropdown">

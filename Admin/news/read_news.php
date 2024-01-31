@@ -1,20 +1,31 @@
-<?php // include "navigation.php"; ?>
 <style>
     /* Additional custom styles as needed */
     .news-card {
         margin-bottom: 20px;
+        height: 400px; /* Set a fixed height for the cards */
+    }
+
+    .news-card img {
+        height: 250px; /* Set a fixed height for the images */
+        width: 100%; /* Ensure images take full width of the card */
+        object-fit: cover; /* Maintain aspect ratio and cover the entire card */
+    }
+
+    .news-container {
+        margin-top: 20px;
     }
 </style>
+
 <div class="container mt-5">
-    <h2>All News</h2>
-    <div class="row">
+    <!-- <h2>All News</h2> -->
+    <div class="news-container">
         <?php
         // Database connection
         $servername = "localhost";
         $username = "root";
         $password = "";
         $dbname = "TAPA_DB";
-        
+
         $conn = new mysqli($servername, $username, $password, $dbname);
         // Check connection
         if ($conn->connect_error) {
@@ -25,17 +36,21 @@
         $sql = "SELECT * FROM news ORDER BY date DESC";
         $result = $conn->query($sql);
 
-        
+        $count = 0; // Initialize a counter
+
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                echo "<div class='col-md-4'>
+                // Start a new row after every four news articles
+                if ($count % 4 == 0) {
+                    echo "<div class='row'>";
+                }
+
+                echo "<div class='col-md-3'>
                         <div class='card news-card'>";
-        
+
                 // Check if video URL is available for this article
                 if (!empty($row['image_url'])) {
-                    echo "<img src='Admin/news/{$row['image_url']}' class='card-img-top' height='250px' width='250px' alt='News Image'>";
-
-                    
+                    echo "<img src='Admin/news/{$row['image_url']}' class='card-img-top' alt='News Image'>";
                 } else {
                     // Display the image if no video URL is available
                     echo "<div class='embed-responsive embed-responsive-16by9'>
@@ -45,28 +60,40 @@
                             </video>
                         </div>";
                 }
-        
+
                 echo "<div class='card-body'>
                         <h5 class='card-title'>{$row['title']}</h5>
-                        <p class='card-text'>{$row['description']}</p>
+                        <p class='card-text'>";
+
+                // Shorten the description for the preview
+                $shortenedDescription = substr($row['description'], 0, 80) . '...';
+
+                echo $shortenedDescription;
+
+                echo "</p>
                         <p class='card-text'><small class='text-muted'>{$row['date']}</small></p>
-                        <a href='edit_news.php?id={$row['id']}' class='btn btn-primary btn-sm mr-2'>Edit</a>
-                        <form action='delete_news.php' method='post' style='display: inline-block;'>
-                            <input type='hidden' name='id' value='{$row['id']}'>
-                            <button type='submit' class='btn btn-danger btn-sm' onclick='return confirm(\"Are you sure you want to delete this news article?\");'>Delete</button>
-                        </form>
-                        <a href='Admin/news/full_news.php?id={$row['id']}' class='btn btn-secondary btn-sm'>Read More</a>
+                        <a href='Admin/news/full_news.php?id={$row['id']}' class='btn btn-primary btn-sm'>Read More</a>
                     </div>
                 </div>
             </div>";
+
+                // End the row after every four news articles
+                if ($count % 4 == 3) {
+                    echo "</div>";
+                }
+
+                $count++; // Increment the counter
+            }
+
+            // If the last row doesn't have enough news articles to fill four columns
+            if ($count % 4 !== 0) {
+                echo "</div>";
             }
         } else {
             echo "No news articles found.";
         }
-    
-        
+
         $conn->close();
         ?>
     </div>
 </div>
-<?php //include "footer.php"; ?>

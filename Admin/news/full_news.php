@@ -19,6 +19,15 @@ if (isset($_GET['id'])) {
 
         // Display the news article details
 ?>
+
+        <?php
+        include('../../titleIcon.php');
+
+        ?>
+         <?php
+            include "../../header.php";
+            ?>
+
         <!DOCTYPE html>
         <html>
 
@@ -26,6 +35,8 @@ if (isset($_GET['id'])) {
             <title><?php echo $news['title']; ?></title>
             <!-- Include necessary Bootstrap or CSS links -->
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css" rel="stylesheet">
+            <link rel="stylesheet" href="../../assets/css/style.css">
             <style>
                 /* Adjust styles for image or video */
                 .media-container {
@@ -33,46 +44,173 @@ if (isset($_GET['id'])) {
                     height: 700px;
                     justify-content: center;
                 }
-            </style>    
+            </style>
         </head>
 
         <body>
+           
             <!-- Navigation -->
-            <?php //include "navigation.php"; 
-            ?>
+            <!-- if ($comments) { -->
 
             <div class="container mt-5">
                 <h1><?php echo $news['title']; ?></h1>
                 <p>Date: <?php echo $news['date']; ?></p>
                 <div class="row">
-                    <div class="col-md-6">
-                        <?php
-                        if (!empty($news['video_url'])) {
-                            echo "<div class='embed-responsive embed-responsive-16by9 media-container'>
-                            <video class='embed-responsive-item' width='550px'   controls>
-                                <source src='{$news['video_url']}' type='video/mp4'>
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>";
-                        } elseif (!empty($news['image_url'])) {
-                            echo "<img src='{$news['image_url']}' alt='News Image'  ' class='img-fluid media-container'>";
-                        }
-
-                        ?>
-                    </div>
-                    <div class="col-md-6">
-                        <p><?php echo $news['description']; ?></p>
-                    </div>
+                    <?php
+                    if (!empty($news['video_url'])) {
+                        echo "<div class='embed-responsive embed-responsive-16by9 media-container'>
+                    <video class='embed-responsive-item' width='550px'   controls>
+                        <source src='{$news['video_url']}' type='video/mp4'>
+                        Your browser does not support the video tag.
+                    </video>
+                </div>";
+                    } elseif (!empty($news['image_url'])) {
+                        echo "<img src='{$news['image_url']}' alt='News Image'  ' class='img-fluid media-container'>";
+                    }
+                    ?>
                 </div>
-                <!-- Display image or video -->
+                <div class="mt-4">
+                    <?php
+                    // Explode the description into paragraphs
+                    $paragraphs = explode("\n", $news['description']);
 
-
-                <!-- Add Edit and Delete buttons -->
-                <a href="edit_news.php?id=<?php echo $news['id']; ?>" class="btn btn-primary">Edit</a>
-                <a href="delete_news.php?id=<?php echo $news['id']; ?>" class="btn btn-danger">Delete</a>
-                <!-- Add Read More functionality if needed -->
+                    // Output each paragraph in a <p> tag
+                    foreach ($paragraphs as $paragraph) {
+                        echo "<p class='text-center m-3 p-4'>$paragraph</p>";
+                    }
+                    ?>
+                </div>
 
             </div>
+            <!-- Display image or video -->
+            <div class="mt-3 text-center">
+                <button class="btn btn-primary" onclick="shareNews()">
+                    <i class="bi bi-share"></i> Share
+                </button>
+                <button id="copyButton" class="btn btn-primary">
+                    <i class="bi bi-files"></i> Copy Link
+                </button>
+            </div>
+
+            <script>
+                function shareNews() {
+                    // Get the news details
+                    var newsTitle = '<?php echo $news['title']; ?>';
+                    var newsID = '<?php echo $news['id']; ?>';
+
+                    // Create a shareable link with the news ID
+                    var shareLink = "http://example.com/share-news.php?id=" + encodeURIComponent(newsID);
+
+                    // Check if the Web Share API is supported
+                    if (navigator.share) {
+                        navigator.share({
+                                title: newsTitle,
+                                url: shareLink,
+                            })
+                            .then(() => console.log('Successful share'))
+                            .catch((error) => console.log('Error sharing:', error));
+                    } else {
+                        // Fallback for browsers that do not support Web Share API
+                        // You can customize this fallback based on your needs (e.g., open a modal with sharing options)
+                        alert("Share this link for '" + newsTitle + "': " + shareLink);
+                    }
+
+                    // Enable the "Copy Link" button
+                    document.getElementById('copyButton').disabled = false;
+                }
+
+                document.getElementById('copyButton').addEventListener('click', function() {
+                    // Get the shareable link
+                    var shareLink = "http://example.com/share-news.php?id=" + encodeURIComponent('<?php echo $news['id']; ?>');
+
+                    // Create a temporary input element
+                    var tempInput = document.createElement('input');
+                    tempInput.value = shareLink;
+                    document.body.appendChild(tempInput);
+
+                    // Select the text in the input element
+                    tempInput.select();
+                    tempInput.setSelectionRange(0, 99999); /*For mobile devices*/
+
+                    // Copy the text to the clipboard
+                    document.execCommand('copy');
+                    document.body.removeChild(tempInput);
+
+                    // Display a confirmation message
+                    alert('Link copied to clipboard: ' + shareLink);
+                });
+            </script>
+
+
+
+            <!-- Display Comments from Database -->
+            <div class="mt-4 text-center">
+                <h3>Comments</h3>
+
+                <?php
+
+                // Assume $news_id is the news article ID
+                $news_id = $_GET['id'];
+
+                // Fetch comments for the specific news article
+                $sql = "SELECT * FROM comments WHERE news_id = ?";
+                $stmt = $conn->prepare($sql);
+                $stmt->bind_param("i", $news_id);
+                $stmt->execute();
+                $result = $stmt->get_result();
+
+                // Check if there are comments
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        // Display comments with styling
+                        echo "<div class='comment-container'>";
+                        echo "<div class='comment-header'>";
+                        echo "<strong>{$row['user_name']}:</strong>";
+                        echo "<span class='comment-date'>{$row['created_at']}</span>";
+                        echo "</div>";
+                        echo "<p class='comment-text'>{$row['comment_text']}</p>";
+                        echo "<button class='btn btn-sm btn-primary reply-btn' onclick='showReplyForm({$row['id']})'>Reply</button>";
+                        echo "<div class='reply-form' id='replyForm{$row['id']}'>";
+                        echo "<form action='post_reply.php' method='post'>";
+                        echo "<input type='hidden' name='comment_id' value='{$row['id']}'>";
+                        echo "<input type='hidden' name='news_id' value='{$news_id}'>";
+                        echo "<label for='user_name'>Your Name:</label>";
+                        echo "<input type='text' name='user_name' required>";
+                        echo "<label for='reply_comment'>Your Reply:</label>";
+                        echo "<textarea name='reply_comment' required></textarea>";
+                        echo "<button type='submit' class='btn btn-sm btn-primary'>Post Reply</button>";
+                        echo "</form>";
+                        echo "</div>";
+                        echo "</div>";
+                    }
+                } else {
+                    echo "<p>No comments yet.</p>";
+                }
+
+                $stmt->close();
+                $conn->close();
+                ?>
+            </div>
+
+            <!-- Comment Form -->
+            <div class="container">
+                <form action="post_comment.php" method="post" class="border p-3 rounded m-5">
+                    <input type="hidden" name="news_id" value="<?php echo $news['id']; ?>">
+
+                    <div class="mb-3">
+                        <label for="user_name" class="form-label">Your Name:</label>
+                        <input type="text" name="user_name" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="comment" class="form-label">Comment:</label>
+                        <textarea name="comment" class="form-control" rows="4" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Post Comment</button>
+                </form>
+            </div>
+
 
             <!-- Include necessary JavaScript or scripts -->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -91,3 +229,4 @@ if (isset($_GET['id'])) {
     echo "No news ID provided.";
 }
 ?>
+<?php include('../../footer.php') ?>

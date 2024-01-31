@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
   <link rel="stylesheet" href="assets/css/style.css">
 
-  <?php //include "titleIcon.php" 
+  <?php include "titleIcon.php" 
   ?>
 
 </head>

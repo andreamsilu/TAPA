@@ -22,196 +22,6 @@
       box-sizing: border-box;
       /* background-color: #0F718A; */
     }
-
-    .btn a {
-      border: #0F718A solid 2px;
-      border-radius: 20px;
-      color: #0F718A;
-    }
-
-    .btn:hover {
-      background-color: #0F718A;
-      color: white;
-      border-radius: 20px;
-    }
-
-
-    .news-item {
-      border: 1px solid #ccc;
-      position: relative;
-      overflow: hidden;
-      border-radius: 5px;
-    }
-
-    .news-item img {
-      width: 100%;
-      height: auto;
-    }
-
-    .news-details {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 15px;
-      color: #fff;
-      text-align: center;
-    }
-
-    .news-details h4 {
-      margin-bottom: 10px;
-      font-size: 1.5em;
-    }
-
-    .news-details p {
-      margin-bottom: 5px;
-      font-size: 0.9em;
-    }
-
-
-    /* =====Services Section=====*/
-    .services {
-      padding: 80px 0;
-    }
-
-    .section-title {
-      font-size: 32px;
-      font-weight: 700;
-      text-align: center;
-      color: #0F718A;
-      margin-bottom: 10px;
-    }
-
-    .service-box {
-      background: #ccc;
-      padding: 30px;
-      text-align: center;
-      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease-in-out;
-      border-radius: 10px;
-      margin: 10px;
-    }
-
-    .service-box:hover {
-      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
-      transform: translateY(-5px);
-    }
-
-    .service-box .service-image {
-      max-width: 150px;
-      margin-bottom: 20px;
-    }
-
-    .service-box h4 {
-      font-size: 24px;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 15px;
-    }
-
-    .service-box p {
-      font-size: 16px;
-      line-height: 1.6;
-      color: #666;
-    }
-
-    /*--------------------------------------------------------------
-# Frequently Asked Questions
---------------------------------------------------------------*/
-
-    .faq h2 {
-      color: #0F718A;
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 28px;
-    }
-
-    .faq .faq-list {
-      padding: 0 100px;
-    }
-
-    .faq .faq-list ul {
-      padding: 0;
-      list-style: none;
-    }
-
-    .faq .faq-list li+li {
-      margin-top: 15px;
-    }
-
-    .faq .faq-list li {
-      padding: 20px;
-      background: #0F718A;
-      border-radius: 4px;
-      position: relative;
-    }
-
-    .faq .faq-list a {
-      display: block;
-      position: relative;
-      font-family: "Poppins", sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      font-weight: 500;
-      padding: 0 30px;
-      outline: none;
-      cursor: pointer;
-      color: #fff;
-      text-decoration: none;
-    }
-
-    .faq .faq-list .icon-help {
-      font-size: 24px;
-      position: absolute;
-      right: 0;
-      left: 20px;
-      color: #fff;
-    }
-
-    .faq .faq-list .icon-show,
-    .faq .faq-list .icon-close {
-      font-size: 24px;
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-
-    .faq .faq-list p {
-      margin-bottom: 0;
-      padding: 10px 0 0 0;
-      color: #fff;
-    }
-
-    .faq .faq-list .icon-show {
-      display: none;
-    }
-
-    .faq .faq-list a.collapsed {
-      color: #343a40;
-      transition: 0.3s;
-      /* background-color: #fff; */
-      color: #fff;
-      border: #0F718A solid 2px;
-    }
-
-    .faq .faq-list a.collapsed:hover {
-      color: #fff;
-    }
-
-    .faq .faq-list a.collapsed .icon-show {
-      display: inline-block;
-    }
-
-    .faq .faq-list a.collapsed .icon-close {
-      display: none;
-    }
-
-    @media (max-width: 1200px) {
-      .faq .faq-list {
-        padding: 0;
-      }
-    }
   </style>
 </head>
 
@@ -224,11 +34,11 @@ include "header.php";
 
 <body>
 
-<?php
-// include "header.php";
-include "hero.php";
+  <?php
+  // include "header.php";
+  include "hero.php";
 
-?>
+  ?>
   <!-- =====Hero section===== -->
   <!-- <section class="hero">
     <div class="container-fluid">
@@ -240,8 +50,8 @@ include "hero.php";
           <img src="assets/img/carousel-images/relationship-counseling-.avif" alt="">
           <img src="assets/img/carousel-images/advocacy-removebg-preview.png" alt="Image 2"> -->
 
-          <!-- Add more images as needed -->
-        <!-- </div>
+  <!-- Add more images as needed -->
+  <!-- </div>
         <div class="col-lg-6 d-flex align-items-center">
           <div class="overlay card">
             <div class="card-body">
@@ -265,90 +75,10 @@ include "hero.php";
       </div>
     </div>
   </section> -->
-
-
-  <!--===== News section =====-->
-  <div class="container">
-    <div class="section-title py-5">
-      <h2>TAPA UPDATES</h2>
-    </div>
-<!-- 
-    <div id="newsCarousel" class="owl-carousel owl-theme">
-      <div class="item">
-        <div class="news-item">
-          <img src="assets/img/tapaImages/slide-1.jpg" alt="News 1">
-          <div class="news-details">
-            <h4>Workshop on Stress Management</h4>
-            <p>Date: December 10, 2023</p>
-            <p>The Tanzanian Psychological Association conducted a successful workshop focused on stress management techniques for professionals and the general public.</p>
-            <a href="post_description.php" class="btn ">Read More</a>
-          </div>
-        </div>
-      </div>
- 
-      <div class="item">
-        <div class="news-item">
-          <img src="assets/img/tapaImages/slide-2.jpg" alt="News 2">
-          <div class="news-details">
-            <h4>Webinar on Mental Health Awareness</h4>
-            <p>Date: November 25, 2023</p>
-            <p>Join our upcoming webinar on mental health awareness where experts will discuss the importance of mental well-being in today's society.</p>
-            <a href="post_description.php" class="btn ">Read More</a>
-          </div>
-        </div>
-      </div>
-   
-      <div class="item">
-        <div class="news-item">
-          <img src="assets/img/tapaImages/slide-3.jpg" alt="News 3">
-          <div class="news-details">
-            <h4>Research Conference 2023</h4>
-            <p>Date: October 15, 2023</p>
-            <p>Our annual research conference showcased the latest advancements and studies in the field of psychology. Participants had insightful discussions on various topics.</p>
-            <a href="post_description.php" class="btn">Read More</a>
-          </div>
-        </div>
-      </div>
-   
-      <div class="item">
-        <div class="news-item">
-          <img src="assets/img/tapaImages/Sustain Digital-2.jpg" alt="News 4">
-          <div class="news-details">
-            <h4>New Therapeutic Approaches</h4>
-            <p>Date: September 28, 2023</p>
-            <p>Discover the innovative therapeutic approaches introduced by the Psychological Association to aid individuals in their mental health journey.</p>
-            <a href="post_description.php" class="btn ">Read More</a>
-          </div>
-        </div>
-      </div>
-    
-      <div class="item">
-        <div class="news-item">
-          <img src="assets/img/tapaImages/Sustain Digital-3.jpg" alt="News 5">
-          <div class="news-details">
-            <h4>Understanding Emotional Intelligence</h4>
-            <p>Date: August 14, 2023</p>
-            <p>Learn about emotional intelligence and its impact on mental well-being in our upcoming workshop.</p>
-            <a href="post_description.php" class="btn ">Read More</a>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="news-item">
-          <img src="assets/img/tapaImages/Sustain Digital-7.jpg" alt="News 6">
-          <div class="news-details">
-            <h4>Mental Health Awareness Month</h4>
-            <p>Date: July 3, 2023</p>
-            <p>Join us in observing Mental Health Awareness Month and explore the various activities lined up to promote mental health.</p>
-            <a href="post_description.php" class="btn ">Read More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-  <!-- end of news -->
-  <!--====== End of news section =====-->
- <?php include "Admin/news/read_news.php" ?>
+  <div class="section-title">
+    <h2>TAPA NEWS</h2>
+  </div>
+  <?php include "Admin/news/read_news.php" ?>
 
   <!-- ======= Services Section ======= -->
   <section id="services" class="services section-bg">
@@ -413,81 +143,120 @@ include "hero.php";
   <!-- End Services Section -->
 
 
-  <section id="faq" class="faq section-bg" style="background:#ccc">
+  <!-- ======= F.A.Q Section ======= -->
+  <section id="faq" class="faq">
+
     <div class="container" data-aos="fade-up">
-      <div class="section-title">
+
+      <header class="section-title">
+        <!-- <h2>F.A.Q</h2> -->
         <h2>Frequently Asked Questions</h2>
+      </header>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <!-- F.A.Q List 1-->
+          <div class="accordion accordion-flush" id="faqlist1">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
+                  What is psychotherapy/counseling?
+                </button>
+              </h2>
+              <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+                <div class="accordion-body">
+                  Psychotherapy or counseling is a professional process that helps individuals explore and manage their emotions, thoughts, and behaviors to improve mental well-being. </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
+                  How do I know if I need therapy? </button>
+              </h2>
+              <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+                <div class="accordion-body">
+                  If you're experiencing persistent emotional distress, behavioral issues, or difficulties in daily functioning, it may be time to consider therapy.
+
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
+                  How do I choose the right therapist for me? </button>
+              </h2>
+              <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+                <div class="accordion-body">
+                  Choose a therapist based on their expertise, approach, and how comfortable you feel discussing your concerns with them.
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+
+          <!-- F.A.Q List 2-->
+          <div class="accordion accordion-flush" id="faqlist2">
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-1">
+                  What can I expect in my first therapy session? </button>
+              </h2>
+              <div id="faq2-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+                <div class="accordion-body">
+                  The first session involves getting to know each other, discussing your reasons for seeking therapy, and understanding the therapeutic process.
+
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-2">
+                  How long does therapy usually take? </button>
+              </h2>
+              <div id="faq2-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+                <div class="accordion-body">
+                  Therapy duration varies depending on your needs and progress, ranging from a few sessions to several months or more.
+
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-3">
+                  What's the difference between a psychologist and a psychiatrist? </button>
+              </h2>
+              <div id="faq2-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+                <div class="accordion-body">
+                  Psychologists provide therapy and counseling, while psychiatrists can prescribe medication in addition to therapy.
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
 
-      <div class="faq-list">
-        <ul>
-          <li data-aos="fade-up">
-            <i class="bx bx-help-circle icon-help"></i>
-            <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">What is psychotherapy/counseling? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-            <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
-              <p>
-                Psychotherapy or counseling is a professional process that helps individuals explore and manage their emotions, thoughts, and behaviors to improve mental well-being.
-              </p>
-            </div>
-          </li>
-
-          <li data-aos="fade-up" data-aos-delay="100">
-            <i class="bx bx-help-circle icon-help"></i>
-            <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">How do I know if I need therapy? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-            <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                If you're experiencing persistent emotional distress, behavioral issues, or difficulties in daily functioning, it may be time to consider therapy.
-              </p>
-            </div>
-          </li>
-
-          <li data-aos="fade-up" data-aos-delay="200">
-            <i class="bx bx-help-circle icon-help"></i>
-            <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">How do I choose the right therapist for me?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-            <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Choose a therapist based on their expertise, approach, and how comfortable you feel discussing your concerns with them.
-              </p>
-            </div>
-          </li>
-
-          <li data-aos="fade-up" data-aos-delay="300">
-            <i class="bx bx-help-circle icon-help"></i>
-            <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">What can I expect in my first therapy session?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-            <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                The first session involves getting to know each other, discussing your reasons for seeking therapy, and understanding the therapeutic process.
-              </p>
-            </div>
-          </li>
-
-          <li data-aos="fade-up" data-aos-delay="400">
-            <i class="bx bx-help-circle icon-help"></i>
-            <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">How long does therapy usually take? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-            <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Therapy duration varies depending on your needs and progress, ranging from a few sessions to several months or more.
-              </p>
-            </div>
-          </li>
-
-          <li data-aos="fade-up" data-aos-delay="500">
-            <i class="bx bx-help-circle icon-help"></i>
-            <a data-bs-toggle="collapse" data-bs-target="#faq-list-6" class="collapsed">What's the difference between a psychologist and a psychiatrist? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-            <div id="faq-list-6" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Psychologists provide therapy and counseling, while psychiatrists can prescribe medication in addition to therapy.
-              </p>
-            </div>
-          </li>
-
-        </ul>
-      </div>
     </div>
+    <style>
+  
+    </style>
   </section>
+  <!-- End F.A.Q Section -->
+
 
   <!-- ======= Our Clients Section ======= -->
-   <!-- <section id="clients" class="clients">
+  <!-- <section id="clients" class="clients">
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
@@ -557,26 +326,7 @@ include "hero.php";
   <!-- Owl Carousel JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script>
-    $(document).ready(function() {
-      $(".owl-carousel").owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-        autoplay: true,
-        autoplayTimeout: 2000, // Set autoplay interval in milliseconds (2000ms = 2s)
-        responsive: {
-          0: {
-            items: 1
-          },
-          600: {
-            items: 2
-          },
-          1000: {
-            items: 3
-          }
-        }
-      });
-    });
+   
   </script>
 </body>
 

@@ -21,7 +21,7 @@
   
 <?php include "header.php" ?>
 
-  <main id="main">
+  <main id="main" class="bg-body-terti">
 
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
@@ -41,13 +41,13 @@
 
     <!-- ======= zones/branches Section ======= -->
 
- <!-- ======= Team Section ======= -->
- <section id="team" class="team">
+ <!-- ======= zone Section ======= -->
+ <section id="zone" class="zone">
 
-<div class="container" data-aos="fade-up">
+<div class="container" data-aos="fade-up" >
 
   <header class="section-header">
-  <h2 style="text-align: center;">TAPA <span>BRANCHES</span></h2>
+  <h2 class="text-center py-3">TAPA <span>BRANCHES</span></h2>
   </header>
 
   <div class="row gy-4">
@@ -181,7 +181,7 @@
 </div>
 
 </section>
-<!-- End Team Section -->
+<!-- End zone Section -->
 
 
     <?php include "division.php" ?>

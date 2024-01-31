@@ -47,12 +47,12 @@
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
             <div class="about-img">
-              <img src="assets/img/tapaImages/Sustain Digital-11.jpg" alt="">
+              <img src="assets/img/tapaImages/Sustain Digital-11.jpg"  alt="">
             </div>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
     <h3><i class="bi bi-university"></i> Tanzanian Psychological Association</h3>
-    <p class="fst-italic">
+    <p class="fs-italic">
         TAPA is a professional association of Tanzanian psychologists, that aims to advance Psychology as a science, profession, and a means of promoting human well-being.
     </p>
     
@@ -77,37 +77,7 @@
     </section>
     <!-- End About Section -->
 
-    <!-- ======= About Us Section ======= -->
-    <!-- <section id="about-us" class="about-us" style="background-image: url(assets/img/service-img/paper-brain-with-light-bulb.jpg);" >
-      <div class="container" data-aos="fade-up" >
-
-        <div class="row content">
-          <div class="col-lg-6" data-aos="fade-right">
-            <h2 style="color: #0F718A;">TANZANIA PSYCHOLOGICAL ASSOCIATION</h2>
-            <h3>TAPA is a professional association of Tanzanian psychologists, that aims to advance Psychology as a science, profession, and a means of promoting human well-being.</h3>
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left">
-            <p>
-              TAPA has its primary objectives which are as follows
-            </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> Proffesional Development</li>
-              <li><i class="ri-check-double-line"></i> Advocacy</li>
-              <li><i class="ri-check-double-line"></i> Continuing Education</li>
-              <li><i class="ri-check-double-line"></i> Research</li>
-              <li><i class="ri-check-double-line"></i> Ethics and Standards</li>
-
-
-            </ul> -->
-            <!-- <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p> -->
-          <!-- </div>
-        </div>
-
-      </div>
-    </section> -->
+   
     <!-- End About Us Section -->
      <!-- ======= Chefs Section ======= -->
      <section id="chefs" class="chefs">
@@ -115,8 +85,8 @@
 
         <div class="section-title">
           <h2>Our Leaders</h2>
-          <p>Prominent individuals within the TAPA organization who hold influential roles and responsibilities.</p>
         </div>
+        <p class="text-center p-2">Prominent individuals within the TAPA organization who hold influential roles and responsibilities.</p>
 
         <div class="row">
 

@@ -1,29 +1,11 @@
-<?php include "navigation.php"; ?>
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-ob_start(); // Start output buffering
 
-// Rest of your code...
+include "../../forms/connection.php";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Rest of your existing code...
-
-    if ($stmt->execute()) {
-        // Redirect to read_news.php with success message
-        header("Location: read_news.php?id=$id&success=1");
-        exit();
-    } else {
-        echo "Error: " . $stmt->error;
-    }
-
-    $stmt->close();
-    $conn->close();
-}
-
-ob_end_flush(); // Flush output buffer
-?>
-
+// Declare $stmt outside the if block
+$stmt = null;
 
 // Function to handle file uploads
 function uploadFile($fileKey, $targetDirectory)
@@ -39,19 +21,84 @@ function uploadFile($fileKey, $targetDirectory)
             return $target_file; // Return the uploaded file path
         } else {
             echo "Sorry, there was an error uploading your file.";
-            return ''; // Return empty string indicating failure
+            return ''; // Return an empty string indicating failure
         }
     } else {
-        return ''; // Return empty string indicating failure
+        return ''; // Return an empty string indicating failure
     }
 }
+
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Database connection
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "TAPA_DB";
+
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Get form data with default values
+    $id = isset($_POST["id"]) ? $_POST["id"] : "";
+    $title = isset($_POST["title"]) ? $_POST["title"] : "";
+    $description = isset($_POST["description"]) ? $_POST["description"] : "";
+    $date = isset($_POST["date"]) ? $_POST["date"] : "";
+
+    // File upload directories
+    $image_target_dir = "uploads/images/";
+    $video_target_dir = "uploads/videos/";
+
+    // File upload paths with default values
+    $image_file = "";
+    $video_file = "";
+
+    // Upload image file if provided
+    if (isset($_FILES["image_url"]["name"]) && !empty($_FILES["image_url"]["name"])) {
+        $image_file = uploadFile("image_url", $image_target_dir);
+    }
+
+    // Upload video file if provided
+    if (isset($_FILES["video_url"]["name"]) && !empty($_FILES["video_url"]["name"])) {
+        $video_file = uploadFile("video_url", $video_target_dir);
+    }
+
+    // Prepare and bind the UPDATE statement
+    $stmt = $conn->prepare("UPDATE news SET title=?, description=?, image_url=?, date=?, video_url=? WHERE id=?");
+
+    // Check if the statement is prepared successfully
+    if ($stmt) {
+        $stmt->bind_param("sssssi", $title, $description, $image_file, $date, $video_file, $id);
+
+        // Execute the statement
+        if ($stmt->execute()) {
+            // Redirect to read_news.php with success message
+            header("Location: show_news.php?id=$id&success=1");
+            exit();
+        } else {
+            echo "Error: " . $stmt->error;
+        }
+
+        // Close the prepared statement
+        $stmt->close();
+    } else {
+        echo "Error preparing statement: " . $conn->error;
+    }
+
+    // Close the database connection
+    $conn->close();
+}
+
+include "navigation.php";
 ?>
 
 <div class="container mt-5">
     <h2>Edit News</h2>
     <?php
-    include "../../forms/connection.php";
-
     // Check if an ID is provided in the URL
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
@@ -73,15 +120,15 @@ function uploadFile($fileKey, $targetDirectory)
                     <textarea class="form-control" id="description" name="description" rows="4" required><?php echo $article['description']; ?></textarea>
                 </div>
                 <div class="form-group">
-    <label for="image_url">Image:</label>
-    <div class="input-group">
-        <input type="file" class="form-control" id="image_url" name="image_url">
-        <label class="input-group-text" for="image_url">Choose file</label>
-    </div>
-    <small>Current Image: <?php echo $article['image_url']; ?></small>
-</div>
+                    <label for="image_url">Image:</label>
+                    <div class="input-group">
+                        <input type="file" class="form-control" id="image_url" name="image_url">
+                        <label class="input-group-text" for="image_url">Choose file</label>
+                    </div>
+                    <small>Current Image: <?php echo $article['image_url']; ?></small>
+                </div>
 
-<div class="form-group">
+                <div class="form-group">
     <label for="date">Date:</label>
     <input type="date" class="form-control" id="date" name="date" value="<?php echo $article['date']; ?>" required>
 </div>
@@ -95,8 +142,16 @@ function uploadFile($fileKey, $targetDirectory)
     <small>Current Video: <?php echo $article['video_url']; ?></small>
 </div>
 
-                <button type="submit" class="btn btn-primary">Update News</button>
-            </form>
+<div class="row">
+    <div class="col">
+        <button type="submit" class="btn btn-primary">Update News</button>
+    </div>
+    <div class="col">
+        <a href="show_news.php?id=<?php echo $id; ?>" class="btn btn-secondary">Cancel</a>
+    </div>
+</div>
+
+</form>
     <?php
         } else {
             echo "News article not found.";
@@ -107,6 +162,6 @@ function uploadFile($fileKey, $targetDirectory)
     ?>
 </div>
 
-<?
+<?php
 include "footer.php";
 ?>
