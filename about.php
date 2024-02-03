@@ -58,16 +58,11 @@
     
     <h3><i class="bi bi-bullseye"></i> Mission</h3>
     <p>
-        Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-        culpa qui officia deserunt mollit anim id est laborum
-    </p>
+    TAPA's mission is to advance psychology in Tanzania, promoting professional excellence, mental well-being, and reducing stigma. Through advocacy and collaboration, we aim to influence positive policy changes and empower professionals to make a lasting impact on Tanzania's mental health landscape.    </p>
     
     <h3><i class="bi bi-eye"></i> Vision</h3>
     <p>
-        Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-        culpa qui officia deserunt mollit anim id est laborum
+    TAPA envisions a Tanzania where psychological well-being is prioritized, stigma surrounding mental health is eradicated, and individuals have access to high-quality mental health services. We strive to create a society that values and nurtures mental health for all.
     </p>
 </div>
 
@@ -79,20 +74,20 @@
 
    
     <!-- End About Us Section -->
-     <!-- ======= Chefs Section ======= -->
-     <section id="chefs" class="chefs">
+     <!-- ======= team Section ======= -->
+     <section id="team" class="team">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
           <h2>Our Leaders</h2>
         </div>
-        <p class="text-center p-2">Prominent individuals within the TAPA organization who hold influential roles and responsibilities.</p>
+        <p class="text-center p-2">Prominent individuals within the organization who hold influential roles and responsibilities.</p>
 
         <div class="row">
 
           <div class="col-lg-4 col-md-6">
             <div class="member" data-aos="zoom-in" data-aos-delay="100">
-              <img src="assets/img/team/shagembe.png" class="img-fluid chef-img" alt="">
+              <img src="assets/img/team/shagembe.png" class="img-fluid member-img" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Shagembe Magolanga</h4>
@@ -110,7 +105,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="member" data-aos="zoom-in" data-aos-delay="200">
-              <img src="assets/img/tapa/hussen.png" class="img-fluid chef-img" alt="">
+              <img src="assets/img/tapa/hussen.png" class="img-fluid member-img" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Hussein Mshunga</h4>
@@ -128,7 +123,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="member" data-aos="zoom-in" data-aos-delay="300">
-              <img src="assets/img/zones/Gs-removebg-preview.png" class="img-fluid chef-img" alt="">
+              <img src="assets/img/zones/Gs-removebg-preview.png" class="img-fluid member-img" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Deogratius Ramale</h4>
@@ -150,7 +145,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="member" data-aos="zoom-in" data-aos-delay="100">
-              <img src="assets/img/tapa/eunice-kitenge.png" class="img-fluid chef-img" alt="">
+              <img src="assets/img/tapa/eunice-kitenge.png" class="img-fluid member-img" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Eunice Kitenge</h4>
@@ -168,7 +163,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="member" data-aos="zoom-in" data-aos-delay="200">
-              <img src="assets/img/tapa/bertha-lusioki.png" class="img-fluid chef-img" alt="">
+              <img src="assets/img/tapa/bertha-lusioki.png" class="img-fluid member-img" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Dr Bertha Lusioki</h4>
@@ -186,7 +181,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="member" data-aos="zoom-in" data-aos-delay="300">
-              <img src="assets/img/tapa/mauki2.png" class="img-fluid chef-img" alt="">
+              <img src="assets/img/tapa/mauki2.png" class="img-fluid member-img" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Dr.Chris mauki</h4>
@@ -206,7 +201,7 @@
 
       </div>
     </section>
-    <!-- End Chefs Section -->
+    <!-- End team Section -->
 
 <!-- ======= Our leadership Section ======= -->
 <!-- <section id="team" class="team section-bg">
