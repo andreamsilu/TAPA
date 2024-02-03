@@ -13,70 +13,17 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <?php include("titleIcon.php");
   ?>
-  <style>
-    /* General styles */
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      /* background-color: #0F718A; */
-    }
-  </style>
 </head>
 
 <?php
 include "header.php";
-// include "hero.php";
-
 ?>
-
-
 <body>
-
   <?php
-  // include "header.php";
   include "hero.php";
-
   ?>
-  <!-- =====Hero section===== -->
-  <!-- <section class="hero">
-    <div class="container-fluid">
-      <div class="row position-relative">
-        <div class="hero-carousel">
-          <img src="assets/img/carousel-images/group-therapy.png" alt="Image 1">
-          <img src="assets/img/carousel-images/advocacy-removebg-preview.png" alt="Image 2">
-          <img src="assets/img/carousel-images/3918491-removebg-preview.png" alt="Image 2">
-          <img src="assets/img/carousel-images/relationship-counseling-.avif" alt="">
-          <img src="assets/img/carousel-images/advocacy-removebg-preview.png" alt="Image 2"> -->
-
-  <!-- Add more images as needed -->
-  <!-- </div>
-        <div class="col-lg-6 d-flex align-items-center">
-          <div class="overlay card">
-            <div class="card-body">
-              <h2 class="card-title">About TAPA</h2>
-              <p class="card-text">Tanzanian Psychological Association is an organization that represents psychologists and professionals in the field of psychology in Tanzanian. Its primary objectives typically include promoting the field of psychology, advancing the professional development of psychologists, and advocating for mental health and psychological well-being in the country.
-              </p>
-              <a href="about.php" class="btn">Learn More</a>
-            </div>
-          </div>
-
-        </div>
-        <div class="col-lg-5 p-0">
-          <div class="card join-card">
-            <div class="card-body">
-              <h3>Membership in TAPA</h3>
-              <p>Become a member of TAPA and be part of a community dedicated to advancing psychology.</p>
-              <a href="membeship-category.php" class="btn">Learn More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
   <div class="section-title">
-    <h2>TAPA NEWS</h2>
+    <h2>Recentely  updates</h2>
   </div>
   <?php include "Admin/news/read_news.php" ?>
 
@@ -91,7 +38,7 @@ include "header.php";
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
           <div class="service-box">
             <img src="assets/img/service-img/progress.png" alt="" class="service-image">
-            <h4><a href="#">Professional Development</a></h4>
+            <h4>Professional Development</h4>
             <p>The association supports the professional growth of psychologists and related professionals through training, workshops, and conferences.</p>
           </div>
         </div>
@@ -99,7 +46,7 @@ include "header.php";
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
           <div class="service-box">
             <img src="assets/img/service-img/advocay4.png" alt="" class="service-image">
-            <h4><a href="#">Advocacy</a></h4>
+            <h4>Advocacy</h4>
             <p>Advocating for mental health awareness, access to services, and policies supporting psychological research and practice.</p>
           </div>
         </div>
@@ -107,7 +54,7 @@ include "header.php";
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
           <div class="service-box">
             <img src="assets/img/service-img/integrity.png" alt="" class="service-image">
-            <h4><a href="#">Ethics and Standards</a></h4>
+            <h4>Ethics and Standards</h4>
             <p>Establishing and upholding ethical guidelines, providing resources, and supporting adherence to ethical principles.</p>
           </div>
         </div>
@@ -117,7 +64,7 @@ include "header.php";
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
           <div class="service-box">
             <img src="assets/img/service-img/teacher.png" alt="" class="service-image">
-            <h4><a href="#">Continuing Education</a></h4>
+            <h4>Continuing Education</h4>
             <p>Offering opportunities for continuous education and professional development to stay updated with field developments.</p>
           </div>
         </div>
@@ -125,7 +72,7 @@ include "header.php";
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
           <div class="service-box">
             <img src="assets/img/service-img/research.png" alt="" class="service-image">
-            <h4><a href="#">Research and Education</a></h4>
+            <h4>Research and Education</h4>
             <p>Promoting research, supporting educational initiatives, and facilitating knowledge-sharing among members.</p>
           </div>
         </div>
@@ -133,7 +80,7 @@ include "header.php";
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
           <div class="service-box">
             <img src="assets/img/service-img/community.png" alt="" class="service-image">
-            <h4><a href="#">Community Outreach and Networking</a></h4>
+            <h4>Community Outreach and Networking</h4>
             <p>Building a supportive network of professionals and promoting mental health awareness in communities.</p>
           </div>
         </div>

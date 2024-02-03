@@ -265,12 +265,14 @@ h6 {
   font-size: 18px;
   border-radius: 0px;
   border: #0F718A solid 2px;
+  margin-bottom: 15px;
+  margin-left: 20px;
 }
 
-.nav-links:hover {
+/* .nav-links:hover {
   background-color: #0F718A;
   color: #fff;
-}
+} */
 
 .nav-link {
   display: inline-block;
@@ -279,15 +281,17 @@ h6 {
   font-weight: 400;
   padding: 4px 6px;
   margin-right: 1px;
+  padding-right: 5px;
+
 }
 
 .nav-link:hover {
-  border-radius: 30px;
+  border-radius: 0px;
   color: #fff;
+  background-color: #0F718A;
 }
 
 /*======== mobile navigation =====*/
-/* Mobile Navigation */
 .mobile-nav-toggle {
   color: #37423b;
   font-size: 28px;
@@ -651,7 +655,7 @@ section {
     }
 
     .service-box {
-      background: #ccc;
+      background: #FFFFFF;
       padding: 30px;
       text-align: center;
       box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
@@ -670,17 +674,24 @@ section {
       margin-bottom: 20px;
     }
 
+    .service-box .service-image:hover {
+      max-width: 150px;
+      margin-bottom: 20px;
+      transform: translateY(-5px);
+
+    }
+
     .service-box h4 {
       font-size: 24px;
       font-weight: 600;
-      color: #333;
+      color: #0F718A;
       margin-bottom: 15px;
     }
 
     .service-box p {
       font-size: 16px;
       line-height: 1.6;
-      color: #666;
+      color: #444444;
     }
 
     
