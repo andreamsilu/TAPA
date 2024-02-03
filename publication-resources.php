@@ -39,14 +39,7 @@
     <!-- ======= Why Choose Us Section ======= -->
     <section id="publication" class="publication">
       <div class="container" data-aos="fade-up">
-
-        <div class="section-header">
-        <h2 class="text-center mb-5">Publication && Resources</h2>
-
-        </div>
-
         <div class="row g-0" data-aos="fade-up" data-aos-delay="200">
-
           <div class="col-xl-6 img-bg" style="background-image: url('assets/img/tapaImages/Sustain Digital-21.jpg')"></div>
           <div class="col-xl-6 slides  position-relative">
             <div class="slides-1 swiper">
