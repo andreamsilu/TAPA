@@ -179,7 +179,7 @@ h6 {
 
 .navbar a i,
 .navbar a:focus i {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 0;
   margin-left: 5px;
 }
@@ -507,7 +507,7 @@ h6 {
 #hero .btn-get-started {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 1px;
   display: inline-block;
   padding: 14px 32px;
@@ -700,7 +700,7 @@ section {
   cursor: pointer;
   display: inline-block;
   padding: 8px 20px 10px 20px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1;
   text-transform: uppercase;
@@ -744,7 +744,7 @@ section {
 
 .portfolio .portfolio-item .portfolio-info p {
   color: #444444;
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 0;
 }
 
@@ -893,7 +893,7 @@ section {
 
 .divisions-list .division-item .description {
   line-height: 24px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 
@@ -1097,14 +1097,14 @@ width: 350px;
 
 .zone .member .member-info span {
   display: block;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   color: #aaaaaa;
 }
 
 .zone .member .member-info p {
   font-style: italic;
-  font-size: 14px;
+  font-size: 16px;
   padding-top: 15px;
   line-height: 26px;
   color: #5e5e5e;
@@ -1577,7 +1577,7 @@ width: 350px;
   color: #000;
   text-align: center;
   line-height: 20px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .pricing ul li {
@@ -1609,7 +1609,7 @@ width: 350px;
   border-radius: 4px;
   color: #fff;
   transition: none;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   font-family: "Roboto", sans-serif;
   font-weight: 600;
@@ -1632,7 +1632,7 @@ width: 350px;
   right: -68px;
   transform: rotate(45deg);
   z-index: 1;
-  font-size: 14px;
+  font-size: 16px;
   padding: 1px 0 3px 0;
   background: #0F718A;
   color: #fff;
@@ -1710,7 +1710,7 @@ width: 350px;
 }
 
 .testimonials .testimonial-item h4 {
-  font-size: 14px;
+  font-size: 16px;
   color: #999;
   margin: 0;
   text-align: center;
@@ -1743,57 +1743,71 @@ width: 350px;
   text-align: center  ;
 }
 
+
 /*--------------------------------------------------------------
-# Contact
+# Contact Section
 --------------------------------------------------------------*/
-.contact .info-wrap {
-  box-shadow: 0px 2px 15px #0F718A;
-  padding: 30px;
+.contact .info-container {
+  background-color: var(--color-primary);
+  height: 100%;
+  padding: 20px;
+  border-radius: 10px 0 0 10px;
+  box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
 }
 
-.contact .info {
-  background: #fff;
+.contact .info-item {
+  width: 100%;
+  background-color: #0F718A;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
 }
 
-.contact .info i {
+.contact .info-item:last-child {
+  margin-bottom: 0;
+}
+
+.contact .info-item i {
   font-size: 20px;
-  color: #0F718A;
+  color: #fff;
   float: left;
   width: 44px;
   height: 44px;
-  border: 1px solid #0F718A;
+  background-color: rgba(255, 255, 255, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50px;
-  transition: all 0.3s;
+  transition: all 0.3s ease-in-out;
+  margin-right: 15px;
 }
 
-.contact .info h4 {
-  padding: 0 0 0 60px;
-  font-size: 22px;
+.contact .info-item h4 {
+  padding: 0;
+  font-size: 20px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #0F718A;
 }
 
-.contact .info p {
-  padding: 0 0 0 60px;
+.contact .info-item p {
+  padding: 0;
   margin-bottom: 0;
-  font-size: 14px;
-  color: #444444;
+  font-size: 16px;
 }
 
-.contact .info:hover i {
-  background: #0F718A;
-  color: #fff;
+.contact .info-item:hover i {
+  /* background: #fff; */
+  color: var(--color-primary);
 }
 
 .contact .php-email-form {
   width: 100%;
-  box-shadow: 0 0 24px 0 #0F718A;
-  padding: 30px;
+  height: 100%;
   background: #fff;
+  box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 0 10px 10px 0;
 }
 
 .contact .php-email-form .form-group {
@@ -1803,7 +1817,7 @@ width: 350px;
 .contact .php-email-form .error-message {
   display: none;
   color: #fff;
-  background: #ed3c0d;
+  background: #df1529;
   text-align: left;
   padding: 15px;
   font-weight: 600;
@@ -1816,7 +1830,7 @@ width: 350px;
 .contact .php-email-form .sent-message {
   display: none;
   color: #fff;
-  background: #18d26e;
+  background: #0F718A;
   text-align: center;
   padding: 15px;
   font-weight: 600;
@@ -1836,31 +1850,28 @@ width: 350px;
   width: 24px;
   height: 24px;
   margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
+  border: 2px solid #0F718A;
+  border-top-color: #fff;
   animation: animate-loading 1s linear infinite;
 }
 
 .contact .php-email-form input,
 .contact .php-email-form textarea {
+  border-radius: 0;
   box-shadow: none;
-  font-size: 14px;
-  border-radius: 4px;
-  border:#0F718A 2px solid;
-
+  font-size: 16px;
 }
 
-.contact .php-email-form input:focus,
+.contact .php-email-form input[type=text],
+.contact .php-email-form input[type=email],
+.contact .php-email-form textarea {
+  padding: 12px 15px;
+}
+
+.contact .php-email-form input[type=text]:focus,
+.contact .php-email-form input[type=email]:focus,
 .contact .php-email-form textarea:focus {
-  border:#0F718A 2px solid;
-  border-color: #0F718A;
-  color: #000;
-  transition-delay: 0.5s;
-  transition: 0.4s;
-}
-
-.contact .php-email-form input {
-  height: 44px;
+  border-color: rgb(15, 113, 138,0.8);
 }
 
 .contact .php-email-form textarea {
@@ -1868,16 +1879,17 @@ width: 350px;
 }
 
 .contact .php-email-form button[type=submit] {
-  background: #0F718A;
-  border: 0;
-  padding: 10px 24px;
-  color: #fff;
+  background: var(--color-primary);
+  border: 3px solid #0f718acc;
+  padding: 14px 45px;
+  color:rgb(15, 113, 138,0.8);
   transition: 0.4s;
-  border-radius: 4px;
+  border-radius: 50px;
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: #0F718A;
+  background: rgb(15, 113, 138,0.8);
+  color: white;
 }
 
 @keyframes animate-loading {
@@ -1889,6 +1901,7 @@ width: 350px;
     transform: rotate(360deg);
   }
 }
+
 
 /*--------------------------------------------------------------
 # Blog
@@ -1951,7 +1964,7 @@ width: 350px;
 
 .blog .entry .entry-meta a {
   color: #847872;
-  font-size: 14px;
+  font-size: 16px;
   display: inline-block;
   line-height: 1;
 }
@@ -1971,7 +1984,7 @@ width: 350px;
   color: #fff;
   padding: 6px 20px;
   transition: 0.3s;
-  font-size: 14px;
+  font-size: 16px;
   border-radius: 4px;
 }
 
@@ -2038,7 +2051,7 @@ width: 350px;
   list-style: none;
   display: inline;
   padding: 0 20px 0 0;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .blog .entry .entry-footer .cats li {
@@ -2049,7 +2062,7 @@ width: 350px;
   list-style: none;
   display: inline;
   padding: 0;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .blog .entry .entry-footer .tags li {
@@ -2154,7 +2167,7 @@ width: 350px;
 
 .blog .blog-comments .comment time {
   display: block;
-  font-size: 14px;
+  font-size: 16px;
   color: #2b2b2b;
   margin-bottom: 5px;
 }
@@ -2175,13 +2188,13 @@ width: 350px;
 }
 
 .blog .blog-comments .reply-form p {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .blog .blog-comments .reply-form input {
   border-radius: 4px;
   padding: 10px 10px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .blog .blog-comments .reply-form input:focus {
@@ -2192,7 +2205,7 @@ width: 350px;
 .blog .blog-comments .reply-form textarea {
   border-radius: 4px;
   padding: 10px 10px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .blog .blog-comments .reply-form textarea:focus {
@@ -2328,7 +2341,7 @@ width: 350px;
 .blog .sidebar .categories ul a span {
   padding-left: 5px;
   color: #b4aca8;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .blog .sidebar .recent-posts .post-item+.post-item {
@@ -2359,7 +2372,7 @@ width: 350px;
   display: block;
   margin-left: 95px;
   font-style: italic;
-  font-size: 14px;
+  font-size: 16px;
   color: #b4aca8;
 }
 
@@ -2378,7 +2391,7 @@ width: 350px;
 
 .blog .sidebar .tags ul a {
   color: #515151;
-  font-size: 14px;
+  font-size: 16px;
   padding: 6px 14px;
   margin: 0 6px 8px 0;
   border: 1px solid #c4c4c4;
@@ -2395,7 +2408,7 @@ width: 350px;
 .blog .sidebar .tags ul a span {
   padding-left: 5px;
   color: #aaaaaa;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 /*--------------------------------------------------------------
@@ -2403,7 +2416,7 @@ width: 350px;
 --------------------------------------------------------------*/
 #footer {
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
   background: #111;
 }
 
@@ -2428,7 +2441,7 @@ width: 350px;
 }
 
 #footer .footer-top .footer-contact p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   margin-bottom: 0;
   font-family: "Roboto", sans-serif;
