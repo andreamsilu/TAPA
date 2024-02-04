@@ -1,9 +1,16 @@
-<?php include("navigation.php"); ?>
 
 <?php
+
+   session_start();
+   include "navigation.php";
    include "../forms/connection.php";
-
-
+   
+   // Check if the user is authenticated
+   if (!isset($_SESSION['user_id'])) {
+       // Redirect to the login page if not authenticated
+       header("Location: login.php");
+       exit();
+   }
 // Function to sanitize form data
 function sanitizeData($data) {
     return htmlspecialchars(trim($data));

@@ -4,7 +4,7 @@ session_start();
 include "connection.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['login'];
+    $email = $_POST['email'];
     $password = $_POST['password'];
 
     // Query to fetch user details based on the provided email
@@ -17,8 +17,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Verify the provided password with the hashed password from the database
         if (password_verify($password, $hashedPassword)) {
-            // Password matches, create a session and redirect to a success page
+            // Password matches, create a session and store user information
+            $_SESSION['id'] = $row['id'];
             $_SESSION['email'] = $email;
+            $_SESSION['user_id'] = $userId;
             header("Location: ../profile/index.php"); // Redirect to a success page
             exit();
         } else {

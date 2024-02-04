@@ -1,6 +1,13 @@
-<?php include "navigation.php" ?>
-
 <?php
+session_start();
+
+// Check if the user is authenticated
+if (!isset($_SESSION['user_id'])) {
+    // Redirect to the login page if not authenticated
+    header("Location: login.php");
+    exit();
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve form data
     $award = htmlspecialchars($_POST['award']);
@@ -11,8 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($award) || empty($institution) || empty($year)) {
         echo "All fields are required.";
     } else {
-      include "../forms/connection.php";
-
+        include "../forms/connection.php";
 
         // Prepare and execute SQL query to insert data into the 'education' table
         $sql = "INSERT INTO education (award, institution, year) VALUES ('$award', '$institution', '$year')";
@@ -26,11 +32,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Close connection
         $conn->close();
     }
-  
 }
 
 ?>
 
+<?php include("navigation.php"); ?>
 <div class="container mt-5">
   <h2>Education Details</h2>
   <form action="add_edu.php" method="post">

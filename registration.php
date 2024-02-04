@@ -215,7 +215,7 @@
 
             <div class="col-md-6 form-group">
               <label for="yes_licensure" class="col-form-label"><i class="bi bi-check2"></i> If Yes, Mention below</label>
-              <input type="text" name="yes_licensure" class="form-control" id="yes_licensure" placeholder="Your licensure">
+              <input type="text" name="yes_licensure" class="form-control" id="ye_licensure" placeholder="Your licensure">
             </div>
           </div>
 
@@ -256,7 +256,6 @@
             </div>
           </div>
 
-          <!-- ... (other form elements) ... -->
 
           <div class="form-group mt-3">
             <button type="button" class="bt btn-terms" data-toggle="modal" data-target="#termsModal">

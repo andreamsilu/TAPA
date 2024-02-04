@@ -1,5 +1,14 @@
-<?php include "navigation.php" ?>
 <?php
+ session_start();
+ include "navigation.php";
+ include "../forms/connection.php";
+ 
+ // Check if the user is authenticated
+ if (!isset($_SESSION['user_id'])) {
+     // Redirect to the login page if not authenticated
+     header("Location: login.php");
+     exit();
+ }
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve form data
     $id = $_POST['id'];
@@ -18,7 +27,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "UPDATE education SET award='$award', institution='$institution', year='$year' WHERE id=$id";
 
         if ($conn->query($sql) === TRUE) {
-            // echo "<h3>Data has been successfully updated in the database!</h3>";
             header("Location:show_edu.php");
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;

@@ -2,8 +2,16 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+session_start();
+include "navigation.php";
 include "../forms/connection.php";
 
+// Check if the user is authenticated
+if (!isset($_SESSION['user_id'])) {
+    // Redirect to the login page if not authenticated
+    header("Location: login.php");
+    exit();
+}
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         $userId = $_POST['user_id'];

@@ -1,6 +1,10 @@
-<?php include "navigation.php" ?>
-
 <?php
+session_start();
+
+
+
+include "navigation.php";
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 $servername = "localhost";
@@ -12,7 +16,13 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Function to fetch progress based on your application's logic
 function fetchProgress() {
-   include "../forms/connection.php";
+    include "../forms/connection.php";
+    // User authentication logic
+if (!isset($_SESSION['user_id']) || empty($_SESSION['user_id'])) {
+    // Redirect to login page if user is not authenticated
+    header("Location: ../login.php");
+    exit();
+}
     // You can customize this function to fetch and calculate progress based on your application's requirements
     // Example: Fetching total number of completed forms out of the total number of forms
     $totalForms = 5; // Adjust this based on the total number of forms
@@ -37,29 +47,9 @@ function fetchProgress() {
 $conn->close();
 ?>
 
-
-
 <div class="container mt-5">
   <h2>Summary Page</h2>
 
-  <h3>Personal Information</h3>
-  <?php include '../profile/show_personal_info.php'; ?>
+  <?php //fetchProgress(); ?>
 
-  <h3>Work Experience</h3>
-  <?php include '../profile/show-exp.php'; ?>
-
-  <h3>Certification Information</h3>
-  <?php include '../profile/show-cert.php'; ?>
-
-  <h3>Contact Information</h3>
-  <?php include '../profile/show-cont.php'; ?>
-
-  <h3>Personal CV</h3>
-  <?php include '../profile/show-cv.php'; ?>
-
-  <h3>Progress</h3>
-  <!-- Display progress based on your application's logic -->
-  <?php include '../profile/progress.php'; ?>
-</div>
-
-<?php include("footer.php") ?>
+<?php include("footer.php"); ?>

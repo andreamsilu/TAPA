@@ -1,13 +1,19 @@
-<?php include "navigation.php" ?>
-
 <?php
+session_start();
+include "navigation.php";
 include "../forms/connection.php";
-
 
 // Function to sanitize form data
 function sanitizeData($data)
 {
     return htmlspecialchars(trim($data));
+}
+
+// Check if the user is authenticated
+if (!isset($_SESSION['user_id'])) {
+    // Redirect to the login page if not authenticated
+    header("Location: login.php");
+    exit();
 }
 
 // Process form data
@@ -33,7 +39,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Close the database connection
 $conn->close();
 ?>
-
 
 <div class="container mt-5">
     <form id="registrationForm" action="add_personal_info.php" method="post">

@@ -1,8 +1,16 @@
-<?php include("navigation.php"); ?>
 
 
 <?php
+   session_start();
+   include "navigation.php";
    include "../forms/connection.php";
+   
+   // Check if the user is authenticated
+   if (!isset($_SESSION['user_id'])) {
+       // Redirect to the login page if not authenticated
+       header("Location: login.php");
+       exit();
+   }
 
 
 // Function to sanitize form data
@@ -58,17 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $conn->close();
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Change Password</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-
+<?php include("navigation.php"); ?>
 <div class="container mt-5">
   <h2>Change Password</h2>
   <form id="changePasswordForm">
@@ -87,35 +85,11 @@ $conn->close();
       <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
     </div>
 
-    <button type="button" class="btn btn-primary" onclick="changePassword()">Change Password</button>
+    <button type="button" class="btn btn-primary">Change Password</button>
   </form>
 </div>
+<?php include("footer.php"); ?>
 
-<!-- Bootstrap JS and jQuery -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-<script>
-  function changePassword() {
-    // You can add your password-changing logic here
-    // Example: Send the form data to a server using AJAX
-    var formData = $("#changePasswordForm").serialize();
-    $.ajax({
-      type: "POST",
-      url: "/change_password.php", // Replace with your actual backend endpoint
-      data: formData,
-      success: function(response) {
-        alert(response);
-        // Add any other logic you need after successful password change
-      },
-      error: function(error) {
-        console.error("Error changing password:", error);
-        // Handle errors here
-      }
-    });
-  }
-</script>
 
-<?php include("foooter.php"); ?>
 

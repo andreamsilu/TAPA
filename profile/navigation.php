@@ -8,6 +8,9 @@
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Jss+8gN5eWPS2+xe7i7e6pZYO/dUZ37OqYz3NjcmmJ1W4Z" crossorigin="anonymous">
+    <!-- Bootstrap Icons CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css" rel="stylesheet">
+
     <style>
         /* Adjust sidebar styles */
         .sidebar {
@@ -30,6 +33,11 @@
 
         }
 
+        i{
+            /* font-size: 28px; */
+            color: #fff;
+        }
+
         .sidebar a:hover {
             background-color: #0F718A;
             color: #fff;
@@ -40,12 +48,12 @@
             color: #0F718A;
         }
 
-        .dropdown-menu{
+        .dropdown-menu {
             background-color: #333;
             color: #fff;
-        } 
+        }
 
-        .nav-link{
+        .nav-link {
             color: white;
         }
     </style>
@@ -93,80 +101,110 @@
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php">Dashboard</a>
+                            <a class="nav-link" href="index.php">
+                                <i class="bi bi-house-door"></i> Dashboard
+                            </a>
                         </li>
-                       
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Personal info
+                                <i class="bi bi-person"></i> Personal info
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="add_personal_info.php">Add</a>
-                                <a class="dropdown-item" href="show_personal_info.php">Manage</a>
+                                <a class="dropdown-item" href="add_personal_info.php">
+                                    <i class="bi bi-person-plus"></i> Add
+                                </a>
+                                <a class="dropdown-item" href="show_personal_info.php">
+                                    <i class="bi bi-person-lines-fill"></i> Manage
+                                </a>
                             </div>
                         </li>
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Contact info
+                                <i class="bi bi-telephone"></i> Contact info
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="add-cont.php">Contact info</a>
-                                <a class="dropdown-item" href="show-cont.php">Manage</a>
+                                <a class="dropdown-item" href="add-cont.php">
+                                    <i class="bi bi-telephone-plus"></i> Contact info
+                                </a>
+                                <a class="dropdown-item" href="show-cont.php">
+                                    <i class="bi bi-telephone-fill"></i> Manage
+                                </a>
                             </div>
                         </li>
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Education info
+                                <i class="bi bi-book"></i> Education info
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="add_edu.php">Add Education</a>
-                                <a class="dropdown-item" href="show_edu.php">Manage Education</a>
+                                <a class="dropdown-item" href="add_edu.php">
+                                    <i class="bi bi-book-plus"></i> Add Education
+                                </a>
+                                <a class="dropdown-item" href="show_edu.php">
+                                    <i class="bi bi-book-fill"></i> Manage Education
+                                </a>
                             </div>
                         </li>
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Work experience
+                                <i class="bi bi-briefcase"></i> Work experience
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="add-exp.php">Add</a>
-                                <a class="dropdown-item" href="show-exp.php">Manage</a>
+                                <a class="dropdown-item" href="add-exp.php">
+                                    <i class="bi bi-briefcase-plus"></i> Add
+                                </a>
+                                <a class="dropdown-item" href="show-exp.php">
+                                    <i class="bi bi-briefcase-fill"></i> Manage
+                                </a>
                             </div>
                         </li>
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Membership
+                                <i class="bi bi-file-text"></i> My CV
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Add</a>
-                                <a class="dropdown-item" href="#">Manage</a>
+                                <a class="dropdown-item" href="add-cv.php">
+                                    <i class="bi bi-file-earmark-plus"></i> Add
+                                </a>
+                                <a class="dropdown-item" href="show-cv.php">
+                                    <i class="bi bi-file-earmark-text-fill"></i> Manage
+                                </a>
                             </div>
                         </li>
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Certification
+                                <i class="bi bi-file-earmark-certificate"></i> Certification
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="add-cert.php">Add</a>
-                                <a class="dropdown-item" href="show-cert.php">Manage</a>
+                                <a class="dropdown-item" href="add-cert.php">
+                                    <i class="bi bi-file-earmark-certificate-plus"></i> Add
+                                </a>
+                                <a class="dropdown-item" href="show-cert.php">
+                                    <i class="bi bi-file-earmark-certificate-fill"></i> Manage
+                                </a>
                             </div>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="">Change password</a>
+                            <a class="nav-link" href="change-password.php">
+                                <i class="bi bi-shield-lock"></i> Change password
+                            </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="logout.php">Logout</a>
+                            <a class="nav-link" href="logout.php">
+                                <i class="bi bi-box-arrow-right"></i> Logout
+                            </a>
                         </li>
                     </ul>
                 </div>
             </nav>
 
+        </div>
             <!-- Main content area -->
             <main role="main" class="col-md-10 ml-sm-auto col-lg-10">
