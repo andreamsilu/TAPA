@@ -8,7 +8,7 @@
     </div>
     <div class="card-body">
       <?php
-        include "../forms/connection.php";
+      include "../forms/connection.php";
 
 
       // Get the user's information
@@ -17,26 +17,26 @@
       $result = $conn->query($sql);
 
       if ($result->num_rows > 0) {
-          $row = $result->fetch_assoc();
+        $row = $result->fetch_assoc();
       ?>
         <div class="well">
           <p><strong>Name:</strong> <?php echo $row['fullname']; ?></p>
           <p><strong>Email:</strong> <?php echo $row['email']; ?></p>
-          <p><strong>Gender:</strong> <?php echo $row['gender']; ?></p>
-          <p><strong>Nationality:</strong> <?php echo $row['nationality']; ?></p>
-          <p><strong>Date of Birth:</strong> <?php echo $row['dob']; ?></p>
-          <p><strong>Country of Residence:</strong> <?php echo $row['country_residence']; ?></p>
-          <p><strong>City/Town of Residence:</strong> <?php echo $row['city_residence']; ?></p>
-          <p><strong>Practitioner License:</strong> <?php echo $row['license']; ?></p>
-          <p><strong>Languages:</strong> <?php echo $row['languages']; ?></p>
+          <p><strong>Phone:</strong> <?php echo $row['phone']; ?></p>
+          <p><strong>Postal Address:</strong> <?php echo $row['postal_address']; ?></p>
+          <p><strong>Date of Birth:</strong> <?php echo $row['birth_date']; ?></p>
+          <p><strong>Physical address:</strong> <?php echo $row['physical_address']; ?></p>
+          <p><strong>Membership type:</strong> <?php echo $row['membership_type']; ?></p>
+          <p><strong>Practitioner License:</strong> <?php echo $row['yes_licensure']; ?></p>
+          <p><strong>Cv:</strong> <?php echo $row['cv_file']; ?></p>
           <!-- Add other fields as needed -->
 
           <!-- Edit Button -->
-          <a href="edit_personal_info.php" class="btn btn-primary">Edit</a>
+          <a href="edit_personal_info.php?id=<?php echo $userId; ?>" class="btn btn-primary">Edit</a>
         </div>
       <?php
       } else {
-          echo "User not found.";
+        echo "User not found.";
       }
 
       // Close the database connection

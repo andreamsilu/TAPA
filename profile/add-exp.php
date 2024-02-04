@@ -22,6 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($conn->query($sql) === TRUE) {
         echo "Work experience saved successfully";
+        header('Location: show-exp.php');
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
@@ -35,7 +36,7 @@ $conn->close();
 
 
 <div class="container mt-5">
-  <form id="workExperienceForm">
+  <form id="workExperienceForm"  action="add-exp.php" method="post">
     <!-- Company Name -->
     <div class="form-group">
       <label for="companyName">Company Name</label>
@@ -67,7 +68,7 @@ $conn->close();
     </div>
 
     <!-- Submit Button -->
-    <button type="button" class="btn btn-primary" onclick="submitForm()">Submit</button>
+    <button type="button" class="btn btn-primary">Submit</button>
   </form>
 </div>
 
