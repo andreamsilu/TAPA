@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($password, $hashedPassword)) {
             // Password matches, create a session and redirect to a success page
             $_SESSION['email'] = $email;
-            header("Location: profile/index.php"); // Redirect to a success page
+            header("Location: ../profile/index.php"); // Redirect to a success page
             exit();
         } else {
             // Incorrect password

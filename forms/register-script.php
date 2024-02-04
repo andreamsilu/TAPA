@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Validate crime fields
         if ($crime !== 'yes' && $crime !== 'no') {
             echo "Please select either 'yes' or 'no' for crime.";
-            header('location: registration.php');
+            header('location:login.php');
             exit;
         }
 

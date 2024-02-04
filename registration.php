@@ -11,19 +11,19 @@
   <link href="assets/img/tapa.png" rel="icon">
   <link href="assets/img/tapa.png" rel="apple-touch-icon">
   <!-- Google Fonts -->
-  <link href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet"> -->
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
   <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet"> -->
   <!-- Template Main CSS File -->
-  <link href="test1.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- <link href="test1.css" rel="stylesheet"> -->
+  <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
 
 </head>
 <style>
@@ -122,170 +122,169 @@
 </style>
 
 <body>
-  <?php include "header.php" ?>
+  <?php
+   include "titleIcon.php" ;
+   include "header.php" 
+
+  
+  ?>
 
   <main>
     <!-- Breadcrumbs -->
-    <!-- <section id="breadcrumbs" class="breadcrumbs">
+    <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Membership Registration</h2>
+          <h2>Membership registration</h2>
           <ol>
             <li><a href="index.php">Home</a></li>
-            <li>Membership Registration</li>
+            <li>Membership registration</li>
           </ol>
         </div>
       </div>
-    </section> -->
+    </section>
     <!-- End Breadcrumbs -->
 
     <!-- ======= registration Section ======= -->
     <section id="ragistration" class="registration">
-      <div class="container">
-        <h1 class="text-center">MEMBERSHIP REGISTRATION FORM</h1>
+  <div class="container">
+    <div class="row mt-2 justify-content-center" data-aos="fade-up">
+      <form action="forms/register-script.php" method="post" role="form" enctype="multipart/form-data">
 
-        <div class="row mt-2 justify-content-center" data-aos="fade-up">
-          <form action="forms/register-script.php" method="post" role="form" enctype="multipart/form-data">
-            <div class="row">
-              <div class="col-md-6 form-group">
-                <label for="fullname" class="col-form-label">Full Name</label>
-                <input type="text" name="fullname" class="form-control" id="name" placeholder="Your full name" required>
-              </div>
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <label for="fullname" class="col-form-label"><i class="bi bi-person"></i> Full Name</label>
+            <input type="text" name="fullname" class="form-control" id="name" placeholder="Your full name" required>
+          </div>
 
-
-              <div class="col-md-6 form-group mt-3 mt-md-0">
-                <label for="email" class="col-form-label">Email</label>
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6 form-group mt-3 mt-md-0">
-                <label for="phone" class="col-form-label">Phone</label>
-                <input type="phone" class="form-control" name="phone" id="phone" placeholder="Your phone" required>
-              </div>
-              <div class=" col-md-6 form-group mt-3 mt-md-0">
-                <label for="postal_address" class="col-form-label">Postal Address</label>
-                <input type="text" class="form-control" name="postal_address" id="postal_addrress" placeholder="Postal address" required>
-              </div>
-            </div>
-
-            <div class="form-group mt-3 mt-md-0">
-              <label for="birth_date" class="col-form-label">Birth date</label>
-              <input type="date" class="form-control" name="birth_date" id="birth_date" placeholder="Birthdate" required>
-            </div>
-
-
-            <div class="row">
-              <div class="col-md-6 form-group mt-3 mt-md-0">
-                <label for="physical_address" class="col-form-label">Physical Address</label>
-                <input type="text" class="form-control" name="pysical_address" id="physical_addrress" placeholder="Physical address" required>
-              </div>
-
-              <div class="col-md-6 form-group mt-3 mt-md-0">
-                <label for="membership_type" class="col-form-label">Select Membership category</label>
-                <select class="form-control" id="membership_type" name="membership_type" required>
-                  <option value="" disabled selected>Select membership category</option>
-                  <option value="student">Full Member</option>
-                  <option value="associate_one">Associate Member I</option>
-                  <option value="associate_two">Associate Member II</option>
-                  <option value="student">Student Member </option>
-                  <option value="local_affiliate">Local Affiliate Member</option>
-                  <option value="foreign_affiliate">Foreign Affiliate Member</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="row">
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <label for="licensure" class="col-form-label"> Licensure/Ethics <br> Are you licensed as a psychologist by a state or provincial psychology board outside of Tanzania?</label>
-                  <div>
-                    <input type="radio" name="licensure" value="yes" id="licensure_yes" required>
-                    <label for="licensure_yes">Yes</label>
-                  </div>
-                  <div>
-                    <input type="radio" name="licensure" value="no" id="licensure_no" required>
-                    <label for="licensure_no">No</label>
-                  </div>
-                </div>
-
-                <div class="col-md-6 form-group">
-                  <label for="yes_licensure" class="col-form-label">If Yes, Mention below</label>
-                  <input type="text" name="yes_licensure" class="form-control" id="yes_licensure" placeholder="Your licensure" required>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <label for="crimes" class="col-form-label"> Crimes <br> Have you at any time been convicted of a crime, sanctioned by any professional ethics body, licensing board, regulatory body, professional/scientific organization, or supervisory group for unethical behavior?</label>
-                  <div>
-                    <input type="radio" name="crime" value="yes" id="crime_yes" required>
-                    <label for="crime_yes">Yes</label>
-                  </div>
-                  <div>
-                    <input type="radio" name="crime" value="no" id="crime_no" required>
-                    <label for="crime_no">No</label>
-                  </div>
-                </div>
-
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <label for="yes_crime" class="col-form-label">If Yes, please explain below</label>
-                  <textarea class="form-control" name="yes_crime" rows="3" placeholder="Explain your crime situation" required></textarea>
-                </div>
-              </div>
-
-              <div class=" col-md-6 form-group mt-3 mt-md-0">
-                <label for="cv" class="col-form-label">Upload your CV</label>
-                <input type="file" class="form-control" name="cv" id="cv" placeholder="Upload your cv" accept=".pdf,.doc,.docx" required>
-                <small class="text-muted">Accepted file formats: PDF, DOC, DOCX</small>
-              </div>
-
-              <div class="row">
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <label for="password" class="col-form-label">Password</label>
-                  <input type="password" class="form-control" name="password" id="password" placeholder="Your password" required minlength="8">
-                  <small class="text-muted">Minimum length: 8 characters</small>
-                </div>
-
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <label for="confirm-password" class="col-form-label">Confirm password</label>
-                  <input type="password" class="form-control" name="confirm-password" id="confirm-password" placeholder="Confirm password" required minlength="8">
-                </div>
-              </div>
-
-              <div class="form-group mt-3">
-                <button type="button" class="bt btn-terms" data-toggle="modal" data-target="#termsModal">
-                  Read the terms and condions
-                </button><br><br>
-                <input type="checkbox" name="crime_yes" value="yes"> I agree to the terms and condions
-              </div>
-
-              <div class="form-group mt-3">
-                <h5>Robot Confirmation</h5>
-                <label for="" class="col-form-label">Confirm that you are not robot to continue with registration.....</label><br>
-
-                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
-              </div>
-              <div class="text-center">
-                <button type="submit">Register</button>
-              </div>
-
-              <div class="form-group mt-3">
-                <p class="large mb-0" style="text-align: center; font-size:x-large">Already have account? <a href="login.php">Login Now</a></p>
-              </div>
-          </form>
+          <div class="col-md-6 form-group mt-3 mt-md-0">
+            <label for="email" class="col-form-label"><i class="bi bi-envelope"></i> Email</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+          </div>
         </div>
-      </div>
-      </div>
-    </section>
-    <!-- End registration Section -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
+        <div class="row">
+          <div class="col-md-6 form-group mt-3 mt-md-0">
+            <label for="phone" class="col-form-label"><i class="bi bi-telephone"></i> Phone</label>
+            <input type="phone" class="form-control" name="phone" id="phone" placeholder="Your phone" required>
+          </div>
+
+          <div class=" col-md-6 form-group mt-3 mt-md-0">
+            <label for="postal_address" class="col-form-label"><i class="bi bi-house-door"></i> Postal Address</label>
+            <input type="text" class="form-control" name="postal_address" id="postal_addrress" placeholder="Postal address" required>
+          </div>
+        </div>
+
+        <div class="form-group mt-3 mt-md-0">
+          <label for="birth_date" class="col-form-label"><i class="bi bi-calendar"></i> Birth date</label>
+          <input type="date" class="form-control" name="birth_date" id="birth_date" placeholder="Birthdate" required>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 form-group mt-3 mt-md-0">
+            <label for="physical_address" class="col-form-label"><i class="bi bi-house"></i> Physical Address</label>
+            <input type="text" class="form-control" name="pysical_address" id="physical_addrress" placeholder="Physical address" required>
+          </div>
+
+          <div class="col-md-6 form-group mt-3 mt-md-0">
+            <label for="membership_type" class="col-form-label">Select Membership category</label>
+            <select class="form-control" id="membership_type" name="membership_type" required>
+              <option value="" disabled selected>Select membership category</option>
+              <option value="student">Full Member</option>
+              <option value="associate_one">Associate Member I</option>
+              <option value="associate_two">Associate Member II</option>
+              <option value="student">Student Member </option>
+              <option value="local_affiliate">Local Affiliate Member</option>
+              <option value="foreign_affiliate">Foreign Affiliate Member</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="row">
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <label for="licensure" class="col-form-label">Licensure/Ethics <br> Are you licensed as a psychologist by a state or provincial psychology board outside of Tanzania?</label>
+              <div>
+                <input type="radio" name="licensure" value="yes" id="licensure_yes" required>
+                <label for="licensure_yes">Yes</label>
+              </div>
+              <div>
+                <input type="radio" name="licensure" value="no" id="licensure_no" required>
+                <label for="licensure_no">No</label>
+              </div>
+            </div>
+
+            <div class="col-md-6 form-group">
+              <label for="yes_licensure" class="col-form-label"><i class="bi bi-check2"></i> If Yes, Mention below</label>
+              <input type="text" name="yes_licensure" class="form-control" id="yes_licensure" placeholder="Your licensure">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <label for="crimes" class="col-form-label"> Crimes <br> Have you at any time been convicted of a crime, sanctioned by any professional ethics body, licensing board, regulatory body, professional/scientific organization, or supervisory group for unethical behavior?</label>
+              <div>
+                <input type="radio" name="crime" value="yes" id="crime_yes" required>
+                <label for="crime_yes">Yes</label>
+              </div>
+              <div>
+                <input type="radio" name="crime" value="no" id="crime_no" required>
+                <label for="crime_no">No</label>
+              </div>
+            </div>
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <label for="yes_crime" class="col-form-label"><i class="bi bi-exclamation-triangle"></i> If Yes, please explain below</label>
+              <textarea class="form-control" name="yes_crime" rows="3" placeholder="Explain your crime situation" ></textarea>
+            </div>
+          </div>
+
+          <div class=" col-md-6 form-group mt-3 mt-md-0">
+            <label for="cv" class="col-form-label"><i class="bi bi-file-earmark-pdf"></i> Upload your CV</label>
+            <input type="file" class="form-control" name="cv" id="cv" placeholder="Upload your cv" accept=".pdf,.doc,.docx" required>
+            <small class="text-muted">Accepted file formats: PDF, DOC, DOCX</small>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <label for="password" class="col-form-label"><i class="bi bi-lock"></i> Password</label>
+              <input type="password" class="form-control" name="password" id="password" placeholder="Your password" required minlength="8">
+              <small class="text-muted">Minimum length: 8 characters</small>
+            </div>
+
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <label for="confirm-password" class="col-form-label"><i class="bi bi-lock"></i> Confirm password</label>
+              <input type="password" class="form-control" name="confirm-password" id="confirm-password" placeholder="Confirm password" required minlength="8">
+            </div>
+          </div>
+
+          <!-- ... (other form elements) ... -->
+
+          <div class="form-group mt-3">
+            <button type="button" class="bt btn-terms" data-toggle="modal" data-target="#termsModal">
+              <i class="bi bi-file-earmark-text"></i> Read the terms and conditions
+            </button><br><br>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" name="crime_yes" value="yes">
+              <label class="form-check-label"><i class="bi bi-check-square"></i> I agree to the terms and conditions</label>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <button type="submit"><i class="bi bi-person-plus"></i> Register</button>
+          </div>
+
+          <div class="form-group mt-3">
+            <p class="large mb-0" style="text-align: center; font-size:x-large">Already have an account? <a href="login.php"><i class="bi bi-box-arrow-in-right"></i> Login Now</a></p>
+          </div>
+        </form>
+      </div>
     </div>
-    </div>
-    </form>
+  </div>
+</section>
+
+<!-- End registration Section -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- End Profile registration Form -->
-  </main>
+</main>
 
 
   <!-- Modal -->
