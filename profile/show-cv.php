@@ -6,12 +6,13 @@ include "../forms/connection.php";
 
 // Check if the user is authenticated
 if (!isset($_SESSION['user_id'])) {
-    // Redirect to the login page if not authenticated
     header("Location: login.php");
     exit();
 }
-?>
 
+$userId = $_SESSION['user_id'];
+
+?>
 
 <div class="container mt-5">
   <?php
@@ -19,9 +20,9 @@ if (!isset($_SESSION['user_id'])) {
 
 
   // Get the record to be displayed
-  // $cvId = $_GET['id'];
+  $cvId = $_GET['id'];
   // $sql = "SELECT * FROM personal_cv WHERE id = $cvId";
-  $sql = "SELECT * FROM personal_cv";
+  $sql = "SELECT * FROM personal_cv WHERE user_id = '$userId'";
 
   $result = $conn->query($sql);
 
@@ -35,10 +36,10 @@ if (!isset($_SESSION['user_id'])) {
     <!-- Display CV File -->
     <h4>CV File</h4>
     <p><?php echo $row['cv_file']; ?></p>
-    <a href="uploads/<?php echo $row['cv_file']; ?>" target="_blank" class="btn btn-primary">Open</a>
+    <a href="../forms/uploads/<?php echo $row['cv_file']; ?>" target="_blank" class="btn btn-primary">Open</a>
 
     <!-- Edit Button -->
-    <a href="edit_personal_cv.php?id=<?php echo $cvId; ?>" class="btn btn-warning">Edit</a>
+    <a href="edit-cv.php?id=<?php echo $cvId; ?>" class="btn btn-warning">Edit</a>
   <?php
   } else {
       echo "Personal CV not found.";
