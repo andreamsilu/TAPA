@@ -1,6 +1,5 @@
 <?php
     session_start();
-    include "navigation.php";
     include "../forms/connection.php";
     
     // Check if the user is authenticated
@@ -32,6 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($conn->query($sql) === TRUE) {
         echo "Certification information updated successfully";
+        header("Location: show-cert.php");
+
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
@@ -58,7 +59,7 @@ $conn->close();
   if ($result->num_rows > 0) {
       $row = $result->fetch_assoc();
   ?>
-    <form id="editCertificationForm">
+    <form id="editCertificationForm" action="edit-cert.php" method="post">
       <!-- Certification Details -->
       <h4>Certification Details</h4>
       <div class="form-row">
@@ -87,7 +88,7 @@ $conn->close();
       <input type="hidden" name="certificationId" value="<?php echo $certificationId; ?>">
 
       <!-- Submit Button -->
-      <button type="button" class="btn btn-primary" onclick="updateForm()">Update</button>
+      <button type="submit" class="btn btn-primary" >Update</button>
     </form>
   <?php
   } else {
@@ -102,26 +103,5 @@ $conn->close();
 
 <?php include("footer.php") ?>
 
-<script>
-  function updateForm() {
-    // You can add your database-updating logic here
-    // Example: Send the updated form data to a server using AJAX
-    var formData = $("#editCertificationForm").serialize();
-    $.ajax({
-      type: "POST",
-      url: "/update_certification.php", // Replace with your actual backend endpoint
-      data: formData,
-      success: function(response) {
-        alert("Certification information updated successfully!");
-        // Add any other logic you need after successful update
-      },
-      error: function(error) {
-        console.error("Error updating certification information:", error);
-        // Handle errors here
-      }
-    });
-  }
-</script>
 
-</body>
-</html>
+

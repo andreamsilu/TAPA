@@ -43,7 +43,7 @@ if (!isset($_SESSION['user_id'])) {
           echo '<td>' . $row['certification_authority'] . '</td>';
           echo '<td>' . $row['certification_date'] . '</td>';
           echo '<td>' . ($row['expiration_date'] ? $row['expiration_date'] : 'N/A') . '</td>';
-          echo '<td><a href="edit_certification.php?id=' . $row['id'] . '" class="btn btn-warning">Edit</a></td>';
+          echo '<td><a href="edit-cert.php?id=' . $row['id'] . '" class="btn btn-warning">Edit</a></td>';
           echo '</tr>';
       }
 
