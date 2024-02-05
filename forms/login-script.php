@@ -1,38 +1,52 @@
 <?php
-session_start();
 
-include "connection.php";
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+session_start(); // Uncommented session_start()
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
+    // Replace these values with your actual database credentials
+    $servername = "localhost";
+    $username = "root";
+    $passwordDb = "";
+    $database = "TAPA_DB";
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $passwordDb, $database);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
     // Query to fetch user details based on the provided email
     $sql = "SELECT * FROM users WHERE email = '$email' LIMIT 1";
-    $result = mysqli_query($conn, $sql);
+    $result = $conn->query($sql);
 
-    if ($result && mysqli_num_rows($result) > 0) {
-        $row = mysqli_fetch_assoc($result);
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
         $hashedPassword = $row['password'];
 
         // Verify the provided password with the hashed password from the database
         if (password_verify($password, $hashedPassword)) {
             // Password matches, create a session and store user information
-            $_SESSION['id'] = $row['id'];
+            $_SESSION['user_id'] = $row['id'];
             $_SESSION['email'] = $email;
-            $_SESSION['user_id'] = $userId;
             header("Location: ../profile/index.php"); // Redirect to a success page
             exit();
         } else {
             // Incorrect password
-            $error = "Invalid credentials. Please try again.";
-            echo $error;
+            echo $error = "Invalid credentials. Please try again.";
         }
     } else {
         // User not found
-        $error = "User with this email does not exist.";
-        echo $error;
+       echo $error = "User with this email does not exist.";
     }
+
+    $conn->close();
 }
-mysqli_close($conn);
 ?>

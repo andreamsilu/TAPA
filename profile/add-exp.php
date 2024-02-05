@@ -1,8 +1,10 @@
 
 <?php
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
    session_start();
-   include "navigation.php";
    include "../forms/connection.php";
    
    // Check if the user is authenticated
@@ -11,6 +13,8 @@
        header("Location: login.php");
        exit();
    }
+
+   $userId = $_SESSION['user_id'];
 // Function to sanitize form data
 function sanitizeData($data) {
     return htmlspecialchars(trim($data));
@@ -25,8 +29,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $jobDescription = sanitizeData($_POST["jobDescription"]);
 
     // SQL query to insert data into the database
-    $sql = "INSERT INTO experience (company_name, position, start_date, end_date, job_description) VALUES ('$companyName', '$position', '$startDate', '$endDate', '$jobDescription')";
-
+    $sql = "INSERT INTO experience (company_name, position, start_date, end_date, job_description, user_id)
+    VALUES ('$companyName', '$position', '$startDate', '$endDate', '$jobDescription', '$userId')";
+    
     if ($conn->query($sql) === TRUE) {
         echo "Work experience saved successfully";
         header('Location: show-exp.php');
@@ -41,7 +46,9 @@ $conn->close();
 
 
 
-
+<?php              
+   include "navigation.php";
+?>
 <div class="container mt-5">
   <form id="workExperienceForm"  action="add-exp.php" method="post">
     <!-- Company Name -->
@@ -75,31 +82,11 @@ $conn->close();
     </div>
 
     <!-- Submit Button -->
-    <button type="button" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div>
 
-
-<script>
-  function submitForm() {
-    // You can add your database-saving logic here
-    // Example: Send the form data to a server using AJAX
-    var formData = $("#workExperienceForm").serialize();
-    $.ajax({
-      type: "POST",
-      url: "/save-work-experience.php", // Replace with your actual backend endpoint
-      data: formData,
-      success: function(response) {
-        alert("Work experience saved successfully!");
-        // Add any other logic you need after successful submission
-      },
-      error: function(error) {
-        console.error("Error saving work experience:", error);
-        // Handle errors here
-      }
-    });
-  }
-</script>
-
 <?php include("footer.php"); ?>
+
+
 

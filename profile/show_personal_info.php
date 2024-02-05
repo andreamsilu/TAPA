@@ -4,20 +4,19 @@ ini_set('display_errors', 1);
 
 session_start(); // Start the session
 
-if (!isset($_SESSION['id'])) {
+if (!isset($_SESSION['email']) && !isset($_SESSION['user_id'])) {
     // Redirect to the login page if the user is not authenticated
     header("Location: ../login.php");
     exit();
 }
 
-$userID = $_SESSION['id']; // Use the stored user ID from the session
-$userEmail = $_SESSION['email']; // Use the stored user ID from the session
-
+$userID = $_SESSION['user_id']; // Use the stored user ID from the session
+$userEmail = $_SESSION['email']; // Use the stored user email from the session
 
 include "../forms/connection.php";
 
-// Get the user's information
-$sql = "SELECT * FROM users WHERE id = $userID";
+// Get the user's information based on both ID and email
+$sql = "SELECT * FROM users WHERE id = $userID AND email = '$userEmail' LIMIT 1";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

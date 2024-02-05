@@ -1,12 +1,12 @@
 <?php
 session_start();
-
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 
 include "navigation.php";
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -18,7 +18,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 function fetchProgress() {
     include "../forms/connection.php";
     // User authentication logic
-if (!isset($_SESSION['user_id']) || empty($_SESSION['user_id'])) {
+if (!isset($_SESSION['user_id']) || empty($_SESSION['email'])) {
     // Redirect to login page if user is not authenticated
     header("Location: ../login.php");
     exit();

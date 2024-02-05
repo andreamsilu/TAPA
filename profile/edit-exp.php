@@ -1,146 +1,103 @@
-
 <?php
-  session_start();
-   include "navigation.php";
-   include "../forms/connection.php";
-   
-   // Check if the user is authenticated
-   if (!isset($_SESSION['user_id'])) {
-       // Redirect to the login page if not authenticated
-       header("Location: login.php");
-       exit();
-   }
-// Function to sanitize form data
-function sanitizeData($data) {
-    return htmlspecialchars(trim($data));
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+session_start();
+include "../forms/connection.php";
+
+// Check if the user is authenticated
+if (!isset($_SESSION['user_id'])) {
+    // Redirect to the login page if not authenticated
+    header("Location: login.php");
+    exit();
 }
 
-// Process form data
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $workExperienceId = sanitizeData($_POST["id"]);
-    $companyName = sanitizeData($_POST["companyName"]);
-    $position = sanitizeData($_POST["position"]);
-    $startDate = sanitizeData($_POST["startDate"]);
-    $endDate = sanitizeData($_POST["endDate"]);
-    $jobDescription = sanitizeData($_POST["jobDescription"]);
+// Check if an experience ID is provided in the URL
+if (!isset($_GET['id'])) {
+    echo "Experience ID not provided.";
+    exit();
+}
 
-    // SQL query to update data in the database
-    $sql = "UPDATE experience SET company_name = '$companyName', position = '$position', start_date = '$startDate', end_date = '$endDate', job_description = '$jobDescription' WHERE id = $workExperienceId";
+$userId = $_SESSION['user_id'];
+$experienceId = $_GET['id'];
 
-    if ($conn->query($sql) === TRUE) {
-        echo "Work experience updated successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+// Retrieve the existing experience details
+$sql = "SELECT * FROM experience WHERE id = $experienceId AND user_id = $userId";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+
+    // Process form data when the form is submitted
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $companyName = htmlspecialchars($_POST["companyName"]);
+        $position = htmlspecialchars($_POST["position"]);
+        $startDate = htmlspecialchars($_POST["startDate"]);
+        $endDate = htmlspecialchars($_POST["endDate"]);
+        $jobDescription = htmlspecialchars($_POST["jobDescription"]);
+
+        // SQL query to update experience data
+        $updateSql = "UPDATE experience SET
+                      company_name = '$companyName',
+                      position = '$position',
+                      start_date = '$startDate',
+                      end_date = '$endDate',
+                      job_description = '$jobDescription'
+                      WHERE id = $experienceId AND user_id = $userId";
+
+        if ($conn->query($updateSql) === TRUE) {
+            echo "Experience updated successfully!";
+            header("Location: show-exp.php");
+        } else {
+            echo "Error updating experience: " . $conn->error;
+        }
     }
+} else {
+    echo "Experience not found for the provided ID and user.";
 }
 
 // Close the database connection
 $conn->close();
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Edit Work Experience</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-
+<?php 
+include "navigation.php";
+?>
+<!-- HTML form for editing experience details -->
 <div class="container mt-5">
-  <?php
-  // Replace these values with your actual database credentials
-  $servername = "your_database_server";
-  $username = "your_username";
-  $password = "your_password";
-  $database = "your_database_name";
+    <form id="editExperienceForm" action="edit-exp.php?id=<?php echo $experienceId; ?>" method="post">
+        <!-- Company Name -->
+        <div class="form-group">
+            <label for="companyName">Company Name</label>
+            <input type="text" class="form-control" id="companyName" name="companyName" value="<?php echo $row['company_name']; ?>" required>
+        </div>
 
-  // Create connection
-  $conn = new mysqli($servername, $username, $password, $database);
+        <!-- Position -->
+        <div class="form-group">
+            <label for="position">Job title/position</label>
+            <input type="text" class="form-control" id="position" name="position" value="<?php echo $row['position']; ?>" required>
+        </div>
 
-  // Check connection
-  if ($conn->connect_error) {
-      die("Connection failed: " . $conn->connect_error);
-  }
+        <!-- Start Date -->
+        <div class="form-group">
+            <label for="startDate">Start Date</label>
+            <input type="date" class="form-control" id="startDate" name="startDate" value="<?php echo $row['start_date']; ?>" required>
+        </div>
 
-  // Get the record to be edited
-  $workExperienceId = $_GET['id'];
-  $sql = "SELECT * FROM work_experience WHERE id = $workExperienceId";
-  $result = $conn->query($sql);
+        <!-- End Date -->
+        <div class="form-group">
+            <label for="endDate">End Date</label>
+            <input type="date" class="form-control" id="endDate" name="endDate" value="<?php echo $row['end_date']; ?>">
+        </div>
 
-  if ($result->num_rows > 0) {
-      $row = $result->fetch_assoc();
-  ?>
-    <form id="editWorkExperienceForm">
-      <!-- Company Name -->
-      <div class="form-group">
-        <label for="companyName">Company Name</label>
-        <input type="text" class="form-control" id="companyName" name="companyName" value="<?php echo $row['company_name']; ?>" required>
-      </div>
+        <!-- Job Description -->
+        <div class="form-group">
+            <label for="jobDescription">Job Description</label>
+            <textarea class="form-control" id="jobDescription" name="jobDescription" rows="4" required><?php echo $row['job_description']; ?></textarea>
+        </div>
 
-      <!-- Position -->
-      <div class="form-group">
-        <label for="position">Position</label>
-        <input type="text" class="form-control" id="position" name="position" value="<?php echo $row['position']; ?>" required>
-      </div>
-
-      <!-- Start Date -->
-      <div class="form-group">
-        <label for="startDate">Start Date</label>
-        <input type="text" class="form-control" id="startDate" name="startDate" placeholder="mm/dd/yyyy" value="<?php echo $row['start_date']; ?>" required>
-      </div>
-
-      <!-- End Date -->
-      <div class="form-group">
-        <label for="endDate">End Date</label>
-        <input type="text" class="form-control" id="endDate" name="endDate" placeholder="mm/dd/yyyy" value="<?php echo $row['end_date']; ?>">
-      </div>
-
-      <!-- Job Description -->
-      <div class="form-group">
-        <label for="jobDescription">Job Description</label>
-        <textarea class="form-control" id="jobDescription" name="jobDescription" rows="4" required><?php echo $row['job_description']; ?></textarea>
-      </div>
-
-      <!-- Submit Button -->
-      <button type="button" class="btn btn-primary" onclick="updateForm()">Update</button>
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Update Experience</button>
     </form>
-  <?php
-  } else {
-      echo "Work experience not found.";
-  }
-
-  // Close the database connection
-  $conn->close();
-  ?>
-
 </div>
 
-<?php include("navigation.php") ?>
-
-
-<script>
-  function updateForm() {
-    // You can add your database-updating logic here
-    // Example: Send the updated form data to a server using AJAX
-    var formData = $("#editWorkExperienceForm").serialize();
-    $.ajax({
-      type: "POST",
-      url: "/update-work-experience.php", // Replace with your actual backend endpoint
-      data: formData,
-      success: function(response) {
-        alert("Work experience updated successfully!");
-        // Add any other logic you need after successful update
-      },
-      error: function(error) {
-        console.error("Error updating work experience:", error);
-        // Handle errors here
-      }
-    });
-  }
-</script>
-
-</body>
-</html>
+<?php include("footer.php"); ?>

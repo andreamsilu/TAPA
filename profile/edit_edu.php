@@ -1,6 +1,5 @@
 <?php
  session_start();
- include "navigation.php";
  include "../forms/connection.php";
  
  // Check if the user is authenticated
@@ -28,7 +27,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($conn->query($sql) === TRUE) {
             header("Location:show_edu.php");
-        } else {
+        } else {  // Retrieve education details from the database based on the ID
+
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
 
@@ -38,12 +38,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
+<?php 
+ include "navigation.php";
+?>
 
 <div class="container mt-5">
   <!-- <h2>Edit Education Details</h2> -->
 
   <?php
-  // Retrieve education details from the database based on the ID
   $id = $_GET['id']; // Assuming you are passing the ID through the URL
 
   // Database connection settings

@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 session_start();
 
 // Check if the user is authenticated
@@ -7,6 +10,8 @@ if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
     exit();
 }
+
+$userId = $_SESSION['user_id'];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve form data
@@ -21,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         include "../forms/connection.php";
 
         // Prepare and execute SQL query to insert data into the 'education' table
-        $sql = "INSERT INTO education (award, institution, year) VALUES ('$award', '$institution', '$year')";
+        $sql = "INSERT INTO education (award, institution, year, user_id) VALUES ('$award', '$institution', '$year', '$userId')";
 
         if ($conn->query($sql) === TRUE) {
             echo "<h3>Data has been successfully stored in the database!</h3>";
@@ -33,7 +38,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $conn->close();
     }
 }
-
 ?>
 
 <?php include("navigation.php"); ?>

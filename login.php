@@ -82,7 +82,7 @@
                         <form action="forms/login-script.php" method="post" autocomplete="off">
                             <div class="form-group">
                                 <label>Email</label>
-                                <input type="email" name="login" id="login" class="form-control" placeholder="Email" required />
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Email" required />
                             </div>
                             <div class="form-group">
                                 <label>Password</label>
