@@ -1,138 +1,139 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-<?php 
- session_start();
-   include "navigation.php";
-   include "../forms/connection.php";
-   
-   // Check if the user is authenticated
-   if (!isset($_SESSION['user_id'])) {
-       // Redirect to the login page if not authenticated
-       header("Location: login.php");
-       exit();
-   }
+session_start();
+include "../forms/connection.php";
 
-// Process form data
+// Check if the user is authenticated
+if (!isset($_SESSION['user_id'])) {
+    // Redirect to the login page if not authenticated
+    header("Location: login.php");
+    exit();
+}
+$userId = $_SESSION['user_id'];
+// Function to sanitize form data
+function sanitizeData($data)
+{
+    return htmlspecialchars(trim($data));
+}
+
+// Process form data for updating contact information
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $contactInfoId = sanitizeData($_POST["id"]);
-    $companyName = sanitizeData($_POST["companyName"]);
-    $contactPerson = sanitizeData($_POST["contactPerson"]);
-    $email = sanitizeData($_POST["email"]);
-    $phoneNumber = sanitizeData($_POST["phoneNumber"]);
-    $address = sanitizeData($_POST["address"]);
+    $contactId = sanitizeData($_POST["contactId"]);
+    $mobile1 = sanitizeData($_POST["mobile1"]);
+    $mobile2 = sanitizeData($_POST["mobile2"]);
+    $whatsappNumber = sanitizeData($_POST["whatsappNumber"]);
+    $secondaryEmail = sanitizeData($_POST["secondaryEmail"]);
+    $workEmail = sanitizeData($_POST["workEmail"]);
+    $countryResidence = sanitizeData($_POST["countryResidence"]);
+    $stateResidence = sanitizeData($_POST["stateResidence"]);
+    $cityResidence = sanitizeData($_POST["cityResidence"]);
+    $areaResidence = sanitizeData($_POST["areaResidence"]);
+    $zipCode = sanitizeData($_POST["zipCode"]);
 
-    // SQL query to update data in the database
-    $sql = "UPDATE contact_info SET company_name = '$companyName', contact_person = '$contactPerson', email = '$email', phone_number = '$phoneNumber', address = '$address' WHERE id = $contactInfoId";
+    // SQL query to update contact information in the database
+    $sql = "UPDATE contact_info 
+            SET mobile1 = '$mobile1', mobile2 = '$mobile2', whatsapp_number = '$whatsappNumber', 
+                secondary_email = '$secondaryEmail', work_email = '$workEmail', 
+                country_residence = '$countryResidence', state_residence = '$stateResidence', 
+                city_residence = '$cityResidence', area_residence = '$areaResidence', zip_code = '$zipCode' 
+            WHERE id = $contactId AND user_id = $userId";
 
     if ($conn->query($sql) === TRUE) {
         echo "Contact information updated successfully";
+    header("Location: show-cont.php");
+
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error updating contact information: " . $conn->error;
     }
 }
 
-// Close the database connection
+// Get the contact ID from the URL
+$contactId = isset($_GET['id']) ? $_GET['id'] : null;
+
+// Get the existing contact information for editing
+$sql = "SELECT * FROM contact_info WHERE id = $contactId AND user_id = {$_SESSION['user_id']}";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+} else {
+    // Redirect to the contact list page if the contact ID is not valid
+    header("Location: contact-list.php");
+    exit();
+}
+
 $conn->close();
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Edit Contact Information</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-
+<?php
+include "navigation.php";
+?>
 <div class="container mt-5">
-  <?php
-  // Replace these values with your actual database credentials
-  $servername = "your_database_server";
-  $username = "your_username";
-  $password = "your_password";
-  $database = "your_database_name";
+    <h2>Edit Contact Information</h2>
+    <form id="editContactForm" action="edit-cont.php" method="post">
+        <input type="hidden" name="contactId" value="<?php echo $contactId; ?>">
 
-  // Create connection
-  $conn = new mysqli($servername, $username, $password, $database);
+        <!-- Contact Details -->
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="mobile1">Mobile 1</label>
+                <input type="text" class="form-control" id="mobile1" name="mobile1" value="<?php echo $row['mobile1']; ?>" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="mobile2">Mobile 2</label>
+                <input type="text" class="form-control" id="mobile2" name="mobile2" value="<?php echo $row['mobile2']; ?>">
+            </div>
+        </div>
 
-  // Check connection
-  if ($conn->connect_error) {
-      die("Connection failed: " . $conn->connect_error);
-  }
 
-  // Get the record to be edited
-  $contactInfoId = $_GET['id'];
-  $sql = "SELECT * FROM contact_info WHERE id = $contactInfoId";
-  $result = $conn->query($sql);
-
-  if ($result->num_rows > 0) {
-      $row = $result->fetch_assoc();
-  ?>
-    <form id="editContactInfoForm">
-      <!-- Company Name -->
-      <div class="form-group">
-        <label for="companyName">Company Name</label>
-        <input type="text" class="form-control" id="companyName" name="companyName" value="<?php echo $row['company_name']; ?>" required>
-      </div>
-
-      <!-- Contact Person Name -->
-      <div class="form-group">
-        <label for="contactPerson">Contact Person</label>
-        <input type="text" class="form-control" id="contactPerson" name="contactPerson" value="<?php echo $row['contact_person']; ?>" required>
-      </div>
-
-      <!-- Email -->
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" name="email" value="<?php echo $row['email']; ?>" required>
-      </div>
-
-      <!-- Phone Number -->
-      <div class="form-group">
-        <label for="phoneNumber">Phone Number</label>
-        <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" value="<?php echo $row['phone_number']; ?>" required>
-      </div>
-
-      <!-- Address -->
-      <div class="form-group">
-        <label for="address">Address</label>
-        <textarea class="form-control" id="address" name="address" rows="4" required><?php echo $row['address']; ?></textarea>
-      </div>
-
-      <!-- Submit Button -->
-      <button type="button" class="btn btn-primary" onclick="updateForm()">Update</button>
-    </form>
-  <?php
-  } else {
-      echo "Contact information not found.";
-  }
-
-  // Close the database connection
-  $conn->close();
-  ?>
-
+        <div class="form-row">
+    <div class="form-group col-md-6">
+        <label for="whatsappNumber">Whatsapp Number</label>
+        <input type="text" class="form-control" id="whatsappNumber" name="whatsappNumber" value="<?php echo $row['whatsapp_number']; ?>">
+    </div>
+    <div class="form-group col-md-6">
+        <label for="secondaryEmail">Secondary Email</label>
+        <input type="email" class="form-control" id="secondaryEmail" name="secondaryEmail" value="<?php echo $row['secondary_email']; ?>">
+    </div>
 </div>
 
+<div class="form-row">
+    <div class="form-group col-md-6">
+        <label for="workEmail">Work Email</label>
+        <input type="email" class="form-control" id="workEmail" name="workEmail" value="<?php echo $row['work_email']; ?>">
+    </div>
+    <div class="form-group col-md-6">
+        <label for="countryResidence">Country of Residence</label>
+        <input type="text" class="form-control" id="countryResidence" name="countryResidence" value="<?php echo $row['country_residence']; ?>">
+    </div>
+</div>
 
-<script>
-  function updateForm() {
-    // You can add your database-updating logic here
-    // Example: Send the updated form data to a server using AJAX
-    var formData = $("#editContactInfoForm").serialize();
-    $.ajax({
-      type: "POST",
-      url: "/update-contact-info.php", // Replace with your actual backend endpoint
-      data: formData,
-      success: function(response) {
-        alert("Contact information updated successfully!");
-        // Add any other logic you need after successful update
-      },
-      error: function(error) {
-        console.error("Error updating contact information:", error);
-        // Handle errors here
-      }
-    });
-  }
-</script>
-<?php include("footer.php") ?>
+<div class="form-row">
+    <div class="form-group col-md-6">
+        <label for="stateResidence">State of Residence</label>
+        <input type="text" class="form-control" id="stateResidence" name="stateResidence" value="<?php echo $row['state_residence']; ?>">
+    </div>
+    <div class="form-group col-md-6">
+        <label for="cityResidence">City of Residence</label>
+        <input type="text" class="form-control" id="cityResidence" name="cityResidence" value="<?php echo $row['city_residence']; ?>">
+    </div>
+</div>
+
+<div class="form-row">
+    <div class="form-group col-md-6">
+        <label for="areaResidence">Area of Residence</label>
+        <input type="text" class="form-control" id="areaResidence" name="areaResidence" value="<?php echo $row['area_residence']; ?>">
+    </div>
+    <div class="form-group col-md-6">
+        <label for="zipCode">ZIP Code / PO Box</label>
+        <input type="text" class="form-control" id="zipCode" name="zipCode" value="<?php echo $row['zip_code']; ?>">
+    </div>
+</div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Update Contact</button>
+    </form>
+</div>
+
+<?php include "footer.php"; ?>
