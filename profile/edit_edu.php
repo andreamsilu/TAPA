@@ -42,24 +42,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  include "navigation.php";
 ?>
 <div class="container mt-5">
-  <h2>Edit Education Details</h2>
 
   <?php
   $id = $_GET['id']; // Assuming you are passing the ID through the URL
 
-  // Database connection settings
-  $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $dbname = "TAPA_DB";
-
-  // Create connection
-  $conn = new mysqli($servername, $username, $password, $dbname);
-
-  // Check connection
-  if ($conn->connect_error) {
-      die("Connection failed: " . $conn->connect_error);
-  }
+  include "../forms/connection.php";
 
   // Retrieve existing data from the database
   $sql = "SELECT * FROM education WHERE id = $id";
@@ -70,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   ?>
   <div class="card">
     <div class="card-header">
-        <h5>Edit Education Details</h5>
+        <h4><i class="bi bi-pencil-square"></i>Edit Education Details</h4>
     </div>
     <div class="card-body">
         <form method="post" action="edit_edu.php">
