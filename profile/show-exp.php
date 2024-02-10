@@ -36,6 +36,7 @@ if (!isset($_SESSION['user_id'])) {
                     <p><strong><i class="bi bi-calendar"></i> End Date:</strong> <?php echo ($row['end_date']) ? $row['end_date'] : 'Present'; ?></p>
                     <p><strong><i class="bi bi-card-text"></i> Job Description:</strong> <?php echo $row['job_description']; ?></p>
                     <a href="edit-exp.php?id=<?php echo $row['id']; ?>" class="btn btn-warning"><i class="bi bi-pencil-fill"></i> Edit</a>
+                    <a href="delete-exp.php?id=<?php echo $row['id']; ?>" class="btn btn-danger"><i class="bi bi-trash"></i> Delete</a>
                 </div>
             </div>
     <?php
