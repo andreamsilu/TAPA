@@ -82,7 +82,7 @@ $conn->close();
 <div class="container mt-5">
     <div class="card">
         <div class="card-header">
-            <h4><i class="bi bi-file-earmark-plus"></i> CV Details</h4>
+            <h4><i class="bi bi-file-earmark-plus"></i> Add CV Details</h4>
         </div>
         <div class="card-body">
             <div class="row">

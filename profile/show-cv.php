@@ -17,7 +17,7 @@ $userId = $_SESSION['user_id'];
 <div class="container mt-5">
   <div class="card">
     <div class="card-header d-flex justify-content-between align-items-center">
-      <h5><i class="bi bi-file-earmark-person"></i> User Profile</h5>
+      <h5><i class="bi bi-file-earmark-text"></i> CV details</h5>
       <?php
       // Check if CV exists for the user
       $sql = "SELECT * FROM personal_cv WHERE user_id = '$userId'";
