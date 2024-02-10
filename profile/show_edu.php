@@ -46,6 +46,8 @@ if (!isset($_SESSION['user_id'])) {
       }
   } else {
       echo "No education details found.";
+  echo " <a href='add-edu.php' class='btn btn-primary'>Add</a>";
+
   }
 
   // Close connection

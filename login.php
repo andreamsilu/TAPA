@@ -1,7 +1,7 @@
 <?php include("titleIcon.php") ?>
 <?php include("header.php") ?>
 
-
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,80 +12,88 @@
     <meta content="" name="description">
     <meta content="" name="keywords">
     <!-- Include Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
+<!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">  -->
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
 
-        .login-page {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-image: url('assets/img/login/login-bg2.jpg');
-            /* Replace with your background image path */
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
+    .login-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url('assets/img/login/login-bg2.jpg');
+        /* Replace with your background image path */
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
 
-        .login-container {
-            width: 90%;
-            max-width: 1000px;
-            background-color: rgba(255, 255, 255, 0.6);
-            /* Semi-transparent background */
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        }
+    .login-container {
+        margin: 50px 20px 20px 250px;
+        width: 50%;
+        /* max-width: 1000px; */
+        background-color: rgba(255, 255, 255, 0.6);
+        /* Semi-transparent background */
+        padding: 50px;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
 
-        .sign-in {
-            border: solid 2px #0F718A;
-            border-radius: 20px;
-        }
+    .login-container {}
 
-        .sign-in:hover {
-            background-color: #0F718A;
-            color: white;
-        }
+    .sign-in {
+        border: solid 2px #0F718A;
+        border-radius: 20px;
+    }
 
-        .a {
-            text-decoration: none;
-            /* Remove underlines from links */
-        }
+    .sign-in:hover {
+        background-color: #0F718A;
+        color: white;
+    }
 
-        .register-btn {
-            border-radius: 20px;
-            background-color: #0F718A;
-        }
+    .a {
+        text-decoration: none;
+        /* Remove underlines from links */
+    }
 
-        .register-btn:hover {
-            border-radius: 20px;
-            color: white;
-            background-color: #0F718A;
-        }
-    </style>
+    .register-btn {
+        border-radius: 20px;
+        background-color: #0F718A;
+    }
+
+    .register-btn:hover {
+        border-radius: 20px;
+        color: white;
+        background-color: #0F718A;
+    }
+</style>
 </head>
 
 <body>
 
     <main class="login-page">
+
+
         <!-- Login Container -->
         <div class="container">
             <div class="row">
-                <!-- Login Form -->
-                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+
+                <div class="col-lg-12 col-md-10">
                     <div class="login-container">
+                        <div>
+                            <img src="assets/img/tapa/tapa-fam.JPG" class="img-fluid" height="200px" alt="Image">
+                        </div>
                         <h1>Welcome back,</h1>
                         <form action="forms/login-script.php" method="post" autocomplete="off">
                             <div class="form-group">
-                                <label>Email</label>
+                                <label for="email"><i class="fas fa-envelope"></i> Email</label>
                                 <input type="email" name="email" id="email" class="form-control" placeholder="Email" required />
                             </div>
                             <div class="form-group">
-                                <label>Password</label>
+                                <label for="password"><i class="fas fa-lock"></i> Password</label>
                                 <input type="password" class="form-control" name="password" id="password" placeholder="Password" required />
                             </div>
                             <div class="form-group">
@@ -107,6 +115,7 @@
                 </div>
             </div>
         </div>
+
     </main>
 
     <!-- Bootstrap JS -->

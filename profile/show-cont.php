@@ -69,6 +69,8 @@ if (!isset($_SESSION['user_id'])) {
         }
     } else {
         echo "No contact information found.";
+  echo " <a href='add-cont.php' class='btn btn-primary'>Add contact</a>";
+
     }
 
     $conn->close();

@@ -42,7 +42,9 @@ $userId = $_SESSION['user_id'];
     <a href="edit-cv.php?id=<?php echo $cvId; ?>" class="btn btn-warning">Edit</a>
   <?php
   } else {
-      echo "Personal CV not found.";
+      // echo "Personal CV not found.";
+  echo " <a href='add-cv.php' class='btn btn-primary'>Add your cv</a>";
+
   }
 
   // Close the database connection

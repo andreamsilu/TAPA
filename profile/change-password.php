@@ -2,7 +2,6 @@
 
 <?php
    session_start();
-   include "navigation.php";
    include "../forms/connection.php";
    
    // Check if the user is authenticated
@@ -29,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validate current password and new password match
     if ($newPassword !== $confirmPassword) {
-        echo "New password and confirm password do not match.";
+        echo "alert('New password and confirm password do not match.')";
         exit();
     }
 
@@ -50,15 +49,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $updatePasswordQuery = "UPDATE users SET password = '$newPasswordHash' WHERE id = $userId";
 
             if ($conn->query($updatePasswordQuery) === TRUE) {
-                echo "Password changed successfully";
+                echo " alert('Password changed successfully')";
             } else {
                 echo "Error updating password: " . $conn->error;
             }
         } else {
-            echo "Incorrect current password.";
+            echo "alert('Incorrect current password.')";
         }
     } else {
-        echo "User not found.";
+        echo "alert('User not found.')";
     }
 }
 
@@ -68,26 +67,27 @@ $conn->close();
 
 <?php include("navigation.php"); ?>
 <div class="container mt-5">
-  <h2>Change Password</h2>
-  <form id="changePasswordForm">
+  <h2><i class="fas fa-lock"></i> Change Password</h2>
+  <form id="changePasswordForm" action="change-password.php" method="post">
     <div class="form-group">
-      <label for="currentPassword">Current Password</label>
+      <label for="currentPassword"><i class="fas fa-key"></i> Current Password</label>
       <input type="password" class="form-control" id="currentPassword" name="currentPassword" required>
     </div>
 
     <div class="form-group">
-      <label for="newPassword">New Password</label>
+      <label for="newPassword"><i class="fas fa-unlock-alt"></i> New Password</label>
       <input type="password" class="form-control" id="newPassword" name="newPassword" required>
     </div>
 
     <div class="form-group">
-      <label for="confirmPassword">Confirm New Password</label>
+      <label for="confirmPassword"><i class="fas fa-check"></i> Confirm New Password</label>
       <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
     </div>
 
-    <button type="button" class="btn btn-primary">Change Password</button>
+    <button type="submit" class="btn btn-primary"><i class="fas fa-key"></i> Change Password</button>
   </form>
 </div>
+
 <?php include("footer.php"); ?>
 
 

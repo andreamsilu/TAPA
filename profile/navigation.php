@@ -9,7 +9,8 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Jss+8gN5eWPS2+xe7i7e6pZYO/dUZ37OqYz3NjcmmJ1W4Z" crossorigin="anonymous">
     <!-- Bootstrap Icons CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
 
     <style>
         /* Adjust sidebar styles */
@@ -33,7 +34,7 @@
 
         }
 
-        i{
+        i {
             /* font-size: 28px; */
             color: #fff;
         }
@@ -206,5 +207,5 @@
             </nav>
 
         </div>
-            <!-- Main content area -->
-            <main role="main" class="col-md-10 ml-sm-auto col-lg-10">
+        <!-- Main content area -->
+        <main role="main" class="col-md-10 ml-sm-auto col-lg-10">

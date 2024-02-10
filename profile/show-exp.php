@@ -53,6 +53,8 @@ if (!isset($_SESSION['user_id'])) {
         }
     } else {
         echo "No work experience found.";
+  echo " <a href='add-exp.php' class='btn btn-primary'>Add experience</a>";
+
     }
 
     // Close the database connection

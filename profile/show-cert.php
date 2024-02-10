@@ -52,6 +52,8 @@ if (!isset($_SESSION['user_id'])) {
       echo '</div>';
   } else {
       echo "No certification information found.";
+  echo " <a href='add-cert.php' class='btn btn-primary'>Add certification</a>";
+
   }
 
   // Close the database connection
