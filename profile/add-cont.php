@@ -51,67 +51,75 @@ include('navigation.php');
 ?>
 
 <div class="container mt-5">
-    <form id="contactInfoForm" class="p-5" action="add-cont.php" method="post">
-        <div class="row">
-            <!-- Column 1 -->
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="mobile1"><i class="bi bi-phone"></i> Mobile 1</label>
-                    <input type="tel" class="form-control" id="mobile1" name="mobile1" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="mobile2"><i class="bi bi-phone"></i> Mobile 2</label>
-                    <input type="tel" class="form-control" id="mobile2" name="mobile2" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="whatsappNumber"><i class="bi bi-whatsapp"></i> Whatsapp Number</label>
-                    <input type="tel" class="form-control" id="whatsappNumber" name="whatsappNumber" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="secondaryEmail"><i class="bi bi-envelope"></i> Secondary Email</label>
-                    <input type="email" class="form-control" id="secondaryEmail" name="secondaryEmail" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="workEmail"><i class="bi bi-envelope"></i> Work Email</label>
-                    <input type="email" class="form-control" id="workEmail" name="workEmail" required>
-                </div>
-            </div>
-
-            <!-- Column 2 -->
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="countryResidence"><i class="bi bi-globe"></i> Country of Residence</label>
-                    <input type="text" class="form-control" id="countryResidence" name="countryResidence" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="stateResidence"><i class="bi bi-map"></i> State of Residence</label>
-                    <input type="text" class="form-control" id="stateResidence" name="stateResidence" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="cityResidence"><i class="bi bi-map"></i> City of Residence</label>
-                    <input type="text" class="form-control" id="cityResidence" name="cityResidence" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="areaResidence"><i class="bi bi-map"></i> Area of Residence</label>
-                    <input type="text" class="form-control" id="areaResidence" name="areaResidence" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="zipCode"><i class="bi bi-envelope"></i> ZIP Code / PO Box</label>
-                    <input type="text" class="form-control" id="zipCode" name="zipCode" required>
-                </div>
-            </div>
+    <div class="card">
+    <div class="card-header">
+            <h4><i class="bi bi-file-earmark-plus"></i> Add contact information</h4>
         </div>
+        <div class="card-body">
+            <form id="contactInfoForm" action="add-cont.php" method="post">
+                <div class="row">
+                    <!-- Column 1 -->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="mobile1"><i class="bi bi-phone"></i> Mobile 1</label>
+                            <input type="tel" class="form-control" id="mobile1" name="mobile1" required>
+                        </div>
 
-        <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i> Submit</button>
-    </form>
+                        <div class="form-group">
+                            <label for="mobile2"><i class="bi bi-phone"></i> Mobile 2</label>
+                            <input type="tel" class="form-control" id="mobile2" name="mobile2" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="whatsappNumber"><i class="bi bi-whatsapp"></i> Whatsapp Number</label>
+                            <input type="tel" class="form-control" id="whatsappNumber" name="whatsappNumber" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="secondaryEmail"><i class="bi bi-envelope"></i> Secondary Email</label>
+                            <input type="email" class="form-control" id="secondaryEmail" name="secondaryEmail" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="workEmail"><i class="bi bi-envelope"></i> Work Email</label>
+                            <input type="email" class="form-control" id="workEmail" name="workEmail" required>
+                        </div>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="countryResidence"><i class="bi bi-globe"></i> Country of Residence</label>
+                            <input type="text" class="form-control" id="countryResidence" name="countryResidence" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="stateResidence"><i class="bi bi-map"></i> State of Residence</label>
+                            <input type="text" class="form-control" id="stateResidence" name="stateResidence" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cityResidence"><i class="bi bi-map"></i> City of Residence</label>
+                            <input type="text" class="form-control" id="cityResidence" name="cityResidence" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="areaResidence"><i class="bi bi-map"></i> Area of Residence</label>
+                            <input type="text" class="form-control" id="areaResidence" name="areaResidence" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="zipCode"><i class="bi bi-envelope"></i> ZIP Code / PO Box</label>
+                            <input type="text" class="form-control" id="zipCode" name="zipCode" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i> Submit</button>
+            </form>
+        </div>
+    </div>
 </div>
+
 <?php include('footer.php') ?>

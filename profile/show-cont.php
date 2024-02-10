@@ -22,10 +22,10 @@ if (!isset($_SESSION['user_id'])) {
         margin-bottom: 20px;
     }
 
-    .card-header {
+    /* .card-header {
         background-color: #28a745;
         color: #fff;
-    }
+    } */
 
     .btn-icons {
         margin-top: 10px;
@@ -45,9 +45,13 @@ if (!isset($_SESSION['user_id'])) {
         while ($row = $result->fetch_assoc()) {
     ?>
             <div class="card contact-card">
-                <div class="card-header">
-                    <h5> <i class="bi bi-telephone"></i>  Contact Information</h5>
-                    
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5><i class="bi bi-telephone"></i> Contact Information</h5>
+                    <div class="btn-icons">
+                        <a href="edit-cont.php?id=<?php echo $row['id']; ?>" class="btn btn-warning btn-sm">
+                            <i class="bi bi-pencil-square"></i> Edit
+                        </a>
+                    </div>
                 </div>
                 <div class="card-body">
                     <div class="row">
@@ -68,17 +72,6 @@ if (!isset($_SESSION['user_id'])) {
                     </div>
                 </div>
             </div>
-
-            <div class="btn-icons">
-                <a href="edit-cont.php?id=<?php echo $row['id']; ?>" class="btn btn-warning btn-sm">
-                    <i class="bi bi-pencil-square"></i> Edit
-                </a>
-                <!-- <button class="btn btn-danger btn-sm" onclick="deleteContact(<?php echo $row['id']; ?>)">
-                        <i class="fa fa-trash"></i> Delete
-                    </button> -->
-            </div>
-</div>
-
 <?php
         }
     } else {
@@ -89,6 +82,7 @@ if (!isset($_SESSION['user_id'])) {
     $conn->close();
 ?>
 </div>
+
 
 <script>
     function deleteContact(contactId) {
