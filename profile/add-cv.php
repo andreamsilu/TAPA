@@ -89,41 +89,41 @@ $conn->close();
                 <div class="col-md-6">
                     <form id="personalCVForm" action="add-cv.php" method="post" enctype="multipart/form-data">
                         <!-- Add values to input fields for editing -->
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="firstName"><i class="bi bi-person-badge"></i> First Name</label>
-                                <input type="text" class="form-control" id="firstName" name="firstName" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="lastName"><i class="bi bi-person-badge"></i> Last Name</label>
-                                <input type="text" class="form-control" id="lastName" name="lastName" required>
-                            </div>
+                        <div class="form-group ">
+                            <label for="firstName"><i class="bi bi-person-badge"></i> First Name</label>
+                            <input type="text" class="form-control" id="firstName" name="firstName" required>
                         </div>
-
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="email"><i class="bi bi-envelope"></i> Email</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="phone"><i class="bi bi-telephone"></i> Phone</label>
-                                <input type="tel" class="form-control" id="phone" name="phone" required>
-                            </div>
+                        <div class="form-group ">
+                            <label for="lastName"><i class="bi bi-person-badge"></i> Last Name</label>
+                            <input type="text" class="form-control" id="lastName" name="lastName" required>
                         </div>
-
-                        <!-- File Upload -->
-                        <div class="form-group">
-                            <label for="cvFile"><i class="bi bi-file-earmark-pdf"></i> Upload CV</label>
-                            <input type="file" class="form-control-file" id="cvFile" name="cvFile" accept=".pdf, .doc, .docx">
+                        <div class="form-group ">
+                            <label for="email"><i class="bi bi-envelope"></i> Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
                         </div>
+                </div>
 
-                        <!-- Submit Button -->
-                        <button type="submit" class="btn btn-primary"><i class="bi bi-check-circle"></i> Add</button>
+                <div class="col-md-6">
+                    <div class="form-group ">
+                        <label for="phone"><i class="bi bi-telephone"></i> Phone</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" required>
+                    </div>
+
+                    <!-- File Upload -->
+                    <div class="form-group">
+                        <label for="cvFile"><i class="bi bi-file-earmark-pdf"></i> Upload CV</label>
+                        <input type="file" class="form-control-file" id="cvFile" name="cvFile" accept=".pdf, .doc, .docx">
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary mt-5"><i class="bi bi-check-circle"></i> Add</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+</div>
+</div>
 </div>
 
 
