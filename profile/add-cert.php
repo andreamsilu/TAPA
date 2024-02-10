@@ -34,7 +34,7 @@ if ($certId) {
     $sql = "SELECT certification_name, certification_authority, certification_date, expiration_date 
             FROM certification 
             WHERE id = ? AND user_id = ?";
-    
+
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("ii", $certId, $userId);
     $stmt->execute();
@@ -69,7 +69,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($stmt->execute()) {
         echo "Certification information saved successfully";
         header("Location: show-cert.php");
-
     } else {
         echo "Error: " . $stmt->error;
     }

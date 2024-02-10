@@ -1,19 +1,18 @@
-
-
 <?php
-   session_start();
-   include "../forms/connection.php";
-   
-   // Check if the user is authenticated
-   if (!isset($_SESSION['user_id'])) {
-       // Redirect to the login page if not authenticated
-       header("Location: login.php");
-       exit();
-   }
+session_start();
+include "../forms/connection.php";
+
+// Check if the user is authenticated
+if (!isset($_SESSION['user_id'])) {
+    // Redirect to the login page if not authenticated
+    header("Location: login.php");
+    exit();
+}
 
 
 // Function to sanitize form data
-function sanitizeData($data) {
+function sanitizeData($data)
+{
     return htmlspecialchars(trim($data));
 }
 
@@ -67,35 +66,39 @@ $conn->close();
 
 <?php include("navigation.php"); ?>
 <div class="container mt-5">
-  <h2 class="text-center"><i class="bi bi-lock"></i> Change Password</h2>
-  <div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <form id="changePasswordForm" action="change-password.php" method="post">
-                <div class="form-group">
-                    <label for="currentPassword"><i class="bi bi-key"></i> Current Password</label>
-                    <input type="password" class="form-control" id="currentPassword" name="currentPassword" required>
-                </div>
+    <div class="card">
+        <div class="card-header ">
+            <h4 ><i class="bi bi-lock"></i> Change Password</h4>
+        </div>
+        <div class="card-body">
+            <div class="container mt-3">
+                <div class="row">
+                    <div class="col-md-6">
+                        <form id="changePasswordForm" action="change-password.php" method="post">
+                            <div class="form-group">
+                                <label for="currentPassword"><i class="bi bi-key"></i> Current Password</label>
+                                <input type="password" class="form-control" id="currentPassword" name="currentPassword" required>
+                            </div>
 
-                <div class="form-group">
-                    <label for="newPassword"><i class="bi bi-unlock"></i> New Password</label>
-                    <input type="password" class="form-control" id="newPassword" name="newPassword" required>
+                            <div class="form-group">
+                                <label for="newPassword"><i class="bi bi-unlock"></i> New Password</label>
+                                <input type="password" class="form-control" id="newPassword" name="newPassword" required>
+                            </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="confirmPassword"><i class="bi bi-check"></i> Confirm New Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+                        </div>
+                        <div class="form-group mt-5">
+                            <button type="submit" class="btn btn-primary"><i class="bi bi-key"></i> Change Password</button>
+                        </div>
+                        </form>
+                    </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="confirmPassword"><i class="bi bi-check"></i> Confirm New Password</label>
-                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
-                </div>
-
-                <button type="submit" class="btn btn-primary"><i class="bi bi-key"></i> Change Password</button>
-            </form>
+            </div>
         </div>
     </div>
 </div>
 
-
 <?php include("footer.php"); ?>
-
-
-
-
