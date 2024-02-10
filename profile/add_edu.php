@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <div class="container mt-5">
   <div class="card">
     <div class="card-header">
-      <h2 class="text-center"><i class="bi bi-journal-text"></i> Education Details</h2>
+      <h4><i class="bi bi-journal-text"></i> Education Details</h4>
     </div>
     <div class="card-body">
       <form action="add_edu.php" method="post">
