@@ -11,6 +11,8 @@
     <!-- Bootstrap Icons CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Latest Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-TUoGPr7tIJKL+XAKTmwYGhM5lmTr/vpaCoa+C/7QOpj0nHLp1qO3gOeDeJZ5y11Y4W/ijE8gkPdCEwRofV5JwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
         /* Adjust sidebar styles */
@@ -39,23 +41,35 @@
             color: #fff;
         }
 
-        .sidebar a:hover {
+        .sidebar i,a:hover {
             background-color: #0F718A;
             color: #fff;
         }
 
         .sidebar a:active {
-            /* background-color: #0F718A; */
+            background-color: green;
             color: #0F718A;
         }
 
         .dropdown-menu {
-            background-color: #333;
+            background-color: #222;
             color: #fff;
         }
 
         .nav-link {
             color: white;
+        }
+
+        i {
+            color: #0F718A;
+            padding: 3px;
+            font-size: 24px;
+        }
+
+        i:hover {
+            color: white;
+            padding: 3px;
+            font-size: 24px;
         }
     </style>
 </head>
@@ -141,7 +155,7 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item" href="add_edu.php">
-                                    <i class="bi bi-book-plus"></i> Add Education
+                                    <i class="bi bi-plus"></i> Add Education
                                 </a>
                                 <a class="dropdown-item" href="show_edu.php">
                                     <i class="bi bi-book-fill"></i> Manage Education
@@ -155,7 +169,7 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item" href="add-exp.php">
-                                    <i class="bi bi-briefcase-plus"></i> Add
+                                    <i class="bi bi-plus"></i> Add
                                 </a>
                                 <a class="dropdown-item" href="show-exp.php">
                                     <i class="bi bi-briefcase-fill"></i> Manage
@@ -179,17 +193,18 @@
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="bi bi-file-earmark-certificate"></i> Certification
+                                <i class="bi bi-file-earmark"></i> Certification
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item" href="add-cert.php">
-                                    <i class="bi bi-file-earmark-certificate-plus"></i> Add
+                                    <i class="bi bi-file-earmark-plus"></i> Add
                                 </a>
                                 <a class="dropdown-item" href="show-cert.php">
-                                    <i class="bi bi-file-earmark-certificate-fill"></i> Manage
+                                    <i class="bi bi-file-earmark-fill"></i> Manage
                                 </a>
                             </div>
                         </li>
+
 
                         <li class="nav-item">
                             <a class="nav-link" href="change-password.php">

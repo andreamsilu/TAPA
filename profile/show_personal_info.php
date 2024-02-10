@@ -23,31 +23,41 @@ if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
 ?>
 <?php include("navigation.php"); ?>
-
-    <div class="container mt-5">
-        <div class="card">
-            <div class="card-header">
-                <h5>User Profile</h5>
-            </div>
-            <div class="card-body">
-                <div class="well">
-                    <p><strong>Name:</strong> <?php echo $row['fullname']; ?></p>
-                    <p><strong>Email:</strong> <?php echo $row['email']; ?></p>
-                    <p><strong>Phone:</strong> <?php echo $row['phone']; ?></p>
-                    <p><strong>Postal Address:</strong> <?php echo $row['postal_address']; ?></p>
-                    <p><strong>Date of Birth:</strong> <?php echo $row['birth_date']; ?></p>
-                    <p><strong>Physical address:</strong> <?php echo $row['physical_address']; ?></p>
-                    <p><strong>Membership type:</strong> <?php echo $row['membership_type']; ?></p>
-                    <p><strong>Practitioner License:</strong> <?php echo $row['yes_licensure']; ?></p>
-                    <p><strong>Cv:</strong> <?php echo $row['cv_file']; ?></p>
-                    <!-- Add other fields as needed -->
-
-                    <!-- Edit Button -->
-                    <a href="edit_personal_info.php?id=<?php echo $userID; ?>" class="btn btn-primary">Edit</a>
+<style>
+    i{
+        color: #0F718A;
+    }
+</style>
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header d-flex justify-content-between">
+            <h5><i class="bi bi-person-circle"></i>  User Profile</h5>
+            <a href="edit_personal_info.php?id=<?php echo $userID; ?>" class="btn btn-primary"><i class="bi bi-pencil-square"></i> Edit</a>
+        </div>
+        <div class="card-body">
+            <div class="well">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="border-bottom"><strong><i class="bi bi-person-circle"></i> Name:</strong> <?php echo $row['fullname']; ?></p>
+                        <p class="border-bottom"><strong><i class="bi bi-envelope"></i> Email:</strong> <?php echo $row['email']; ?></p>
+                        <p class="border-bottom"><strong><i class="bi bi-telephone"></i> Phone:</strong> <?php echo $row['phone']; ?></p>
+                        <p class="border-bottom"><strong><i class="bi bi-geo-alt"></i> Postal Address:</strong> <?php echo $row['postal_address']; ?></p>
+                        <p class="border-bottom"><strong><i class="bi bi-calendar"></i> Date of Birth:</strong> <?php echo $row['birth_date']; ?></p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="border-bottom"><strong><i class="bi bi-geo-alt"></i> Physical address:</strong> <?php echo $row['physical_address']; ?></p>
+                        <p class="border-bottom"><strong><i class="bi bi-person"></i> Membership type:</strong> <?php echo $row['membership_type']; ?></p>
+                        <p class="border-bottom"><strong><i class="bi bi-card-checklist"></i> Practitioner License:</strong> <?php echo $row['yes_licensure']; ?></p>
+                        <p class="border-bottom"><strong><i class="bi bi-file-earmark"></i> Cv:</strong> <?php echo $row['cv_file']; ?></p>
+                        <!-- Add other fields as needed -->
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+
 <?php
 } else {
     echo "User not found.";

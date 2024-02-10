@@ -41,9 +41,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <?php 
  include "navigation.php";
 ?>
-
 <div class="container mt-5">
-  <!-- <h2>Edit Education Details</h2> -->
+  <h2>Edit Education Details</h2>
 
   <?php
   $id = $_GET['id']; // Assuming you are passing the ID through the URL
@@ -69,26 +68,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if ($result->num_rows > 0) {
       $row = $result->fetch_assoc();
   ?>
-  <form method="post" action="edit_edu.php">
-    <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-    <div class="form-group">
-      <label for="awardSelect">Award</label>
-      <select class="form-control" id="awardSelect" name="award">
-        <option value="Bachelor" <?php echo ($row['award'] == 'Bachelor') ? 'selected' : ''; ?>>Bachelor</option>
-        <option value="Diploma" <?php echo ($row['award'] == 'Diploma') ? 'selected' : ''; ?>>Diploma</option>
-        <option value="Certificate" <?php echo ($row['award'] == 'Certificate') ? 'selected' : ''; ?>>Certificate</option>
-      </select>
+  <div class="card">
+    <div class="card-header">
+        <h5>Edit Education Details</h5>
     </div>
-    <div class="form-group">
-      <label for="institutionInput">Institution</label>
-      <input type="text" class="form-control" id="institutionInput" placeholder="Enter institution" name="institution" value="<?php echo $row['institution']; ?>">
+    <div class="card-body">
+        <form method="post" action="edit_edu.php">
+            <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+            <div class="form-group">
+                <label for="awardSelect"><i class="bi bi-award-fill"></i> Award</label>
+                <select class="form-control" id="awardSelect" name="award">
+                    <option value="Bachelor" <?php echo ($row['award'] == 'Bachelor') ? 'selected' : ''; ?>>Bachelor</option>
+                    <option value="Diploma" <?php echo ($row['award'] == 'Diploma') ? 'selected' : ''; ?>>Diploma</option>
+                    <option value="Certificate" <?php echo ($row['award'] == 'Certificate') ? 'selected' : ''; ?>>Certificate</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="institutionInput"><i class="bi bi-building"></i> Institution</label>
+                <input type="text" class="form-control" id="institutionInput" placeholder="Enter institution" name="institution" value="<?php echo $row['institution']; ?>">
+            </div>
+            <div class="form-group">
+                <label for="yearInput"><i class="bi bi-calendar-check"></i> Year of Graduation</label>
+                <input type="text" class="form-control" id="yearInput" placeholder="Enter year of graduation" name="year" value="<?php echo $row['year']; ?>">
+            </div>
+            <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i> Update</button>
+        </form>
     </div>
-    <div class="form-group">
-      <label for="yearInput">Year of Graduation</label>
-      <input type="text" class="form-control" id="yearInput" placeholder="Enter year of graduation" name="year" value="<?php echo $row['year']; ?>">
-    </div>
-    <button type="submit" class="btn btn-primary">Update</button>
-  </form>
+</div>
+
   <?php
   } else {
       echo "No data found.";
@@ -98,4 +105,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $conn->close();
   ?>
 </div>
+
 <?php include("footer.php") ?>

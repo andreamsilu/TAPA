@@ -50,42 +50,45 @@ $conn->close();
    include "navigation.php";
 ?>
 <div class="container mt-5">
-  <form id="workExperienceForm"  action="add-exp.php" method="post">
-    <!-- Company Name -->
-    <div class="form-group">
-      <label for="companyName">Company Name</label>
-      <input type="text" class="form-control" id="companyName" name="companyName" required>
-    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form id="workExperienceForm" action="add-exp.php" method="post">
+                <!-- Company Name -->
+                <div class="form-group">
+                    <label for="companyName"><i class="bi bi-building"></i> Company Name</label>
+                    <input type="text" class="form-control" id="companyName" name="companyName" required>
+                </div>
 
-    <!-- Position -->
-    <div class="form-group">
-      <label for="position">Job title/position</label>
-      <input type="text" class="form-control" id="position" name="position" required>
-    </div>
+                <!-- Position -->
+                <div class="form-group">
+                    <label for="position"><i class="bi bi-briefcase"></i> Job title/position</label>
+                    <input type="text" class="form-control" id="position" name="position" required>
+                </div>
 
-    <!-- Start Date -->
-    <div class="form-group">
-      <label for="startDate">Start Date</label>
-      <input type="date" class="form-control" id="startDate" name="startDate" placeholder="mm/dd/yyyy" required>
-    </div>
+                <!-- Start Date -->
+                <div class="form-group">
+                    <label for="startDate"><i class="bi bi-calendar"></i> Start Date</label>
+                    <input type="date" class="form-control" id="startDate" name="startDate" placeholder="mm/dd/yyyy" required>
+                </div>
 
-    <!-- End Date -->
-    <div class="form-group">
-      <label for="endDate">End Date</label>
-      <input type="date" class="form-control" id="endDate" name="endDate" placeholder="mm/dd/yyyy">
-    </div>
+                <!-- End Date -->
+                <div class="form-group">
+                    <label for="endDate"><i class="bi bi-calendar"></i> End Date</label>
+                    <input type="date" class="form-control" id="endDate" name="endDate" placeholder="mm/dd/yyyy">
+                </div>
 
-    <!-- Job Description -->
-    <div class="form-group">
-      <label for="jobDescription">Job Description</label>
-      <textarea class="form-control" id="jobDescription" name="jobDescription" rows="4" required></textarea>
-    </div>
+                <!-- Job Description -->
+                <div class="form-group">
+                    <label for="jobDescription"><i class="bi bi-card-text"></i> Job Description</label>
+                    <textarea class="form-control" id="jobDescription" name="jobDescription" rows="4" required></textarea>
+                </div>
 
-    <!-- Submit Button -->
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary"><i class="bi bi-check-circle"></i> Submit</button>
+            </form>
+        </div>
+    </div>
 </div>
-
 <?php include("footer.php"); ?>
 
 

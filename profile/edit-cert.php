@@ -47,59 +47,65 @@ $conn->close();
 
 
 <div class="container mt-5">
-  <?php
-   include "../forms/connection.php";
-
-
-  // Get the record to be edited
-  $certificationId = $_GET['id'];
-  $sql = "SELECT * FROM certification WHERE id = $certificationId";
-  $result = $conn->query($sql);
-
-  if ($result->num_rows > 0) {
-      $row = $result->fetch_assoc();
-  ?>
-    <form id="editCertificationForm" action="edit-cert.php" method="post">
-      <!-- Certification Details -->
-      <h4>Certification Details</h4>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="certificationName">Certification Name</label>
-          <input type="text" class="form-control" id="certificationName" name="certificationName" value="<?php echo $row['certification_name']; ?>" required>
+    <div class="card">
+        <div class="card-header">
+            <h4><i class="bi bi-file-earmark-certificate"></i> Certification Details</h4>
         </div>
-        <div class="form-group col-md-6">
-          <label for="certificationAuthority">Certification Authority</label>
-          <input type="text" class="form-control" id="certificationAuthority" name="certificationAuthority" value="<?php echo $row['certification_authority']; ?>" required>
+        <div class="card-body">
+            <?php
+            include "../forms/connection.php";
+
+            // Get the record to be edited
+            $certificationId = $_GET['id'];
+            $sql = "SELECT * FROM certification WHERE id = $certificationId";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                $row = $result->fetch_assoc();
+            ?>
+                <form id="editCertificationForm" action="edit-cert.php" method="post">
+                    <!-- Certification Details -->
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="certificationName"><i class="bi bi-file-earmark-text"></i> Certification Name</label>
+                            <input type="text" class="form-control" id="certificationName" name="certificationName" value="<?php echo $row['certification_name']; ?>" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="certificationAuthority"><i class="bi bi-building"></i> Certification Authority</label>
+                            <input type="text" class="form-control" id="certificationAuthority" name="certificationAuthority" value="<?php echo $row['certification_authority']; ?>" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="certificationDate"><i class="bi bi-calendar"></i> Certification Date</label>
+                            <input type="date" class="form-control" id="certificationDate" name="certificationDate" value="<?php echo $row['certification_date']; ?>" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="expirationDate"><i class="bi bi-calendar-x"></i> Expiration Date</label>
+                            <input type="date" class="form-control" id="expirationDate" name="expirationDate" value="<?php echo $row['expiration_date']; ?>">
+                        </div>
+                    </div>
+
+                    <!-- Hidden input to store the certification ID -->
+                    <input type="hidden" name="certificationId" value="<?php echo $certificationId; ?>">
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i> Update</button>
+                </form>
+            <?php
+            } else {
+                echo "Certification information not found.";
+            }
+
+            // Close the database connection
+            $conn->close();
+            ?>
         </div>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="certificationDate">Certification Date</label>
-          <input type="date" class="form-control" id="certificationDate" name="certificationDate" value="<?php echo $row['certification_date']; ?>" required>
-        </div>
-        <div class="form-group col-md-6">
-          <label for="expirationDate">Expiration Date</label>
-          <input type="date" class="form-control" id="expirationDate" name="expirationDate" value="<?php echo $row['expiration_date']; ?>">
-        </div>
-      </div>
-
-      <!-- Hidden input to store the certification ID -->
-      <input type="hidden" name="certificationId" value="<?php echo $certificationId; ?>">
-
-      <!-- Submit Button -->
-      <button type="submit" class="btn btn-primary" >Update</button>
-    </form>
-  <?php
-  } else {
-      echo "Certification information not found.";
-  }
-
-  // Close the database connection
-  $conn->close();
-  ?>
-
+    </div>
 </div>
+
+
 
 <?php include("footer.php") ?>
 

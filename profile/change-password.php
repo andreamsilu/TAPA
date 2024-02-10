@@ -67,26 +67,32 @@ $conn->close();
 
 <?php include("navigation.php"); ?>
 <div class="container mt-5">
-  <h2><i class="fas fa-lock"></i> Change Password</h2>
-  <form id="changePasswordForm" action="change-password.php" method="post">
-    <div class="form-group">
-      <label for="currentPassword"><i class="fas fa-key"></i> Current Password</label>
-      <input type="password" class="form-control" id="currentPassword" name="currentPassword" required>
-    </div>
+  <h2 class="text-center"><i class="bi bi-lock"></i> Change Password</h2>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form id="changePasswordForm" action="change-password.php" method="post">
+                <div class="form-group">
+                    <label for="currentPassword"><i class="bi bi-key"></i> Current Password</label>
+                    <input type="password" class="form-control" id="currentPassword" name="currentPassword" required>
+                </div>
 
-    <div class="form-group">
-      <label for="newPassword"><i class="fas fa-unlock-alt"></i> New Password</label>
-      <input type="password" class="form-control" id="newPassword" name="newPassword" required>
-    </div>
+                <div class="form-group">
+                    <label for="newPassword"><i class="bi bi-unlock"></i> New Password</label>
+                    <input type="password" class="form-control" id="newPassword" name="newPassword" required>
+                </div>
 
-    <div class="form-group">
-      <label for="confirmPassword"><i class="fas fa-check"></i> Confirm New Password</label>
-      <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
-    </div>
+                <div class="form-group">
+                    <label for="confirmPassword"><i class="bi bi-check"></i> Confirm New Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+                </div>
 
-    <button type="submit" class="btn btn-primary"><i class="fas fa-key"></i> Change Password</button>
-  </form>
+                <button type="submit" class="btn btn-primary"><i class="bi bi-key"></i> Change Password</button>
+            </form>
+        </div>
+    </div>
 </div>
+
 
 <?php include("footer.php"); ?>
 

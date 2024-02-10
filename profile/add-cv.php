@@ -42,20 +42,6 @@ function handleFileUpload()
     }
 }
 
-// Get CV data for editing (if CV ID is provided)
-$cvId = isset($_GET['cvId']) ? $_GET['cvId'] : null;
-$currentCvFile = '';
-
-if ($cvId) {
-    $sql = "SELECT first_name, last_name, email, phone, cv_file FROM personal_cv WHERE id = ? AND user_id = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ii", $cvId, $userId);
-    $stmt->execute();
-    $stmt->bind_result($firstName, $lastName, $email, $phone, $currentCvFile);
-    $stmt->fetch();
-    $stmt->close();
-}
-
 // Process form data
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $firstName = sanitizeData($_POST["firstName"]);
@@ -68,18 +54,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (strpos($uploadedFileName, 'Error') === false) {
         // File uploaded successfully
-        $sql = $cvId ? "UPDATE personal_cv SET first_name=?, last_name=?, email=?, phone=?, cv_file=? WHERE id=? AND user_id=?" :
-            "INSERT INTO personal_cv (first_name, last_name, email, phone, cv_file, user_id) VALUES (?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO personal_cv (first_name, last_name, email, phone, cv_file, user_id) VALUES (?, ?, ?, ?, ?, ?)";
 
         $stmt = $conn->prepare($sql);
-        if ($cvId) {
-            $stmt->bind_param("ssssiii", $firstName, $lastName, $email, $phone, $uploadedFileName, $cvId, $userId);
-        } else {
-            $stmt->bind_param("sssssi", $firstName, $lastName, $email, $phone, $uploadedFileName, $userId);
-        }
+        $stmt->bind_param("sssssi", $firstName, $lastName, $email, $phone, $uploadedFileName, $userId);
 
         if ($stmt->execute()) {
-            echo $cvId ? "Personal CV updated successfully" : "Personal CV added successfully";
+            echo "Personal CV added successfully";
             header("Location: show-cv.php");
         } else {
             echo "Error saving data to the database: " . $stmt->error;
@@ -98,49 +79,46 @@ $conn->close();
 
 <?php include('navigation.php'); ?>
 
-<form id="personalCVForm" action="add-cv.php" method="post" enctype="multipart/form-data">
-    <h4>Personal Details</h4>
-    <!-- Add values to input fields for editing -->
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <label for="firstName">First Name</label>
-            <input type="text" class="form-control" id="firstName" name="firstName" value="<?php echo isset($firstName) ? $firstName : ''; ?>" required>
-        </div>
-        <div class="form-group col-md-6">
-            <label for="lastName">Last Name</label>
-            <input type="text" class="form-control" id="lastName" name="lastName" value="<?php echo isset($lastName) ? $lastName : ''; ?>" required>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <form id="personalCVForm" action="add-cv.php" method="post" enctype="multipart/form-data">
+                <h4><i class="bi bi-person"></i> Personal Details</h4>
+                <!-- Add values to input fields for editing -->
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="firstName"><i class="bi bi-person-badge"></i> First Name</label>
+                        <input type="text" class="form-control" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="lastName"><i class="bi bi-person-badge"></i> Last Name</label>
+                        <input type="text" class="form-control" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="email"><i class="bi bi-envelope"></i> Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="phone"><i class="bi bi-telephone"></i> Phone</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" required>
+                    </div>
+                </div>
+
+                <!-- File Upload -->
+                <h4><i class="bi bi-file-earmark-pdf"></i> Upload CV</h4>
+                <div class="form-group">
+                    <label for="cvFile"><i class="bi bi-file-earmark-arrow-up"></i> Choose File</label>
+                    <input type="file" class="form-control-file" id="cvFile" name="cvFile" accept=".pdf, .doc, .docx">
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary"><i class="bi bi-check-circle"></i> Add</button>
+            </form>
         </div>
     </div>
-
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" name="email" value="<?php echo isset($email) ? $email : ''; ?>" required>
-        </div>
-        <div class="form-group col-md-6">
-            <label for="phone">Phone</label>
-            <input type="tel" class="form-control" id="phone" name="phone" value="<?php echo isset($phone) ? $phone : ''; ?>" required>
-        </div>
-    </div>
-
-    <!-- File Upload -->
-    <h4>Upload CV</h4>
-    <div class="form-group">
-        <label for="cvFile">Choose File</label>
-        <input type="file" class="form-control-file" id="cvFile" name="cvFile" accept=".pdf, .doc, .docx">
-    </div>
-
-    <!-- Display current CV file for editing -->
-    <?php if ($currentCvFile) : ?>
-        <p>Current CV: <a href="../forms/uploads/<?php echo $currentCvFile; ?>" target="_blank"><?php echo $currentCvFile; ?></a></p>
-        <input type="hidden" name="currentCvFile" value="<?php echo $currentCvFile; ?>">
-    <?php endif; ?>
-
-    <!-- Hidden input to store the CV ID for editing -->
-    <input type="hidden" name="cvId" value="<?php echo $cvId; ?>">
-
-    <!-- Submit Button -->
-    <button type="submit" class="btn btn-primary"><?php echo $cvId ? 'Update' : 'Add'; ?></button>
-</form>
+</div>
 
 <?php include('footer.php'); ?>

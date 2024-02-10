@@ -84,34 +84,41 @@ $conn->close();
 include "navigation.php";
 ?>
 <div class="container mt-5">
-    <form id="certificationForm" action="<?php echo $certId ? 'edit-cert.php?id=' . $certId : 'add-cert.php'; ?>" method="post">
-        <!-- Certification Details -->
-        <h4>Certification Details</h4>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="certificationName">Certification Name</label>
-                <input type="text" class="form-control" id="certificationName" name="certificationName" value="<?php echo $certificationName; ?>" required>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="certificationAuthority">Certification Authority</label>
-                <input type="text" class="form-control" id="certificationAuthority" name="certificationAuthority" value="<?php echo $certificationAuthority; ?>" required>
-            </div>
+    <div class="card">
+        <div class="card-header">
+            <h4><i class="bi bi-file-earmark-plus"></i> Certification Details</h4>
         </div>
+        <div class="card-body">
+            <form id="certificationForm" action="<?php echo $certId ? 'edit-cert.php?id=' . $certId : 'add-cert.php'; ?>" method="post">
+                <!-- Certification Details -->
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="certificationName"><i class="bi bi-file-earmark-text"></i> Certification Name</label>
+                        <input type="text" class="form-control" id="certificationName" name="certificationName" value="<?php echo $certificationName; ?>" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="certificationAuthority"><i class="bi bi-building"></i> Certification Authority</label>
+                        <input type="text" class="form-control" id="certificationAuthority" name="certificationAuthority" value="<?php echo $certificationAuthority; ?>" required>
+                    </div>
+                </div>
 
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="certificationDate">Certification Date</label>
-                <input type="date" class="form-control" id="certificationDate" name="certificationDate" value="<?php echo $certificationDate; ?>" required>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="expirationDate">Expiration Date</label>
-                <input type="date" class="form-control" id="expirationDate" name="expirationDate" value="<?php echo $expirationDate; ?>">
-            </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="certificationDate"><i class="bi bi-calendar"></i> Certification Date</label>
+                        <input type="date" class="form-control" id="certificationDate" name="certificationDate" value="<?php echo $certificationDate; ?>" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="expirationDate"><i class="bi bi-calendar-x"></i> Expiration Date</label>
+                        <input type="date" class="form-control" id="expirationDate" name="expirationDate" value="<?php echo $expirationDate; ?>">
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i> Submit</button>
+            </form>
         </div>
-
-        <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    </div>
 </div>
+
 
 <?php include "footer.php" ?>

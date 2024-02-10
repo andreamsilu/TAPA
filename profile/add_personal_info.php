@@ -41,65 +41,89 @@ $conn->close();
 ?>
 
 <div class="container mt-5">
-    <form id="registrationForm" action="add_personal_info.php" method="post">
-        <!-- Gender -->
-        <div class="form-group">
-            <label for="gender">Gender</label>
-            <select class="form-control" id="gender" name="gender">
-                <option value="">Select Gender</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-            </select>
+    <div class="card m-3">
+        <div class="card-header">
+            <h4><i class="bi bi-person-fill"></i> Personal Information</h4>
         </div>
-
-        <!-- Nationality -->
-        <div class="form-group">
-            <label for="nationality">Nationality</label>
-            <select class="form-control" id="nationality" name="nationality">
-                <option value="">Select Nationality</option>
-                <!-- JavaScript will populate this dropdown -->
-            </select>
+        <div class="card-body">
+            <form id="registrationForm" action="add_personal_info.php" method="post">
+                <div class="row">
+                    <!-- Gender -->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="gender"><i class="bi bi-gender"></i> Gender</label>
+                            <select class="form-control" id="gender" name="gender">
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Nationality -->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="nationality"><i class="bi bi-flag"></i> Nationality</label>
+                            <select class="form-control" id="nationality" name="nationality">
+                                <option value="">Select Nationality</option>
+                                <!-- JavaScript will populate this dropdown -->
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Date of Birth -->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="dob"><i class="bi bi-calendar"></i> Date of Birth</label>
+                            <input type="date" class="form-control" id="dob" name="dob" placeholder="mm/dd/yyyy">
+                        </div>
+                    </div>
+                    <!-- Country of Residence -->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="countryResidence"><i class="bi bi-globe"></i> Country of Residence</label>
+                            <select class="form-control" id="countryResidence" name="countryResidence">
+                                <option value="">Select Country</option>
+                                <!-- JavaScript will populate this dropdown -->
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Region of Residence -->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="regionResidence"><i class="bi bi-map"></i> Region of Residence</label>
+                            <select class="form-control" id="regionResidence" name="regionResidence">
+                                <!-- Options will be dynamically added here -->
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Practitioner License -->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="license"><i class="bi bi-card-checklist"></i> Practitioner License</label>
+                            <input type="text" class="form-control" id="license" name="license">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Languages -->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="languages"><i class="bi bi-chat-left"></i> Languages</label>
+                            <input type="text" class="form-control" id="languages" name="languages">
+                        </div>
+                    </div>
+                </div>
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary"><i class="bi bi-check"></i> Submit</button>
+            </form>
         </div>
-
-        <!-- Date of Birth -->
-        <div class="form-group">
-            <label for="dob">Date of Birth</label>
-            <input type="date" class="form-control" id="dob" name="dob" placeholder="mm/dd/yyyy">
-        </div>
-
-        <!-- Country of Residence -->
-        <div class="form-group">
-            <label for="countryResidence">Country of Residence</label>
-            <select class="form-control" id="countryResidence" name="countryResidence">
-                <option value="">Select Country</option>
-                <!-- JavaScript will populate this dropdown -->
-            </select>
-        </div>
-
-        <div class="form-group">
-            <label for="regionResidence">Region of Residence</label>
-            <select class="form-control" id="regionResidence" name="regionResidence">
-                <!-- Options will be dynamically added here -->
-            </select>
-        </div>
-
-        <!-- Practitioner License -->
-        <div class="form-group">
-            <label for="license">Practitioner License</label>
-            <input type="text" class="form-control" id="license" name="license">
-        </div>
-
-        <!-- Languages -->
-        <div class="form-group">
-            <label for="languages">Languages</label>
-            <input type="text" class="form-control" id="languages" name="languages">
-        </div>
-
-        <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary" onclick="submitForm()">Submit</button>
-    </form>
+    </div>
 </div>
+
 
 <?php include "footer.php" ?>
 <!-- Place this after your HTML elements -->

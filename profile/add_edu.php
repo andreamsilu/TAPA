@@ -42,10 +42,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <?php include("navigation.php"); ?>
 <div class="container mt-5">
-  <h2>Education Details</h2>
+  <h2 class="text-center"><i class="bi bi-journal-text"></i> Education Details</h2>
   <form action="add_edu.php" method="post">
     <div class="form-group">
-      <label for="awardSelect">Award</label>
+      <label for="awardSelect"><i class="bi bi-award"></i> Award</label>
       <select class="form-control" id="awardSelect" name="award">
         <option value="Bachelor">Bachelor</option>
         <option value="Diploma">Diploma</option>
@@ -53,14 +53,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </select>
     </div>
     <div class="form-group">
-      <label for="institutionInput">Institution</label>
+      <label for="institutionInput"><i class="bi bi-building"></i> Institution</label>
       <input type="text" class="form-control" id="institutionInput" placeholder="Enter institution" name="institution">
     </div>
     <div class="form-group">
-      <label for="yearInput">Year of Graduation</label>
+      <label for="yearInput"><i class="bi bi-calendar-check"></i> Year of Graduation</label>
       <input type="text" class="form-control" id="yearInput" placeholder="Enter year of graduation" name="year">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary"><i class="bi bi-check-circle"></i> Submit</button>
   </form>
 </div>
 

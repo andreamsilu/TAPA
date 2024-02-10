@@ -110,45 +110,54 @@ $conn->close();
 
 <?php include('navigation.php');  ?>
 <div class="container mt-5">
-    <h2>Edit CV</h2>
-    <form action="update-cv.php" method="post" enctype="multipart/form-data">
-        <!-- Hidden input for CV ID -->
-        <input type="hidden" name="cv_id" value="<?php echo $cvId; ?>">
-
-        <!-- Existing CV File -->
-        <p><strong>Current CV File:</strong> <?php echo $cvData['cv_file']; ?></p>
-
-        <!-- Allow users to upload a new CV file -->
-        <div class="form-group">
-            <label for="cvFile">Upload New CV File:</label>
-            <input type="file" class="form-control" id="cvFile" name="cvFile">
+    <div class="card">
+        <div class="card-header">
+            <h2><i class="bi bi-pencil-square"></i> Edit CV</h2>
         </div>
+        <div class="card-body">
+            <form action="update-cv.php" method="post" enctype="multipart/form-data">
+                <!-- Hidden input for CV ID -->
+                <input type="hidden" name="cv_id" value="<?php echo $cvId; ?>">
 
-        <!-- Other CV details for editing -->
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="firstName">First Name</label>
-                <input type="text" class="form-control" id="firstName" name="firstName" value="<?php echo $cvData['first_name']; ?>" required>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="lastName">Last Name</label>
-                <input type="text" class="form-control" id="lastName" name="lastName" value="<?php echo $cvData['last_name']; ?>" required>
-            </div>
-        </div>
+               
 
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" name="email" value="<?php echo $cvData['email']; ?>" required>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="phone">Phone</label>
-                <input type="tel" class="form-control" id="phone" name="phone" value="<?php echo $cvData['phone']; ?>" required>
-            </div>
-        </div>
+                <!-- Other CV details for editing -->
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="firstName"><i class="bi bi-person"></i> First Name</label>
+                        <input type="text" class="form-control" id="firstName" name="firstName" value="<?php echo $cvData['first_name']; ?>" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="lastName"><i class="bi bi-person"></i> Last Name</label>
+                        <input type="text" class="form-control" id="lastName" name="lastName" value="<?php echo $cvData['last_name']; ?>" required>
+                    </div>
+                </div>
 
-        <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary">Update CV</button>
-    </form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="email"><i class="bi bi-envelope"></i> Email</label>
+                        <input type="email" class="form-control" id="email" name="email" value="<?php echo $cvData['email']; ?>" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="phone"><i class="bi bi-telephone"></i> Phone</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" value="<?php echo $cvData['phone']; ?>" required>
+                    </div>
+                </div>
+
+                 <!-- Existing CV File -->
+                 <p><strong><i class="bi bi-file-earmark-text"></i> Current CV File:</strong><a href="../forms/uploads/<?php echo $cvData['cv_file']; ?>" target="_blank" rel="noopener noreferrer"> <?php echo $cvData['cv_file']; ?></a> </p>
+
+<!-- Allow users to upload a new CV file -->
+<div class="form-group">
+    <label for="cvFile"><i class="bi bi-cloud-upload"></i> Upload New CV File:</label>
+    <input type="file" class="form-control" id="cvFile" name="cvFile">
 </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i> Update CV</button>
+            </form>
+        </div>
+    </div>
+</div>
+
 <?php include('footer.php'); ?>
