@@ -8,7 +8,7 @@ include "../forms/connection.php";
 // Check if the user is authenticated
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
-    exit(); 
+    exit();
 }
 $userId = $_SESSION['user_id'];
 
@@ -115,11 +115,11 @@ $conn->close();
             <h2><i class="bi bi-pencil-square"></i> Edit CV</h2>
         </div>
         <div class="card-body">
-            <form action="update-cv.php" method="post" enctype="multipart/form-data">
+            <form action="edit-cv.php" method="post" enctype="multipart/form-data">
                 <!-- Hidden input for CV ID -->
                 <input type="hidden" name="cv_id" value="<?php echo $cvId; ?>">
 
-               
+
 
                 <!-- Other CV details for editing -->
                 <div class="form-row">
@@ -144,14 +144,14 @@ $conn->close();
                     </div>
                 </div>
 
-                 <!-- Existing CV File -->
-                 <p><strong><i class="bi bi-file-earmark-text"></i> Current CV File:</strong><a href="../forms/uploads/<?php echo $cvData['cv_file']; ?>" target="_blank" rel="noopener noreferrer"> <?php echo $cvData['cv_file']; ?></a> </p>
+                <!-- Existing CV File -->
+                <p><strong><i class="bi bi-file-earmark-text"></i> Current CV File:</strong><a href="../forms/uploads/<?php echo $cvData['cv_file']; ?>" target="_blank" rel="noopener noreferrer"> <?php echo $cvData['cv_file']; ?></a> </p>
 
-<!-- Allow users to upload a new CV file -->
-<div class="form-group">
-    <label for="cvFile"><i class="bi bi-cloud-upload"></i> Upload New CV File:</label>
-    <input type="file" class="form-control" id="cvFile" name="cvFile">
-</div>
+                <!-- Allow users to upload a new CV file -->
+                <div class="form-group">
+                    <label for="cvFile"><i class="bi bi-cloud-upload"></i> Upload New CV File:</label>
+                    <input type="file" class="form-control" id="cvFile" name="cvFile">
+                </div>
 
                 <!-- Submit Button -->
                 <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i> Update CV</button>

@@ -64,40 +64,52 @@ include "navigation.php";
 ?>
 <!-- HTML form for editing experience details -->
 <div class="container mt-5">
-    <form id="editExperienceForm" action="edit-exp.php?id=<?php echo $experienceId; ?>" method="post">
-        <!-- Company Name -->
-        <div class="form-group">
-            <label for="companyName">Company Name</label>
-            <input type="text" class="form-control" id="companyName" name="companyName" value="<?php echo $row['company_name']; ?>" required>
+    <div class="card">
+        <div class="card-header">
+            <h5><i class="bi bi-briefcase-fill"></i> Edit Experience</h5>
         </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <form id="editExperienceForm" action="edit-exp.php?id=<?php echo $experienceId; ?>" method="post">
+                        <!-- Company Name -->
+                        <div class="form-group">
+                            <label for="companyName"><i class="bi bi-building"></i> Company Name</label>
+                            <input type="text" class="form-control" id="companyName" name="companyName" value="<?php echo $row['company_name']; ?>" required>
+                        </div>
 
-        <!-- Position -->
-        <div class="form-group">
-            <label for="position">Job title/position</label>
-            <input type="text" class="form-control" id="position" name="position" value="<?php echo $row['position']; ?>" required>
+                        <!-- Position -->
+                        <div class="form-group">
+                            <label for="position"><i class="bi bi-briefcase"></i> Job title/position</label>
+                            <input type="text" class="form-control" id="position" name="position" value="<?php echo $row['position']; ?>" required>
+                        </div>
+
+                        <!-- Start Date -->
+                        <div class="form-group">
+                            <label for="startDate"><i class="bi bi-calendar"></i> Start Date</label>
+                            <input type="date" class="form-control" id="startDate" name="startDate" value="<?php echo $row['start_date']; ?>" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <!-- End Date -->
+                    <div class="form-group">
+                        <label for="endDate"><i class="bi bi-calendar"></i> End Date</label>
+                        <input type="date" class="form-control" id="endDate" name="endDate" value="<?php echo $row['end_date']; ?>">
+                    </div>
+
+                    <!-- Job Description -->
+                    <div class="form-group">
+                        <label for="jobDescription"><i class="bi bi-card-text"></i> Job Description</label>
+                        <textarea class="form-control" id="jobDescription" name="jobDescription" rows="4" required><?php echo $row['job_description']; ?></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary"><i class="bi bi-check-circle"></i> Update Experience</button>
+                </div>
+            </div>
         </div>
-
-        <!-- Start Date -->
-        <div class="form-group">
-            <label for="startDate">Start Date</label>
-            <input type="date" class="form-control" id="startDate" name="startDate" value="<?php echo $row['start_date']; ?>" required>
-        </div>
-
-        <!-- End Date -->
-        <div class="form-group">
-            <label for="endDate">End Date</label>
-            <input type="date" class="form-control" id="endDate" name="endDate" value="<?php echo $row['end_date']; ?>">
-        </div>
-
-        <!-- Job Description -->
-        <div class="form-group">
-            <label for="jobDescription">Job Description</label>
-            <textarea class="form-control" id="jobDescription" name="jobDescription" rows="4" required><?php echo $row['job_description']; ?></textarea>
-        </div>
-
-        <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary">Update Experience</button>
-    </form>
+    </div>
 </div>
 
 <?php include("footer.php"); ?>

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 session_start();
 include "navigation.php";
@@ -15,9 +15,11 @@ if (!isset($_SESSION['user_id'])) {
 
 <div class="container mt-5">
     <div class="card">
-        <div class="card-header">
-            <h2><i class="bi bi-file-earmark-fill"></i>Certification Information</h2>
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h4><i class="bi bi-file-earmark-fill"></i>Certification Information</h4>
+            <a href="add-cert.php" class="btn btn-success"><i class="bi bi-plus"></i> Add</a>
         </div>
+
         <div class="card-body">
             <?php
             include "../forms/connection.php";
@@ -35,7 +37,7 @@ if (!isset($_SESSION['user_id'])) {
                 echo '<th>Certification Authority</th>';
                 echo '<th>Certification Date</th>';
                 echo '<th>Expiration Date</th>';
-                echo '<th>Action</th>';
+                echo '<th colspan="2">Action</th>';
                 echo '</tr>';
                 echo '</thead>';
                 echo '<tbody>';
@@ -47,6 +49,7 @@ if (!isset($_SESSION['user_id'])) {
                     echo '<td>' . $row['certification_date'] . '</td>';
                     echo '<td>' . ($row['expiration_date'] ? $row['expiration_date'] : 'N/A') . '</td>';
                     echo '<td><a href="edit-cert.php?id=' . $row['id'] . '" class="btn btn-warning"><i class="bi bi-pencil-fill"></i> Edit</a></td>';
+                    echo '<td><a href="delete-cert.php?id=' . $row['id'] . '" class="btn btn-danger"><i class="bi bi-trash"></i> Delete</a></td>';
                     echo '</tr>';
                 }
 
