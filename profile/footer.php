@@ -1,6 +1,16 @@
 </main>
     </div>
 </div>
+<script>
+    function showSnackbar() {
+    var x = document.getElementById("snackbar");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+
+// Call this function to display the snackbar
+showSnackbar();
+</script>
 
 <!-- Bootstrap JS -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>

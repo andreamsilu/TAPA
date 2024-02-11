@@ -51,7 +51,13 @@ $userId = $_SESSION['user_id'];
         <!-- <p><?php //echo $row['cv_file']; ?></p> -->
         <a href="../forms/uploads/<?php echo $row['cv_file']; ?>" target="_blank" class="btn btn-primary"><i class="bi bi-file-arrow-down"></i> Open</a>
       <?php } else {
-        echo "<p>Personal CV not found.</p>";
+        echo  '<div class="card-body  d-flex justify-content-center">
+              <a href="add-cv.php" class="btn btn-primary  align-items-center">
+              <i class="bi bi-plus"></i> 
+                  Add  CV
+              </a>
+          </div>';
+      echo "<div id='snackbar'>No cv info found.</div>";
       }
       ?>
     </div>

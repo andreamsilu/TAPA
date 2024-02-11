@@ -75,20 +75,26 @@ if (!isset($_SESSION['user_id'])) {
 <?php
         }
     } else {
-        echo "No contact information found.";
-        echo " <a href='add-cont.php' class='btn btn-primary'>Add contact</a>";
+
+        echo "<div id='snackbar'>No contact info found.</div>
+        ";
+        echo ' <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center bg-light ">
+                      <h4><i class="bi bi-telephone"></i> Contact information</h4>
+                      <!-- Edit Icon -->
+                      <a href="add-cont.php" class="btn btn-primary"><i class="bi bi-plus"></i> Add</a>
+                  </div>
+          <div class="card-body  d-flex justify-content-center">
+              <a href="add-exp.php" class="btn btn-primary  align-items-center">
+              <i class="bi bi-plus"></i> 
+                  Add Contact info
+              </a>
+          </div>
+      </div>';
     }
 
     $conn->close();
 ?>
 </div>
-
-
-<script>
-    function deleteContact(contactId) {
-        // Implement your delete logic here
-        console.log("Deleting contact with ID: " + contactId);
-    }
-</script>
 
 <?php include("footer.php") ?>

@@ -10,6 +10,8 @@ if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
     exit();
 }
+
+$userId = $_SESSION['user_id'];
 ?>
 
 
@@ -25,7 +27,7 @@ if (!isset($_SESSION['user_id'])) {
             include "../forms/connection.php";
 
             // Fetch certification information from the database
-            $sql = "SELECT * FROM certification";
+            $sql = "SELECT * FROM certification WHERE user_id ='$userId'";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
@@ -57,8 +59,14 @@ if (!isset($_SESSION['user_id'])) {
                 echo '</table>';
                 echo '</div>';
             } else {
-                echo "No certification information found.";
-                echo " <a href='add-cert.php' class='btn btn-primary'>Add certification</a>";
+
+                echo  '<div class="card-body  d-flex justify-content-center">
+              <a href="add-cert.php" class="btn btn-primary  align-items-center">
+              <i class="bi bi-plus"></i> 
+                  Add Certificate
+              </a>
+          </div>';
+          echo '<div id="snackbar">No certificate info found.</div>';
             }
 
             // Close the database connection

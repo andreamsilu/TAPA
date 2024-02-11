@@ -60,9 +60,8 @@ if ($result->num_rows > 0) {
 
 <?php
 } else {
-    echo "User not found.";
-  echo " <a href='add_personal_info.php' class='btn btn-primary'>Add Personal Info</a>";
-
+    echo " <a href='add_personal_info.php' class='btn btn-primary'>Add Personal Info</a>";
+    echo '<div id="snackbar">No user info found.</div>';
 }
 
 $conn->close();

@@ -9,6 +9,8 @@ if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
     exit();
 }
+
+$userId = $_SESSION['user_id'];
 ?>
 
 
@@ -17,7 +19,7 @@ if (!isset($_SESSION['user_id'])) {
     include "../forms/connection.php";
 
     // Get work experience information
-    $sql = "SELECT * FROM experience";
+    $sql = "SELECT * FROM experience WHERE user_id ='$userId'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -42,8 +44,20 @@ if (!isset($_SESSION['user_id'])) {
     <?php
         }
     } else {
-        echo "No work experience found.";
-        echo " <a href='add-exp.php' class='btn btn-primary  align-items-center'>Add experience</a>";
+        echo "<div id='snackbar'>No work experience info found.</div>";
+        echo ' <div class="card">
+      <div class="card-header d-flex justify-content-between align-items-center bg-light ">
+                    <h4><i class="bi bi-briefcase-fill"></i> Work Experience</h4>
+                    <!-- Edit Icon -->
+                    <a href="add-exp.php" class="btn btn-primary"><i class="bi bi-plus"></i> Add</a>
+                </div>
+        <div class="card-body  d-flex justify-content-center">
+            <a href="add-exp.php" class="btn btn-primary  align-items-center">
+            <i class="bi bi-plus"></i> 
+                Add Experience
+            </a>
+        </div>
+    </div>';
     }
 
     // Close the database connection
@@ -53,4 +67,4 @@ if (!isset($_SESSION['user_id'])) {
 
 
 
-    <?php include("footer.php") ?>
+<?php include("footer.php") ?>
