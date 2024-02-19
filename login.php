@@ -1,127 +1,136 @@
-<?php include("titleIcon.php") ?>
-<?php include("header.php") ?>
 
-<!-- 
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Member Login</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-    <!-- Include Bootstrap CSS -->
-<!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">  -->
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-    }
+<?php include "titleIcon.php" ?>
 
-    .login-page {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-image: url('assets/img/login/login-bg2.jpg');
-        /* Replace with your background image path */
-        background-size: cover;
-        background-position: center;
-        position: relative;
-    }
-
-    .login-container {
-        margin: 50px 20px 20px 250px;
-        width: 50%;
-        /* max-width: 1000px; */
-        background-color: rgba(255, 255, 255, 0.6);
-        /* Semi-transparent background */
-        padding: 50px;
-        border-radius: 8px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .login-container {}
-
-    .sign-in {
-        border: solid 2px #0F718A;
-        border-radius: 20px;
-    }
-
-    .sign-in:hover {
-        background-color: #0F718A;
-        color: white;
-    }
-
-    .a {
-        text-decoration: none;
-        /* Remove underlines from links */
-    }
-
-    .register-btn {
-        border-radius: 20px;
-        background-color: #0F718A;
-    }
-
-    .register-btn:hover {
-        border-radius: 20px;
-        color: white;
-        background-color: #0F718A;
-    }
-</style>
 </head>
 
 <body>
+    <?php include "header.php" ?>
+    <style>
+                        .logo-container {
+                            position: relative;
+                            width: 100%;
+                            height: 120px;
+                            /* Adjust the height as needed */
+                            overflow: hidden;
+                            border: #0F718A 2px dashed;
+                        }
 
-    <main class="login-page">
+                        .logo-container img {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            max-width: 70%;
+                            max-height: 100%;
+                        }
+
+                        i {
+                            color: #0F718A;
+                            font-size: 20px;
+                        }
+
+                        .btn-primary{
+                            background-color: #0F718A;
+                            color: white;
+                        }
+
+                        .btn-primary i{
+                            /* background-color: #0F718A; */
+                            color: white;
+                        }
+                    </style>    
+
+    <main id="main">
+
+        <!-- ======= Breadcrumbs ======= -->
+        <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>Login</h2>
+                    <ol>
+                        <li><a href="index.php">Home</a></li>
+                        <li></li>
+                    </ol>
+                </div>
+
+            </div>
+        </section>
+        <!-- End Breadcrumbs -->
 
 
-        <!-- Login Container -->
-        <div class="container">
-            <div class="row">
+        <!-- ======= login======= -->
+        <section id="publication" class="publication">
+            <div class="container" data-aos="fade-up">
+                <div class="row g-0" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-xl-6 img-bg" style="background-image: url('assets/img/tapa/tapa-fam.JPG');background-color:white;opacity:0.6;">
+                  
+                </div>
+                    <div class="col-xl-6 slides position-relative">
 
-                <div class="col-lg-12 col-md-10">
-                    <div class="login-container">
-                        <div>
-                            <img src="assets/img/tapa/tapa-fam.JPG" class="img-fluid" height="200px" alt="Image">
-                        </div>
-                        <h1>Welcome back,</h1>
-                        <form action="forms/login-script.php" method="post" autocomplete="off">
-                            <div class="form-group">
-                                <label for="email"><i class="fas fa-envelope"></i> Email</label>
-                                <input type="email" name="email" id="email" class="form-control" placeholder="Email" required />
-                            </div>
-                            <div class="form-group">
-                                <label for="password"><i class="fas fa-lock"></i> Password</label>
-                                <input type="password" class="form-control" name="password" id="password" placeholder="Password" required />
-                            </div>
-                            <div class="form-group">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" name="remember" id="remember" value="1" />
-                                    <label class="custom-control-label font-weight-normal" for="remember">Keep me signed in</label>
+
+                        <!-- Login Card -->
+                        <div class="card shadow p-4">
+                            <div class="card-body p-5">
+                                <div class="logo-container text-center mb-4">
+                                    <img src="assets/img/tapa.png" class="img-fluid rounded-pill" alt="Logo">
+                                </div>
+                                <h5 class="card-title text-center">Login</h5>
+                                <!-- Login Form -->
+                                <form action="forms/login-script.php"  method="post">
+                                    <div class="form-group">
+                                        <label for="Email"><i class="bi bi-email-fill"></i> Email:</label>
+                                        <input type="text" id="Email" name="email" class="form-control" required>
+                                    </div>
+
+                                    <div class="form-group position-relative pt-3">
+                                        <label for="password"><i class="bi bi-lock-fill"></i> Password:</label>
+                                        <div class="input-group">
+                                            <input type="password" id="password" name="password" class="form-control" required>
+                                            <button class="btn btn-outline-secondary toggle-password" type="button">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center"> <!-- Centered the button -->
+                                        <button type="submit" class="btn btn-primary mt-3"><i class="bi bi-box-arrow-in-right"></i> Login</button>
+                                    </div>
+                                </form>
+                                <!-- Forgot Password -->
+                                <div class="text-center mt-3">
+                                    <a href="forgot_password.php"><i class="bi bi-question-circle-fill"></i> Forgot Password?</a>
+                                </div>
+                                <!-- Already have an account -->
+                                <div class="text-center mt-2">
+                                    <p class="mb-0">Don't have an account? <a href="membership-category.php">Sign up</a></p>
                                 </div>
                             </div>
-                            <div class="form-action">
-                                <input type="submit" class="btn btn-transparent sign-in" value="Sign In">
-                                <a href="forgot-password.php" class="login-link float-right gray">Forgot Password?</a>
-                            </div>
-                            <p class="gray">New to TAPA? <a href="membeship-category.php" class="gray btn font-blue small-font register-btn ml-sm-2">Register Now</a></p>
-                            <?php if (isset($error)) { ?>
-                                <p><?php echo $error; ?></p>
-                            <?php } ?>
-                        </form>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+        </section>
+        <br>
+        <br>
+        <!-- End login Section -->
+        <?php include "footer.php" ?>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const togglePassword = document.querySelector('.toggle-password');
+                const password = document.querySelector('#password');
 
-    </main>
+                togglePassword.addEventListener('click', function(e) {
+                    // toggle the type attribute
+                    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+                    password.setAttribute('type', type);
 
-    <!-- Bootstrap JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-
-</html>
+                    // toggle eye icon
+                    const eyeIcon = document.querySelector('.bi-eye');
+                    eyeIcon.classList.toggle('bi-eye');
+                    eyeIcon.classList.toggle('bi-eye-slash');
+                });
+            });
+        </script>
+        <!-- ======= End login Section ======= -->
+        <!-- End #main -->

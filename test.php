@@ -1,144 +1,122 @@
 
-<?php include('titleIcon.php'); ?>
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">
-                    <h2 class="text-center"><i class="bi bi-person"></i> Registration Form</h2>
-                </div>
-                <div class="card-body" id="page1">
-                    <form action="javascript:void(0);" method="post" role="form" enctype="multipart/form-data" onsubmit="nextPage()">
-                        <div class="row">
-                            <!-- Page 1 Fields -->
-                            <!-- Page 1 Fields -->
-                            <div class="col-md-6 form-group">
-                                <label for="fullname" class="col-form-label"><i class="bi bi-person"></i> Full Name</label>
-                                <input type="text" name="fullname" class="form-control" id="fullname" placeholder="Your full name" required>
-                            </div>
 
-                            <div class="col-md-6 form-group">
-                                <label for="email" class="col-form-label"><i class="bi bi-envelope"></i> Email</label>
-                                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                            </div>
+        <?php include("titleIcon.php") ?>
+<?php include("header.php") ?>
 
-                            <div class="col-md-6 form-group mt-3">
-                                <label for="phone" class="col-form-label"><i class="bi bi-telephone"></i> Phone</label>
-                                <input type="phone" class="form-control" name="phone" id="phone" placeholder="Your phone" required>
-                            </div>
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
 
-                            <div class="col-md-6 form-group mt-3">
-                                <label for="postal_address" class="col-form-label"><i class="bi bi-house-door"></i> Postal Address</label>
-                                <input type="text" class="form-control" name="postal_address" id="postal_address" placeholder="Postal address" required>
-                            </div>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Member Login</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <!-- Include Bootstrap CSS -->
+<!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">  -->
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
 
-                            <div class="col-md-6 form-group mt-3">
-                                <label for="birth_date" class="col-form-label"><i class="bi bi-calendar"></i> Birth date</label>
-                                <input type="date" class="form-control" name="birth_date" id="birth_date" required>
-                            </div>
+    .login-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url('assets/img/login/login-bg2.jpg');
+        /* Replace with your background image path */
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
 
-                            <div class="col-md-6 form-group mt-3">
-                                <label for="physical_address" class="col-form-label"><i class="bi bi-house"></i> Physical Address</label>
-                                <input type="text" class="form-control" name="physical_address" id="physical_address" placeholder="Physical address" required>
-                            </div>
+    .login-container {
+        margin: 50px 20px 20px 250px;
+        width: 50%;
+        /* max-width: 1000px; */
+        background-color: rgba(255, 255, 255, 0.6);
+        /* Semi-transparent background */
+        padding: 50px;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
 
-                            <!-- Fields go here -->
+
+    .sign-in {
+        border: solid 2px #0F718A;
+        border-radius: 20px;
+    }
+
+    .sign-in:hover {
+        background-color: #0F718A;
+        color: white;
+    }
+
+    .a {
+        text-decoration: none;
+        /* Remove underlines from links */
+    }
+
+    .register-btn {
+        border-radius: 20px;
+        background-color: #0F718A;
+    }
+
+    .register-btn:hover {
+        border-radius: 20px;
+        color: white;
+        background-color: #0F718A;
+    }
+</style>
+</head>
+
+<body>
+    <main class="login-page">
+        <!-- Login Container -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-10">
+                    <div class="login-container">
+                        <div>
+                            <img src="assets/img/tapa/tapa-fam.JPG" class="img-fluid" height="200px" alt="Image">
                         </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary btn-block"><i class="bi bi-arrow-right"></i> Next</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="card-body" id="page2" style="display: none;">
-                    <form action="forms/register-script.php" method="post" role="form" enctype="multipart/form-data">
-                        <div class="row">
-                            <!-- Page 2 Fields -->
-                            <div class="col-md-6 form-group">
-                                <label for="membership_type" class="col-form-label">Select Membership category</label>
-                                <select class="form-control" id="membership_type" name="membership_type" required>
-                                    <option value="" disabled selected>Select membership category</option>
-                                    <option value="full_member">Full Member</option>
-                                    <option value="associate_one">Associate Member I</option>
-                                    <option value="associate_two">Associate Member II</option>
-                                    <option value="student_member">Student Member</option>
-                                    <option value="local_affiliate_member">Local Affiliate Member</option>
-                                    <option value="foreign_affiliate_member">Foreign Affiliate Member</option>
-                                </select>
+                        <h1>Welcome back,</h1>
+                        <form action="forms/login-script.php" method="post" autocomplete="off">
+                            <div class="form-group">
+                                <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Email" required />
                             </div>
-
-                            <div class="col-md-6 form-group">
-                                <label for="licensure" class="col-form-label">Licensure/Ethics <br> Are you licensed as a psychologist by a state or provincial psychology board outside of Tanzania?</label>
-                                <div>
-                                    <input type="radio" name="licensure" value="yes" id="licensure_yes" required>
-                                    <label for="licensure_yes">Yes</label>
-                                </div>
-                                <div>
-                                    <input type="radio" name="licensure" value="no" id="licensure_no" required>
-                                    <label for="licensure_no">No</label>
+                            <div class="form-group">
+                                <label for="password"><i class="fas fa-lock"></i> Password</label>
+                                <input type="password" class="form-control" name="password" id="password" placeholder="Password" required />
+                            </div>
+                            <div class="form-group">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" name="remember" id="remember" value="1"/>
+                                    <label class="custom-control-label font-weight-normal" for="remember">Keep me signed in</label>
                                 </div>
                             </div>
-
-                            <div class="col-md-6 form-group">
-                                <label for="yes_licensure" class="col-form-label"><i class="bi bi-check2"></i> If Yes, Mention below</label>
-                                <input type="text" name="yes_licensure" class="form-control" id="yes_licensure" placeholder="Your licensure">
+                            <div class="form-action">
+                                <input type="submit" class="btn btn-transparent sign-in" value="Sign In">
+                                <a href="forgot-password.php" class="login-link float-right gray">Forgot Password?</a>
                             </div>
-
-                            <div class="col-md-6 form-group">
-                                <label for="crimes" class="col-form-label"> Crimes <br> Have you at any time been convicted of a crime, sanctioned by any professional ethics body, licensing board, regulatory body, professional/scientific organization, or supervisory group for unethical behavior?</label>
-                                <div>
-                                    <input type="radio" name="crime" value="yes" id="crime_yes" required>
-                                    <label for="crime_yes">Yes</label>
-                                </div>
-                                <div>
-                                    <input type="radio" name="crime" value="no" id="crime_no" required>
-                                    <label for="crime_no">No</label>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 form-group">
-                                <label for="yes_crime" class="col-form-label"><i class="bi bi-exclamation-triangle"></i> If Yes, please explain below</label>
-                                <textarea class="form-control" name="yes_crime" rows="3" placeholder="Explain your crime situation"></textarea>
-                            </div>
-
-                            <div class="col-md-6 form-group">
-                                <label for="cv" class="col-form-label"><i class="bi bi-file-earmark-pdf"></i> Upload your CV</label>
-                                <input type="file" class="form-control" name="cv" id="cv" placeholder="Upload your cv" accept=".pdf,.doc,.docx" required>
-                                <small class="text-muted">Accepted file formats: PDF, DOC, DOCX</small>
-                            </div>
-
-                            <div class="col-md-6 form-group">
-                                <label for="password" class="col-form-label"><i class="bi bi-lock"></i> Password</label>
-                                <input type="password" class="form-control" name="password" id="password" placeholder="Your password" required minlength="8">
-                                <small class="text-muted">Minimum length: 8 characters</small>
-                            </div>
-
-                            <div class="col-md-6 form-group">
-                                <label for="confirm-password" class="col-form-label"><i class="bi bi-lock"></i> Confirm password</label>
-                                <input type="password" class="form-control" name="confirm-password" id="confirm-password" placeholder="Confirm password" required minlength="8">
-                            </div>
-
-                        </div>
-                        <div class="form-group">
-                            <button type="button" class="btn btn-secondary" onclick="prevPage()"><i class="bi bi-arrow-left"></i> Previous</button>
-                            <button type="submit" class="btn btn-primary"><i class="bi bi-person-plus"></i> Register</button>
-                        </div>
-                    </form>
+                            <p class="gray">New to TAPA? <a href="membeship-category.php" class="gray btn font-blue small-font register-btn ml-sm-2">Register Now</a></p>
+                            <?php if (isset($error)) { ?>
+                                <p><?php echo $error; ?></p>
+                            <?php } ?>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </main>
+    <!-- Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 
-<script>
-    function nextPage() {
-        document.getElementById('page1').style.display = 'none';
-        document.getElementById('page2').style.display = 'block';
-    }
-
-    function prevPage() {
-        document.getElementById('page1').style.display = 'block';
-        document.getElementById('page2').style.display = 'none';
-    }
-</script>
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.5.1
+</html>

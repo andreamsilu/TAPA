@@ -55,7 +55,7 @@ $result = $conn->query($sql);
         </div>
       <?php
       else :
-        echo '<a class="btn btn-primary" href="add-edu.php"><i class="bi bi-plus"></i> Add </a>';
+        echo '<a class="btn btn-primary" href="add_edu.php"><i class="bi bi-plus"></i> Add </a>';
        echo '<div id="snackbar">No education info found.</div>';
 
       endif;

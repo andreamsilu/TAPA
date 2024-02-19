@@ -85,7 +85,7 @@ include "navigation.php";
 <div class="container mt-5">
     <div class="card">
         <div class="card-header">
-            <h4><i class="bi bi-file-earmark-plus"></i> Certification Details</h4>
+            <h4><i class="bi bi-file-earmark-plus"></i> Add Certification Details</h4>
         </div>
         <div class="card-body">
             <form id="certificationForm" action="<?php echo $certId ? 'edit-cert.php?id=' . $certId : 'add-cert.php'; ?>" method="post">

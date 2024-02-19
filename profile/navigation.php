@@ -17,13 +17,12 @@
     <style>
         /* Adjust sidebar styles */
         .sidebar {
-            position: fixed;
+            position:fixed;
             top: 0;
             left: 0;
             height: 100%;
             width: 250px;
             padding-top: 60px;
-            /* Adjust according to your navbar height */
             background-color: #333;
             color: #fff;
         }
@@ -36,12 +35,13 @@
 
         }
 
-        i {
-            /* font-size: 28px; */
+        .sidebar i {
             color: #fff;
         }
 
-        .sidebar i,a:hover {
+
+
+        .sidebar a:hover {
             background-color: #0F718A;
             color: #fff;
         }
@@ -50,6 +50,8 @@
             background-color: green;
             color: #0F718A;
         }
+
+
 
         .dropdown-menu {
             background-color: #222;
@@ -66,61 +68,93 @@
             font-size: 24px;
         }
 
-        i:hover {
+
+
+        .btn-primary {
+            background-color: #0F718A;
             color: white;
-            padding: 3px;
-            font-size: 24px;
+        }
+
+        .btn-primary i {
+            color: white;
         }
 
 
         /* ====snackbar=== */
         #snackbar {
-    visibility: hidden;
-    min-width: 250px;
-    margin-left: -125px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 2px;
-    padding: 16px;
-    position: fixed;
-    z-index: 1;
-    left: 50%;
-    bottom: 30px;
-}
+            visibility: hidden;
+            min-width: 250px;
+            margin-left: -125px;
+            background-color: darkorange;
+            color: #fff;
+            text-align: center;
+            border-radius: 2px;
+            padding: 16px;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            bottom: 30px;
+        }
 
-#snackbar.show {
-    visibility: visible;
-    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-    animation: fadein 0.5s, fadeout 0.5s 2.5s;
-}
+        #snackbar.show {
+            visibility: visible;
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
 
-@-webkit-keyframes fadein {
-    from {bottom: 0; opacity: 0;}
-    to {bottom: 30px; opacity: 1;}
-}
+        @-webkit-keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
 
-@keyframes fadein {
-    from {bottom: 0; opacity: 0;}
-    to {bottom: 30px; opacity: 1;}
-}
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
+        }
 
-@-webkit-keyframes fadeout {
-    from {bottom: 30px; opacity: 1;}
-    to {bottom: 0; opacity: 0;}
-}
+        @keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
 
-@keyframes fadeout {
-    from {bottom: 30px; opacity: 1;}
-    to {bottom: 0; opacity: 0;}
-}
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
+        }
 
+        @-webkit-keyframes fadeout {
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+
+            to {
+                bottom: 0;
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeout {
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+
+            to {
+                bottom: 0;
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <a class="navbar-brand" href="index.php">TAPA</a>
+    <nav class="navbar navbar-expand-lg navbar-light  ">
+        <a class="navbar-brand" href="index.php"><img src="assets/img/tapa.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -142,11 +176,11 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-user-circle"></i>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Profile</a>
-                        <a class="dropdown-item" href="#">Settings</a>
+                    <div class="dropdown-menu dropdown-menu-right text-white" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="show_personal_info.php">Profile</a>
+                        <a class="dropdown-item" href="change-password.php">Change Password</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Logout</a>
+                        <a class="dropdown-item" href="logout.php">Logout</a>
                     </div>
                 </li>
             </ul>
