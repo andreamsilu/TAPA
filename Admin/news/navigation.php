@@ -8,6 +8,15 @@
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Jss+8gN5eWPS2+xe7i7e6pZYO/dUZ37OqYz3NjcmmJ1W4Z" crossorigin="anonymous">
+    <!-- Bootstrap CSS (latest version) -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons bundled with Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap-icons.css" rel="stylesheet">
+    <!-- Bootstrap Icons CSS (latest version) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+
+
     <style>
         /* Adjust sidebar styles */
         .sidebar {
@@ -40,12 +49,12 @@
             color: #0F718A;
         }
 
-        .dropdown-menu{
+        .dropdown-menu {
             background-color: #333;
             color: #fff;
-        } 
+        }
 
-        .nav-link{
+        .nav-link {
             color: white;
         }
     </style>

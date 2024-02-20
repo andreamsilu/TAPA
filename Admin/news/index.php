@@ -2,113 +2,90 @@
 include "navigation.php";
 include "../../forms/connection.php";
 
-$selected_date = isset($_GET['selected_date']) ? $_GET['selected_date'] : '';
+// Total number of members
+$totalMembersQuery = "SELECT COUNT(*) AS total_members FROM users";
+$totalMembersResult = $conn->query($totalMembersQuery);
+$totalMembers = $totalMembersResult->fetch_assoc()['total_members'];
 
-$total_news_query = "SELECT COUNT(*) AS total FROM news";
-$total_news_result = $conn->query($total_news_query);
-$total_news = $total_news_result->fetch_assoc()['total'];
+// Total pending payments
+$totalPendingQuery = "SELECT COUNT(*) AS total_pending FROM payments WHERE status = 'pending'";
+$totalPendingResult = $conn->query($totalPendingQuery);
+$totalPending = $totalPendingResult->fetch_assoc()['total_pending'];
 
-$news_per_day_query = "SELECT DATE(date) AS news_date, COUNT(*) AS count_per_day FROM news GROUP BY DATE(date)";
-$news_per_day_result = $conn->query($news_per_day_query);
+// Total paid payments
+$totalPaidQuery = "SELECT COUNT(*) AS total_paid FROM payments WHERE status = 'paid'";
+$totalPaidResult = $conn->query($totalPaidQuery);
+$totalPaid = $totalPaidResult->fetch_assoc()['total_paid'];
 
-$selected_date_query = "SELECT COUNT(*) AS count_selected_date FROM news WHERE DATE(date) = '$selected_date'";
-$selected_date_result = $conn->query($selected_date_query);
-$count_selected_date = $selected_date_result->fetch_assoc()['count_selected_date'];
+// Total unpaid payments
+$totalUnpaidQuery = "SELECT COUNT(*) AS total_unpaid FROM payments WHERE status = 'unpaid'";
+$totalUnpaidResult = $conn->query($totalUnpaidQuery);
+$totalUnpaid = $totalUnpaidResult->fetch_assoc()['total_unpaid'];
 
-// Query to get news articles for the selected date
-$selected_news_query = "SELECT * FROM news WHERE DATE(date) = '$selected_date'";
-$selected_news_result = $conn->query($selected_news_query);
+// Total amount collected
+$totalAmountQuery = "SELECT SUM(amount) AS total_amount FROM payments WHERE status = 'paid'";
+$totalAmountResult = $conn->query($totalAmountQuery);
+$totalAmount = $totalAmountResult->fetch_assoc()['total_amount'];
+
 ?>
-
+<style>
+    i {
+        font-size: 50px;
+    }
+</style>
 <div class="container mt-4">
-<h2 class="text-center">Dashboard</h2>
+    <h2 class="text-center">Dashboard</h2>
 
     <div class="row">
-        <div class="col-md-4 mb-4">
-            <div class="card">
+        <div class="col-md-3 mb-4">
+            <div class="card bg-primary">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Total News Articles</h5>
-                    <p class="display-4"><?php echo $total_news; ?></p>
+                    <h5 class="card-title">Total Amount</h5>
+                    <p class="display-4"><?php echo $totalAmount; ?></p>
+                    <i class="bi bi-currency-dollar fa-3x text-light"></i>
                 </div>
             </div>
         </div>
-
-        <div class="col-md-8 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">News Articles Added Each Day</h5>
-                    <div class="table-responsive">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Date</th>
-                                    <th>Count</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php
-                                while ($row = $news_per_day_result->fetch_assoc()) {
-                                    $news_date = $row['news_date'];
-                                    $count_per_day = $row['count_per_day'];
-                                    echo "<tr><td>$news_date</td><td>$count_per_day</td></tr>";
-                                }
-                                ?>
-                            </tbody>
-                        </table>
-                    </div>
+        <div class="col-md-3 mb-4">
+            <div class="card bg-success">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Total Paid Payments</h5>
+                    <p class="display-4"><?php echo $totalPaid; ?></p>
+                    <i class="bi bi-cash-stack fa-3x text-light"></i>
                 </div>
             </div>
-            <?php if ($selected_date && $count_selected_date !== null) : ?>
-                <div class="mt-4 card">
-                    <div class="card-body">
-                        <h5 class="card-title">Number of News Articles for <?php echo $selected_date; ?></h5>
-                        <p><?php echo $count_selected_date; ?></p>
-                    </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card bg-warning">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Total Pending fees</h5>
+                    <p class="display-4"><?php echo $totalPending; ?></p>
+                    <i class="bi bi-cash-coin fa-3x text-light"></i>
                 </div>
-            <?php endif; ?>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card bg-danger">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Total Unpaid fees</h5>
+                    <p class="display-4"><?php echo $totalUnpaid; ?></p>
+                    <i class="bi bi-cash-coin fa-3x text-light"></i>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="row mt-4">
-        <div class="col-md-6 offset-md-3">
-            <form action="index.php" method="GET">
-                <div class="form-group">
-                    <label for="datepicker">Filter by Date:</label>
-                    <div class="input-group date" data-provide="datepicker">
-                        <input type="text" class="form-control" id="datepicker" name="selected_date" value="<?php echo $selected_date; ?>">
-                        <div class="input-group-append">
-                            <span class="input-group-text"><i class="fa fa-calendar"></i></span>
-                        </div>
-                    </div>
+    <div class="row  mt-4">
+        <div class="col-md-3 mb-4">
+            <div class="card bg-info">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Total Members</h5>
+                    <p class="display-4"><?php echo $totalMembers; ?></p>
+                    <i class="bi bi-people-fill fa-3x text-light"></i>
                 </div>
-                <button type="submit" class="btn btn-primary">Filter</button>
-            </form>
+            </div>
         </div>
     </div>
-
-    <!-- Display news articles for the selected date -->
-    <?php if ($selected_date && $selected_news_result->num_rows > 0) : ?>
-        <div class="row mt-4">
-            <div class="col-md-12">
-                <h4>News Articles for <?php echo $selected_date; ?></h4>
-            </div>
-            <?php while ($article = $selected_news_result->fetch_assoc()) : ?>
-                <div class="col-md-4 mb-4">
-                    <div class="card" style="height: 100%;">
-                        <img src="<?php echo $article['image_url']; ?>" class="card-img-top" alt="News Image">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo $article['title']; ?></h5>
-                            <p class="card-text text-truncate" style="max-height: 50px; overflow: hidden;"><?php echo $article['description']; ?></p>
-                            <a href="#" class="btn btn-primary btn-sm">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            <?php endwhile; ?>
-        </div>
-    <?php endif; ?>
 </div>
-
-
-
 
 <?php include "footer.php"; ?>

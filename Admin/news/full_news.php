@@ -52,7 +52,7 @@ if (isset($_GET['id'])) {
             <!-- Navigation -->
             <!-- if ($comments) { -->
 
-            <div class="container mt-5">
+            <div class="container" style="margin-top:50px">
                 <h1><?php echo $news['title']; ?></h1>
                 <p>Date: <?php echo $news['date']; ?></p>
                 <div class="row">

@@ -42,7 +42,7 @@
             while ($row = $result->fetch_assoc()) {
                 // Start a new row after every four news articles
                 if ($count % 4 == 0) {
-                    echo "<div class='row'>";
+                    echo "<div class='row mb-5' >";
                 }
 
                 echo "<div class='col-md-3'>
@@ -62,15 +62,16 @@
                 }
 
                 echo "<div class='card-body'>
-                        <h5 class='card-title'>{$row['title']}</h5>
+                        <h6 class='card-title'>{$row['title']}</h6>
                         <p class='card-text'>";
 
                 // Shorten the description for the preview
-                $shortenedDescription = substr($row['description'], 0, 80) . '...';
+                $shortenedDescription = substr($row['description'], 0, 20) . '...';
 
                 echo $shortenedDescription;
 
                 echo "</p>
+                
                         <p class='card-text'><small class='text-muted'>{$row['date']}</small></p>
                         <a href='Admin/news/full_news.php?id={$row['id']}' class='btn btn-primary btn-sm'>Read More</a>
                     </div>

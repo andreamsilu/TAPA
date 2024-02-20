@@ -75,32 +75,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <?php include "navigation.php"; ?>
 
 <div class="container mt-5">
-    <h2 class="text-center">Add News</h2>
-    <form action="add_news.php" method="post" enctype="multipart/form-data" style="margin:20px">
-        <!-- Form fields -->
-        <div class="form-group">
-            <label for="title">Title:</label>
-            <input type="text" class="form-control" id="title" name="title" required>
+    <h2 class="text-center">ADD NEWS</h2>
+    <div class="card">
+        <div class="card-body">
+            <form action="add_news.php" method="post" enctype="multipart/form-data">
+                <!-- Form fields -->
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" class="form-control" id="title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea class="form-control" id="description" name="description" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="image_url">Image:</label>
+                    <input type="file" class="form-control" id="image_url" name="image_url">
+                </div>
+                <div class="form-group">
+                    <label for="date">Date:</label>
+                    <input type="date" class="form-control" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="video_url">Video:</label>
+                    <input type="file" class="form-control" id="video_url" name="video_url">
+                </div>
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary">Add News</button>
+            </form>
         </div>
-        <div class="form-group">
-            <label for="description">Description:</label>
-            <textarea class="form-control" id="description" name="description" rows="4" required></textarea>
-        </div>
-        <div class="form-group">
-            <label for="image_url">Image:</label>
-            <input type="file" class="form-control" id="image_url" name="image_url">
-        </div>
-        <div class="form-group">
-            <label for="date">Date:</label>
-            <input type="date" class="form-control" id="date" name="date" required>
-        </div>
-        <div class="form-group">
-            <label for="video_url">Video:</label>
-            <input type="file" class="form-control" id="video_url" name="video_url">
-        </div>
-        <!-- Submit button -->
-        <button type="submit" class="btn btn-primary">Add News</button>
-    </form>
+    </div>
 </div>
+
 
 <?php include "footer.php"; ?>

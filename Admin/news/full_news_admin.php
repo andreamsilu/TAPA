@@ -33,49 +33,48 @@ if (isset($_GET['id'])) {
                     height: 700px;
                     justify-content: center;
                 }
-            </style>    
+            </style>
         </head>
 
         <body>
             <!-- Navigation -->
-            <?php include "../TAPA/header.php"; 
+            <?php include "navigation.php";
             ?>
 
             <div class="container mt-5">
                 <h1><?php echo $news['title']; ?></h1>
                 <p>Date: <?php echo $news['date']; ?></p>
                 <div class="row">
-                        <?php
-                        if (!empty($news['video_url'])) {
-                            echo "<div class='embed-responsive embed-responsive-16by9 media-container'>
+                    <?php
+                    if (!empty($news['video_url'])) {
+                        echo "<div class='embed-responsive embed-responsive-16by9 media-container'>
                             <video class='embed-responsive-item' width='550px'   controls>
                                 <source src='{$news['video_url']}' type='video/mp4'>
                                 Your browser does not support the video tag.
                             </video>
                         </div>";
-                        } elseif (!empty($news['image_url'])) {
-                            echo "<img src='{$news['image_url']}' alt='News Image'  ' class='img-fluid media-container'>";
-                        }
+                    } elseif (!empty($news['image_url'])) {
+                        echo "<img src='{$news['image_url']}' alt='News Image'  ' class='img-fluid media-container'>";
+                    }
 
-                        ?>
+                    ?>
                 </div>
                 <div>
-                <p><?php echo $news['description']; ?></p>
-                </div>
-                </div>
-                <!-- Display image or video -->
+                    <?php
+                    $description = $news['description'];
+                    $paragraphs = explode("\n", $description);
+                    ?>
 
+                    <?php foreach ($paragraphs as $paragraph) : ?>
+                        <p><?php echo $paragraph; ?></p>
+                    <?php endforeach; ?>
 
-                <!-- Add Edit and Delete buttons -->
-                <div>
-                    
                 </div>
+            </div>
+            <div class="button-container" style="text-align: center;">
                 <a href="edit_news.php?id=<?php echo $news['id']; ?>" class="btn btn-primary">Edit</a>
                 <a href="delete_news.php?id=<?php echo $news['id']; ?>" class="btn btn-danger">Delete</a>
-                <!-- Add Read More functionality if needed -->
-
             </div>
-
             <!-- Include necessary JavaScript or scripts -->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         </body>
