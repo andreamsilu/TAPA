@@ -29,7 +29,7 @@ $totalAmount = $totalAmountResult->fetch_assoc()['total_amount'];
 
 ?>
 <style>
-    i {
+    .icon1 {
         font-size: 50px;
     }
 </style>
@@ -42,7 +42,7 @@ $totalAmount = $totalAmountResult->fetch_assoc()['total_amount'];
                 <div class="card-body text-center">
                     <h5 class="card-title">Total Amount</h5>
                     <p class="display-4"><?php echo $totalAmount; ?></p>
-                    <i class="bi bi-currency-dollar fa-3x text-light"></i>
+                    <i class="bi bi-currency-dollar fa-3x text-light  icon1"></i>
                 </div>
             </div>
         </div>
@@ -51,7 +51,7 @@ $totalAmount = $totalAmountResult->fetch_assoc()['total_amount'];
                 <div class="card-body text-center">
                     <h5 class="card-title">Total Paid Payments</h5>
                     <p class="display-4"><?php echo $totalPaid; ?></p>
-                    <i class="bi bi-cash-stack fa-3x text-light"></i>
+                    <i class="bi bi-cash-stack fa-3x text-light icon1"></i>
                 </div>
             </div>
         </div>
@@ -60,7 +60,7 @@ $totalAmount = $totalAmountResult->fetch_assoc()['total_amount'];
                 <div class="card-body text-center">
                     <h5 class="card-title">Total Pending fees</h5>
                     <p class="display-4"><?php echo $totalPending; ?></p>
-                    <i class="bi bi-cash-coin fa-3x text-light"></i>
+                    <i class="bi bi-cash-coin fa-3x text-light icon1"></i>
                 </div>
             </div>
         </div>
@@ -69,7 +69,7 @@ $totalAmount = $totalAmountResult->fetch_assoc()['total_amount'];
                 <div class="card-body text-center">
                     <h5 class="card-title">Total Unpaid fees</h5>
                     <p class="display-4"><?php echo $totalUnpaid; ?></p>
-                    <i class="bi bi-cash-coin fa-3x text-light"></i>
+                    <i class="bi bi-cash-coin fa-3x text-light icon1"></i>
                 </div>
             </div>
         </div>
@@ -81,7 +81,7 @@ $totalAmount = $totalAmountResult->fetch_assoc()['total_amount'];
                 <div class="card-body text-center">
                     <h5 class="card-title">Total Members</h5>
                     <p class="display-4"><?php echo $totalMembers; ?></p>
-                    <i class="bi bi-people-fill fa-3x text-light"></i>
+                    <i class="bi bi-people-fill fa-3x text-light icon1"></i>
                 </div>
             </div>
         </div>

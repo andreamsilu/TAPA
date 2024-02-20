@@ -74,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <?php include "navigation.php"; ?>
 
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
     <h2 class="text-center">ADD NEWS</h2>
     <div class="card">
         <div class="card-body">

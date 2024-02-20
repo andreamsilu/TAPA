@@ -57,6 +57,10 @@
         .nav-link {
             color: white;
         }
+
+        i {
+            font-size: 28px;
+        }
     </style>
 </head>
 
@@ -99,29 +103,50 @@
     <div class="container-fluid">
         <div class="row">
             <!-- Sidebar navigation -->
+            <!-- Sidebar navigation -->
             <nav class="col-md-2 d-none d-md-block bg-dark sidebar">
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php">Dashboard</a>
+                            <a class="nav-link" href="index.php">
+                                <i class="bi bi-house-door-fill"></i> Dashboard
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="add_news.php">Add News</a>
+                            <a class="nav-link" href="add_news.php">
+                                <i class="bi bi-newspaper"></i> Add News
+                            </a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link" href="show_news.php">Fetch All News</a>
+                            <a class="nav-link" href="show_news.php">
+                                <i class="bi bi-journal-text"></i> Fetch News
+                            </a>
                         </li>
-
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Membership
+                                <i class="bi bi-people"></i> Membership
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="member_list.php">Member List</a>
-                                <a class="dropdown-item" href="membership_fees.php">Membership Fees</a>
+                                <a class="dropdown-item" href="member_list.php">
+                                    <i class="bi bi-people"></i> Member List
+                                </a>
+                                <a class="dropdown-item" href="membership_fees.php">
+                                    <i class="bi bi-cash"></i> Membership Fees
+                                </a>
                             </div>
+
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="show_users.php">
+                                <i class="bi bi-person"></i> Users
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="logout.php">
+                                <i class="bi bi-box-arrow-right"></i> Logout
+                            </a>
+                        </li>
+
                     </ul>
                 </div>
             </nav>
