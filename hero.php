@@ -23,9 +23,9 @@
         <div class="carousel-item active" style="background-image: url(assets/img/tapaImages/slide-1.jpg)">
           <div class="carousel-container">
             <div class="container">
-              <h2 class="animated fadeInDown">Build spaces and empower <span>young people with skills development</span></h2>
+              <h2 class="animated fadeInDown">Build spaces and empower <span>young people with mental health development</span></h2>
               <p class="animated fadeInUp">We work closely with communities, providing self-employment and life skills training through mentorship, leadership programs, research, nature expeditions, photography explorations, advocacy, and community outreach programs</p>
-              <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a>
+              <a href="about.php" class="btn-get-started animated fadeInUp scrollto">Read More</a>
             </div>
           </div>
         </div>
@@ -35,8 +35,8 @@
           <div class="carousel-container">
             <div class="container">
               <h2 class="animated fadeInDown">We use different methodologies with different partners to achieve our goals</h2>
-              <p class="animated fadeInUp">Our hard-working young people use innovative ways to help communities value their environment, Human rights and recognize the value of the ecosystem around them.</p>
-              <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a>
+              <p class="animated fadeInUp">Our hard-working young people use psychological ways to help communities value their environment, Human rights and recognize the value of the ecosystem around them.</p>
+              <a href="about.php" class="btn-get-started animated fadeInUp scrollto">Read More</a>
             </div>
           </div>
         </div>
@@ -47,7 +47,7 @@
             <div class="container">
               <h2 class="animated fadeInDown">Loving relationships should permeate every aspect of organizational life.</h2>
               <p class="animated fadeInUp">Equipping the youth with the knowledge and skills, and competence to act and drive sustainable change.</p>
-              <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a>
+              <a href="about.php" class="btn-get-started animated fadeInUp scrollto">Read More</a>
             </div>
           </div>
         </div>

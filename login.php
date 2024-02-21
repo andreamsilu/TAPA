@@ -104,7 +104,7 @@
                                 </div>
                                 <!-- Already have an account -->
                                 <div class="text-center mt-2">
-                                    <p class="mb-0">Don't have an account? <a href="membership-category.php">Sign up</a></p>
+                                    <p class="mb-0">Don't have an account? <a href="membeship-category.php">Sign up</a></p>
                                 </div>
                             </div>
                         </div>
