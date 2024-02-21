@@ -36,7 +36,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Password matches, create a session and store user information
             $_SESSION['user_id'] = $row['id'];
             $_SESSION['email'] = $email;
-            header("Location: ../profile/index.php"); // Redirect to a success page
+            
+            // Check user role
+            if ($row['role'] == 1) {
+                // Admin user
+                header("Location: ../Admin/news/index.php"); // Redirect to admin dashboard
+            } else {
+                // Normal user
+                header("Location: ../profile/index.php"); // Redirect to user profile
+            }
             exit();
         } else {
             // Incorrect password
@@ -44,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     } else {
         // User not found
-       echo $error = "User with this email does not exist.";
+        echo $error = "User with this email does not exist.";
     }
 
     $conn->close();

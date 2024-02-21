@@ -25,7 +25,7 @@ if (isset($_GET['id'])) {
 
         ?>
          <?php
-            include "../../header.php";
+           // include "../../header.php";
             ?>
 
         <!DOCTYPE html>
@@ -76,7 +76,7 @@ if (isset($_GET['id'])) {
 
                     // Output each paragraph in a <p> tag
                     foreach ($paragraphs as $paragraph) {
-                        echo "<p class='text-center m-3 p-4'>$paragraph</p>";
+                        echo "<p class='text-left    m-1 p-2'>$paragraph</p>";
                     }
                     ?>
                 </div>

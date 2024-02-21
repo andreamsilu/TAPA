@@ -1,4 +1,6 @@
 <?php
+session_start(); // Uncommented session_start()
+
 include "navigation.php";
 include "../../forms/connection.php";
 

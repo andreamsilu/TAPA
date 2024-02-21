@@ -1,4 +1,6 @@
 <?php
+session_start(); // Uncommented session_start()
+
 // Database connection
 include "../../forms/connection.php";
 

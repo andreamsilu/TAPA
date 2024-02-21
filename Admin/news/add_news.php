@@ -2,6 +2,7 @@
 // Enable error reporting for debugging
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+session_start(); // Uncommented session_start()
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

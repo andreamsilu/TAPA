@@ -1,4 +1,7 @@
-<?php  include "navigation.php"; ?>
+<?php 
+ include "navigation.php"; 
+session_start(); // Uncommented session_start()
+ ?>
 <style>
     /* Additional custom styles as needed */
     .news-card {
