@@ -5,6 +5,11 @@ session_start(); // Uncommented session_start()
 
 include "../../forms/connection.php";
 
+// Check if the user is authenticated
+if (!isset($_SESSION['email'])) {
+    header("Location: ../../login.php");
+    exit();
+}
 // Declare $stmt outside the if block
 $stmt = null;
 

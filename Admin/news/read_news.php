@@ -32,8 +32,8 @@
             die("Connection failed: " . $conn->connect_error);
         }
 
-        // Fetch all news articles ordered by date (most recent first)
-        $sql = "SELECT * FROM news ORDER BY date DESC";
+        // Fetch all news articles where status is 1, ordered by date (most recent first)
+        $sql = "SELECT * FROM news WHERE status = '1' ORDER BY date DESC";
         $result = $conn->query($sql);
 
         $count = 0; // Initialize a counter

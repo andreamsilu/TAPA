@@ -2,6 +2,11 @@
 // Database connection
 include "../../forms/connection.php";
 
+// Check if the user is authenticated
+if (!isset($_SESSION['email'])) {
+    header("Location: ../../login.php");
+    exit();
+}
 // Check if 'id' parameter is provided in the URL
 if (isset($_GET['id'])) {
     // Get the news ID from the URL

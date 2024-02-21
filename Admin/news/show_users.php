@@ -4,11 +4,9 @@
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);   
-include "navigation.php";
 
-// Include the database connection file
-// include "connection.php";
-// Database connection
+ session_start();
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -20,11 +18,19 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+// Check if the user is authenticated
+if (!isset($_SESSION['email'])) {
+    header("Location: ../../login.php");
+    exit();
+}
 // SQL query to fetch users where role is 1
 $sql = "SELECT * FROM users WHERE role = '1'";
 
 // Execute the query
 $result = $conn->query($sql);
+
+include "navigation.php";
+
 ?>
 
 <div class="container mt-4">

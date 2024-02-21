@@ -4,6 +4,13 @@ session_start(); // Uncommented session_start()
 include "navigation.php";
 include "../../forms/connection.php";
 
+// Check if the user is authenticated
+if (!isset($_SESSION['email'])) {
+    header("Location: ../../login.php");
+    exit();
+}
+
+
 // Total number of members
 $totalMembersQuery = "SELECT COUNT(*) AS total_members FROM users";
 $totalMembersResult = $conn->query($totalMembersQuery);

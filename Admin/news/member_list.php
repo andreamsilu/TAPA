@@ -4,6 +4,11 @@ session_start(); // Uncommented session_start()
 // Database connection
 include "../../forms/connection.php";
 include "navigation.php";
+// Check if the user is authenticated
+if (!isset($_SESSION['email'])) {
+  header("Location: ../../login.php");
+  exit();
+}
 ?>
 
 <div class="container mt-4">

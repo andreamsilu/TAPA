@@ -4,6 +4,11 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 session_start(); // Uncommented session_start()
 
+// Check if the user is authenticated
+if (!isset($_SESSION['email'])) {
+    header("Location: ../../login.php");
+    exit();
+}
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Database connection
