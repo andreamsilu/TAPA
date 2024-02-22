@@ -77,24 +77,25 @@ if (isset($_GET['id'])) {
 
                 </div>
             </div>
-            <div class="button-container" style="text-align: center;">
-        <a href="edit_news.php?id=<?php echo $news['id']; ?>" class="btn btn-primary">Edit</a>
-        <a href="delete_news.php?id=<?php echo $news['id']; ?>" class="btn btn-danger">Delete</a>
-        
-        <!-- Button to post the news article -->
-        <form action="update_status.php" method="post" style="display: inline;">
-            <input type="hidden" name="news_id" value="<?php echo $news['id']; ?>">
-            <input type="hidden" name="status" value="1">
-            <button type="submit" class="btn btn-success">Post</button>
-        </form>
+            <div class="button-container mb-5" style="text-align: center;">
+                <a href="edit_news.php?id=<?php echo $news['id']; ?>" class="btn btn-primary">Edit</a>
+                <a href="delete_news.php?id=<?php echo $news['id']; ?>" class="btn btn-danger">Delete</a>
 
-        <!-- Button to unpost the news article -->
-        <form action="update_status.php" method="post" style="display: inline;">
-            <input type="hidden" name="news_id" value="<?php echo $news['id']; ?>">
-            <input type="hidden" name="status" value="0">
-            <button type="submit" class="btn btn-warning">Unpost</button>
-        </form>
-    </div>
+                <!-- Button to post the news article -->
+                <form action="update_status.php" method="post" style="display: inline;">
+                    <input type="hidden" name="news_id" value="<?php echo $news['id']; ?>">
+                    <input type="hidden" name="status" value="1">
+                    <button type="submit" class="btn btn-success">Post</button>
+                </form>
+
+                <!-- Button to unpost the news article -->
+                <form action="update_status.php" method="post" style="display: inline;">
+                    <input type="hidden" name="news_id" value="<?php echo $news['id']; ?>">
+                    <input type="hidden" name="status" value="0">
+                    <button type="submit" class="btn btn-warning">Unpost</button>
+                </form>
+            </div>
+            </div>
             <!-- Include necessary JavaScript or scripts -->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         </body>

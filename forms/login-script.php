@@ -9,19 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // Replace these values with your actual database credentials
-    $servername = "localhost";
-    $username = "root";
-    $passwordDb = "";
-    $database = "TAPA_DB";
-
-    // Create connection
-    $conn = new mysqli($servername, $username, $passwordDb, $database);
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+  include('../forms/connection.php');
 
     // Query to fetch user details based on the provided email
     $sql = "SELECT * FROM users WHERE email = '$email' LIMIT 1";
@@ -49,6 +37,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             // Incorrect password
             echo $error = "Invalid credentials. Please try again.";
+            header("Location: ../login.php"); // Redirect to user profile
+
         }
     } else {
         // User not found

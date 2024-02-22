@@ -23,7 +23,7 @@ include "header.php";
   include "hero.php";
   ?>
   <div class="section-title">
-    <h2>Recentely  updates</h2>
+    <h2 class="pt-5">Recentely  updates</h2>
   </div>
   <?php include "Admin/news/read_news.php" ?>
 

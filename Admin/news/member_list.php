@@ -15,42 +15,58 @@ if (!isset($_SESSION['email'])) {
   <h2>User Information</h2>
   <?php
   // Fetch user information along with payment status
-  $sql = "SELECT u.id, u.fullname, u.email, u.phone, p.status, p.amount
-          FROM users u
-          LEFT JOIN payments p ON u.id = p.user_id";
+  $sql = "SELECT u.id, u.fullname, u.phone, 
+  CASE 
+      WHEN p.status IS NULL THEN 'unpaid' 
+      ELSE p.status 
+  END AS status, 
+  p.amount, p.payment_date
+FROM users u
+LEFT JOIN payments p ON u.id = p.user_id
+";
   $result = $conn->query($sql);
 
   if ($result->num_rows > 0) {
-      // Display user information and payment status in a striped table
-      echo "<table class='table table-striped'>";
-      echo "<thead class='thead-dark'><tr><th>ID</th><th>Fullname</th><th>Email</th><th>Phone</th><th>Payment Status</th><th>Amount</th><th>Actions</th></tr></thead>";
-      echo "<tbody>";
-      while ($row = $result->fetch_assoc()) {
-          echo "<tr>";
-          echo "<td><a href='view_member.php?id=" . $row['id'] . "'>" . $row['id'] . " view</a></td>";
-          echo "<td>" . $row['fullname'] . "</td>";
-          echo "<td>" . $row['email'] . "</td>";
-          echo "<td>" . $row['phone'] . "</td>";
-          echo "<td>" . $row['status'] . "</td>";
-          echo "<td>" . $row['amount'] . "</td>";
-          echo "<td>";
-          if ($row['status'] == 'unpaid') {
-              echo "<button class='btn btn-primary add-payment' data-user-id='" . $row['id'] . "'>Add</button>";
-          }
-          if ($row['status'] == 'pending') {
-              echo "<button class='btn btn-info edit-payment' data-user-id='" . $row['id'] . "' data-status='" . $row['status'] . "' data-amount='" . $row['amount'] . "'>Edit</button>";
-          }
+    // Display user information and payment status in a striped table
+    echo "<table class='table table-striped'>";
+    echo "<thead class='thead-dark'><tr><th>ID</th><th>Fullname</th><th>Time</th><th>Phone</th><th>Payment Status</th><th>Amount</th><th>Actions</th></tr></thead>";
+    echo "<tbody>";
+    while ($row = $result->fetch_assoc()) {
 
-          if ($row['status'] == 'paid') {
-            echo "<button class='btn btn-info edit-payment' data-user-id='" . $row['id'] . "' data-status='" . $row['status'] . "' data-amount='" . $row['amount'] . "'>approved</button>";
-        }
-          echo "</td>";
-          echo "</tr>";
+      if ($row['status'] == 'paid' && !empty($row['payment_date'])) {
+        $paymentDate = date('Y-m-d', strtotime($row['payment_date'])); // Format the date without hours, minutes, and seconds
+      } else {
+        $paymentDate = 'N/A';
       }
-      echo "</tbody>";
-      echo "</table>";
+      echo "<tr>";
+      echo "<td><a href='view_member.php?id=" . $row['id'] . "'>" . $row['id'] . " view</a></td>";
+      echo "<td>" . $row['fullname'] . "</td>";
+      echo "<td>" . $row['phone'] . "</td>";
+      echo "<td>" . $paymentDate . "</td>";
+      echo "<td>" . $row['status'] . "</td>";
+      echo "<td>" . $row['amount'] . "</td>";
+      echo "<td>";
+      if ($row['status'] == 'unpaid') {
+        echo "<button class='btn btn-primary add-payment' data-user-id='" . $row['id'] . "'><i class='bi bi-plus bi-fw'></i> Add</button>";
+    }
+    
+    if ($row['status'] == 'pending') {
+        echo "<button class='btn btn-info bg-warning edit-payment' data-user-id='" . $row['id'] . "' data-status='" . $row['status'] . "' data-amount='" . $row['amount'] . "'><i class='bi bi-pencil bi-fw'></i> Edit</button>";
+    }
+    
+    if ($row['status'] == 'paid') {
+        echo "<button class='btn btn-info bg-success' data-user-id='" . $row['id'] . "' data-status='" . $row['status'] . "' data-amount='" . $row['amount'] . "' disabled><i class='bi bi-check bi-fw'></i> Done</button>";
+        echo "<button class='btn btn-info bg-warning edit-payment mx-1' data-user-id='" . $row['id'] . "' data-status='" . $row['status'] . "' data-amount='" . $row['amount'] . "'><i class='bi bi-pencil bi-fw'></i> Edit</button>";
+    }
+    
+    
+      echo "</td>";
+      echo "</tr>";
+    }
+    echo "</tbody>";
+    echo "</table>";
   } else {
-      echo "<p>No users found.</p>";
+    echo "<p>No users found.</p>";
   }
 
   // Close database connection
@@ -143,7 +159,4 @@ if (!isset($_SESSION['email'])) {
     $('#editAmount').val(amount);
     $('#editPaymentModal').modal('show');
   });
-
 </script>
-
-

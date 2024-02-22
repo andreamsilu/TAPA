@@ -51,7 +51,7 @@
                     <h2>Login</h2>
                     <ol>
                         <li><a href="index.php">Home</a></li>
-                        <li></li>
+                        <li>Login</li>
                     </ol>
                 </div>
 
@@ -80,7 +80,7 @@
                                 <!-- Login Form -->
                                 <form action="forms/login-script.php"  method="post">
                                     <div class="form-group">
-                                        <label for="Email"><i class="bi bi-email-fill"></i> Email:</label>
+                                        <label for="Email"> <i class="bi bi-envelope"></i> Email:</label>
                                         <input type="text" id="Email" name="email" class="form-control" required>
                                     </div>
 

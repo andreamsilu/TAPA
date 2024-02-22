@@ -1,55 +1,329 @@
+<style>
+    /* CSS Styles for Profile Page */
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+        border: #ccc dotted 2px;
+    }
+
+    .profile-info {
+        margin-bottom: 30px;
+    }
+
+    .profile-pic-container {
+        background-image: url('assets/img/tapaImages/Sustain Digital-33 (1).jpg');
+        /* background-color: #218838; */
+        padding: 20px;
+        margin-bottom: 10px;
+        border: green dashed 2px;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #ccc;
+    }
+
+    .upload-btn {
+        margin-top: 10px;
+    }
+
+
+    .edit-info {
+        width: 335px;
+    }
+
+
+
+
+
+
+
+
+
+    /* Define the slide-from-left animation */
+    @keyframes slideFromLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    /* Apply the animation to the cards */
+    .slide-from-left {
+        animation: slideFromLeft 0.5s ease-out;
+    }
+</style>
 <?php
 session_start();
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+include '../forms/connection.php';
 
-include "navigation.php";
-
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "TAPA_DB";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Function to fetch progress based on your application's logic
-function fetchProgress() {
-    include "../forms/connection.php";
-    // User authentication logic
-if (!isset($_SESSION['user_id']) || empty($_SESSION['email'])) {
-    // Redirect to login page if user is not authenticated
+// Check if the user is authenticated
+if (!isset($_SESSION['email']) || isset($_SESSION['id'])) {
+    // Redirect to the login page if the user is not authenticated
     header("Location: ../login.php");
     exit();
 }
-    // You can customize this function to fetch and calculate progress based on your application's requirements
-    // Example: Fetching total number of completed forms out of the total number of forms
-    $totalForms = 5; // Adjust this based on the total number of forms
-    $completedFormsQuery = "SELECT COUNT(*) AS completedForms FROM personal_info WHERE status = 'completed'";
-    $result = $conn->query($completedFormsQuery);
+// $userID = $_SESSION['id'];
+// Fetch user profile information including the profile picture
+$user_email = $_SESSION['email'];
+$query = "SELECT * FROM users WHERE email = '$user_email'";
+$result = $conn->query($query);
 
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        $completedForms = $row['completedForms'];
-        $progressPercentage = ($completedForms / $totalForms) * 100;
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    $profile_picture = $row['profile_pic'];
+    // Display user profile information including the profile picture
+?>
+    <?php
+    include "navigation.php";
+    ?>
+    <div class="container mt-5 px-2">
+        <div class="row">
+            <div class="col-md-4">
+                <!-- <h2>Profile Page</h2> -->
+                <div class="profile-info p-2 pt-3">
+                    <!-- Display profile picture if available or use placeholder avatar -->
+                    <div class="profile-pic-container" style="background: url('assets/img/tapaImages/Sustain Digital-33 (1).jpg');">
+                        <?php
+                        // Display profile picture if available or use placeholder avatar
+                        if (!empty($profile_picture)) {
+                            echo '<a href="#" data-toggle="modal" data-target="#editProfileModal"><img src="' . $profile_picture . '" class="profile-pic" alt="Profile Picture"><i class="bi bi-pencil"></i></a>';
+                        } else {
+                            echo '<a href="#" data-toggle="modal" data-target="#addProfileModal"><img src="assets/img/tapa/person1.png" class="profile-pic" alt="Placeholder Avatar"><i class="bi bi-pencil"></i></a>';
+                        }
+                        ?>
+                    </div>
+                    <?php
+                    // Assuming $row contains user profile data fetched from the database
 
-        echo '<p>Completed Forms: ' . $completedForms . ' out of ' . $totalForms . '</p>';
-        echo '<div class="progress">';
-        echo '<div class="progress-bar" role="progressbar" style="width: ' . $progressPercentage . '%" aria-valuenow="' . $progressPercentage . '" aria-valuemin="0" aria-valuemax="100"></div>';
-        echo '</div>';
-    } else {
-        echo 'Error fetching progress.';
-    }
+                    // Define the fields contributing to profile completion
+                    $requiredFields = array('fullname', 'email', 'phone', 'profile_pic', 'cv');
+
+                    // Calculate the percentage of completion
+                    $totalFields = count($requiredFields);
+                    $filledFields = 0;
+                    foreach ($requiredFields as $field) {
+                        if (!empty($row[$field])) {
+                            $filledFields++;
+                        }
+                    }
+                    $completionPercentage = ($filledFields / $totalFields) * 100;
+                    ?>
+
+                    <div class="progress mt-3 mb-3" style="height: 50px;">
+                        <div class="progress-bar" role="progressbar" style="width: <?php echo $completionPercentage; ?>%;font-size: 25px;" aria-valuenow="<?php echo $completionPercentage; ?>" aria-valuemin="0" aria-valuemax="100"><?php echo $completionPercentage; ?>%</div>
+                    </div>
+
+                    <a href="edit_personal_info.php?id=<?php echo $userID; ?>" class="btn btn-primary  edit-info"><i class="bi bi-pencil-square"></i> Edit profile</a>
+                </div>
+
+
+                <!-- Add Profile Picture Modal -->
+                <div class="modal fade" id="addProfileModal" tabindex="-1" role="dialog" aria-labelledby="addProfileModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="addProfileModalLabel"><i class="bi bi-plus"></i> Add Profile Picture</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="upload_profile_picture.php" method="post" enctype="multipart/form-data">
+                                    <div class="form-group">
+                                        <label for="profile-pic-input">Select Profile Picture:</label>
+                                        <input type="file" name="profile_pic" id="profile-pic-input" class="form-control-file">
+                                    </div>
+                                    <button type="submit" name="submit" class="btn btn-primary">Upload</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Edit Profile Picture Modal -->
+                <div class="modal fade" id="editProfileModal" tabindex="-1" role="dialog" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="editProfileModalLabel"><i class="bi bi-pencil"></i> Edit Profile Picture</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="upload_profile_picture.php" method="post" enctype="multipart/form-data">
+                                    <div class="form-group">
+                                        <label for="profile-pic-input">Select Profile Picture:</label>
+                                        <input type="file" name="profile_pic" id="profile-pic-input" class="form-control-file">
+                                    </div>
+                                    <button type="submit" name="submit" class="btn btn-primary">Upload</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Close profile-info div -->
+            </div>
+            <!-- Add more profile information fields as needed -->
+
+            <div class="col-md-4">
+                <div class="profile-info bg-light w-100 p-2 m-3 border-info text-start">
+                    <p><i class="bi bi-person m-3"></i> Name: <?php echo $row['fullname']; ?></p>
+                </div>
+                <div class="profile-info bg-light w-100 p-2 m-3 border-info">
+                    <p><i class="bi bi-envelope"></i> Email: <?php echo $row['email']; ?></p>
+                </div>
+                <div class="profile-info bg-light w-100 p-2 m-3 border-info">
+                    <p><i class="bi bi-phone"></i> Phone: <?php echo $row['phone']; ?></p>
+                </div>
+                <div class="profile-info bg-light w-100 p-2 m-3 border-info">
+                    <p><i class="bi bi-person"></i> Membership: <?php echo $row['membership_type']; ?></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <?php
+                // Assuming the selected year is provided via a POST or GET parameter named 'selected_year'
+
+                if (isset($_POST['selected_year'])) {
+                    $selectedYear = $_POST['selected_year'];
+
+                    // Fetch status and amount due for the selected year
+                    $statusQuery = "SELECT status FROM payments WHERE YEAR(payment_date) = ?";
+                    $amountQuery = "SELECT amount FROM payments WHERE YEAR(payment_date) = ?";
+
+                    // Assuming $userId contains the user ID of the current user
+                    $stmt = $conn->prepare($statusQuery);
+                    $stmt->bind_param("i", $selectedYear);
+                    $stmt->execute();
+                    $statusResult = $stmt->get_result();
+
+                    // Check if any rows are returned for status
+                    if ($statusResult->num_rows > 0) {
+                        $statusRow = $statusResult->fetch_assoc();
+                        $status = $statusRow['status'];
+                    } else {
+                        $status = "No data available for the selected year";
+                    }
+
+                    $stmt = $conn->prepare($amountQuery);
+                    $stmt->bind_param("i", $selectedYear);
+                    $stmt->execute();
+                    $amountResult = $stmt->get_result();
+
+                    // Check if any rows are returned for amount
+                    if ($amountResult->num_rows > 0) {
+                        $amountRow = $amountResult->fetch_assoc();
+                        $amountDue = $amountRow['amount'];
+                    } else {
+                        $amountDue = "No data available for the selected year";
+                    }
+                }
+                ?>
+
+
+
+                <div class="profile-info bg-light w-100 p-2 m-3 border-info text-start">
+                    <p><i class="bi bi-credit-card m-3"></i> ANNUAL MEMBERSHIP FEES</p>
+                </div>
+                <div class="profile-info bg-light w-100 p-2 m-3 border-info">
+                    <!-- <p><i class="bi bi-calendar-check"></i> Select year</p> -->
+                    <div class="form-group mr-2">
+                        <form method="post" class="form-inline">
+                            <div class="input-group m">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="bi bi-calendar-check"></i></span>
+                                </div>
+                                <select name="selected_year" id="selected_year" class="form-control">
+                                    <option value="">Select year</option>
+                                    <?php
+                                    // Get the current year
+                                    $currentYear = date('Y');
+
+                                    // Generate options for years from 1900 to 2100
+                                    for ($year = 1900; $year <= 2100; $year++) {
+                                        // Check if the current year matches the iteration year
+                                        $selected = ($year == $currentYear) ? 'selected' : '';
+                                        echo '<option value="' . $year . '" ' . $selected . '>' . $year . '</option>';
+                                    }
+                                    ?>
+                                </select>
+                                <button type="submit" class="btn btn-primary m">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="profile-info bg-light w-100 p-2 m-3 border-info">
+                    <p><i class="bi bi-info-square"></i> Status: <?php echo isset($status) ? $status : "N/A"; ?></p>
+                </div>
+                <div class="profile-info bg-light w-100 p-2 m-3 border-info">
+                    <p><i class="bi bi-cash"></i> Amount: <?php echo isset($amountDue) ? $amountDue : "N/A"; ?></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="text-center mt-5 bg-success rounded pb-1 pt-2  fs-6 fw-bold text-white ">
+        <h1>Membership updates</h1>
+    </div>
+    <!-- Close row div -->
+    <!-- Close container div -->
+<?php
+} else {
+    echo 'alert("Error fetching user profile.")';
 }
 
 // Close the database connection
 $conn->close();
+
 ?>
+<style>
 
-<div class="container mt-5">
-  <h2>Summary Page</h2>
+</style>
+<div class="container mt-3 mb-5 p-3">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card slide-from-left">
+                <div class="card-body">
+                    <h5 class="card-title">Update 1</h5>
+                    <p class="card-text">This is the content of update 1.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card slide-from-left">
+                <div class="card-body">
+                    <h5 class="card-title">Update 2</h5>
+                    <p class="card-text">This is the content of update 2.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card slide-from-left">
+                <div class="card-body">
+                    <h5 class="card-title">Update 3</h5>
+                    <p class="card-text">This is the content of update 3.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-  <?php //fetchProgress(); ?>
 
-<?php include("footer.php"); ?>
+<?php
+include("footer.php");
+?>
