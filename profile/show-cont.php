@@ -85,7 +85,7 @@ if (!isset($_SESSION['user_id'])) {
                       <a href="add-cont.php" class="btn btn-primary"><i class="bi bi-plus"></i> Add</a>
                   </div>
           <div class="card-body  d-flex justify-content-center">
-              <a href="add-exp.php" class="btn btn-primary  align-items-center">
+              <a href="add-cont.php" class="btn btn-primary  align-items-center">
               <i class="bi bi-plus"></i> 
                   Add Contact info
               </a>

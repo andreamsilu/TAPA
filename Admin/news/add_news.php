@@ -12,19 +12,10 @@ if (!isset($_SESSION['email'])) {
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Database connection
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "TAPA_DB";
-
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+    include "../../forms/connection.php";
 
     // Get form data with default values
+    $category = isset($_POST["category"]) ? $_POST["category"] : "";
     $title = isset($_POST["title"]) ? $_POST["title"] : "";
     $description = isset($_POST["description"]) ? $_POST["description"] : "";
     $date = isset($_POST["date"]) ? $_POST["date"] : "";
@@ -50,11 +41,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Prepare and bind the INSERT statement
-    $stmt = $conn->prepare("INSERT INTO news (title, description, image_url, date, video_url) VALUES (?, ?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO news (category,title, description, image_url, date, video_url) VALUES (?, ?, ?, ?, ?, ?)");
 
     // Check if the statement is prepared successfully
     if ($stmt) {
-        $stmt->bind_param("sssss", $title, $description, $image_file, $date, $video_file);
+        $stmt->bind_param("ssssss", $category, $title, $description, $image_file, $date, $video_file);
 
         // Execute the statement
         if ($stmt->execute()) {
@@ -86,6 +77,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="card-body">
             <form action="add_news.php" method="post" enctype="multipart/form-data">
                 <!-- Form fields -->
+                <div class="form-group">
+                    <label for="category">Category:</label>
+                    <select class="form-control" id="category" name="category" required>
+                        <option value="">Select a category</option>
+                        <option value="category1">All members</option>
+                        <option value="category2">Only with membership</option>
+                    </select>
+                </div>
+
                 <div class="form-group">
                     <label for="title">Title:</label>
                     <input type="text" class="form-control" id="title" name="title" required>

@@ -12,11 +12,12 @@
     }
 
     .profile-pic-container {
-        background-image: url('assets/img/tapaImages/Sustain Digital-33 (1).jpg');
+        background: url('../assets/img/tapaImages/Sustain Digital-33 (1).jpg');
         /* background-color: #218838; */
         padding: 20px;
         margin-bottom: 10px;
         border: green dashed 2px;
+        object-fit: cover;
     }
 
     .profile-pic {
@@ -33,7 +34,7 @@
 
 
     .edit-info {
-        width: 335px;
+        width: 315px;
     }
 
 
@@ -75,7 +76,6 @@ if (!isset($_SESSION['email']) || isset($_SESSION['id'])) {
     header("Location: ../login.php");
     exit();
 }
-// $userID = $_SESSION['id'];
 // Fetch user profile information including the profile picture
 $user_email = $_SESSION['email'];
 $query = "SELECT * FROM users WHERE email = '$user_email'";
@@ -95,13 +95,13 @@ if ($result->num_rows > 0) {
                 <!-- <h2>Profile Page</h2> -->
                 <div class="profile-info p-2 pt-3">
                     <!-- Display profile picture if available or use placeholder avatar -->
-                    <div class="profile-pic-container" style="background: url('assets/img/tapaImages/Sustain Digital-33 (1).jpg');">
+                    <div class="profile-pic-container" style="background: url('../assets/img/tapa/ethics.jpg');background-size:cover;  background-position: center;background-repeat: no-repeat;">
                         <?php
                         // Display profile picture if available or use placeholder avatar
                         if (!empty($profile_picture)) {
                             echo '<a href="#" data-toggle="modal" data-target="#editProfileModal"><img src="' . $profile_picture . '" class="profile-pic" alt="Profile Picture"><i class="bi bi-pencil"></i></a>';
                         } else {
-                            echo '<a href="#" data-toggle="modal" data-target="#addProfileModal"><img src="assets/img/tapa/person1.png" class="profile-pic" alt="Placeholder Avatar"><i class="bi bi-pencil"></i></a>';
+                            echo '<a href="#" data-toggle="modal" data-target="#addProfileModal"><img src="../assets/img/tapa/person1.png" class="profile-pic" alt="Placeholder Avatar"><i class="bi bi-pencil"></i></a>';
                         }
                         ?>
                     </div>
@@ -253,7 +253,7 @@ if ($result->num_rows > 0) {
                                     $currentYear = date('Y');
 
                                     // Generate options for years from 1900 to 2100
-                                    for ($year = 1900; $year <= 2100; $year++) {
+                                    for ($year = 2020; $year <= 2100; $year++) {
                                         // Check if the current year matches the iteration year
                                         $selected = ($year == $currentYear) ? 'selected' : '';
                                         echo '<option value="' . $year . '" ' . $selected . '>' . $year . '</option>';
