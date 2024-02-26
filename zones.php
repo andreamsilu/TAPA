@@ -39,7 +39,6 @@
     </section>
     <!-- End Breadcrumbs -->
 
-    <!-- ======= zones/branches Section ======= -->
 
  <!-- ======= zone Section ======= -->
  <section id="zone" class="zone">
@@ -52,7 +51,7 @@
 
   <div class="row gy-4">
 
-    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+    <div class="col-lg-4 col-md-6 d-flex align-items-center" data-aos="fade-up" data-aos-delay="100">
       <div class="member">
         <div class="member-img">
           <img src="assets/img/zones/yisambi-removebg-preview.png" class="img-fluid" alt="">
@@ -72,7 +71,7 @@
       </div>
     </div>
 
-    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+    <div class="col-lg-4 col-md-6 d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
       <div class="member">
         <div class="member-img">
           <img src="assets/img/zones/kimario-removebg-preview.png" class="img-fluid" alt="">
@@ -92,7 +91,7 @@
       </div>
     </div>
 
-    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+    <div class="col-lg-4 col-md-6 d-flex align-items-center" data-aos="fade-up" data-aos-delay="300">
       <div class="member">
         <div class="member-img">
           <img src="assets/img/zones/boniphace-removebg-preview.png" class="img-fluid" alt="">
@@ -116,7 +115,7 @@
   </div>
 
   <div class="row gy-4">
-  <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+  <div class="col-lg-4 col-md-6 d-flex align-items-center" data-aos="fade-up" data-aos-delay="400">
       <div class="member">
         <div class="member-img">
           <img src="assets/img/zones/SHABANI_MNKAI_PASSPORT_SIZE-removebg-preview.png" class="img-fluid" alt="">
@@ -136,7 +135,7 @@
       </div>
     </div>
 
-<div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+<div class="col-lg-4 col-md-6 d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
   <div class="member">
     <div class="member-img">
       <img src="assets/img/zones/dr-joel-removebg-preview.png" class="img-fluid" alt="">
@@ -156,7 +155,7 @@
   </div>
 </div>
 
-<div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+<div class="col-lg-4 col-md-6 d-flex align-items-center" data-aos="fade-up" data-aos-delay="300">
   <div class="member">
     <div class="member-img">
       <img src="assets/img/tapa/person1.png" class="img-fluid" alt="">
