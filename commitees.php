@@ -74,7 +74,7 @@
           <div class="col-md-4 d-flex align-items-stretch">
             <div class="card">
               <div class="card-img">
-                <img src="assets/img/tapaImages/Sustain Digital-3.jpg" alt="...">
+                <img src="assets/img/tapaImages/Sustain Digital-14.jpg" alt="...">
               </div>
               <div class="card-body">
                 <h5 class="card-title"><a href="">PUBLICATIONS COMMITTEE</a></h5>
@@ -90,7 +90,7 @@
           <div class="col-md-4 d-flex align-items-stretch">
             <div class="card">
               <div class="card-img">
-                <img src="assets/img/tapaImages/Sustain Digital-36.jpg" alt="...">
+                <img src="assets/img/tapaImages/Sustain Digital-14 (1).jpg" alt="...">
               </div>
               <div class="card-body">
                 <h5 class="card-title"><a href="">CONTINUOUS PROFESSIONAL DEVELOPMENT COMMITTEE</a></h5>
@@ -103,7 +103,7 @@
           <div class="col-md-4 d-flex align-items-stretch">
             <div class="card">
               <div class="card-img">
-                <img src="assets/img/tapaImages/Sustain Digital-3.jpg" alt="...">
+                <img src="assets/img/tapaImages/Sustain Digital-15.jpg  " alt="...">
               </div>
               <div class="card-body">
                 <h5 class="card-title"><a href="">THE TARIFFS AND PRACTICE ISSUES COMMITTEE</a></h5>
@@ -117,7 +117,7 @@
           <div class="col-md-4 d-flex align-items-stretch">
             <div class="card">
               <div class="card-img">
-                <img src="assets/img/tapaImages/Sustain Digital-3.jpg" alt="...">
+                <img src="assets/img/tapaImages/Sustain Digital-38.jpg" alt="...">
               </div>
               <div class="card-body">
                 <h5 class="card-title">
