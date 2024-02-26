@@ -10,7 +10,7 @@ if (!isset($_SESSION['email'])) {
     exit();
 }
 
-
+$email = $_SESSION['email'];
 // Total number of members
 $totalMembersQuery = "SELECT COUNT(*) AS total_members FROM users";
 $totalMembersResult = $conn->query($totalMembersQuery);
@@ -36,6 +36,11 @@ $totalAmountQuery = "SELECT SUM(amount) AS total_amount FROM payments WHERE stat
 $totalAmountResult = $conn->query($totalAmountQuery);
 $totalAmount = $totalAmountResult->fetch_assoc()['total_amount'];
 
+
+//total news
+$totlaNewsQuery = "SELECT COUNT(*) AS total_news FROM news";
+$totalNewsResult = $conn->query($totlaNewsQuery);
+$totalNews = $totalNewsResult->fetch_assoc()['total_news'];
 ?>
 <style>
     .icon1 {
@@ -44,12 +49,13 @@ $totalAmount = $totalAmountResult->fetch_assoc()['total_amount'];
 </style>
 <div class="container mt-4">
     <h2 class="text-center">Dashboard</h2>
+    <h3><?php echo $email ?></h3>
 
     <div class="row">
         <div class="col-md-3 mb-4">
             <div class="card bg-primary">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Total Amount</h5>
+                    <h5 class="card-title">Total Amount(Tzs)</h5>
                     <p class="display-4"><?php echo $totalAmount; ?></p>
                     <i class="bi bi-currency-dollar fa-3x text-light  icon1"></i>
                 </div>
@@ -90,6 +96,16 @@ $totalAmount = $totalAmountResult->fetch_assoc()['total_amount'];
                 <div class="card-body text-center">
                     <h5 class="card-title">Total Members</h5>
                     <p class="display-4"><?php echo $totalMembers; ?></p>
+                    <i class="bi bi-people-fill fa-3x text-light icon1"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card bg-info">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Total updates</h5>
+                    <p class="display-4"><?php echo $totalNews; ?></p>
                     <i class="bi bi-people-fill fa-3x text-light icon1"></i>
                 </div>
             </div>

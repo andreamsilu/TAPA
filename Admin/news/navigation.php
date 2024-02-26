@@ -106,7 +106,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="show_news.php">
+                        <a class="nav-link" href="show_news_admin.php">
                             <i class="bi bi-journal-text"></i> Fetch News
                         </a>
                     </li>

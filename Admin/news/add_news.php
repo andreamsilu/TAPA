@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <?php include "navigation.php"; ?>
 
 <div class="container mt-5 mb-5">
-    <h2 class="text-center">ADD NEWS</h2>
+    <h2 class="text-center"><b>ADD NEWS</b></h2>
     <div class="card">
         <div class="card-body">
             <form action="add_news.php" method="post" enctype="multipart/form-data">
@@ -81,8 +81,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <label for="category">Category:</label>
                     <select class="form-control" id="category" name="category" required>
                         <option value="">Select a category</option>
-                        <option value="category1">All members</option>
-                        <option value="category2">Only with membership</option>
+                        <option value="all_members">All members</option>
+                        <option value="membership_only">Only with membership</option>
                     </select>
                 </div>
 

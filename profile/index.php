@@ -37,14 +37,6 @@
         width: 315px;
     }
 
-
-
-
-
-
-
-
-
     /* Define the slide-from-left animation */
     @keyframes slideFromLeft {
         from {

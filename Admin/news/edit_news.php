@@ -37,20 +37,11 @@ function uploadFile($fileKey, $targetDirectory)
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Database connection
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "TAPA_DB";
-
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+   include('../../forms/connection.php');
 
     // Get form data with default values
     $id = isset($_POST["id"]) ? $_POST["id"] : "";
+    $category = isset($_POST["category"]) ? $_POST["category"] : "";
     $title = isset($_POST["title"]) ? $_POST["title"] : "";
     $description = isset($_POST["description"]) ? $_POST["description"] : "";
     $date = isset($_POST["date"]) ? $_POST["date"] : "";
@@ -74,16 +65,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Prepare and bind the UPDATE statement
-    $stmt = $conn->prepare("UPDATE news SET title=?, description=?, image_url=?, date=?, video_url=? WHERE id=?");
+    $stmt = $conn->prepare("UPDATE news SET category=?, title=?, description=?, image_url=?, date=?, video_url=? WHERE id=?");
 
     // Check if the statement is prepared successfully
     if ($stmt) {
-        $stmt->bind_param("sssssi", $title, $description, $image_file, $date, $video_file, $id);
+        $stmt->bind_param("ssssssi",$category, $title, $description, $image_file, $date, $video_file, $id);
 
         // Execute the statement
         if ($stmt->execute()) {
             // Redirect to read_news.php with success message
-            header("Location: show_news.php?id=$id&success=1");
+            header("Location: show_news_admin.php?id=$id&success=1");
             exit();
         } else {
             echo "Error: " . $stmt->error;
@@ -117,6 +108,16 @@ include "navigation.php";
     ?>
             <form action="edit_news.php" method="post" enctype="multipart/form-data">
                 <input type="hidden" name="id" value="<?php echo $id; ?>">
+
+                <div class="form-group">
+                    <label for="category">Category:</label>
+                    <select class="form-control" id="category" name="category" required>
+                        <option value="">Select a category</option>
+                        <option value="all_members">All members</option>
+                        <option value="membership_only">Only with membership</option>
+                    </select>
+                </div>
+                
                 <div class="form-group">
                     <label for="title">Title:</label>
                     <input type="text" class="form-control" id="title" name="title" value="<?php echo $article['title']; ?>" required>
@@ -153,7 +154,7 @@ include "navigation.php";
         <button type="submit" class="btn btn-primary">Update News</button>
     </div>
     <div class="col">
-        <a href="show_news.php?id=<?php echo $id; ?>" class="btn btn-secondary">Cancel</a>
+        <a href="show_news_admin.php?id=<?php echo $id; ?>" class="btn btn-secondary">Cancel</a>
     </div>
 </div>
 

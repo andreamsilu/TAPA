@@ -153,39 +153,40 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light  ">
-        <a class="navbar-brand" href="index.php"><img src="assets/img/tapa.png" alt=""></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<nav class="navbar navbar-expand-lg navbar-success bg-dark">
+    <a class="navbar-brand" href="index.php">TAPA</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <div class="collapse navbar-collapse" id="navbarContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">updateProgressBar</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Manage</a>
-                </li>
-                <!-- Other Links -->
-            </ul>
+    <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mr-auto"> <!-- Add mr-auto class here -->
+            <li class="nav-item">
+                <a class="nav-link" href="#">updateProgressBar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">membership fees</a>
+            </li>
+            <!-- Add other navigation links here -->
+        </ul>
 
-            <!-- Profile Avatar with Dropdown -->
-            <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-user-circle"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right text-white" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="show_personal_info.php">Profile</a>
-                        <a class="dropdown-item" href="change-password.php">Change Password</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="logout.php">Logout</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
+        <!-- Profile Avatar with Dropdown -->
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user-circle"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Profile</a>
+                    <a class="dropdown-item" href="#">Settings</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Logout</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
 
     <div class="container-fluid">
         <div class="row">
