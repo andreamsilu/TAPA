@@ -1,4 +1,4 @@
-This part goes in the <head> section of your HTML
+<head> 
 <?php include "titleIcon.php"; ?>
 
 <!-- Bootstrap CSS -->
@@ -8,11 +8,11 @@ This part goes in the <head> section of your HTML
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.19.0/font/bootstrap-icons.css">
 
 <!-- Header -->
-<header id="header" class="fixed-top">
-  <div class="container d-flex align-items-center">
+<header id="header" class="fixed-op">
+  <div class="container d-flex align-items-right">
 
     <a href="index.php" class="me-auto m-lg-0">
-      <img src="assets/img/tapa.png" alt="" class="img-fluid logo" width="100px">
+      <img src="assets/img/tapa.png" alt="" class="img-fluid logo" width="400px" style="margin-right:1px;">
     </a>
 
     <nav id="navbar" class="navbar order-last order-lg-0">

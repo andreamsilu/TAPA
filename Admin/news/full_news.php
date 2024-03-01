@@ -3,10 +3,10 @@
 include "../../forms/connection.php";
 
 // Check if the user is authenticated
-if (!isset($_SESSION['email'])) {
-    header("Location: ../../login.php");
-    exit();
-}
+// if (!isset($_SESSION['email'])) {
+//     header("Location: ../../login.php");
+//     exit();
+// }
 // Check if 'id' parameter is provided in the URL
 if (isset($_GET['id'])) {
     // Get the news ID from the URL
@@ -26,40 +26,80 @@ if (isset($_GET['id'])) {
 ?>
 
         <?php
-        include('../../titleIcon.php');
 
         ?>
-         <?php
-           // include "../../header.php";
-            ?>
-
         <!DOCTYPE html>
-        <html>
+<html>
 
-        <head>
-            <title><?php echo $news['title']; ?></title>
-            <!-- Include necessary Bootstrap or CSS links -->
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css" rel="stylesheet">
-            <link rel="stylesheet" href="../../assets/css/style.css">
-            <style>
-                /* Adjust styles for image or video */
-                .media-container {
-                    max-width: 100%;
-                    height: 700px;
-                    justify-content: center;
-                }
-            </style>
-        </head>
+<head>
+    <title><?php echo $news['title']; ?></title>
+    <!-- Include necessary Bootstrap or CSS links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <style>
+        /* Adjust styles for image or video */
+        .media-container {
+            max-width: 100%;
+            height: 700px;
+            justify-content: center;
+        }
 
-        <body>
-           
-            <!-- Navigation -->
-            <!-- if ($comments) { -->
+        /* Styles for back button */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 10px;
+            z-index: -9999; /* Ensure it's above other content */
+        }
 
-            <div class="container" style="margin-top:50px">
-                <h1><?php echo $news['title']; ?></h1>
-                <p>Date: <?php echo $news['date']; ?></p>
+        .back-button a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0F718A;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .back-button a:hover {
+            background-color: #095C72;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Back button -->
+    <!-- <div class="back-button">
+        <a href="../../index.php" onclick="hstory.back();">Home</a>
+    </div> -->
+
+    <?php
+    include('../../titleIcon.php');
+    ?>
+    <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="../../index.php"> <h2>Home</h2></a>
+                    <ol>
+                        <li><a href="../../index.php">Home</a></li>
+                        <li>Full news</li>
+                    </ol>
+                </div>
+
+            </div>
+        </section>
+
+    <!-- Navigation -->
+    <!-- if ($comments) { -->
+
+    <div class="container" style="margin-top:50px">
+                <h1 class="text-center"><?php echo $news['title']; ?></h1>
+                <p class="text-center">Date: <?php echo $news['date']; ?></p>
                 <div class="row">
                     <?php
                     if (!empty($news['video_url'])) {
@@ -104,7 +144,7 @@ if (isset($_GET['id'])) {
                     var newsID = '<?php echo $news['id']; ?>';
 
                     // Create a shareable link with the news ID
-                    var shareLink = "http://example.com/share-news.php?id=" + encodeURIComponent(newsID);
+                    var shareLink = "http://tapa.or.tz/share-news.php?id=" + encodeURIComponent(newsID);
 
                     // Check if the Web Share API is supported
                     if (navigator.share) {
@@ -126,7 +166,7 @@ if (isset($_GET['id'])) {
 
                 document.getElementById('copyButton').addEventListener('click', function() {
                     // Get the shareable link
-                    var shareLink = "http://example.com/share-news.php?id=" + encodeURIComponent('<?php echo $news['id']; ?>');
+                    var shareLink = "http://tapa.or.tz/share-news.php?id=" + encodeURIComponent('<?php echo $news['id']; ?>');
 
                     // Create a temporary input element
                     var tempInput = document.createElement('input');

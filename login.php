@@ -1,5 +1,3 @@
-
-
 <?php include "titleIcon.php" ?>
 
 </head>
@@ -7,39 +5,39 @@
 <body>
     <?php include "header.php" ?>
     <style>
-                        .logo-container {
-                            position: relative;
-                            width: 100%;
-                            height: 120px;
-                            /* Adjust the height as needed */
-                            overflow: hidden;
-                            border: #0F718A 2px dashed;
-                        }
+        .logo-container {
+            position: relative;
+            width: 100%;
+            height: 120px;
+            /* Adjust the height as needed */
+            overflow: hidden;
+            border: #0F718A 2px dashed;
+        }
 
-                        .logo-container img {
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                            max-width: 70%;
-                            max-height: 100%;
-                        }
+        .logo-container img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 70%;
+            max-height: 100%;
+        }
 
-                        i {
-                            color: #0F718A;
-                            font-size: 20px;
-                        }
+        i {
+            color: #0F718A;
+            font-size: 20px;
+        }
 
-                        .btn-primary{
-                            background-color: #0F718A;
-                            color: white;
-                        }
+        .btn-primary {
+            background-color: #0F718A;
+            color: white;
+        }
 
-                        .btn-primary i{
-                            /* background-color: #0F718A; */
-                            color: white;
-                        }
-                    </style>    
+        .btn-primary i {
+            /* background-color: #0F718A; */
+            color: white;
+        }
+    </style>
 
     <main id="main">
 
@@ -65,8 +63,8 @@
             <div class="container" data-aos="fade-up">
                 <div class="row g-0" data-aos="fade-up" data-aos-delay="200">
                     <div class="col-xl-6 img-bg" style="background-image: url('assets/img/tapa/tapa-fam.JPG');background-color:white;opacity:0.6;">
-                  
-                </div>
+
+                    </div>
                     <div class="col-xl-6 slides position-relative">
 
 
@@ -78,7 +76,7 @@
                                 </div>
                                 <h5 class="card-title text-center">Login</h5>
                                 <!-- Login Form -->
-                                <form action="forms/login-script.php"  method="post">
+                                <form action="forms/login-script.php" method="post">
                                     <div class="form-group">
                                         <label for="Email"> <i class="bi bi-envelope"></i> Email:</label>
                                         <input type="text" id="Email" name="email" class="form-control" required>

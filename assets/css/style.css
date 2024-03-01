@@ -103,8 +103,8 @@ h6 {
 }
 
 #header .logo img {
-  /* max-height: 30px; */
-  width: 40%;
+  max-height: 30px;
+  width: 40px;
 }
 
 /*--------------------------------------------------------------
@@ -142,7 +142,6 @@ h6 {
   }
 }
 
-
 /* ====Desktop Navigation =====*/
 .navbar {
   padding: 0;
@@ -151,8 +150,16 @@ h6 {
   align-items: center;
 }
 
+.navbar .logo {
+  order: -1; /* Moves the logo to the left */
+}
+
+.navbar .nav-links {
+  margin-left: 0px; /* Moves the nav-links to the right */
+}
+
 .navbar ul {
-  margin: 0;
+  margin-left: 50px;
   padding: 0;
   display: flex;
   list-style: none;
@@ -167,10 +174,10 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 20px;
+  padding: 5px 10px;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   color: #111;
   white-space: nowrap;
   text-transform: uppercase;
@@ -252,43 +259,38 @@ h6 {
 }
 
 #header .logo img {
-  max-height: 40px;
-  padding-right: 40px;
+  max-height: auto;
+  margin-right: 40px;
 }
 
 /* Additional Styles for Navigation Links */
 .nav-links {
-  align-self: flex-end;
   display: flex;
   text-align: center;
-  padding: 6px 20px;
+  padding: 6px 20px 0px  0px;
   font-size: 18px;
-  border-radius: 0px;
-  border: #0F718A solid 2px;
-  margin-bottom: 15px;
-  margin-left: 20px;
+  /* border-radius: 10px; */
+  /* border: #0F718A solid 2px; */
+  /* margin-bottom: 10px; */
+  margin-top: 5px;
+  margin-left: 30px;
 }
-
-/* .nav-links:hover {
-  background-color: #0F718A;
-  color: #fff;
-} */
 
 .nav-link {
-  display: inline-block;
+  display: inline;
   text-decoration: none;
   color: #333;
-  font-weight: 400;
-  padding: 4px 6px;
+  font-weight: 500;
+  /* padding: 4px 6px; */
   margin-right: 1px;
-  padding-right: 5px;
-
+  padding-right: 1px;
 }
 
-.nav-link:hover {
+.nav-link:hover a {
   border-radius: 0px;
-  color: #fff;
+  color: #0F718A;
   background-color: #0F718A;
+  /* font-size: 20px; */
 }
 
 /*======== mobile navigation =====*/
