@@ -18,6 +18,8 @@
     <nav id="navbar" class="navbar order-last order-lg-0">
       <ul>
         <li><a class="active" href="index.php">Home</a></li>
+        <li><a href="about.php">About us</a></li>
+
         <li class="dropdown">
           <a href="membeship-category.php">
             <span>Membership</span> <i class="bi bi-chevron-down"></i>
@@ -27,7 +29,7 @@
             <li><a href="membeship-category.php">Register</a></li>
           </ul>
         </li>
-        <li class="dropdown">
+        <!-- <li class="dropdown">
           <a href="#">
             <span>About</span> <i class="bi bi-chevron-down"></i>
           </a>
@@ -36,7 +38,7 @@
             <li><a href="commitees.php">Committees</a></li>
             <li><a href="zones.php">Zone & Division</a></li>
           </ul>
-        </li>
+        </li> -->
         <li><a href="publication-resources.php">Publication & Resources</a></li>
         <li><a href="photo-gallery.php">Photo Gallery</a></li>
         <li><a href="contact.php">Contact</a></li>

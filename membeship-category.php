@@ -119,7 +119,9 @@
     <main id="main">
         <section id="categories" class="categories py-5">
             <div class="container">
-                <h2 class="text-center mb-5">UNLOCK THE BENEFITS OF TAPA MEMBERSHIP CATEGORIES</h2>
+                <div class="section-title">
+                    <h2>UNLOCK THE BENEFITS OF TAPA MEMBERSHIP CATEGORIES</h2>
+                </div>
                 <div class="row row-cols-1 row-cols-md-2 g-4">
                     <div class="col-md-4">
                         <div class="card shadow-sm h-100">
@@ -131,6 +133,7 @@
                                     <li class="list-group-item">Exclusive member benefits</li>
                                     <li class="list-group-item">Discounted event registration</li>
                                     <li class="list-group-item">Voting rights in TAPA elections</li>
+                                    <li class="list-group-item">50,000 TSH Annual Fee</li>
                                 </ul>
                                 <a href="registration.php" class="btn btn-primar">Register Now</a>
                             </div>
@@ -147,6 +150,7 @@
                                     <li class="list-group-item">Access to member resources</li>
                                     <li class="list-group-item">Networking opportunities</li>
                                     <li class="list-group-item">Reduced event registration fees</li>
+                                    <li class="list-group-item">20,000 TSH Annual Fee</li>
                                 </ul>
                                 <a href="registration.php" class="btn btn-primar">Register Now</a>
                             </div>
@@ -162,7 +166,8 @@
                                 <ul class="list-group list-group-flush mb-3">
                                     <li class="list-group-item">Limited access to resources</li>
                                     <li class="list-group-item">Basic networking opportunities</li>
-                                    <li class="list-group-item">Discounted rates on select events</li>
+                                    <li class="list-group-item">20,000 TSH Annual Fee</li>
+                                    
                                 </ul>
                                 <a href="registration.php" class="btn btn-primar">Register Now</a>
                             </div>
@@ -181,6 +186,7 @@
                                     <li class="list-group-item">Discounted student rates</li>
                                     <li class="list-group-item">Exclusive mentorship opportunities</li>
                                     <li class="list-group-item">Access to student-focused resources</li>
+                                    <li class="list-group-item">10,000 TSH Annual Fee</li>
                                 </ul>
                                 <a href="registration.php" class="btn btn-primar">Register Now</a>
                             </div>
@@ -197,6 +203,7 @@
                                     <li class="list-group-item">Access to select TAPA events</li>
                                     <li class="list-group-item">Networking opportunities</li>
                                     <li class="list-group-item">Stay updated on psychology news</li>
+                                    <li class="list-group-item">30,000 TSH Annual Fee</li>
                                 </ul>
                                 <a href="registration.php" class="btn btn-primar">Register Now</a>
                             </div>
@@ -213,6 +220,7 @@
                                     <li class="list-group-item">Online access to select resources</li>
                                     <li class="list-group-item">Discounted rates on virtual events</li>
                                     <li class="list-group-item">Connect with the global psychology community</li>
+                                    <li class="list-group-item">50,000 TSH Annual Fee</li>
                                 </ul>
                                 <a href="registration.php" class="btn btn-primar">Register Now</a>
                             </div>
@@ -225,4 +233,5 @@
     </main>
     <?php include "footer.php" ?>
 </body>
+
 </html>

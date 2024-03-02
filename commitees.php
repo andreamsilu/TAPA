@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,19 +10,18 @@
   <meta content="" name="keywords">
   <link rel="stylesheet" href="assets/css/style.css">
 
-  <?php include "titleIcon.php" 
+  <?php //include "titleIcon.php" 
   ?>
 
-</head>
+</head> -->
 
-<body>
-  <?php include "header.php" ?>
+  <?php //include "header.php" ?>
 
 
   <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
+    <!-- <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
@@ -34,14 +33,16 @@
         </div>
 
       </div>
-    </section>
+    </section> -->
     <!-- End Breadcrumbs -->
 
 
     <!-- ======= Events Section ======= -->
     <section id="events" class="events">
       <div class="container" data-aos="fade-up">
-
+      <div class="section-title">
+          <h2>COMMITTEES</h2>
+        </div>
         <div class="row">
           <div class="col-md-4 d-flex align-items-stretch">
             <div class="card">
@@ -137,7 +138,4 @@
 
   </main>
   <!-- End #main -->
-  <?php include "footer.php" ?>
-</body>
-
-</html>
+  <?php //include "footer.php" ?>

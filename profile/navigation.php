@@ -162,10 +162,10 @@
     <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav mr-auto"> <!-- Add mr-auto class here -->
             <li class="nav-item">
-                <a class="nav-link" href="#">updateProgressBar</a>
+                <!-- <a class="nav-link" href="#">updateProgressBar</a>  -->
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">membership fees</a>
+                <!-- <a class="nav-link" href="#">membership fees</a> -->
             </li>
             <!-- Add other navigation links here -->
         </ul>

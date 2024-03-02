@@ -2,9 +2,9 @@
 <section id="divisions-list" class="divisions-list">
   <div class="container" data-aos="fade-up">
 
-    <div class="section-header text-center py-5">
-      <h2>TAPA DIVISIONS</h2>
-    </div>
+  <div class="section-title">
+    <h2 class="pt-5">TAPA DIVISIONS</h2>
+  </div>
 
     <div class="row gy-5">
 

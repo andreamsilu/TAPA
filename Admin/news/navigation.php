@@ -9,6 +9,8 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons bundled with Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap-icons.css" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css" rel="stylesheet"> -->
     <style>
         /* Adjust sidebar styles */
         .sidebar {
@@ -64,10 +66,10 @@
     <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#">updateProgressBar</a>
+                <!-- <a class="nav-link" href="#">updateProgressBar</a> -->
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">membership fees</a>
+                <!-- <a class="nav-link" href="#">membership fees</a> -->
             </li>
             <!-- Add other navigation links here -->
         </ul>

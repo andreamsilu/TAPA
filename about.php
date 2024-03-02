@@ -18,7 +18,7 @@
 </head>
 
 <body>
-<?php include "header.php" ?>
+  <?php include "header.php" ?>
 
 
   <main id="main">
@@ -39,7 +39,7 @@
     </section>
     <!-- End Breadcrumbs -->
 
-    
+
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
@@ -47,24 +47,26 @@
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
             <div class="about-img">
-              <img src="assets/img/tapaImages/Sustain Digital-11.jpg"  alt="">
+              <img src="assets/img/tapaImages/Sustain Digital-11.jpg" alt="">
             </div>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-    <h3><i class="bi bi-university"></i> Tanzanian Psychological Association</h3>
-    <p class="fs-italic">
-        TAPA is a professional association of Tanzanian psychologists, that aims to advance Psychology as a science, profession, and a means of promoting human well-being.
-    </p>
-    
-    <h3><i class="bi bi-bullseye"></i> Mission</h3>
-    <p>
-    TAPA's mission is to advance psychology in Tanzania, promoting professional excellence, mental well-being, and reducing stigma. Through advocacy and collaboration, we aim to influence positive policy changes and empower professionals to make a lasting impact on Tanzania's mental health landscape.    </p>
-    
-    <h3><i class="bi bi-eye"></i> Vision</h3>
-    <p>
-    TAPA envisions a Tanzania where psychological well-being is prioritized, stigma surrounding mental health is eradicated, and individuals have access to high-quality mental health services. We strive to create a society that values and nurtures mental health for all.
-    </p>
-</div>
+            <h3><i class="bi bi-university"></i> Tanzanian Psychological Association</h3>
+            <p class="fs-italic">
+              TAPA is the leading  professional organization representing psychology in the Tanzania, with a good number of researchers, educators, clinicians, consultants, and students as its members.
+            </p>
+
+            <h3><i class="bi bi-bullseye"></i> Mission</h3>
+            <p>
+              The Tanzanian Psychological Association is a non- profit organization
+              which has the mission to promote and to support psychological training and
+              services in Tanzania</p>
+
+            <h3><i class="bi bi-eye"></i> Vision</h3>
+            <p>
+              To promote the common interests of the members of the Association, who are
+              practitioners of or who are involved in the field of psychology. </p>
+          </div>
 
         </div>
 
@@ -72,85 +74,22 @@
     </section>
     <!-- End About Section -->
 
-   
-    <!-- End About Us Section -->
-     <!-- ======= team Section ======= -->
-     <section id="team" class="team">
+
+     <!-- ======= Doctors Section ======= -->
+     <section id="doctors" class="doctors section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Our Leaders</h2>
-        </div>
-        <p class="text-center p-2">Prominent individuals within the organization who hold influential roles and responsibilities.</p>
-
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6">
-            <div class="member" data-aos="zoom-in" data-aos-delay="100">
-              <img src="assets/img/team/shagembe.png" class="img-fluid member-img" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>Shagembe Magolanga</h4>
-                  <span>President</span>
-                </div>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="member" data-aos="zoom-in" data-aos-delay="200">
-              <img src="assets/img/tapa/hussen.png" class="img-fluid member-img" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>Hussein Mshunga</h4>
-                  <span>Vice president</span>
-                </div>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="member" data-aos="zoom-in" data-aos-delay="300">
-              <img src="assets/img/zones/Gs-removebg-preview.png" class="img-fluid member-img" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>Deogratius Ramale</h4>
-                  <span>General Scretary</span>
-                </div>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
+          <h2>EXECUTIVE COMMITTEE</h2>
+          <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
         </div>
 
         <div class="row">
 
-          <div class="col-lg-4 col-md-6">
-            <div class="member" data-aos="zoom-in" data-aos-delay="100">
-              <img src="assets/img/tapa/eunice-kitenge.png" class="img-fluid member-img" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>Eunice Kitenge</h4>
-                  <span>Deputy General Secretary</span>
-                </div>
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-img">
+                <img src="assets/img/team/shagembe.png" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -158,17 +97,17 @@
                   <a href=""><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
+              <div class="member-info">
+                <h4>Shagembe Magolanga</h4>
+                <span>President</span>
+              </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
-            <div class="member" data-aos="zoom-in" data-aos-delay="200">
-              <img src="assets/img/tapa/bertha-lusioki.png" class="img-fluid member-img" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>Dr Bertha Lusioki</h4>
-                  <span>Treasurer</span>
-                </div>
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="200">
+              <div class="member-img">
+                <img src="assets/img/zones/Gs-removebg-preview.png" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -176,23 +115,45 @@
                   <a href=""><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
+              <div class="member-info">
+                <h4>Deogratius Ramale</h4>
+                <span>General Scretary</span>
+              </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
-            <div class="member" data-aos="zoom-in" data-aos-delay="300">
-              <img src="assets/img/tapa/mauki2.png" class="img-fluid member-img" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>Dr.Chris mauki</h4>
-                  <span>Excom advisor</span>
-                </div>
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="300">
+              <div class="member-img">
+                <img src="assets/img/tapa/bertha-lusioki.png" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
                   <a href=""><i class="bi bi-instagram"></i></a>
                   <a href=""><i class="bi bi-linkedin"></i></a>
                 </div>
+              </div>
+              <div class="member-info">
+                <h4>Dr Bertha Lusioki</h4>
+                <span>Treasurer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="400">
+              <div class="member-img">
+                <img src="assets/img/tapa/mauki2.png" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Dr.Chris mauki</h4>
+                <span>Excom advisor</span>
               </div>
             </div>
           </div>
@@ -201,10 +162,16 @@
 
       </div>
     </section>
-    <!-- End team Section -->
+    <!-- End Doctors Section -->
 
-<!-- ======= Our leadership Section ======= -->
-<!-- <section id="team" class="team section-bg">
+    <?php
+    include 'commitees.php';
+    include 'zones.php';
+    ?>
+
+
+    <!-- ======= Our leadership Section ======= -->
+    <!-- <section id="team" class="team section-bg">
   <div class="container">
 
     <div class="section-title" data-aos="fade-up">
@@ -326,8 +293,8 @@
 
   </div>
 </section> -->
-<!-- End Our Team Section -->
-    
+    <!-- End Our Team Section -->
+
 
     <!-- ======= Our Skills Section ======= -->
     <!-- <section id="skills" class="skills">

@@ -69,6 +69,7 @@ if (!isset($_SESSION['email']) || isset($_SESSION['id'])) {
     exit();
 }
 // Fetch user profile information including the profile picture
+// $userID =$_SESSION['id'];
 $user_email = $_SESSION['email'];
 $query = "SELECT * FROM users WHERE email = '$user_email'";
 $result = $conn->query($query);
@@ -118,7 +119,7 @@ if ($result->num_rows > 0) {
                         <div class="progress-bar" role="progressbar" style="width: <?php echo $completionPercentage; ?>%;font-size: 25px;" aria-valuenow="<?php echo $completionPercentage; ?>" aria-valuemin="0" aria-valuemax="100"><?php echo $completionPercentage; ?>%</div>
                     </div>
 
-                    <a href="edit_personal_info.php?id=<?php echo $userID; ?>" class="btn btn-primary  edit-info"><i class="bi bi-pencil-square"></i> Edit profile</a>
+                    <a href="edit_personal_info.php?id=<?php $userID; ?>" class="btn btn-primary  edit-info"><i class="bi bi-pencil-square"></i> Edit profile</a>
                 </div>
 
 
