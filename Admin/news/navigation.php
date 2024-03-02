@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
     <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons bundled with Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap-icons.css" rel="stylesheet">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css" rel="stylesheet"> -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Jss+8gN5eWPS2+xe7i7e6pZYO/dUZ37OqYz3NjcmmJ1W4Z" crossorigin="anonymous">
+    <!-- Bootstrap Icons CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Latest Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-TUoGPr7tIJKL+XAKTmwYGhM5lmTr/vpaCoa+C/7QOpj0nHLp1qO3gOeDeJZ5y11Y4W/ijE8gkPdCEwRofV5JwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <style>
         /* Adjust sidebar styles */
         .sidebar {
@@ -66,10 +70,10 @@
     <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <!-- <a class="nav-link" href="#">updateProgressBar</a> -->
+                <a class="nav-link" href="#">updateProgressBar</a>
             </li>
             <li class="nav-item">
-                <!-- <a class="nav-link" href="#">membership fees</a> -->
+                <a class="nav-link" href="#">membership fees</a>
             </li>
             <!-- Add other navigation links here -->
         </ul>

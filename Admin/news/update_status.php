@@ -3,7 +3,6 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 session_start(); // Start the session if not already started
 
-// Check if the user is logged in or has appropriate permissions (you can customize this part as per your authentication logic)
 
 // Include the database connection
 include "../../forms/connection.php";
@@ -28,7 +27,7 @@ if (isset($_POST['news_id']) && isset($_POST['status'])) {
     // Check if the update was successful
     if ($stmt->affected_rows > 0) {
         // Redirect back to the page where the news article was being viewed
-        header("Location: show_news.php?id=$news_id");
+        header("Location: show_news_admin.php?id=$news_id");
         exit(); // Stop further execution
     } else {
         echo "Failed to update the status of the news article.";

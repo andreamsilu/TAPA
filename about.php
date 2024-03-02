@@ -62,10 +62,14 @@
               which has the mission to promote and to support psychological training and
               services in Tanzania</p>
 
-            <h3><i class="bi bi-eye"></i> Principle objective</h3>
+            <h3><i class="bi bi-people"></i> Principle objective</h3>
             <p>
               To promote the common interests of the members of the Association, who are
-              practitioners of or who are involved in the field of psychology. </p>
+              practitioners of or who are involved in the field of psychology.
+            </p>
+
+            <h3><i class="bi bi-eye"></i> Vision</h3>
+            <p>A mentally healthy Tanzania, where everyone has access to quality psychological care, empowering them to thrive.</p>
           </div>
 
         </div>
@@ -81,11 +85,9 @@
 
         <div class="section-title">
           <h2>EXECUTIVE COMMITTEE</h2>
-          <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
         </div>
 
         <div class="row">
-
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="100">
               <div class="member-img">

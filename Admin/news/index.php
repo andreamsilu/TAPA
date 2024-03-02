@@ -1,7 +1,6 @@
 <?php
 session_start(); // Uncommented session_start()
 
-include "navigation.php";
 include "../../forms/connection.php";
 
 // Check if the user is authenticated
@@ -41,6 +40,10 @@ $totalAmount = $totalAmountResult->fetch_assoc()['total_amount'];
 $totlaNewsQuery = "SELECT COUNT(*) AS total_news FROM news";
 $totalNewsResult = $conn->query($totlaNewsQuery);
 $totalNews = $totalNewsResult->fetch_assoc()['total_news'];
+?>
+
+<?php include
+    include "navigation.php";
 ?>
 <style>
     .icon1 {

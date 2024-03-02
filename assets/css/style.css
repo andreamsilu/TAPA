@@ -1314,14 +1314,14 @@ width: 450px;
 .about .about-img {
   position: relative;
   transition: 0.5s;
-  height: 390px;
+  height: 520px;
 }
 
 .about .about-img img {
   max-width: 100%;
   border: 4px solid rgba(255, 255, 255, 0.2);
   position: relative;
-  height: 400px;
+  height: 530px;
 
 }
 
