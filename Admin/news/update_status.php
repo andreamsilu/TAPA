@@ -7,13 +7,11 @@ session_start(); // Start the session if not already started
 // Include the database connection
 include "../../forms/connection.php";
 
-// Check if the user is authenticated
 if (!isset($_SESSION['email'])) {
     header("Location: ../../login.php");
     exit();
 }
 
-// Check if the news ID and status are provided via POST method
 if (isset($_POST['news_id']) && isset($_POST['status'])) {
     // Sanitize the input
     $news_id = $_POST['news_id'];
