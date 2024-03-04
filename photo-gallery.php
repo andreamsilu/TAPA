@@ -55,7 +55,7 @@
             <div class="portfolio-info">
               <h4>AGM 2023</h4>
               <p>Images</p>
-              <a href="assets/img/tapaImages/Sustain Digital-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bi bi-camera"></i></a>
+              <a href="assets/img/tapaImages/Sustain Digital-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bi bi-camera"></i></a>
             </div>
           </div>
 
@@ -64,7 +64,7 @@
             <div class="portfolio-info">
               <h4>AGM 2022</h4>
               <p>Images</p>
-              <a href="assets/img/tapaImages/Sustain Digital-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bi bi-camera"></i></a>
+              <a href="assets/img/tapaImages/Sustain Digital-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bi bi-camera"></i></a>
             </div>
           </div>
 
@@ -73,7 +73,7 @@
             <div class="portfolio-info">
               <h4>AGM 2023</h4>
               <p>Images</p>
-              <a href="assets/img/tapaImages/Sustain Digital-11.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bi bi-camera"></i></a>
+              <a href="assets/img/tapaImages/Sustain Digital-11.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bi bi-camera"></i></a>
             </div>
           </div>
 
@@ -82,7 +82,7 @@
             <div class="portfolio-info">
               <h4>AGM 2022</h4>
               <p>Images</p>
-              <a href="assets/img/tapaImages/Sustain Digital-24.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bi bi-camera"></i></a>
+              <a href="assets/img/tapaImages/Sustain Digital-24.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bi bi-camera"></i></a>
             </div>
           </div>
 
@@ -91,7 +91,7 @@
             <div class="portfolio-info">
               <h4>AGM 2021</h4>
               <p>Images</p>
-              <a href="assets/img/tapaImages/Sustain Digital-32.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bi bi-camera"></i></a>
+              <a href="assets/img/tapaImages/Sustain Digital-32.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bi bi-camera"></i></a>
             </div>
           </div>
 
@@ -100,7 +100,7 @@
             <div class="portfolio-info">
               <h4>AGM 2020</h4>
               <p>Images</p>
-              <a href="assets/img/tapaImages/Sustain Digital-38.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bi bi-camera"></i></a>
+              <a href="assets/img/tapaImages/Sustain Digital-38.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bi bi-camera"></i></a>
             </div>
           </div>
 
@@ -109,7 +109,7 @@
             <div class="portfolio-info">
               <h4>AGM 2020</h4>
               <p>Images</p>
-              <a href="assets/img/tapaImages/Sustain Digital-15 (1).jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bi bi-camera"></i></a>
+              <a href="assets/img/tapaImages/Sustain Digital-15 (1).jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link""><i class="bi bi-camera"></i></a>
             </div>
           </div>
 
@@ -118,7 +118,7 @@
             <div class="portfolio-info">
               <h4>AGM 2019</h4>
               <p>Images</p>
-              <a href="assets/img/tapaImages/Sustain Digital-11.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bi bi-camera"></i></a>
+              <a href="assets/img/tapaImages/Sustain Digital-11.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link""><i class="bi bi-camera"></i></a>
             </div>
           </div>
 
@@ -127,7 +127,7 @@
             <div class="portfolio-info">
               <h4>AGM 2018</h4>
               <p>Images</p>
-              <a href="assets/img/tapaImages/slide-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bi bi-camera"></i></a>
+              <a href="assets/img/tapaImages/slide-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bi bi-camera"></i></a>
             </div>
           </div>
 
