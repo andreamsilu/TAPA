@@ -1,5 +1,9 @@
-<?php include "navigation.php"; 
+<?php 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 session_start();
+include "navigation.php"; 
+
 ?>
 
 <style>
@@ -43,17 +47,27 @@ if (!isset($_SESSION['email'])) {
 
 // Check if 'id' parameter is provided in the URL
 if (isset($_GET['id'])) {
-    // Get the member ID from the URL
     $member_id = $_GET['id'];
 
     // Prepare a SELECT query to fetch specific member information by ID
     $stmt = $conn->prepare("SELECT * FROM users WHERE id = ?");
+    if (!$stmt) {
+        die("Prepare failed: " . $conn->error);
+    }
+
+    // Bind the parameter
     $stmt->bind_param("i", $member_id);
-    $stmt->execute();
+
+    // Execute the statement
+    if (!$stmt->execute()) {
+        die("Execution failed: " . $stmt->error);
+    }
+
+    // Get the result
     $result = $stmt->get_result();
 
+    // Check if any rows were returned
     if ($result->num_rows > 0) {
-        // Fetch the member details
         $member = $result->fetch_assoc();
 
         // Display the member information in a table
@@ -66,12 +80,15 @@ if (isset($_GET['id'])) {
         echo "No member found with the provided ID.";
     }
 
-    // Close statement and database connection
+    // Close statement
     $stmt->close();
+    
+    // Close database connection
     $conn->close();
 } else {
     echo "No member ID provided.";
 }
 ?>
+
 
 <?php include "footer.php"; ?>
