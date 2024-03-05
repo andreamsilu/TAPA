@@ -17,7 +17,7 @@ $sql = "SELECT * FROM users WHERE role = '1'";
 // Execute the query
 $result = $conn->query($sql);
 
-include "../Admin/news/navigation.php";
+include("navigation.php");
 
 ?>
 
@@ -63,6 +63,6 @@ include "../Admin/news/navigation.php";
 <?php
 // Close the database connection
 // $conn->close();
-include "../Admin/news/footer.php";
+include("footer.php");
 ?>
 
