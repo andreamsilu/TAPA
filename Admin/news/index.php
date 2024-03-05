@@ -42,7 +42,7 @@ $totalNewsResult = $conn->query($totlaNewsQuery);
 $totalNews = $totalNewsResult->fetch_assoc()['total_news'];
 ?>
 
-<?php include
+<?php 
     include("navigation.php");
 ?>
 <style>
