@@ -52,13 +52,13 @@ $totalNews = $totalNewsResult->fetch_assoc()['total_news'];
 </style>
 <div class="container mt-4">
     <h2 class="text-center">Dashboard</h2>
-    <h3><?php echo $email ?></h3>
+    <h3><?php echo $email; ?></h3>
 
     <div class="row">
         <div class="col-md-3 mb-4">
             <div class="card bg-primary">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Total Amount(Tzs)</h5>
+                    <h5 class="card-title">Total Amount (Tzs)</h5>
                     <p class="display-4"><?php echo $totalAmount; ?></p>
                     <i class="bi bi-currency-dollar fa-3x text-light  icon1"></i>
                 </div>
@@ -76,7 +76,7 @@ $totalNews = $totalNewsResult->fetch_assoc()['total_news'];
         <div class="col-md-3 mb-4">
             <div class="card bg-warning">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Total Pending fees</h5>
+                    <h5 class="card-title">Total Pending Fees</h5>
                     <p class="display-4"><?php echo $totalPending; ?></p>
                     <i class="bi bi-cash-coin fa-3x text-light icon1"></i>
                 </div>
@@ -85,7 +85,7 @@ $totalNews = $totalNewsResult->fetch_assoc()['total_news'];
         <div class="col-md-3 mb-4">
             <div class="card bg-danger">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Total Unpaid fees</h5>
+                    <h5 class="card-title">Total Unpaid Fees</h5>
                     <p class="display-4"><?php echo $totalUnpaid; ?></p>
                     <i class="bi bi-cash-coin fa-3x text-light icon1"></i>
                 </div>
@@ -107,7 +107,7 @@ $totalNews = $totalNewsResult->fetch_assoc()['total_news'];
         <div class="col-md-3 mb-4">
             <div class="card bg-info">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Total updates</h5>
+                    <h5 class="card-title">Total Updates</h5>
                     <p class="display-4"><?php echo $totalNews; ?></p>
                     <i class="bi bi-people-fill fa-3x text-light icon1"></i>
                 </div>
