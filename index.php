@@ -18,6 +18,7 @@
 <?php
 include "header.php";
 ?>
+
 <body>
   <?php
   include "hero.php";
@@ -109,24 +110,24 @@ include "header.php";
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
-                  What is psychotherapy/counseling?
+                  1.Who and how can one join TAPA?
                 </button>
               </h2>
               <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
                 <div class="accordion-body">
-                  Psychotherapy or counseling is a professional process that helps individuals explore and manage their emotions, thoughts, and behaviors to improve mental well-being. </div>
+                  TAPA Membership is open to all Tanzanian citizens and non-Tanzanian citizens who are practitioners of Psychology or have an interest in the field of Psychology. We have different categories of membership. Visit <a href="membeship-category.php">here</a>
+                </div>
               </div>
             </div>
 
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
-                  How do I know if I need therapy? </button>
+                  2.What will I benefit from being a member of TAPA? </button>
               </h2>
               <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
                 <div class="accordion-body">
-                  If you're experiencing persistent emotional distress, behavioral issues, or difficulties in daily functioning, it may be time to consider therapy.
-
+                  The benefits of becoming a member of TAPA include but are not limited to capacity building, mentorship, and supervision of members, members endorsement, participating in community outreaches for awareness and sensitization on mental health and psychological issues, and advocating for policies and laws reformation to support and promote psychological training and services in Tanzania.
                 </div>
               </div>
             </div>
@@ -134,12 +135,12 @@ include "header.php";
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
-                  How do I choose the right therapist for me? </button>
+                  3.Does TAPA have an office that provides counseling services?
+                </button>
               </h2>
               <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
                 <div class="accordion-body">
-                  Choose a therapist based on their expertise, approach, and how comfortable you feel discussing your concerns with them.
-
+                  TAPA as an association has no office offering counseling or psychological services. Our members are found in institutions where they offer services and some provide services as private practitioners. If you need counseling or psychological services, we advise you to consult private practitioners or organizations offering psychological services.
                 </div>
               </div>
             </div>
@@ -155,12 +156,11 @@ include "header.php";
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-1">
-                  What can I expect in my first therapy session? </button>
+                  4.How can I get a practicing license if I want to practice as a psychologist in Tanzania? </button>
               </h2>
               <div id="faq2-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
                 <div class="accordion-body">
-                  The first session involves getting to know each other, discussing your reasons for seeking therapy, and understanding the therapeutic process.
-
+                  Licensing practitioners is the responsibility of the government. Currently, the government of Tanzania has no act guiding psychology practices. If you want to practice in Tanzania, we advise you to get a work permit (if you are a foreign citizen) and register your business with the local authorities. Another option is to practice under an organization with legal local registration.
                 </div>
               </div>
             </div>
@@ -168,12 +168,12 @@ include "header.php";
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-2">
-                  How long does therapy usually take? </button>
+                  5.Do psychologists know what people are thinking by just looking at them?
+                </button>
               </h2>
               <div id="faq2-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
                 <div class="accordion-body">
-                  Therapy duration varies depending on your needs and progress, ranging from a few sessions to several months or more.
-
+                  Psychologists study behavior, which is an interaction of cognitive and affective states. They use various methods to study people’s behaviors and are skilled in reading non-verbal cues. They come to understand what people are experiencing by doing a thorough assessment through interviews, observation, and psychological tests. They can not know what people are thinking by simply looking at them.
                 </div>
               </div>
             </div>
@@ -181,12 +181,12 @@ include "header.php";
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-3">
-                  What's the difference between a psychologist and a psychiatrist? </button>
+                  6.Does TAPA provide internship opportunities for students?
+                </button>
               </h2>
               <div id="faq2-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
                 <div class="accordion-body">
-                  Psychologists provide therapy and counseling, while psychiatrists can prescribe medication in addition to therapy.
-
+                  If you are looking for an internship opportunity, we advise you to look for an organization offering psychological services. TAPA has no office providing psychological services. Our principal objective is to support psychological training and services in Tanzania. TAPA implements various community outreach programs in which you can participate as a member or seasoned volunteer.
                 </div>
               </div>
             </div>
@@ -198,7 +198,7 @@ include "header.php";
 
     </div>
     <style>
-  
+
     </style>
   </section>
   <!-- End F.A.Q Section -->
@@ -275,7 +275,7 @@ include "header.php";
   <!-- Owl Carousel JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script>
-   
+
   </script>
 </body>
 

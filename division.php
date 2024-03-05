@@ -39,7 +39,7 @@
       <div class="col-lg-4 col-md-6 division-item d-flex" data-aos="fade-up" data-aos-delay="400">
         <div class="icon flex-shrink-0"><i class="bi bi-book" style="color: #15bfbc;"></i></div>
         <div>
-          <h4 class="title"><a href="#" class="stretched-link">Educational Psychology</a></h4>
+          <h4 class="title"><a href="#" class="stretche-link">Educational Psychology</a></h4>
           <p class="description">The Educational Psychology Division at TAPA is dedicated to enhancing educational practices...</p>
         </div>
       </div>
