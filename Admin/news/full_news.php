@@ -229,7 +229,7 @@ if (isset($_GET['id'])) {
                 }
 
                 $stmt->close();
-                // $conn->close();
+                // $conn->close();  
                 ?>
             </div>
 
@@ -264,7 +264,7 @@ if (isset($_GET['id'])) {
     }
 
     // Close statement and database connection
-    $stmt->close();
+    // $stmt->close();
     $conn->close();
 } else {
     echo "No news ID provided.";
