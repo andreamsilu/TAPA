@@ -43,7 +43,7 @@ $totalNews = $totalNewsResult->fetch_assoc()['total_news'];
 ?>
 
 <?php include
-    include "navigation.php";
+    include("navigation.php");
 ?>
 <style>
     .icon1 {
