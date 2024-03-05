@@ -1,27 +1,15 @@
 <?php
- 
- 
-
 error_reporting(E_ALL);
 ini_set('display_errors', 1);   
 
- session_start();
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "TAPA_DB";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+//  session_start();
+include("connection.php");
 
 // Check if the user is authenticated
 if (!isset($_SESSION['email'])) {
-    header("Location: ../../login.php");
-    exit();
+    // header("Location: ../../login.php");
+    // exit();
 }
 // SQL query to fetch users where role is 1
 $sql = "SELECT * FROM users WHERE role = '1'";
@@ -29,7 +17,7 @@ $sql = "SELECT * FROM users WHERE role = '1'";
 // Execute the query
 $result = $conn->query($sql);
 
-include "navigation.php";
+include "../Admin/news/navigation.php";
 
 ?>
 
@@ -74,6 +62,7 @@ include "navigation.php";
 
 <?php
 // Close the database connection
-$conn->close();
-include "footer.php";
+// $conn->close();
+include "../Admin/news/footer.php";
 ?>
+
