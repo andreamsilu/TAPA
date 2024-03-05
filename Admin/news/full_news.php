@@ -25,9 +25,6 @@ if (isset($_GET['id'])) {
         // Display the news article details
 ?>
 
-        <?php
-
-        ?>
         <!DOCTYPE html>
 <html>
 
@@ -155,7 +152,6 @@ if (isset($_GET['id'])) {
                             .then(() => console.log('Successful share'))
                             .catch((error) => console.log('Error sharing:', error));
                     } else {
-                        // Fallback for browsers that do not support Web Share API
                         // You can customize this fallback based on your needs (e.g., open a modal with sharing options)
                         alert("Share this link for '" + newsTitle + "': " + shareLink);
                     }
@@ -166,7 +162,7 @@ if (isset($_GET['id'])) {
 
                 document.getElementById('copyButton').addEventListener('click', function() {
                     // Get the shareable link
-                    var shareLink = "http://tapa.or.tz/share-news.php?id=" + encodeURIComponent('<?php echo $news['id']; ?>');
+                    var shareLink = "https://tapa.or.tz/share-news.php?id=" + encodeURIComponent('<?php echo $news['id']; ?>');
 
                     // Create a temporary input element
                     var tempInput = document.createElement('input');

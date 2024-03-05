@@ -25,7 +25,7 @@ include "header.php";
   <div class="section-title">
     <h2 class="pt-5">UPDATES</h2>
   </div>
-  <?php include "Admin/news/read_news.php" ?>
+  <?php include "./Admin/news/read_news.php" ?>
 
   <!-- ======= Services Section ======= -->
   <section id="services" class="services section-bg">

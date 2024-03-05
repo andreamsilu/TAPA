@@ -2,13 +2,17 @@
     /* Additional custom styles as needed */
     .news-card {
         margin-bottom: 20px;
-        height: 400px; /* Set a fixed height for the cards */
+        height: 400px;
+        /* Set a fixed height for the cards */
     }
 
     .news-card img {
-        height: 250px; /* Set a fixed height for the images */
-        width: 100%; /* Ensure images take full width of the card */
-        object-fit: cover; /* Maintain aspect ratio and cover the entire card */
+        height: 250px;
+        /* Set a fixed height for the images */
+        width: 100%;
+        /* Ensure images take full width of the card */
+        object-fit: cover;
+        /* Maintain aspect ratio and cover the entire card */
     }
 
     .news-container {
@@ -20,17 +24,11 @@
     <!-- <h2>All News</h2> -->
     <div class="news-container">
         <?php
-        // Database connection
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "TAPA_DB";
+        session_start();
+        error_reporting(E_ALL);
+        ini_set('display_errors', 1);
 
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+        include('connection.php');
 
         // Fetch all news articles where status is 1, ordered by date (most recent first)
         $sql = "SELECT * FROM news WHERE status = '1' ORDER BY date DESC";
@@ -71,7 +69,6 @@
                 echo $shortenedDescription;
 
                 echo "</p>
-                
                         <p class='card-text'><small class='text-muted'>{$row['date']}</small></p>
                         <a href='Admin/news/full_news.php?id={$row['id']}' class='btn btn-primary btn-sm'>Read More</a>
                     </div>
