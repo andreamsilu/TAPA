@@ -63,11 +63,11 @@ $totalNews = $totalNewsResult->fetch_assoc()['total_news'];
                     <i class="bi bi-currency-dollar fa-3x text-light  icon1"></i>
                 </div>
             </div>
-        </div>
+        </div>  
         <div class="col-md-3 mb-4">
             <div class="card bg-success">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Total Paid Payments</h5>
+                    <h5 class="card-title">Total Paid fees</h5>
                     <p class="display-4"><?php echo $totalPaid; ?></p>
                     <i class="bi bi-cash-stack fa-3x text-light icon1"></i>
                 </div>

@@ -1,4 +1,8 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+session_start(); 
+
 session_start(); // Uncommented session_start()
 // Check if the user is authenticated
 if (!isset($_SESSION['email'])) {
@@ -44,7 +48,8 @@ if (isset($_GET['id'])) {
 
         <body>
             <!-- Navigation -->
-            <?php include "navigation.php";
+            <?php 
+            include "navigation.php";
             ?>
 
             <div class="container mt-5">
