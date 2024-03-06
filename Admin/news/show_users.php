@@ -3,13 +3,13 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);   
 
 
-//  session_start();
+ session_start();
 include("connection.php");
 
 // Check if the user is authenticated
 if (!isset($_SESSION['email'])) {
     // header("Location: ../../login.php");
-    // exit();
+    exit();
 }
 // SQL query to fetch users where role is 1
 $sql = "SELECT * FROM users WHERE role = '1'";
