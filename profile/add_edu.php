@@ -29,8 +29,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO education (award, institution, year, user_id) VALUES ('$award', '$institution', '$year', '$userId')";
 
     if ($conn->query($sql) === TRUE) {
-      echo "<h3>Data has been successfully stored in the database!</h3>";
-      header('Location:show_edu.php');
+      // echo "<h3>Data has been successfully stored in the database!</h3>";
+      // header('Location:show_edu.php');
     } else {
       echo "Error: " . $sql . "<br>" . $conn->error;
     }
