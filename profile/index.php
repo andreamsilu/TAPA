@@ -8,11 +8,12 @@
 include '../forms/connection.php';
 
 // Check if the user is authenticated
-if (!isset($_SESSION['email']) || isset($_SESSION['id'])) {
+if (!isset($_SESSION['email'])) {
     // Redirect to the login page if the user is not authenticated
     // header("Location: ../login.php");
     exit();
 }
+
 // Fetch user profile information including the profile picture
 // $userID =$_SESSION['id'];
 $user_email = $_SESSION['email'];
