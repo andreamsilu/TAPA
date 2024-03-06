@@ -149,6 +149,64 @@
                 opacity: 0;
             }
         }
+
+
+        /* ====member profile page===== */
+          /* CSS Styles for Profile Page */
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+        border: #ccc dotted 2px;
+    }
+
+    .profile-info {
+        margin-bottom: 30px;
+    }
+
+    .profile-pic-container {
+        background: url('../assets/img/tapaImages/Sustain Digital-33 (1).jpg');
+        /* background-color: #218838; */
+        padding: 20px;
+        margin-bottom: 10px;
+        border: green dashed 2px;
+        object-fit: cover;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #ccc;
+    }
+
+    .upload-btn {
+        margin-top: 10px;
+    }
+
+
+    .edit-info {
+        width: 315px;
+    }
+
+    /* Define the slide-from-left animation */
+    @keyframes slideFromLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    /* Apply the animation to the cards */
+    .slide-from-left {
+        animation: slideFromLeft 0.5s ease-out;
+    }
     </style>
 </head>
 
