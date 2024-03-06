@@ -65,7 +65,7 @@ include '../forms/connection.php';
 // Check if the user is authenticated
 if (!isset($_SESSION['email']) || isset($_SESSION['id'])) {
     // Redirect to the login page if the user is not authenticated
-    header("Location: ../login.php");
+    // header("Location: ../login.php");
     exit();
 }
 // Fetch user profile information including the profile picture
