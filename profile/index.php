@@ -1,6 +1,4 @@
-<style>
-  
-</style>
+
 <?php
     session_start();
 
