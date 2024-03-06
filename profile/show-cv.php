@@ -35,7 +35,7 @@ $userId = $_SESSION['user_id'];
     <div class="card-body">
       <?php
       // Get the record to be displayed
-      $cvId = $_GET['id'];
+      $cvId = $_GET['id'] = $row['id'];
       $sql = "SELECT * FROM personal_cv WHERE user_id = '$userId'";
       $result = $conn->query($sql);
 
