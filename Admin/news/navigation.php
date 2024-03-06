@@ -88,7 +88,7 @@
                     <a class="dropdown-item" href="#">Profile</a>
                     <a class="dropdown-item" href="#">Settings</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Logout</a>
+                    <a class="dropdown-item" href="logout.php">Logout</a>
                 </div>
             </li>
         </ul>
@@ -135,10 +135,10 @@
                             <i class="bi bi-briefcase"></i> Jobs & Updates
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="member_list.php">
+                            <a class="dropdown-item" href="#">
                                 <i class="bi bi-people"></i> Jobs
                             </a>
-                            <a class="dropdown-item" href="membership_fees.php">
+                            <a class="dropdown-item" href="#">
                                 <i class="bi bi-megaphone"></i> Announcements
                             </a>
                         </div>
