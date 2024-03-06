@@ -141,22 +141,3 @@ LEFT JOIN payments p ON u.id = p.user_id
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <?php include "footer.php"; ?>
 
-<script>
-  // Handle Add Payment button click
-  $(document).on('click', '.add-payment', function() {
-    var userId = $(this).data('user-id');
-    $('#userId').val(userId);
-    $('#paymentModal').modal('show');
-  });
-
-  // Handle Edit Payment button click
-  $(document).on('click', '.edit-payment', function() {
-    var userId = $(this).data('user-id');
-    var status = $(this).data('status');
-    var amount = $(this).data('amount');
-    $('#editUserId').val(userId);
-    $('#editStatus').val(status);
-    $('#editAmount').val(amount);
-    $('#editPaymentModal').modal('show');
-  });
-</script>
