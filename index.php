@@ -4,16 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TAPA</title>
+  <title>TAPA - Home</title>
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <!-- Owl Carousel CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
-  <?php include("titleIcon.php");
-  ?>
+  <?php include("titleIcon.php"); ?>
+  <meta name="description" content="Welcome to the Tanzanian Psychological Association (TAPA)! We are a professional organization dedicated to promoting psychology, mental health, and well-being in Tanzania. Our mission is to provide support and resources for psychologists, therapists, counselors, and mental health professionals. Explore our educational programs, workshops, and networking opportunities in various areas of psychology including clinical psychology, counseling, therapy, and more. Join TAPA to stay updated on the latest developments in the field, connect with peers, and contribute to the advancement of mental health awareness and advocacy in Tanzania.">
+">
+  <meta name="keywords" content="Tanzanian Psychological Association, TAPA, psychology, mental health, Tanzania, African psychology, therapy, counseling, psychotherapy, psychiatrist, psychologist, counselor, mental illness, mental well-being, emotional health, behavioral health, social psychology, clinical psychology, developmental psychology, educational psychology, industrial psychology, organizational psychology, counseling psychology, psychoanalysis, cognitive psychology, neuropsychology, positive psychology, community psychology, forensic psychology, child psychology, adolescent psychology, adult psychology, geriatric psychology, trauma, stress, anxiety, depression, OCD, PTSD, bipolar disorder, schizophrenia, personality disorders, addiction, substance abuse, family therapy, marriage counseling, group therapy, self-help, wellness, resilience, coping strategies, psychoeducation, mental health awareness, mental health advocacy, stigma, discrimination">
 </head>
+
 
 <?php
 include "header.php";
