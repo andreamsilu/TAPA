@@ -30,14 +30,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             p {
                 margin-bottom: 10px;
             }
-            .success-msg {
-                color: #28a745;
-                font-weight: bold;
-            }
-            .error-msg {
-                color: #dc3545;
-                font-weight: bold;
-            }
         </style>
     </head>
     <body>
@@ -52,11 +44,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Send email
     if (mail($to, $subject, $email_content, $headers)) {
-        echo "<p class='success-msg'>Your message has been sent successfully. Thank you!</p>";
+        echo "<script>showSnackbar('Your message has been sent successfully. Thank you!', 'success');</script>";
     } else {
-        echo "<p class='error-msg'>Failed to send message. Please try again later.</p>";
+        echo "<script>showSnackbar('Failed to send message. Please try again later.', 'error');</script>";
     }
 } else {
-    echo "<p class='error-msg'>Invalid request method.</p>";
+    echo "<script>showSnackbar('Invalid request method.', 'error');</script>";
 }
 ?>
+<script>
+function showSnackbar(message, type) {
+    var snackbar = document.createElement('div');
+    snackbar.className = 'snackbar ' + type;
+    snackbar.textContent = message;
+    document.body.appendChild(snackbar);
+    setTimeout(function() {
+        snackbar.className = snackbar.className.replace('show', '');
+        snackbar.parentNode.removeChild(snackbar);
+    }, 3000);
+}
+</script>
