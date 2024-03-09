@@ -16,23 +16,47 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Email content
     $email_content = "
     <html>
+    <head>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+                padding: 20px;
+            }
+            h2 {
+                color: #333;
+                margin-bottom: 20px;
+            }
+            p {
+                margin-bottom: 10px;
+            }
+            .success {
+                color: #28a745;
+                font-weight: bold;
+            }
+            .error {
+                color: #dc3545;
+                font-weight: bold;
+            }
+        </style>
+    </head>
     <body>
-    <h2>New Contact Form Submission</h2>
-    <p><strong>Name:</strong> $name</p>
-    <p><strong>Email:</strong> $email</p>
-    <p><strong>Subject:</strong> $subject</p>
-    <p><strong>Message:</strong><br>$message</p>
+        <h2>New Contact Form Submission</h2>
+        <p><strong>Name:</strong> $name</p>
+        <p><strong>Email:</strong> $email</p>
+        <p><strong>Subject:</strong> $subject</p>
+        <p><strong>Message:</strong><br>$message</p>
     </body>
     </html>
     ";
 
     // Send email
     if (mail($to, $subject, $email_content, $headers)) {
-        echo "success";
+        echo "<p class='success'>Your message has been sent successfully. Thank you!</p>";
     } else {
-        echo "error";
+        echo "<p class='error'>Failed to send message. Please try again later.</p>";
     }
 } else {
-    echo "Invalid request method.";
+    echo "<p class='error'>Invalid request method.</p>";
 }
 ?>
