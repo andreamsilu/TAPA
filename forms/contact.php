@@ -30,11 +30,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             p {
                 margin-bottom: 10px;
             }
-            .success {
+            .success-msg {
                 color: #28a745;
                 font-weight: bold;
             }
-            .error {
+            .error-msg {
                 color: #dc3545;
                 font-weight: bold;
             }
@@ -52,11 +52,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Send email
     if (mail($to, $subject, $email_content, $headers)) {
-        echo "<p class='success'>Your message has been sent successfully. Thank you!</p>";
+        echo "<p class='success-msg'>Your message has been sent successfully. Thank you!</p>";
     } else {
-        echo "<p class='error'>Failed to send message. Please try again later.</p>";
+        echo "<p class='error-msg'>Failed to send message. Please try again later.</p>";
     }
 } else {
-    echo "<p class='error'>Invalid request method.</p>";
+    echo "<p class='error-msg'>Invalid request method.</p>";
 }
 ?>
