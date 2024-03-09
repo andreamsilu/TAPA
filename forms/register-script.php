@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if (mail($email, $subject, $message, $headers)) {
                 // Redirect to success page
-                header("Location: ../login.php");
+                header("Location: registration_success.php");
                 exit();
             } else {
                 throw new Exception("Failed to send confirmation email.");
