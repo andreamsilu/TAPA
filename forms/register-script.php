@@ -20,82 +20,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $yes_crime = filter_input(INPUT_POST, 'yes_crime', FILTER_SANITIZE_STRING);
         $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
 
+        // Generate a unique token for email confirmation
+        $token = bin2hex(random_bytes(16)); // Generates a 32-character hexadecimal string
+
+        // Hash the password
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-        // $cv = $_FILES["cv"]["name"];
-
-        try {
-            // Check if the file input exists and has a value
-            if (isset($_FILES["cv"]) && $_FILES["cv"]["name"]) {
-                // File upload handling
-                $targetDir = "../forms/uploads/";
-                $fileName = basename($_FILES["cv"]["name"]);
-                $targetFilePath = $targetDir . $fileName;
-                $fileType = strtolower(pathinfo($targetFilePath, PATHINFO_EXTENSION));
-
-                // Allowed file extensions
-                $allowedExtensions = array("pdf", "doc", "docx");
-
-                // Check if the uploaded file extension is allowed
-                if (!in_array($fileType, $allowedExtensions)) {
-                    throw new Exception("Only PDF, DOC, and DOCX files are allowed.");
-                }
-
-                // Move the uploaded file to the desired location
-                if (!move_uploaded_file($_FILES["cv"]["tmp_name"], $targetFilePath)) {
-                    throw new Exception("File upload failed.");
-                }
-            } else {
-                throw new Exception("File not found or empty.");
-            }
-        } catch (Exception $e) {
-            // Handle the exception (error) gracefully
-            echo 'Error: ' . $e->getMessage();
-        }
-
-        //=========validation===========
-
-        // Validate licensure fields
-        if ($licensure !== 'yes' && $licensure !== 'no') {
-            echo "Please select either 'yes' or 'no' for licensure.";
-            header('location: registration.php');
-            exit;
-        }
-
-        if ($licensure === 'yes' && empty($yes_licensure)) {
-            echo "Please provide details of your licensure if you answered 'yes'.";
-            header('location: registration.php');
-            exit;
-        }
-
-        // Validate crime fields
-        if ($crime !== 'yes' && $crime !== 'no') {
-            echo "Please select either 'yes' or 'no' for crime.";
-            header('location:login.php');
-            exit;
-        }
-
-        if ($crime === 'yes' && empty($yes_crime)) {
-            echo "Please provide details of the crime if you answered 'yes'.";
-            header('location: registration.php');
-            exit;
-        }
-
-
-
 
         // Database connection parameters
-
         include "../forms/connection.php";
 
         // SQL query for insertion (modify table and column names accordingly)
-        $sql = "INSERT INTO users(fullname, email, phone, postal_address, birth_date, physical_address, membership_type, licensure, yes_licensure, crime, yes_crime,cv_file, password) 
-        VALUES ('$fullname', '$email', '$phone', '$postal_address', '$birth_date', '$physical_address', '$membership_type', '$licensure', '$yes_licensure', '$crime', '$yes_crime','$fileName', '$hashedPassword')";
+        $sql = "INSERT INTO users(fullname, email, phone, postal_address, birth_date, physical_address, membership_type, licensure, yes_licensure, crime, yes_crime, password, token) 
+        VALUES ('$fullname', '$email', '$phone', '$postal_address', '$birth_date', '$physical_address', '$membership_type', '$licensure', '$yes_licensure', '$crime', '$yes_crime', '$hashedPassword', '$token')";
 
         if ($conn->query($sql) === TRUE) {
-            // Redirect after successful registration
-            echo "Your registration is successifully";
-            header("Location: ../login.php");
-            exit();
+            // Registration successful, send confirmation email
+            $subject = 'Confirm Your Registration';
+            $message = "Dear $fullname,\n\nThank you for registering with TAPA. Please click the following link to confirm your registration:\n\n";
+            $message .= "https://tapa.or.tz/confirm.php?email=$email&token=$token\n\n";
+            $message .= "If you did not register on our website, please ignore this message.\n\nBest regards,\nTAPA";
+            $headers = "From: TAPA <msiluandrew2020@gmail.com>";
+
+            if (mail($email, $subject, $message, $headers)) {
+                // Redirect to success page
+                header("Location: ../login.php");
+                exit();
+            } else {
+                throw new Exception("Failed to send confirmation email.");
+            }
         } else {
             throw new Exception("Error: " . $sql . "<br>" . $conn->error);
         }
@@ -107,3 +59,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "An error occurred: " . $e->getMessage();
     }
 }
+
+?>
