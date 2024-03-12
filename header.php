@@ -29,21 +29,13 @@
             <li><a href="membeship-category.php">Register</a></li>
           </ul>
         </li>
-        <!-- <li class="dropdown">
-          <a href="#">
-            <span>About</span> <i class="bi bi-chevron-down"></i>
-          </a>
-          <ul>
-            <li><a href="about.php">About Us</a></li>
-            <li><a href="commitees.php">Committees</a></li>
-            <li><a href="zones.php">Zone & Division</a></li>
-          </ul>
-        </li> -->
+       
+        </li> 
         <li><a href="publication-resources.php">Publication & Resources</a></li>
         <li><a href="photo-gallery.php">Photo Gallery</a></li>
         <li><a href="contact.php">Contact</a></li>
       </ul>
-      <!-- <i class="bi bi-list mobile-nav-toggle"></i> -->
+      <i class="bi bi-list mobile-nav-toggle"></i>
     </nav>
 
     <div class="d-flex nav-links">
