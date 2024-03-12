@@ -37,12 +37,77 @@
             /* background-color: #0F718A; */
             color: white;
         }
+
+        /* Logo container */
+        .logo-container {
+            border: 2px solid #0F718A;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Card title */
+        .card-title {
+            color: #0F718A;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        /* Form label */
+        .form-group label {
+            font-weight: bold;
+            color: #0F718A;
+            margin-bottom: 10px;
+        }
+
+        /* Input fields */
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ccc;
+            background-color: #fff;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: #0F718A;
+        }
+
+        /* Button */
+        .btn-primary {
+            background-color: #0F718A;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #095d72;
+        }
+
+        .toggle-password {
+            height: 52px;
+            /* background-color: #ccc; */
+            border:#ccc 2px solid;
+        }
+
+        /* Forgot password and sign up links */
+        .forgot-password,
+        .sign-up {
+            color: #0F718A;
+            margin-top: 20px;
+        }
     </style>
 
     <main id="main">
 
         <!-- ======= Breadcrumbs ======= -->
-        <section id="breadcrumbs" class="breadcrumbs">
+        <!-- <section id="breadcrumbs" class="breadcrumbs">
             <div class="container">
 
                 <div class="d-flex justify-content-between align-items-center">
@@ -54,7 +119,7 @@
                 </div>
 
             </div>
-        </section>
+        </section> -->
         <!-- End Breadcrumbs -->
 
 
@@ -76,10 +141,11 @@
                                 </div>
                                 <h5 class="card-title text-center">Login</h5>
                                 <!-- Login Form -->
-                                <form action="forms/login-script.php" method="post">
+                                <form id="loginForm" action="forms/login-script.php" method="post">
                                     <div class="form-group">
                                         <label for="Email"> <i class="bi bi-envelope"></i> Email:</label>
-                                        <input type="text" id="Email" name="email" class="form-control" required>
+                                        <input type="email" id="Email" name="email" class="form-control" required>
+                                        <div class="invalid-feedback">Please enter a valid email address.</div>
                                     </div>
 
                                     <div class="form-group position-relative pt-3">
@@ -92,10 +158,11 @@
                                         </div>
                                     </div>
 
-                                    <div class="text-center"> <!-- Centered the button -->
+                                    <div class="text-center">
                                         <button type="submit" class="btn btn-primary mt-3"><i class="bi bi-box-arrow-in-right"></i> Login</button>
                                     </div>
                                 </form>
+
                                 <!-- Forgot Password -->
                                 <div class="text-center mt-3">
                                     <a href="forgot_password.php"><i class="bi bi-question-circle-fill"></i> Forgot Password?</a>
@@ -129,6 +196,19 @@
                     eyeIcon.classList.toggle('bi-eye-slash');
                 });
             });
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const loginForm = document.getElementById('loginForm');
+
+                loginForm.addEventListener('submit', function(event) {
+                    const emailInput = document.getElementById('Email');
+
+                    if (!emailInput.checkValidity()) {
+                        event.preventDefault(); // Prevent form submission
+                        emailInput.classList.add('is-invalid'); // Add Bootstrap's is-invalid class for styling
+                    }
+                });
+            }); 
         </script>
         <!-- ======= End login Section ======= -->
         <!-- End #main -->
