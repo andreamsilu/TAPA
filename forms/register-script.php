@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_STRING);
         $postal_address = filter_input(INPUT_POST, 'postal_address', FILTER_SANITIZE_STRING);
         $birth_date = filter_input(INPUT_POST, 'birth_date', FILTER_SANITIZE_STRING);
-        $physical_address = filter_input(INPUT_POST, 'pysical_address', FILTER_SANITIZE_STRING);
+        $physical_address = filter_input(INPUT_POST, 'physical_address', FILTER_SANITIZE_STRING);
         $membership_type = filter_input(INPUT_POST, 'membership_type', FILTER_SANITIZE_STRING);
         $licensure = filter_input(INPUT_POST, 'licensure', FILTER_SANITIZE_STRING);
         $yes_licensure = filter_input(INPUT_POST, 'yes_licensure', FILTER_SANITIZE_STRING);
