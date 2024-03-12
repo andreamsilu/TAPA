@@ -102,6 +102,21 @@
             color: #0F718A;
             margin-top: 20px;
         }
+
+        /* Mobile styles */
+    @media (max-width: 768px) {
+        .logo-container {
+            height: 80px; /* Adjusted height for mobile view */
+        }
+
+        .logo-container img {
+            max-width: 50%; /* Adjusted logo size for mobile view */
+        }
+
+        .btn-primary {
+            padding: 10px 20px; /* Reduced padding for mobile view */
+        }
+    }
     </style>
 
     <main id="main">
