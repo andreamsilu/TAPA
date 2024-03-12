@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.19.0/font/bootstrap-icons.css">
 
 <!-- Header -->
-<header id="header" class="fixed-op">
+<header id="header" class="fixed-top">
   <div class="container d-flex align-items-right">
 
     <a href="index.php" class="me-auto m-lg-0">
@@ -16,7 +16,7 @@
     </a>
 
     <nav id="navbar" class="navbar order-last order-lg-0">
-      <ul>
+      <ul class="nav-list">
         <li><a class="" href="index.php">Home</a></li>
         <li><a href="about.php">About us</a></li>
 
@@ -51,7 +51,7 @@
 <script>
   $(document).ready(function () {
     $(".mobile-nav-toggle").click(function () {
-      $("#navbar ul").toggleClass("show");
+      $("#navbar ul.nav-list").toggleClass("show");
     });
   });
 </script>
