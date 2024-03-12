@@ -120,7 +120,7 @@
         <section id="categories" class="categories py-5">
             <div class="container">
                 <div class="section-title">
-                    <h2>UNLOCK THE BENEFITS OF TAPA MEMBERSHIP CATEGORIES</h2>
+                    <h2 style="background-color:#0F718A;padding:10px; color:#eee;">UNLOCK THE BENEFITS OF TAPA MEMBERSHIP CATEGORIES</h2>
                 </div>
                 <div class="row row-cols-1 row-cols-md-2 g-4">
                     <div class="col-md-4">
