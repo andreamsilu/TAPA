@@ -37,9 +37,15 @@ include('header.php');
                                     <input type="email" class="form-control" name="email" placeholder="example@gmail.com" required>
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label class="label" for="password">Password</label>    
-                                    <input type="password" class="form-control" name="password" placeholder="Password" required>
+                                    <label class="label" for="password">Password</label>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary " type="button" id="togglePassword"><i class="bi bi-eye"></i></button>
+                                        </div>
+                                    </div>
                                 </div>
+
                                 <div class="form-group">
                                     <button type="submit" class="form-control btn btn-primary rounded submit px-3">Login</button>
                                 </div>
@@ -51,7 +57,7 @@ include('header.php');
                                         </label>
                                     </div>
                                     <div class="w-50 text-md-right">
-                                        <a href="forgot_password.php" >Forgot Password</a>
+                                        <a href="forgot_password.php">Forgot Password</a>
                                     </div>
                                 </div>
                             </form>
@@ -63,9 +69,18 @@ include('header.php');
         </div>
     </section>
     <?php include('footer.php'); ?>
+    <script>
+        document.getElementById("togglePassword").addEventListener("click", function() {
+            var passwordInput = document.getElementById("password");
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+            } else {
+                passwordInput.type = "password";
+            }
+        });
+    </script>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
-
