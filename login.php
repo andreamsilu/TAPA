@@ -1,229 +1,71 @@
-<?php include "titleIcon.php" ?>
+<?php
+include('titleIcon.php');
+include('header.php');
 
+?>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <?php include "header.php" ?>
-    <style>
-        .logo-container {
-            position: relative;
-            width: 100%;
-            height: 120px;
-            /* Adjust the height as needed */
-            overflow: hidden;
-            border: #0F718A 2px dashed;
-        }
-
-        .logo-container img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            max-width: 70%;
-            max-height: 100%;
-        }
-
-        i {
-            color: #0F718A;
-            font-size: 20px;
-        }
-
-        .btn-primary {
-            background-color: #0F718A;
-            color: white;
-        }
-
-        .btn-primary i {
-            /* background-color: #0F718A; */
-            color: white;
-        }
-
-        /* Logo container */
-        .logo-container {
-            border: 2px solid #0F718A;
-            border-radius: 10px;
-            padding: 10px;
-            margin-bottom: 20px;
-        }
-
-        /* Card title */
-        .card-title {
-            color: #0F718A;
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-        }
-
-        /* Form label */
-        .form-group label {
-            font-weight: bold;
-            color: #0F718A;
-            margin-bottom: 10px;
-        }
-
-        /* Input fields */
-        .form-control {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #ccc;
-            background-color: #fff;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-control:focus {
-            border-color: #0F718A;
-        }
-
-        /* Button */
-        .btn-primary {
-            background-color: #0F718A;
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn-primary:hover {
-            background-color: #095d72;
-        }
-
-        .toggle-password {
-            height: 52px;
-            /* background-color: #ccc; */
-            border:#ccc 2px solid;
-        }
-
-        /* Forgot password and sign up links */
-        .forgot-password,
-        .sign-up {
-            color: #0F718A;
-            margin-top: 20px;
-        }
-
-        /* Mobile styles */
-    @media (max-width: 768px) {
-        .logo-container {
-            height: 80px; /* Adjusted height for mobile view */
-        }
-
-        .logo-container img {
-            max-width: 50%; /* Adjusted logo size for mobile view */
-        }
-
-        .btn-primary {
-            padding: 10px 20px; /* Reduced padding for mobile view */
-        }
-    }
-    </style>
-
-    <main id="main">
-
-        <!-- ======= Breadcrumbs ======= -->
-        <!-- <section id="breadcrumbs" class="breadcrumbs">
-            <div class="container">
-
-                <div class="d-flex justify-content-between align-items-center">
-                    <h2>Login</h2>
-                    <ol>
-                        <li><a href="index.php">Home</a></li>
-                        <li>Login</li>
-                    </ol>
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-1 mt-5">
+                    <h2 class="heading-section">FOR REGISTERED MEMBERS</h2>
                 </div>
-
             </div>
-        </section> -->
-        <!-- End Breadcrumbs -->
-
-
-        <!-- ======= login======= -->
-        <section id="publication" class="publication">
-            <div class="container" data-aos="fade-up">
-                <div class="row g-0" data-aos="fade-up" data-aos-delay="200">
-                    <div class="col-xl-6 img-bg" style="background-image: url('assets/img/tapa/tapa-fam.JPG');background-color:white;opacity:0.6;">
-
-                    </div>
-                    <div class="col-xl-6 slides position-relative">
-
-
-                        <!-- Login Card -->
-                        <div class="card shadow p-4">
-                            <div class="card-body p-5">
-                                <div class="logo-container text-center mb-4">
-                                    <img src="assets/img/tapa.png" class="img-fluid rounded-pill" alt="Logo">
+            <div class="row justify-content-center">
+                <div class="col-md-12 col-lg-10">
+                    <div class="wrap d-md-flex">
+                        <div class="img" style="background-image: url(assets/img/tapa/tapa-fam.JPG);">
+                        </div>
+                        <div class="login-wrap p-4 p-md-5">
+                            <div class="d-flex">
+                                <div class="w-100">
+                                    <h3 class="mb-4">Sign In</h3>
                                 </div>
-                                <h5 class="card-title text-center">Login</h5>
-                                <!-- Login Form -->
-                                <form id="loginForm" action="forms/login-script.php" method="post">
-                                    <div class="form-group">
-                                        <label for="Email"> <i class="bi bi-envelope"></i> Email:</label>
-                                        <input type="email" id="Email" name="email" class="form-control" required>
-                                        <div class="invalid-feedback">Please enter a valid email address.</div>
-                                    </div>
-
-                                    <div class="form-group position-relative pt-3">
-                                        <label for="password"><i class="bi bi-lock-fill"></i> Password:</label>
-                                        <div class="input-group">
-                                            <input type="password" id="password" name="password" class="form-control" required>
-                                            <button class="btn btn-outline-secondary toggle-password" type="button">
-                                                <i class="bi bi-eye"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="text-center">
-                                        <button type="submit" class="btn btn-primary mt-3"><i class="bi bi-box-arrow-in-right"></i> Login</button>
-                                    </div>
-                                </form>
-
-                                <!-- Forgot Password -->
-                                <div class="text-center mt-3">
-                                    <a href="forgot_password.php"><i class="bi bi-question-circle-fill"></i> Forgot Password?</a>
-                                </div>
-                                <!-- Already have an account -->
-                                <div class="text-center mt-2">
-                                    <p class="mb-0">Don't have an account? <a href="membeship-category.php">Sign up</a></p>
+                                <div class="w-100">
+                                    <p class="social-media d-flex justify-content-end">
+                                        <a href="https://www.facebook.com/profile.php?id=100092108256995" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a>
+                                        <a href="https://x.com/tapa_tz?t=Xa40Dj9GacpBmaTJ863zqA&s=08" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-twitter"></span></a>
+                                    </p>
                                 </div>
                             </div>
+                            <form action="forms/login-script.php" class="signin-form" method="post">
+                                <div class="form-group mb-3">
+                                    <label class="label" for="email">Email</label>
+                                    <input type="email" class="form-control" name="email" placeholder="example@gmail.com" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="label" for="password">Password</label>    
+                                    <input type="password" class="form-control" name="password" placeholder="Password" required>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="form-control btn btn-primary rounded submit px-3">Login</button>
+                                </div>
+                                <div class="form-group d-md-flex">
+                                    <div class="w-50 text-left">
+                                        <label class="checkbox-wrap checkbox-primary mb-0">Remember Me
+                                            <input type="checkbox" checked>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="w-50 text-md-right">
+                                        <a href="forgot_password.php" >Forgot Password</a>
+                                    </div>
+                                </div>
+                            </form>
+                            <p class="text-center">Not a member? <a data-toggle="tab" href="membeship-category.php">Register</a></p>
                         </div>
                     </div>
                 </div>
-        </section>
-        <br>
-        <br>
-        <!-- End login Section -->
-        <?php include "footer.php" ?>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const togglePassword = document.querySelector('.toggle-password');
-                const password = document.querySelector('#password');
+            </div>
+        </div>
+    </section>
+    <?php include('footer.php'); ?>
 
-                togglePassword.addEventListener('click', function(e) {
-                    // toggle the type attribute
-                    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-                    password.setAttribute('type', type);
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 
-                    // toggle eye icon
-                    const eyeIcon = document.querySelector('.bi-eye');
-                    eyeIcon.classList.toggle('bi-eye');
-                    eyeIcon.classList.toggle('bi-eye-slash');
-                });
-            });
-
-            document.addEventListener('DOMContentLoaded', function() {
-                const loginForm = document.getElementById('loginForm');
-
-                loginForm.addEventListener('submit', function(event) {
-                    const emailInput = document.getElementById('Email');
-
-                    if (!emailInput.checkValidity()) {
-                        event.preventDefault(); // Prevent form submission
-                        emailInput.classList.add('is-invalid'); // Add Bootstrap's is-invalid class for styling
-                    }
-                });
-            }); 
-        </script>
-        <!-- ======= End login Section ======= -->
-        <!-- End #main -->

@@ -1,3 +1,4 @@
 # Ignore connection.php
 forms/connection.php
 Admin/news/connection.php
+test.php
