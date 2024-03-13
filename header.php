@@ -1,14 +1,6 @@
 <head>
   <?php include "titleIcon.php"; ?>
 
-  <!-- Bootstrap CSS -->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> -->
-
-  <!-- Bootstrap Icons -->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.19.0/font/bootstrap-icons.css"> -->
-
-
-
   <style>
 
     /*--------------------------------------------------------------
@@ -346,7 +338,7 @@
           <li><a class="nav-link scrollto" href="about.php">About</a></li>
           <li class="dropdown"><a href="membeship-category.php"><span>Membership</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="login.php">Login</a></li>
+              <li><a href="login.php">Sign In</a></li>
               <li><a href="registration.php">Register</a></li>
             </ul>
           </li>
