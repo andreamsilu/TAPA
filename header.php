@@ -349,7 +349,7 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="login.php" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span>Login</a>
+      <a href="login.php" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span>Sign In</a>
 
 </div>
   </header>
