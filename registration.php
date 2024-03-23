@@ -232,7 +232,7 @@
                             <input type="file" class="form-control" name="cv" id="cv" placeholder="Upload your cv" accept=".pdf,.doc,.docx" required>
                             <small class="text-muted">Accepted file formats: PDF, DOC, DOCX</small>
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="password"><i class="bi bi-lock"></i> Password</label>
                             <input type="password" class="form-control" name="password" id="password" placeholder="Your password" required minlength="8">
                             <small class="text-muted">Minimum length: 8 characters</small>
@@ -240,7 +240,7 @@
                         <div class="form-group">
                             <label for="confirm-password"><i class="bi bi-lock"></i> Confirm password</label>
                             <input type="password" class="form-control" name="confirm-password" id="confirm-password" placeholder="Confirm password" required minlength="8">
-                        </div>
+                        </div> -->
                         <div class="form-group">
                             <button type="button" class="btn btn-secondary btn-block" data-toggle="modal" data-target="#termsModal">
                                 <i class="bi bi-file-earmark-text"></i> Read the terms and conditions
