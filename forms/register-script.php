@@ -1,5 +1,5 @@
 <?php
-
+// Enable error reporting and display errors for debugging
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -30,8 +30,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         include "../forms/connection.php";
 
         // SQL query for insertion (modify table and column names accordingly)
-        $sql = "INSERT INTO users(fullname, email, phone, postal_address, birth_date, physical_address, membership_type, licensure, yes_licensure, crime, yes_crime, password, token) 
-        VALUES ('$fullname', '$email', '$phone', '$postal_address', '$birth_date', '$physical_address', '$membership_type', '$licensure', '$yes_licensure', '$crime', '$yes_crime', '$hashedPassword', '$token')";
+        $sql = "INSERT INTO users(fullname, email, phone, postal_address, birth_date, physical_address, membership_type, licensure, yes_licensure, crime, yes_crime, token) 
+        VALUES ('$fullname', '$email', '$phone', '$postal_address', '$birth_date', '$physical_address', '$membership_type', '$licensure', '$yes_licensure', '$crime', '$yes_crime', '$token')";
 
         if ($conn->query($sql) === TRUE) {
             // Registration successful, send confirmation email
@@ -41,11 +41,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Add hyperlink button to pay annual fees
             $message .= "\n\n<a href='https://tapa.or.tz/pay_annual_fees.php'>Pay Annual Fees</a>";
 
-            $headers = "From: TAPA <msiluandrew2020@gmail.com>";
+            $headers = "From: TAPA <msiluandrew2020@gmail.com>\r\n";
+            $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
             if (mail($email, $subject, $message, $headers)) {
                 // Redirect to success page
-                header("Location: pay_annual_fees.php");
+                header("Location: ../../../pay_annual_fees.php");
                 exit();
             } else {
                 throw new Exception("Failed to send confirmation email.");
@@ -59,7 +60,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } catch (Exception $e) {
         // Handle exceptions, log errors, or display error messages
         echo "An error occurred: " . $e->getMessage();
+
+        // Log error to a file
+        error_log("Email error: " . $e->getMessage(), 0);
     }
 }
-
 ?>
