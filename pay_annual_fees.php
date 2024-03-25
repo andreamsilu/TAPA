@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 // Database connection parameters
-include "../forms/connection.php";
+include "./forms/connection.php";
 
 // Function to generate a one-time password
 function generateOTP() {
@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 
         // Handle file upload
-        $target_dir = "forms/uploads/receipts/";
+        $target_dir = "./forms/uploads/receipts/";
         $target_file = $target_dir . basename($_FILES["receipt"]["name"]);
 
         if (move_uploaded_file($_FILES["receipt"]["tmp_name"], $target_file)) {
