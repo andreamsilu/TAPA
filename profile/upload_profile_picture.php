@@ -5,7 +5,6 @@ ini_set('display_errors', 1);
 
 // Check if the user is authenticated
 if (!isset($_SESSION['email'])) {
-    // Redirect to the login page if the user is not authenticated
     header("Location: ../login.php");
     exit();
 }
