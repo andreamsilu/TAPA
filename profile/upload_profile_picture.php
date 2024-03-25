@@ -10,18 +10,20 @@ if (!isset($_SESSION['email'])) {
     exit();
 }
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "TAPA_DB";
+// $servername = "localhost";
+// $username = "root";
+// $password = "";
+// $dbname = "TAPA_DB";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+// // Create connection
+// $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+// // Check connection
+// if ($conn->connect_error) {
+//     die("Connection failed: " . $conn->connect_error);
+// }
+
+include('../forms/connection.php');
 
 // Check if the form is submitted
 if (isset($_POST['submit'])) {
