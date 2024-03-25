@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 
         // Handle file upload
-        $target_dir = "uploads/";
+        $target_dir = "forms/uploads/receipts/";
         $target_file = $target_dir . basename($_FILES["receipt"]["name"]);
 
         if (move_uploaded_file($_FILES["receipt"]["tmp_name"], $target_file)) {
@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             mail($email, $subject, $message, $headers);
 
             // Redirect to a page indicating successful receipt upload
-            header("Location: receipt_uploaded.php");
+            header("Location: login.php");
             exit();
         } else {
             // Error handling for file upload failure
