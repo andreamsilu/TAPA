@@ -26,6 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // User exists, proceed with receipt upload and OTP generation
             $row = $result_select_user->fetch_assoc();
             $user_id = $row['id'];
+            $user_name = $row['fullname'];
+
 
             // Handle file upload
             $target_dir = "forms/uploads/";
@@ -44,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 // Send email with one-time password
                 $subject = 'Your One-Time Password';
-                $message = "Dear user,\n\nYour one-time password for completing the payment process is: $otp\n\nPlease enter this password on the payment confirmation page.\n\nRegards,\nTAPA";
+                $message = "Dear $user_name,\n\nYour one-time password for completing the payment process is: $otp\n\nPlease enter this password on the login page.\n\nRegards,\nTAPA";
                 $headers = "From: TAPA <msiluandrew2020@gmail.com>";
                 mail($email, $subject, $message, $headers);
 

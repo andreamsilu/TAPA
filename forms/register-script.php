@@ -8,6 +8,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Collect form data
         // Sanitize input fields
         $fullname = filter_input(INPUT_POST, 'fullname', FILTER_SANITIZE_STRING);
+        if (!preg_match("/^[a-zA-Z ]+$/", $fullname)) {
+            throw new Exception("Invalid full name. Only alphabetic characters and spaces are allowed.");
+        }
+
+        // Other input sanitization
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         $phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_STRING);
         $postal_address = filter_input(INPUT_POST, 'postal_address', FILTER_SANITIZE_STRING);
