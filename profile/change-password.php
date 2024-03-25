@@ -9,7 +9,6 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
-
 // Function to sanitize form data
 function sanitizeData($data)
 {
@@ -27,42 +26,51 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validate current password and new password match
     if ($newPassword !== $confirmPassword) {
-        echo "alert('New password and confirm password do not match.')";
+        echo "<script>alert('New password and confirm password do not match.');</script>";
         exit();
     }
 
-    // Hash the passwords before comparing or storing
-    $currentPassword = password_hash($currentPassword, PASSWORD_DEFAULT);
-
-    // Check if the current password matches the stored password
-    $checkPasswordQuery = "SELECT password FROM users WHERE id = $userId";
-    $result = $conn->query($checkPasswordQuery);
+    // Prepare and execute a SELECT query to get the hashed password of the user
+    $checkPasswordQuery = "SELECT password FROM users WHERE id = ?";
+    $stmt = $conn->prepare($checkPasswordQuery);
+    $stmt->bind_param("i", $userId);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         $storedPassword = $row['password'];
 
+        // Verify if the provided current password matches the stored password
         if (password_verify($currentPassword, $storedPassword)) {
-            // Update the password in the database
+            // Hash the new password
             $newPasswordHash = password_hash($newPassword, PASSWORD_DEFAULT);
-            $updatePasswordQuery = "UPDATE users SET password = '$newPasswordHash' WHERE id = $userId";
 
-            if ($conn->query($updatePasswordQuery) === TRUE) {
-                echo " alert('Password changed successfully')";
+            // Prepare and execute an UPDATE query to update the password
+            $updatePasswordQuery = "UPDATE users SET password = ? WHERE id = ?";
+            $stmt = $conn->prepare($updatePasswordQuery);
+            $stmt->bind_param("si", $newPasswordHash, $userId);
+
+            if ($stmt->execute()) {
+                echo "<script>alert('Password changed successfully');</script>";
             } else {
-                echo "Error updating password: " . $conn->error;
+                echo "<script>alert('Error updating password: " . $conn->error . "');</script>";
             }
         } else {
-            echo "alert('Incorrect current password.')";
+            echo "<script>alert('Incorrect current password.');</script>";
         }
     } else {
-        echo "alert('User not found.')";
+        echo "<script>alert('User not found.');</script>";
     }
+
+    // Close the prepared statement
+    $stmt->close();
 }
 
 // Close the database connection
 $conn->close();
 ?>
+
 
 <?php include("navigation.php"); ?>
 <div class="container mt-5">
