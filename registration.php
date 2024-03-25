@@ -24,7 +24,7 @@
   <!-- Template Main CSS File -->
   <!-- <link href="test1.css" rel="stylesheet"> -->
   <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
-  
+
   <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfB6aEpAAAAAAqhOtkcweZgJDsXn3kV-FabTfep"></script>
   <!-- Your code -->
 
@@ -162,7 +162,8 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="fullname"><i class="bi bi-person"></i> Full Name</label>
-                        <input type="text" name="fullname" class="form-control" id="name" placeholder="Your full name" required>
+                        <input type="text" name="fullname" class="form-control" id="fullname" placeholder="Your full name" required>
+                        <small id="nameError" class="text-danger"></small>
                       </div>
                       <div class="form-group">
                         <label for="email"><i class="bi bi-envelope"></i> Email</label>
@@ -327,7 +328,34 @@
   function onClick(e) {
     e.preventDefault();
     grecaptcha.enterprise.ready(async () => {
-      const token = await grecaptcha.enterprise.execute('6LfB6aEpAAAAAAqhOtkcweZgJDsXn3kV-FabTfep', {action: 'LOGIN'});
+      const token = await grecaptcha.enterprise.execute('6LfB6aEpAAAAAAqhOtkcweZgJDsXn3kV-FabTfep', {
+        action: 'LOGIN'
+      });
     });
   }
+
+  // Function to validate full name
+  function validateFullName() {
+    var fullnameInput = document.getElementById('fullname');
+    var fullname = fullnameInput.value.trim();
+
+    // Regular expression to match only alphabetical characters
+    var regex = /^[a-zA-Z ]+$/;
+
+    if (!regex.test(fullname)) {
+      document.getElementById('nameError').textContent = 'Please enter only alphabetical characters';
+      fullnameInput.focus();
+      return false;
+    } else {
+      document.getElementById('nameError').textContent = '';
+      return true;
+    }
+  }
+
+  // Form submission validation
+  document.getElementById('myForm').addEventListener('submit', function(event) {
+    if (!validateFullName()) {
+      event.preventDefault(); // Prevent form submission if validation fails
+    }
+  });
 </script>
