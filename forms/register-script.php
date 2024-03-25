@@ -43,7 +43,63 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($stmt->execute()) {
             // Registration successful, send confirmation email
             $subject = 'Confirm Your Registration';
-            $message = "Dear $fullname,\n\nThank you for registering with TAPA. Your application has been received, and our team will get back to you after the application is processed and after payment of the fee. Your membership account will be activated only after paying the Registration and Annual Fees.\n\nApplication fees for all categories is 10,000 Tshs.\nAnnual Fees is as follows:\n\ni. Full Member: 50,000 Tshs per annum\nii. Associate Member I: 20,000 Tshs per annum\niii. Associate Member II: 20,000 Tshs per annum\niv. Student Member: 10,000 Tshs per annum\nv. Affiliates: 30,000 Tshs per annum\nvi. Foreign Affiliates: 50,000 Tshs per annum\n\nFor example, if you have a bachelor’s degree in psychology, you qualify to become a Full Member. You would then deposit your annual fee of 50,000 Tshs plus the 10,000 Tshs one-time application fee. The total amount to deposit would be 60,000 TShs.\n\nAfter payment upload proof of payment (receipt) here( https://tapa.or.tz/pay_annual_fees.php).\n\nFor any inquiries, please email admin@tapa.or.tz or Whatsapp +255 719911575.\n\nIf you did not register on our website, please ignore this message.\n\nRegards,\nAdministrative Assistant,\nTanzanian Psychological Association (TAPA)\n+255 719911575 \n";
+            $message = "
+            <html>
+            <head>
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        line-height: 1.6;
+                    }
+                    .container {
+                        max-width: 600px;
+                        margin: 0 auto;
+                    }
+                    .header {
+                        background-color: #f4f4f4;
+                        padding: 20px;
+                        text-align: center;
+                    }
+                    .content {
+                        padding: 20px;
+                    }
+                    .footer {
+                        background-color: #f4f4f4;
+                        padding: 20px;
+                        text-align: center;
+                    }
+                </style>
+            </head>
+            <body>
+                <div class='container'>
+                    <div class='header'>
+                        <h1>Welcome to TAPA</h1>
+                    </div>
+                    <div class='content'>
+                        <p>Dear $fullname,</p>
+                        <p>Thank you for registering with TAPA. Your application has been received, and our team will get back to you after the application is processed and after payment of the fee. Your membership account will be activated only after paying the Registration and Annual Fees.</p>
+                        <p><strong>Application fees for all categories is 10,000 Tshs.</strong></p>
+                        <p><strong>Annual Fees is as follows:</strong></p>
+                        <ol>
+                            <li>Full Member: 50,000 Tshs per annum</li>
+                            <li>Associate Member I: 20,000 Tshs per annum</li>
+                            <li>Associate Member II: 20,000 Tshs per annum</li>
+                            <li>Student Member: 10,000 Tshs per annum</li>
+                            <li>Affiliates: 30,000 Tshs per annum</li>
+                            <li>Foreign Affiliates: 50,000 Tshs per annum</li>
+                        </ol>
+                        <p>For example, if you have a bachelor’s degree in psychology, you qualify to become a Full Member. You would then deposit your annual fee of 50,000 Tshs plus the 10,000 Tshs one-time application fee. The total amount to deposit would be 60,000 TShs.</p>
+                        <p>After payment upload proof of payment (receipt) <a href='https://tapa.or.tz/pay_annual_fees.php'>here</a>.</p>
+                        <p>For any inquiries, please email <a href='mailto:admin@tapa.or.tz'>admin@tapa.or.tz</a> or Whatsapp +255 719911575.</p>
+                        <p>If you did not register on our website, please ignore this message.</p>
+                    </div>
+                    <div class='footer'>
+                        <p>Regards,<br>Administrative Assistant,<br>Tanzanian Psychological Association (TAPA)<br>+255 719 911 575</p>
+                    </div>
+                </div>
+            </body>
+            </html>
+        ";
             $headers = "From: TAPA <msiluandrew2020@gmail.com>";
 
             if (mail($email, $subject, $message, $headers)) {
@@ -67,5 +123,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "An error occurred: " . $e->getMessage();
     }
 }
-
-?>
