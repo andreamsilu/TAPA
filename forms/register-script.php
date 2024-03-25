@@ -12,8 +12,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             throw new Exception("Invalid full name. Only alphabetic characters and spaces are allowed.");
         }
 
-        // Other input sanitization
+        // Sanitize and validate email
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            throw new Exception("Invalid email format.");
+        }
+
+        // Check if the email is already registered
+        $stmt_check_email = $conn->prepare("SELECT id FROM users WHERE email = ?");
+        $stmt_check_email->bind_param("s", $email);
+        $stmt_check_email->execute();
+        $stmt_check_email->store_result();
+        if ($stmt_check_email->num_rows > 0) {
+            throw new Exception("Email already registered. Please use a different email.");
+        }
+        $stmt_check_email->close();
+
+        // Continue with other input sanitization
         $phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_STRING);
         $postal_address = filter_input(INPUT_POST, 'postal_address', FILTER_SANITIZE_STRING);
         $birth_date = filter_input(INPUT_POST, 'birth_date', FILTER_SANITIZE_STRING);
@@ -72,5 +87,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "An error occurred: " . $e->getMessage();
     }
 }
-
-?>
