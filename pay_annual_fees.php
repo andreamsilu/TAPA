@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 
         // Handle file upload
-        $target_dir = "forms/uploads//receipts/";
+        $target_dir = "forms/uploads/receipts/";
         $target_file = $target_dir . basename($_FILES["receipt"]["name"]);
 
         if (move_uploaded_file($_FILES["receipt"]["tmp_name"], $target_file)) {
