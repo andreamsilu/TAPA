@@ -1,6 +1,7 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+
 // Database connection parameters
 include "./forms/connection.php";
 
@@ -14,32 +15,51 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_FILES['receipt'])) {
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 
-        // Handle file upload
-        $target_dir = "forms/uploads/";
-        $target_file = $target_dir . basename($_FILES["receipt"]["name"]);
+        // Check if the user exists in the users table
+        $sql_select_user = "SELECT * FROM users WHERE email = ?";
+        $stmt_select_user = $conn->prepare($sql_select_user);
+        $stmt_select_user->bind_param("s", $email);
+        $stmt_select_user->execute();
+        $result_select_user = $stmt_select_user->get_result();
 
-        if (move_uploaded_file($_FILES["receipt"]["tmp_name"], $target_file)) {
-            // File uploaded successfully, generate one-time password
-            $otp = generateOTP();
+        if ($result_select_user->num_rows > 0) {
+            // User exists, proceed with receipt upload and OTP generation
+            $row = $result_select_user->fetch_assoc();
+            $user_id = $row['id'];
 
-            // Store one-time password in the database
-            $hashedOTP = password_hash($otp, PASSWORD_DEFAULT);
-            $sql = "INSERT INTO otps (email, hashed_otp) VALUES ('$email', '$hashedOTP')";
-            $conn->query($sql);
+            // Handle file upload
+            $target_dir = "forms/uploads/";
+            $target_file = $target_dir . basename($_FILES["receipt"]["name"]);
 
-            // Send email with one-time password
-            $subject = 'Your One-Time Password';
-            $message = "Dear user,\n\nYour one-time password for completing the payment process is: $otp\n\nPlease enter this password on the payment confirmation page.\n\nRegards,\nTAPA";
-            $headers = "From: TAPA <msiluandrew2020@gmail.com>";
-            mail($email, $subject, $message, $headers);
+            if (move_uploaded_file($_FILES["receipt"]["tmp_name"], $target_file)) {
+                // File uploaded successfully, generate one-time password
+                $otp = generateOTP();
 
-            // Redirect to a page indicating successful receipt upload
-            header("Location: login.php");
-            exit();
+                // Store one-time password and receipt in the users table
+                $hashedOTP = password_hash($otp, PASSWORD_DEFAULT);
+                $sql_update_user = "UPDATE users SET password = ?, receipt = ? WHERE id = ?";
+                $stmt_update_user = $conn->prepare($sql_update_user);
+                $stmt_update_user->bind_param("ssi", $hashedOTP, $target_file, $user_id);
+                $stmt_update_user->execute();
+
+                // Send email with one-time password
+                $subject = 'Your One-Time Password';
+                $message = "Dear user,\n\nYour one-time password for completing the payment process is: $otp\n\nPlease enter this password on the payment confirmation page.\n\nRegards,\nTAPA";
+                $headers = "From: TAPA <msiluandrew2020@gmail.com>";
+                mail($email, $subject, $message, $headers);
+
+                // Redirect to a page indicating successful receipt upload
+                header("Location: login.php");
+                exit();
+            } else {
+                // Error handling for file upload failure
+                echo "Sorry, there was an error uploading your file.";
+            }
         } else {
-            // Error handling for file upload failure
-            echo "Sorry, there was an error uploading your file.";
+            // User does not exist
+            echo "User with the provided email does not exist.";
         }
+        $stmt_select_user->close(); // Close the statement
     }
 }
 ?>
