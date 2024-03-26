@@ -1,36 +1,24 @@
 <?php
-session_start(); // Ensure session is started
+session_start(); // Uncommented session_start()
 
 // Database connection
 include "../../forms/connection.php";
-
 // Check if the user is authenticated
-if (!isset($_SESSION['id'])) {
+if (!isset($_SESSION['email'])) {
     header("Location: ../../login.php");
     exit();
 }
-
-// Fetch the ID of the current logged-in user from the session
-$userId = $_SESSION['id'];
-
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate and sanitize input data
+    $paymentId = $_POST['paymentId'];
     $status = $_POST['status'];
     $amount = $_POST['amount'];
 
-    // Update payment data in the database using prepared statement
-    $sql = "UPDATE payments SET status = ?, amount = ? WHERE user_id = ?";
+    // Update payment data in the database
+    $sql = "UPDATE payments SET status = ?, amount = ? WHERE id = ?";
     $stmt = $conn->prepare($sql);
-
-    if (!$stmt) {
-        // Handle error if prepare() fails
-        echo "Error in preparing statement: " . $conn->error;
-        exit();
-    }
-
-    // Bind parameters
-    $stmt->bind_param("ssi", $status, $amount, $userId);
+    $stmt->bind_param("ssi", $status, $amount, $paymentId);
 
     // Execute the statement
     if ($stmt->execute()) {
@@ -39,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit(); // Terminate script execution after redirect
     } else {
         // Error occurred while updating payment
-        echo "Error: " . $stmt->error;
+        echo "Error: " . $conn->error;
     }
 
     // Close statement
