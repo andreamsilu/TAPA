@@ -23,6 +23,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "UPDATE payments SET status = ?, amount = ? WHERE email = ?";
     $stmt = $conn->prepare($sql);
 
+    if (!$stmt) {
+        // Handle error if prepare() fails
+        echo "Error in preparing statement: " . $conn->error;
+        exit();
+    }
+
     // Bind parameters
     $stmt->bind_param("sss", $status, $amount, $paymentEmail);
 
@@ -33,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit(); // Terminate script execution after redirect
     } else {
         // Error occurred while updating payment
-        echo "Error: " . $conn->error;
+        echo "Error: " . $stmt->error;
     }
 
     // Close statement
