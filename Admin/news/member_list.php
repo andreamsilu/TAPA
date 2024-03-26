@@ -51,13 +51,13 @@ LEFT JOIN payments p ON u.id = p.user_id
     }
     
     if ($row['status'] == 'pending') {
-        echo "<button class='btn btn-info bg-warning edit-payment' data-user-id='" . $row['id'] . "' data-status='" . $row['status'] . "' data-amount='" . $row['amount'] . "'><i class='bi bi-pencil bi-fw'></i> Edit</button>";
-    }
-    
-    if ($row['status'] == 'paid') {
-        echo "<button class='btn btn-info bg-success' data-user-id='" . $row['id'] . "' data-status='" . $row['status'] . "' data-amount='" . $row['amount'] . "' disabled><i class='bi bi-check bi-fw'></i> Done</button>";
-        echo "<button class='btn btn-info bg-warning edit-payment mx-1' data-user-id='" . $row['id'] . "' data-status='" . $row['status'] . "' data-amount='" . $row['amount'] . "'><i class='bi bi-pencil bi-fw'></i> Edit</button>";
-    }
+      echo "<a href='edit_payment.php?id=" . $row['id'] . "&status=" . $row['status'] . "&amount=" . $row['amount'] . "' class='btn btn-info bg-warning'><i class='bi bi-pencil bi-fw'></i> Edit</a>";
+  }
+  
+  if ($row['status'] == 'paid') {
+      echo "<button class='btn btn-info bg-success' disabled><i class='bi bi-check bi-fw'></i> Done</button>";
+      echo "<a href='edit_payment.php?id=" . $row['id'] . "&status=" . $row['status'] . "&amount=" . $row['amount'] . "' class='btn btn-info bg-warning mx-1'><i class='bi bi-pencil bi-fw'></i> Edit</a>";
+  }
     
     
       echo "</td>";
