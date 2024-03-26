@@ -18,9 +18,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $amount = $_POST['amount'];
 
     // Update payment data in the database
-    $sql = "UPDATE payments SET status = ?, amount = ? WHERE email = ?";
+    $sql = "UPDATE payments SET status = ?, amount = ? WHERE email = $paymentEmail";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sss", $status, $amount, $paymentEmail);
+    $stmt->bind_param("ss", $status, $amount);
 
     // Execute the statement
     if ($stmt->execute()) {
