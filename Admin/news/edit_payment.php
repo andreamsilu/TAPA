@@ -8,17 +8,19 @@ if (!isset($_SESSION['email'])) {
     header("Location: ../../login.php");
     exit();
 }
+$paymentEmail = $_SESSION['email'];
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate and sanitize input data
-    $paymentId = $_POST['paymentId'];
+    // $paymentId = $_POST['paymentId'];
+    $paymentEmail = $_POST['email'];
     $status = $_POST['status'];
     $amount = $_POST['amount'];
 
     // Update payment data in the database
-    $sql = "UPDATE payments SET status = ?, amount = ? WHERE id = ?";
+    $sql = "UPDATE payments SET status = ?, amount = ? WHERE email = ?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssi", $status, $amount, $paymentId);
+    $stmt->bind_param("sss", $status, $amount, $paymentEmail);
 
     // Execute the statement
     if ($stmt->execute()) {
