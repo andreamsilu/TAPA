@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_param("ssi", $status, $amount, $userId);
         if ($stmt->execute()) {
             // Payment updated successfully
-            echo "Payment updated successfully";
+            echo "<script>alert('Payment updated successfully')</script>";
             header('Location: member_list.php');
 
         } else {
@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_param("iss", $userId, $status, $amount);
         if ($stmt->execute()) {
             // Payment added successfully
-            echo "Payment added successfully";
+            echo "<script>alert('Payment updated successfully')</script>";
             // header('Location: member_list.php');
         } else {
             // Error occurred while adding payment
