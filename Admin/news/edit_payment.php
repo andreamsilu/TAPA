@@ -55,14 +55,14 @@ $conn->close();
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header">
-                    Edit Payment
+                    Edit Payment Status
                 </div>
                 <div class="card-body">
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="paymentId">Payment ID:</label>
                             <input type="text" name="paymentId" id="paymentId" class="form-control" required>
-                        </div>
+                        </div> -->
                         <div class="form-group">
                             <label for="status">Status:</label>
                             <input type="text" name="status" id="status" class="form-control" required>
