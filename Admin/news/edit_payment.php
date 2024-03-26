@@ -1,19 +1,17 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 session_start(); // Ensure session is started
 
 // Database connection
 include "../../forms/connection.php";
 
 // Check if the user is authenticated
-if (!isset($_SESSION['email'])) {
+if (!isset($_SESSION['id'])) {
     header("Location: ../../login.php");
     exit();
 }
 
-// Fetch the email of the current logged-in user from the session
-$paymentEmail = $_SESSION['email'];
+// Fetch the ID of the current logged-in user from the session
+$userId = $_SESSION['id'];
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -22,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $amount = $_POST['amount'];
 
     // Update payment data in the database using prepared statement
-    $sql = "UPDATE payments SET status = ?, amount = ? WHERE email = ?";
+    $sql = "UPDATE payments SET status = ?, amount = ? WHERE user_id = ?";
     $stmt = $conn->prepare($sql);
 
     if (!$stmt) {
@@ -32,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Bind parameters
-    $stmt->bind_param("sss", $status, $amount, $paymentEmail);
+    $stmt->bind_param("ssi", $status, $amount, $userId);
 
     // Execute the statement
     if ($stmt->execute()) {
