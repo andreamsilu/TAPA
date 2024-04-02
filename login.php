@@ -11,7 +11,9 @@ include('header.php');
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center mb-1 mt-5">
-                    <h2 class="heading-section">FOR REGISTERED MEMBERS</h2>
+                    <div class="section-title">
+                        <h2 class="pt-1">SIGN IN WITH YOUR TAPA ACCOUNT</h2>
+                    </div>
                 </div>
             </div>
             <div class="row justify-content-center">
