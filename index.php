@@ -68,7 +68,7 @@ include "header.php";
               </a>
               <div class="post-text">
                 <!-- <span class="post-meta">December 13, 2019 &bullet; By <a href="#">Admin</a></span> -->
-                <h3><a href="renew-membership.php">RENEW YOUR MEMBERSHIP HERE</a></h3>
+                <h3><a href="renew-membership.php">REGISTER AS NEW MEMBER NOW</a></h3>
                 <p>Maintain your advantages and availability of cutting-edge psychological information</p>
                 <!-- <p><a href="#" class="readmore">Read more</a></p> -->
               </div>
