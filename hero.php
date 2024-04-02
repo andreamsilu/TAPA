@@ -23,9 +23,9 @@
         <div class="carousel-item active" style="background-image: url(assets/img/tapaImages/slide-1.jpg)">
           <div class="carousel-container">
             <div class="container">
-              <h2 class="animated fadeInDown">Tanzanian Psychological Association (TAPA)</h2>
+              <h2 class="animated fadeInDown">Tanzanian Psychological Association <br>TAPA</h2>
               <p class="animated fadeInUp"></p>
-              <a href="membeship-category.php" class="btn-get-started animated fadeInUp scrollto">Become a member</a>
+              <a href="membeship-category.php" class="btn-get-started animated fadeInUp scrollto">Join TAPA now</a>
             </div>
           </div>
         </div>
