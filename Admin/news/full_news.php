@@ -81,7 +81,7 @@ if (isset($_GET['id'])) {
     <section id="breadcrumbs" class="breadcrumbs">
             <div class="container">
                 <div class="d-flex justify-content-between align-items-center">
-                    <a href="../../index.php"> <h2>Home</h2></a>
+                    <a href="../../news-page.php"> <h2>Back</h2></a>
                     <ol>
                         <li><a href="../../index.php">Home</a></li>
                         <li>Full news</li>
