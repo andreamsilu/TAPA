@@ -48,7 +48,7 @@ include "navigation.php";
         }
 
         // Fetch all news articles ordered by date (most recent first)
-        $sql = "SELECT * FROM news ORDER BY date DESC";
+        $sql = "SELECT * FROM news ORDER BY date ASC";
         $result = $conn->query($sql);
 
         $count = 0; // Initialize a counter
@@ -57,8 +57,7 @@ include "navigation.php";
             while ($row = $result->fetch_assoc()) {
                 // Start a new row after every four news articles
                 if ($count % 3 == 0) {
-                    echo "<div class='row'>
-        <a href='index.php'><button>Go Back</button></a>";
+                    echo "<div class='row'>";
                 }
 
                 echo "<div class='col-md-3'>
