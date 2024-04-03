@@ -38,7 +38,7 @@ include "header.php";
           <div class="col-md-4">
             <div class="post-entry">
               <a href="./news-page.php" class="d-block mb-4">
-                <img src="assets/img/tapaImages/Sustain Digital-3.jpg" alt="Image" class="img-fluid">
+                <img src="assets/img/membership/news.jpg" alt="Image" class="img-fluid">
               </a>
               <div class="post-text">
                 <!-- <span class="post-meta">December 13, 2019 &bullet; By <a href="#">Admin</a></span> -->
@@ -51,7 +51,7 @@ include "header.php";
           <div class="col-md-4">
             <div class="post-entry">
               <a href="membership-benefits.php" class="d-block mb-4">
-                <img src="assets/img/tapaImages/Sustain Digital-5.jpg" alt="Image" class="img-fluid">
+                <img src="assets/img/tapaImages/Sustain Digital-21.jpg" alt="Image" class="img-fluid">
               </a>
               <div class="post-text">
                 <!-- <span class="post-meta">December 13, 2019 &bullet; By <a href="#">Admin</a></span> -->
@@ -64,7 +64,7 @@ include "header.php";
           <div class="col-md-4">
             <div class="post-entry">
               <a href="blog-single.html" class="d-block mb-4">
-                <img src="assets/img/tapaImages/Sustain Digital-7.jpg" alt="Image" class="img-fluid">
+                <img src="assets/img/membership/register-phone.jpg"  alt="Image" class="img-fluid">
               </a>
               <div class="post-text">
                 <!-- <span class="post-meta">December 13, 2019 &bullet; By <a href="#">Admin</a></span> -->
