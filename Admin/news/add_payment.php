@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($stmt->execute()) {
             // Payment added successfully
             echo "<script>alert('Payment updated successfully')</script>";
-            // header('Location: member_list.php');
+            header('Location: member_list.php');
         } else {
             // Error occurred while adding payment
             echo "Error: " . $conn->error;

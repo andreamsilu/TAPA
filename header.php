@@ -354,6 +354,10 @@
 </div>
   </header>
   <!-- End Header -->
+</head>
+<body>
+<main id="main">
+
   <script>
     /**
    * Mobile nav toggle

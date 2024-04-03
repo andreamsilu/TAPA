@@ -57,18 +57,18 @@ include "header.php";
                 <!-- <span class="post-meta">December 13, 2019 &bullet; By <a href="#">Admin</a></span> -->
                 <h3><a href="membership-benefits.php">MEMBERSHIP BENEFITS</a></h3>
                 <p>Access the resources, discounts, and services that come with your membership.</p>
-                <p><a href="#" class="readmore">Read more</a></p>
+                <p><a href="membership-benefits.php" class="readmore">Read more</a></p>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="post-entry">
-              <a href="blog-single.html" class="d-block mb-4">
+              <a href="membeship-category.php" class="d-block mb-4">
                 <img src="assets/img/membership/register-phone.jpg"  alt="Image" class="img-fluid">
               </a>
               <div class="post-text">
                 <!-- <span class="post-meta">December 13, 2019 &bullet; By <a href="#">Admin</a></span> -->
-                <h3><a href="renew-membership.php">REGISTER AS NEW MEMBER NOW</a></h3>
+                <h3><a href="membeship-category.php">REGISTER AS NEW MEMBER NOW</a></h3>
                 <p>Maintain your advantages and availability of cutting-edge psychological information</p>
                 <!-- <p><a href="#" class="readmore">Read more</a></p> -->
               </div>
