@@ -77,7 +77,7 @@
             while ($row = mysqli_fetch_assoc($result)) {
               // Extracting data from the current row
               $date = $row['date'];
-              $author = $row['author'];
+              // $author = $row['author'];
               $title = $row['title'];
               $content = substr($row['description'], 0, 100);
               $image = $row['image_url'];
@@ -88,7 +88,7 @@
                             <img src="./Admin/news/' . $image . '" alt="Image" class="img-fluid">
                         </a>
                         <div class="post-text">
-                            <span class="post-meta">' . $date . ' &bullet; By <a href="#">' . $author . '</a></span>
+                            <span class="post-meta">' . $date . ' &bullet; By <a href="#">Admin</a></span>
                             <h3><a href="Admin/news/full_news.php?id=' . $row['id'] . '">' . $title . '</a></h3>
                             <p>' . $content . '...</p>
                             <p><a href="Admin/news/full_news.php?id=' . $row['id'] . '" class="readmore">Read more</a></p>
