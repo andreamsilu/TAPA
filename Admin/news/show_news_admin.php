@@ -48,7 +48,7 @@ include "navigation.php";
         }
 
         // Fetch all news articles ordered by date (most recent first)
-        $sql = "SELECT * FROM news ORDER BY date DESC";
+        $sql = "SELECT * FROM news ORDER BY date ASC";
         $result = $conn->query($sql);
 
         $count = 0; // Initialize a counter
