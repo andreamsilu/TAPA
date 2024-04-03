@@ -40,17 +40,7 @@ include "navigation.php";
     <div class="news-container">
         <?php
         // Database connection
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "TAPA_DB";
-
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-
+        include('./connection.php');
         // Check if the user is authenticated
         if (!isset($_SESSION['email'])) {
             header("Location: ../../login.php");
@@ -66,8 +56,9 @@ include "navigation.php";
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 // Start a new row after every four news articles
-                if ($count % 4 == 0) {
-                    echo "<div class='row'>";
+                if ($count % 3 == 0) {
+                    echo "<div class='row'>
+        <a href='index.php'><button>Go Back</button></a>";
                 }
 
                 echo "<div class='col-md-3'>
