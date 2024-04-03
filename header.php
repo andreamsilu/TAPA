@@ -344,6 +344,7 @@
           </li>
           <li><a class="nav-link scrollto" href="publication-resources.php">Publications</a></li>
           <li><a class="nav-link scrollto" href="photo-gallery.php">Photo Gallery</a></li>
+          <li><a class="nav-link scrollto" href="news-page.php">News&Topics</a></li>
           <li><a class="nav-link scrollto" href="contact.php">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
