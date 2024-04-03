@@ -68,7 +68,7 @@
           // Assuming you have established a database connection already
           include('./forms/connection.php');
           // Fetching data from the 'news' table, sorted by date in descending order
-          $sql = "SELECT * FROM news ORDER BY date ASC";
+          $sql = "SELECT * FROM news WHERE status ='1' ORDER BY date ASC";
           $result = mysqli_query($conn, $sql);
 
           // Check if there are any records
