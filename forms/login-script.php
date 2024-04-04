@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   include('../forms/connection.php');
 
     // Query to fetch user details based on the provided email
-    $sql = "SELECT * FROM users WHERE email = '$email' AND pay_status =='1' LIMIT 1";
+    $sql = "SELECT * FROM users WHERE email = '$email'  LIMIT 1";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
