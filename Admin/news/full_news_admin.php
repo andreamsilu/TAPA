@@ -108,7 +108,7 @@ if (isset($_GET['id'])) {
         </html>
 <?php
     } else {
-        echo "No news found with the provided ID.";
+        echo "<script>alert('No news found with the provided ID.')</script>";
     }
 
     // Close statement and database connection
