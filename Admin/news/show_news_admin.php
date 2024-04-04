@@ -40,7 +40,7 @@ include "navigation.php";
     <div class="news-container">
         <?php
         // Database connection
-        include('./connection.php');
+        include('../../forms/connection.php');
         // Check if the user is authenticated
         if (!isset($_SESSION['email'])) {
             header("Location: ../../login.php");
