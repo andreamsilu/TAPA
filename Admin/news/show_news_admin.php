@@ -61,7 +61,7 @@ include "navigation.php";
                 }
 
                 echo "<div class='col-md-4'>
-                <a href='./full_news_admin.php'>
+                <a href='./full_news_admin.php?id={$row['id']}'>
               <div class='card news-card'>";
 
                 // Check if video URL is available for this article
