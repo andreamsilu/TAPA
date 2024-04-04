@@ -32,8 +32,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 }
                 exit();
             } else {
-                echo $error = "Invalid credentials. Please try again.";
-                header("Location: ../login.php");
+                echo $error = "<script>alert('Invalid credentials. Please try again.')</script>";
+                // header("Location: ../login.php");
             }
         } else {
             echo $error = "Please pay the annual fees or renew your membership to continue.";
