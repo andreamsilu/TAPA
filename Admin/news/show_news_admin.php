@@ -60,7 +60,7 @@ include "navigation.php";
                     echo "<div class='row'>";
                 }
 
-                echo "<div class='col-md-3'>
+                echo "<div class='col-md-4'>
                         <div class='card news-card'>";
 
                 // Check if video URL is available for this article
