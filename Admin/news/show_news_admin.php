@@ -111,7 +111,7 @@ include "navigation.php";
 
         <?php
                 // End the row after every four news articles
-                if ($count % 4 == 3) {
+                if ($count % 3 == 3) {
                     echo "</div>";
                 }
 
@@ -119,7 +119,7 @@ include "navigation.php";
             }
 
             // If the last row doesn't have enough news articles to fill four columns
-            if ($count % 4 !== 0) {
+            if ($count % 3 !== 0) {
                 echo "</div>";
             }
         } else {
