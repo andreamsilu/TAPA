@@ -2,7 +2,7 @@
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-session_start(); 
+session_start();
 
 // Check if the user is authenticated
 if (!isset($_SESSION['email'])) {
@@ -31,10 +31,10 @@ if (!isset($_SESSION['email'])) {
         margin-top: 20px;
     }
 </style>
-<?php 
+<?php
 include "navigation.php";
 ?>
-
+<a href="./full_news_admin.php"></a>
 <div class="container mt-5">
     <!-- <h2>All News</h2> -->
     <div class="news-container">
@@ -61,7 +61,8 @@ include "navigation.php";
                 }
 
                 echo "<div class='col-md-4'>
-                        <div class='card news-card'>";
+                <a href='./full_news_admin.php'>
+              <div class='card news-card'>";
 
                 // Check if video URL is available for this article
                 if (!empty($row['image_url'])) {
@@ -103,6 +104,7 @@ include "navigation.php";
 
                 <p class='card-text'><small class='text-muted'>{$row['date']}</small></p>
                 <a href='full_news_admin.php?id={$row['id']}' class='btn btn-primary btn-sm'>Read More</a>
+                </a>
     </div>
 </div>
 </div>"
