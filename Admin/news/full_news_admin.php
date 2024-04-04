@@ -52,6 +52,7 @@ if (isset($_GET['id'])) {
             ?>
 
             <div class="container mt-5">
+                <a href="./show_news_admin.php"><button type="button" class="btn btn-primary  float-left m-2 p-3">Back</button></a>
                 <h1><?php echo $news['title']; ?></h1>
                 <p>Date: <?php echo $news['date']; ?></p>
                 <div class="row">
