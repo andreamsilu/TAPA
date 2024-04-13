@@ -116,7 +116,7 @@ include "header.php";
                 WhatsApp: +255719911575<br>
                 Call: +255742670113</p> -->
             <a href="https://forms.gle/DM5NMKcMRwEJS7UP9" target="_blank" class="btn btn-primary" style="background-color:#0F718A ;">Register Now</a>
-
+            <a href="assets/img/conference-poster/poster.jpeg" class="btn btn-primary" style="background-color:#0F718A ;" download>Download Poster</a>
             <!-- <a href="https://forms.gle/DM5NMKcMRwEJS7UP9" target="_blank" class="btn btn-primary" style="background-color:#0F718A ;">Register Now</a> -->
         </div>
     </div>
