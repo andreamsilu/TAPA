@@ -70,9 +70,9 @@
                 <!-- End Info Item -->
 
                 <div class="info-item d-flex">
-                  <i class="bi bi-phone flex-shrink-0"></i>
+               <i> <img src="assets/img/conference-poster/whatsap.png" alt="WhatsApp Icon" style="width: 24px; height: 24px; margin-right: 5px;"></i>
                   <div>
-                    <h4>Call:</h4>
+                    <h4>Whatsap:</h4>
                     <p>+255 719 911 575</p>
                   </div>
                 </div>
