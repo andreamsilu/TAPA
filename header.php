@@ -320,8 +320,10 @@
         <i class="bi bi-clock"></i> Monday - Saturday, 8AM to 5PM
       </div>
       <div class="d-flex align-items-center">
-        <i class="bi bi-phone"></i> Call us now +255 719 911 575
-      </div>
+  <img src="assets/img/conference-poster/whatsap.png" alt="WhatsApp Icon" style="width: 24px; height: 24px; margin-right: 5px;"> <!-- Replace whatsapp_icon.png with the actual path to your WhatsApp icon -->
+  <span> +255 719 911 575</span>
+</div>
+
     </div>
   </div>
   <!-- ======= Header ======= -->
