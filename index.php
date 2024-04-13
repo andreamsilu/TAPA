@@ -103,7 +103,7 @@ include "header.php";
         <div class="col-md-6">
     <div class="card mb-1">
         <div class="card-body">
-            <h5 class="card-title p-2 text-white" style="background-color:#0F718A ;">First Psychological Research Conference and Annual General Meeting (AGM) 2024.</h5>
+            <h5 class="card-title p-2 text-white" style="background-color:#0F718A ;">TAPA Scientific Conference Research and Annual General Meeting 2024 Registration</h5>
             <!-- <p class="card-text">The Tanzanian Psychological Association (TAPA), is pleased to invite you to the First Psychological Research Conference and Annual General Meeting (AGM) 2024.</p> -->
             <p class="text"> Theme: <b> The Role of Psychologists in Enhancing Mental Health and Psychosocial Wellbeing in Tanzania.</b> </p>
             <p class="text"> Organizer: <b>Tanzanian Psychological Association (TAPA) </b>  </p>
