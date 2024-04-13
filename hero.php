@@ -18,6 +18,20 @@
       <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
 
       <div class="carousel-inner" role="listbox">
+      <div class="carousel-item" style="background-image: url(assets/img/conference-poster/poster.jpeg); background-size: cover;">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animated fadeInDown">TAPA Scientific Conference Research and Annual General Meeting 2024 Registration</h2>
+              <!-- <p class="animated fadeInUp">
+                The Tanzanian Psychological Association is a non- profit organization
+                which has the mission to promote and to support psychological training and
+                services in Tanzania</p> -->
+              <a href="https://forms.gle/DM5NMKcMRwEJS7UP9" target="_blank" class="btn-get-started animated fadeInUp scrollto">Register now</a>
+              <a href="https://forms.gle/RCDohz7TU3JcBnr2A" target="_blank" class="btn-get-started animated fadeInUp scrollto">Submit abstract</a>
+
+            </div>
+          </div>
+        </div>
 
         <!-- Slide 1 -->
         <div class="carousel-item active" style="background-image: url(assets/img/tapaImages/slide-1.jpg)">
