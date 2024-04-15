@@ -18,7 +18,7 @@
       <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
 
       <div class="carousel-inner" role="listbox">
-      <div class="carousel-item" style="background-image: url(assets/img/conference-poster/poster.jpeg); background-size: cover;">
+      <div class="carousel-item" style="background-image: url(assets/img/conference-poster/AGM.jpg); background-size: cover;">
           <div class="carousel-container">
             <div class="container">
               <h2 class="animated fadeInDown">TAPA Scientific Conference Research and Annual General Meeting 2024 Registration</h2>
