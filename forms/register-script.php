@@ -64,8 +64,53 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($stmt->execute()) {
             // Registration successful, send confirmation email
             $subject = 'Confirm Your Registration';
-            $message = "Dear $fullname,\nThank you for registering with TAPA. Your application has been received, and our team will get back to you after the application is processed and after payment of the fee. Your membership account will be activated only after paying the Registration and Annual Fees.\n\nApplication fees for all categories is 10,000 Tshs.\nAnnual Fees is as follows:\n\ni. Full Member: 50,000 Tshs per annum\nii. Associate Member I: 20,000 Tshs per annum\niii. Associate Member II: 20,000 Tshs per annum\niv. Student Member: 10,000 Tshs per annum\nv. Affiliates: 30,000 Tshs per annum\nvi. Foreign Affiliates: 50,000 Tshs per annum\n\nFor example, if you have a bachelor’s degree in psychology, you qualify to become a Full Member. You would then deposit your annual fee of 50,000 Tshs plus the 10,000 Tshs one-time application fee. The total amount to deposit would be 60,000 TShs.\n\nAfter payment upload proof of payment (receipt) here( https://tapa.or.tz/pay_annual_fees.php).\n\nFor any inquiries, please email admin@tapa.or.tz or Whatsapp +255 719911575.\n\nIf you did not register on our website, please ignore this message.\n\nRegards,\nAdministrative Assistant,\nTanzanian Psychological Association (TAPA)\n+255 719 911 575\n";
-            $headers = "From: TAPA <msiluandrew2020@gmail.com>";
+
+                $message = <<<EMAIL
+<html>
+<head>
+    <title>Confirm Your Registration</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6;color:white;padding: left 10px;padding: right 10px; }
+        h2 { color: #333; }
+        .fees-table { margin-top: 20px; }
+        .fees-table th { text-align: left; padding-right: 10px; }
+        a { color: #0056b3; text-decoration: none; }
+        .footer { margin-top: 20px; font-size: 0.9em; color: #555; }
+        p{color: #333;}
+    </style>
+</head>
+<body>
+    <h2>Confirm Your Registration</h2>
+    <p>Dear $fullname},</p>
+    <p>Thank you for registering with TAPA. Your application has been received, and our team will get back to you after the application is processed and after payment of the fee. Your membership account will be activated only after paying the Registration and Annual Fees.</p>
+    <table class="fees-table">
+        <tr><th>Membership Type</th><th>Annual Fee</th></tr>
+        <tr><td>Full Member</td><td>50,000 Tshs</td></tr>
+        <tr><td>Associate Member I</td><td>20,000 Tshs</td></tr>
+        <tr><td>Associate Member II</td><td>20,000 Tshs</td></tr>
+        <tr><td>Student Member</td><td>10,000 Tshs</td></tr>
+        <tr><td>Affiliates</td><td>30,000 Tshs</td></tr>
+        <tr><td>Foreign Affiliates</td><td>50,000 Tshs</td></tr>
+    </table>
+    <p>For example, if you have a bachelor’s degree in psychology, you qualify to become a Full Member. You would then deposit your annual fee of 50,000 Tshs plus the 10,000 Tshs one-time application fee. The total amount to deposit would be 60,000 TShs.</p>
+    <p>BANK: NMB.<br>Account No: 20810008255<br>Account name: Tanzanian Psychological Association</p>
+    <p>After payment upload proof of payment (receipt) <a href='https://tapa.or.tz/pay_annual_fees.php'>here</a>.</p>
+    <p>For any inquiries, please email <a href='mailto:admin@tapa.or.tz'>admin@tapa.or.tz</a> or Whatsapp +255 719911575.</p>
+    <p>If you did not register on our website, please ignore this message.</p>
+    <div class="footer">
+        Regards,<br>
+        Administrative Assistant,<br>
+        Tanzanian Psychological Association (TAPA)<br>
+        +255 719 911 575
+    </div>
+</body>
+</html>
+EMAIL;
+
+                $headers = "From: TAPA <msiluandrew2020@gmail.com>\r\n";
+                $headers .= "MIME-Version: 1.0\r\n";
+                $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+
 
             if (mail($email, $subject, $message, $headers)) {
                 // Redirect to success page
