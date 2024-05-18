@@ -1,61 +1,50 @@
 <?php
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+// error_reporting(E_ALL);
+// ini_set('display_errors', 1);
 
-session_start(); // Start the session
+session_start(); // Uncommented session_start()
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    include('../forms/connection.php'); // Ensure the connection script is included once
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
-    if (isset($_POST['email']) && isset($_POST['password'])) {
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        // Prepared statement to prevent SQL Injection
-        $stmt = $conn->prepare("SELECT id, password, role FROM users WHERE email = ? LIMIT 1");
-        $stmt->bind_param("s", $email); // 's' specifies the variable type => 'string'
-        $stmt->execute();
-        $result = $stmt->get_result();
+  include('../forms/connection.php');
 
-        if ($result->num_rows > 0) {
-            $row = $result->fetch_assoc();
-            $hashedPassword = $row['password'];
+    // Query to fetch user details based on the provided email
+    $sql = "SELECT * FROM users WHERE email = '$email'  LIMIT 1";
+    $result = $conn->query($sql);
 
-            // Verify the provided password with the hashed password from the database
-            if ($password == $hashedPassword) {
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $hashedPassword = $row['password'];
 
-                // Password matches, create a session and store user information
-                $_SESSION['user_id'] = $row['id'];
-                $_SESSION['email'] = $email;
-
-                // Check user role
-                if ($row['role'] == '1') {
-                    // Admin user
-                    header("Location: ../Admin/news/index.php"); // Redirect to admin dashboard
-                    exit();
-                } else {
-                    // Normal user
-                    header("Location: ../profile/index.php"); // Redirect to user profile
-                    exit();
-                }
+        // Verify the provided password with the hashed password from the database
+        if (password_verify($password, $hashedPassword)) {
+            // Password matches, create a session and store user information
+            $_SESSION['user_id'] = $row['id'];
+            $_SESSION['email'] = $email;
+            
+            // Check user role
+            if ($row['role'] == 1) {
+                // Admin user
+                header("Location: ../Admin/news/index.php"); // Redirect to admin dashboard
             } else {
-                // Incorrect password
-                $_SESSION['error'] = "Invalid credentials. Please try again.";
-                header("Location: ../login.php"); // Redirect to login page
-                exit();
+                // Normal user
+                header("Location: ../profile/index.php"); // Redirect to user profile
             }
-        } else {
-            // User not found
-            $_SESSION['error'] = "User with this email does not exist.";
-            header("Location: ../login.php"); // Redirect to login page
             exit();
-        }
+        } else {
+            // Incorrect password
+            echo $error = "Invalid credentials. Please try again.";
+            header("Location: ../login.php"); // Redirect to user profile
 
-        $stmt->close(); // Close statement
-        $conn->close(); // Close connection
+        }
     } else {
-        $_SESSION['error'] = "Required fields are missing.";
-        header("Location: ../login.php"); // Redirect to login page
-        exit();
+        // User not found
+        echo $error = "User with this email does not exist.";
     }
+
+    $conn->close();
 }
+?>
