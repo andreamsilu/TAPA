@@ -125,7 +125,7 @@ include "header.php";
             <h5 class="card-title p-2 text-white" style="background-color:#0F718A ;">TAPA Scientific Conference 2024 Call for Abstracts</h5>
             <p class="card-text">Theme: <b>The Role of Psychologists in Enhancing Mental Health and Psychosocial Well-being.</b> </p>
             <p class="card-text"> Submission Email: <a href="mailto:vincymallya105@gmail.com">vincymallya105@gmail.com</a>  </mail> or  <a href="mailto:managingeditor@tapa.or.tz">managingeditor@tapa.or.tz</a>   </p>
-            <p class="card-text"> Submission Deadline: <b>15th May 2024 </b> </p>
+            <p class="card-text"> Submission Deadline: <b>31st May 2024 </b> </p>
 
               <!-- - Abstracts will be published as received, so ensure adherence to formatting instructions. - Timely and accurate submission is crucial for inclusion in the symposium abstract guide. - Confirmation of receipt will be sent to the presenting author via email. - If the submitter differs from the presenter, please indicate in the submission form. Submit your abstract by email to managingeditor@tapa.or.tz or vincymallya105@gmail.com.</p> -->
             <a href="https://forms.gle/RCDohz7TU3JcBnr2A" target="_blank" class="btn btn-primary" style="background-color:#0F718A ;">Submit Abstract</a>
