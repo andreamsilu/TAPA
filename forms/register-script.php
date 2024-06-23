@@ -107,7 +107,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </html>
 EMAIL;
 
-                $headers = "From: TAPA <msiluandrew2020@gmail.com>\r\n";
+                $headers = "From: TAPA <admin@tapa.or.tz>\r\n";
                 $headers .= "MIME-Version: 1.0\r\n";
                 $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
