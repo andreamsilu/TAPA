@@ -10,7 +10,7 @@
 // Establish a database connection (replace with your database details)
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "passw0rd";
 $dbname = "TAPA_DB";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
