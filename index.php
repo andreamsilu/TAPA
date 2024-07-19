@@ -79,8 +79,8 @@ include "header.php";
         </div>
       </div>
     </section> -->
-
-  <section class="section bg-white">
+   <!-- TAPA scientific conference -->
+  <!-- <section class="section bg-white">
     <div class="section-title">
       <h2 class="pt-1">TAPA Scientific Conference and 8th Annual General Meeting
       </h2>
@@ -93,32 +93,20 @@ include "header.php";
               <img src="assets/img/conference-poster/poster.jpeg" alt="Image" class="img-fluid">
             </a>
             <div class="post-text">
-              <!-- <span class="post-meta">December 13, 2019 &bullet; By <a href="#">Admin</a></span> -->
-              <!-- <h3><a href="https://forms.gle/DM5NMKcMRwEJS7UP9" target="_blank"><button class="btn btn-primary p-3"> Registration is now open, please follow this link and register.</button></a></h3> -->
-              <!-- <p>Registration is now open, please follow the link below.</p> -->
-              <!-- <p><a href="https://forms.gle/DM5NMKcMRwEJS7UP9" target="_blank" class="readmore">View all....</a></p> -->
-            </div>
+            </div>    
           </div>
         </div>
         <div class="col-md-6">
     <div class="card mb-1">
         <div class="card-body">
             <h5 class="card-title p-2 text-white" style="background-color:#0F718A ;">TAPA Scientific Conference Research and Annual General Meeting 2024 Registration</h5>
-            <!-- <p class="card-text">The Tanzanian Psychological Association (TAPA), is pleased to invite you to the First Psychological Research Conference and Annual General Meeting (AGM) 2024.</p> -->
-            <p class="text"> Theme: <b> The Role of Psychologists in Enhancing Mental Health and Psychosocial Wellbeing in Tanzania.</b> </p>
+             <p class="text"> Theme: <b> The Role of Psychologists in Enhancing Mental Health and Psychosocial Wellbeing in Tanzania.</b> </p>
             <p class="text"> Organizer: <b>Tanzanian Psychological Association (TAPA) </b>  </p>
-
-              <p class="text"> Conference date: <b> 27th - 28th June 2024 </b>  </p>
+               <p class="text"> Conference date: <b> 27th - 28th June 2024 </b>  </p>
               <p class="text">Location: <b> Vizano Hotel Dodoma.</b>  </p>
-               <!-- <p class="text"> Registration is now open, please fill out the form below.</p> -->
-            <!-- <p class="card-text">Enquiries:<br>
-                Email: info@tapa.or.tz<br> 
-                WhatsApp: +255719911575<br>
-                Call: +255742670113</p> -->
-            <a href="https://forms.gle/DM5NMKcMRwEJS7UP9" target="_blank" class="btn btn-primary" style="background-color:#0F718A ;">Register Now</a>
+             <a href="https://forms.gle/DM5NMKcMRwEJS7UP9" target="_blank" class="btn btn-primary" style="background-color:#0F718A ;">Register Now</a>
             <a href="assets/img/conference-poster/poster.jpeg" class="btn btn-primary" style="background-color:#0F718A ;" download>Download Poster</a>
-            <!-- <a href="https://forms.gle/DM5NMKcMRwEJS7UP9" target="_blank" class="btn btn-primary" style="background-color:#0F718A ;">Register Now</a> -->
-        </div>
+         </div>
     </div>
     <div class="card">
         <div class="card-body">
@@ -126,19 +114,17 @@ include "header.php";
             <p class="card-text">Theme: <b>The Role of Psychologists in Enhancing Mental Health and Psychosocial Well-being.</b> </p>
             <p class="card-text"> Submission Email: <a href="mailto:vincymallya105@gmail.com">vincymallya105@gmail.com</a>  </mail> or  <a href="mailto:managingeditor@tapa.or.tz">managingeditor@tapa.or.tz</a>   </p>
             <p class="card-text"> Submission Deadline: <b>31st May 2024 </b> </p>
-
-              <!-- - Abstracts will be published as received, so ensure adherence to formatting instructions. - Timely and accurate submission is crucial for inclusion in the symposium abstract guide. - Confirmation of receipt will be sent to the presenting author via email. - If the submitter differs from the presenter, please indicate in the submission form. Submit your abstract by email to managingeditor@tapa.or.tz or vincymallya105@gmail.com.</p> -->
-            <a href="https://forms.gle/RCDohz7TU3JcBnr2A" target="_blank" class="btn btn-primary" style="background-color:#0F718A ;">Submit Abstract</a>
+              <a href="https://forms.gle/RCDohz7TU3JcBnr2A" target="_blank" class="btn btn-primary" style="background-color:#0F718A ;">Submit Abstract</a>
         </div>
     </div>
-</div>
+</div> -->
 
 
 
 
-      </div>
+      <!-- </div>
     </div>
-  </section>
+  </section> -->
   <!-- ======= Services Section ======= -->
   <section id="services" class="services section-bg">
     <div class="container" data-aos="fade-up">
