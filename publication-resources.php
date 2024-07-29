@@ -67,6 +67,18 @@
                   </div>
                 </div>
 
+                <div class="swiper-slide">
+                  <div class="item">
+                    <h3 class="mb-0">TAPA  8TH ANNUAL GENERAL MEETING AND
+                    FIRST SCIENTIFIC CONFERENCE 2024</h3>
+                    <p><strong>Theme:</strong>The Role of Psychologists in Enhancing Mental Health and Psychosocial Wellbeing in Tanzania</p>
+                    <br>
+                    <div class="btn-wrap">
+                      <a href="assets/AGM_8TH.pdf" style="border: 2px #0F718A solid;padding:10px;border-radius:5px;" target="_blank">Read Now</a>
+                    </div>
+                  </div>
+                </div>
+
                 <!-- addd more slides for publications here -->
               </div>
               <div class="swiper-pagination"></div>
