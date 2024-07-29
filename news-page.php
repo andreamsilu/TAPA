@@ -65,24 +65,18 @@
       <div class="container">
         <div class="row mb-5">
           <?php
-          // Assuming you have established a database connection already
-          include('./forms/connection.php');
-          // Fetching data from the 'news' table, sorted by date in descending order
-          $sql = "SELECT * FROM news WHERE status ='1' ORDER BY date DESC";
+           include('./forms/connection.php');
+           $sql = "SELECT * FROM news WHERE status ='1' ORDER BY date DESC";
           $result = mysqli_query($conn, $sql);
 
-          // Check if there are any records
-          if (mysqli_num_rows($result) > 0) {
-            // Loop through each row of data
-            while ($row = mysqli_fetch_assoc($result)) {
-              // Extracting data from the current row
-              $date = $row['date'];
+           if (mysqli_num_rows($result) > 0) {
+             while ($row = mysqli_fetch_assoc($result)) {
+               $date = $row['date'];
               // $author = $row['author'];
               $title = $row['title'];
               $content = substr($row['description'], 0, 100);
               $image = $row['image_url'];
-              // Outputting the HTML structure with the fetched data
-              echo '<div class="col-md-4">
+               echo '<div class="col-md-4">
                     <div class="post-entry">
                         <a href="Admin/news/full_news.php?id=' . $row['id'] . '" class="d-block mb-4">
                             <img src="./Admin/news/' . $image . '" alt="Image" class="img-fluid">
@@ -99,8 +93,7 @@
           } else {
             echo "No news found!";
           }
-          // Close the database connection
-          mysqli_close($conn);
+           mysqli_close($conn);
           ?>
         </div>
       </div>
@@ -114,7 +107,8 @@
       </div>
       </div>
     </section>
-    </main><!-- End #main -->
+    </main>
+    <!-- End #main -->
     <!-- ======= Footer ======= -->
     <?php include('footer.php') ?>
-    ```
+    
