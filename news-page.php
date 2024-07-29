@@ -60,7 +60,7 @@
     ?>
     <section class="section">
       <div class="section-title">
-        <h2 class="pt-1">MEMBERSHIP IN TAPA</h2>
+        <h2 class="pt-1"> TAPA NEWS AND TOPICS</h2>
       </div>
       <div class="container">
         <div class="row mb-5">
@@ -68,7 +68,7 @@
           // Assuming you have established a database connection already
           include('./forms/connection.php');
           // Fetching data from the 'news' table, sorted by date in descending order
-          $sql = "SELECT * FROM news WHERE status ='1' ORDER BY date ASC";
+          $sql = "SELECT * FROM news WHERE status ='1' ORDER BY date DESC";
           $result = mysqli_query($conn, $sql);
 
           // Check if there are any records
