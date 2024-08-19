@@ -10,6 +10,7 @@ if (!isset($_SESSION['email'])) {
   exit();
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,6 +22,8 @@ if (!isset($_SESSION['email'])) {
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- DataTables CSS -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    <!-- DataTables Buttons CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.1/css/buttons.dataTables.min.css">
 </head>
 
 <body>
@@ -52,13 +55,14 @@ LEFT JOIN payments p ON u.id = p.user_id
         $paymentDate = 'N/A';
       }
       echo "<tr>";
-      echo "<td><a href='view_member.php?id=" . $row['id'] . "'>" . $row['id'] . " view</a></td>";
+      echo "<td>" . $row['id'] . "</td>";
       echo "<td>" . $row['fullname'] . "</td>";
       echo "<td>" . $row['phone'] . "</td>";
       echo "<td>" . $paymentDate . "</td>";
       echo "<td>" . $row['status'] . "</td>";
       echo "<td>" . $row['amount'] . "</td>";
       echo "<td>";
+      echo "<a href='view_member.php?id=" . $row['id'] . "' class='btn btn-secondary'><i class='bi bi-eye bi-fw'></i> View</a> ";
       if ($row['status'] == 'unpaid') {
         echo "<button class='btn btn-primary add-payment' data-user-id='" . $row['id'] . "'><i class='bi bi-plus bi-fw'></i> Add</button>";
       }
@@ -155,9 +159,27 @@ LEFT JOIN payments p ON u.id = p.user_id
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- DataTables JS -->
     <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <!-- DataTables Buttons JS -->
+    <script src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.print.min.js"></script>
     <script>
     $(document).ready(function() {
-        $('#userTable').DataTable(); // Initialize DataTables
+        $('#userTable').DataTable({
+            dom: 'Bfrtip',
+            buttons: [{
+                    extend: 'excelHtml5',
+                    text: 'Export Excel',
+                    className: 'btn btn-success'
+                },
+                {
+                    extend: 'pdfHtml5',
+                    text: 'Export PDF',
+                    className: 'btn btn-danger'
+                }
+            ]
+        });
     });
     </script>
 
