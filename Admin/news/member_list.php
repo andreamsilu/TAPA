@@ -12,6 +12,7 @@
     <!-- DataTables Buttons CSS -->
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.1/css/buttons.dataTables.min.css">
 </head>
+<?php include 'navigation.php' ?>
 
 <body>
     <div class="container mt-4">
