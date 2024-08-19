@@ -30,10 +30,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt_check_email->close();
 
         // Continue with other input sanitization
-        function sanitize_input($input) {
+        function sanitize_input($input)
+        {
             return trim(htmlspecialchars($input, ENT_QUOTES, 'UTF-8'));
         }
-        
+
         $phone = sanitize_input(filter_input(INPUT_POST, 'phone'));
         $postal_address = sanitize_input(filter_input(INPUT_POST, 'postal_address'));
         $birth_date = sanitize_input(filter_input(INPUT_POST, 'birth_date'));
@@ -44,15 +45,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $crime = sanitize_input(filter_input(INPUT_POST, 'crime'));
         $yes_crime = sanitize_input(filter_input(INPUT_POST, 'yes_crime'));
         $password = sanitize_input(filter_input(INPUT_POST, 'password'));
-        
+
         // Generate a unique token for email confirmation
         $token = bin2hex(random_bytes(16)); // Generates a 32-character hexadecimal string
 
         // Hash the password
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-
-        // Database connection parameters
-        include "../forms/connection.php";
 
         // Prepare the SQL statement with placeholders
         $sql = "INSERT INTO users(fullname, email, phone, postal_address, birth_date, physical_address, membership_type, licensure, yes_licensure, crime, yes_crime, password, token) 
@@ -69,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Registration successful, send confirmation email
             $subject = 'Confirm Your Registration';
 
-                $message = <<<EMAIL
+            $message = <<<EMAIL
 <html>
 <head>
     <title>Confirm Your Registration</title>
@@ -85,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <h2>Confirm Your Registration</h2>
-    <p>Dear $fullname},</p>
+    <p>Dear $fullname,</p>
     <p>Thank you for registering with TAPA. Your application has been received, and our team will get back to you after the application is processed and after payment of the fee. Your membership account will be activated only after paying the Registration and Annual Fees.</p>
     <table class="fees-table">
         <tr><th>Membership Type</th><th>Annual Fee</th></tr>
@@ -111,12 +109,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </html>
 EMAIL;
 
-                $headers = "From: TAPA <admin@tapa.or.tz>\r\n";
-                $headers .= "MIME-Version: 1.0\r\n";
-                $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+            $headers = "From: TAPA <admin@tapa.or.tz>\r\n";
+            $headers .= "MIME-Version: 1.0\r\n";
+            $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
+            // Send email to the provided address and another address
+            $recipients = "$email, tapatz18@gmail.com";
 
-            if (mail($email, $subject, $message, $headers)) {
+            if (mail($recipients, $subject, $message, $headers)) {
                 // Redirect to success page
                 header("Location: registration_success.php");
                 exit();
@@ -137,3 +137,4 @@ EMAIL;
         echo "An error occurred: " . $e->getMessage();
     }
 }
+?>
