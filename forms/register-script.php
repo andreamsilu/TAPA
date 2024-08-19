@@ -30,17 +30,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt_check_email->close();
 
         // Continue with other input sanitization
-        $phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_STRING);
-        $postal_address = filter_input(INPUT_POST, 'postal_address', FILTER_SANITIZE_STRING);
-        $birth_date = filter_input(INPUT_POST, 'birth_date', FILTER_SANITIZE_STRING);
-        $physical_address = filter_input(INPUT_POST, 'physical_address', FILTER_SANITIZE_STRING);
-        $membership_type = filter_input(INPUT_POST, 'membership_type', FILTER_SANITIZE_STRING);
-        $licensure = filter_input(INPUT_POST, 'licensure', FILTER_SANITIZE_STRING);
-        $yes_licensure = filter_input(INPUT_POST, 'yes_licensure', FILTER_SANITIZE_STRING);
-        $crime = filter_input(INPUT_POST, 'crime', FILTER_SANITIZE_STRING);
-        $yes_crime = filter_input(INPUT_POST, 'yes_crime', FILTER_SANITIZE_STRING);
-        $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
-
+        $phone = htmlspecialchars(filter_input(INPUT_POST, 'phone', FILTER_DEFAULT));
+        $postal_address = htmlspecialchars(filter_input(INPUT_POST, 'postal_address', FILTER_DEFAULT));
+        $birth_date = htmlspecialchars(filter_input(INPUT_POST, 'birth_date', FILTER_DEFAULT));
+        $physical_address = htmlspecialchars(filter_input(INPUT_POST, 'physical_address', FILTER_DEFAULT));
+        $membership_type = htmlspecialchars(filter_input(INPUT_POST, 'membership_type', FILTER_DEFAULT));
+        $licensure = htmlspecialchars(filter_input(INPUT_POST, 'licensure', FILTER_DEFAULT));
+        $yes_licensure = htmlspecialchars(filter_input(INPUT_POST, 'yes_licensure', FILTER_DEFAULT));
+        $crime = htmlspecialchars(filter_input(INPUT_POST, 'crime', FILTER_DEFAULT));
+        $yes_crime = htmlspecialchars(filter_input(INPUT_POST, 'yes_crime', FILTER_DEFAULT));
+        $password = htmlspecialchars(filter_input(INPUT_POST, 'password', FILTER_DEFAULT));
+        
         // Generate a unique token for email confirmation
         $token = bin2hex(random_bytes(16)); // Generates a 32-character hexadecimal string
 
