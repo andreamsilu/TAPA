@@ -161,8 +161,6 @@
                                                 <small class="text-muted">Accepted file formats: PDF, DOC, DOCX</small>
                                                 <small id="cvError" class="text-danger"></small>
                                             </div>
-                                        </div>
-                                        <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="physical_address"><i class="bi bi-house"></i> Physical
                                                     Address</label>
@@ -170,6 +168,9 @@
                                                     id="physical_address" placeholder="Physical address" required>
                                                 <small id="physicalAddressError" class="text-danger"></small>
                                             </div>
+                                        </div>
+                                        <div class="col-md-6">
+
                                             <div class="form-group">
                                                 <label for="membership_type">Select Membership category</label>
                                                 <select class="form-control" id="membership_type" name="membership_type"
