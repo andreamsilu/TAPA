@@ -12,6 +12,7 @@ if (!isset($_SESSION['email'])) {
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
 <!-- DataTables Buttons CSS -->
 <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.1/css/buttons.dataTables.min.css">
+
 <div class="container mt-4">
     <h2>User Information</h2>
     <table id="userTable" class="table table-striped">
@@ -74,15 +75,20 @@ $(document).ready(function() {
             }
         ],
         dom: 'Bfrtip',
+        pageLength: 10, // Default number of entries
+        lengthMenu: [
+            [10, 25, 50, 75, 100, -1],
+            [10, 25, 50, 75, 100, "All"]
+        ], // Pagination options
         buttons: [{
                 extend: 'excelHtml5',
                 text: 'Export Excel',
-                className: 'btn btn-sm btn-success'
+                className: 'btn btn-xs btn-success' // Small button
             },
             {
                 extend: 'pdfHtml5',
                 text: 'Export PDF',
-                className: 'btn btn-sm btn-danger'
+                className: 'btn btn-xs btn-danger' // Small button
             }
         ]
     });
