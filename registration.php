@@ -77,6 +77,11 @@
     text-decoration: underline;
     color: #0c5b6d;
 }
+
+.error-message {
+    color: red;
+    font-size: 14px;
+}
 </style>
 
 <body>
@@ -109,37 +114,40 @@
                             </div>
                             <div class="card-body">
                                 <form id="myForm" action="forms/register-script.php" method="post" role="form"
-                                    enctype="multipart/form-data" onsubmit="return validateForm()">
+                                    enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="fullname"><i class="bi bi-person"></i> Full Name</label>
                                                 <input type="text" name="fullname" class="form-control" id="fullname"
                                                     placeholder="Your full name" required>
-                                                <small id="nameError" class="text-danger"></small>
+                                                <small id="nameError" class="error-message"></small>
                                             </div>
                                             <div class="form-group">
                                                 <label for="email"><i class="bi bi-envelope"></i> Email</label>
                                                 <input type="email" class="form-control" name="email" id="email"
                                                     placeholder="Your Email" required>
+                                                <small id="emailError" class="error-message"></small>
                                             </div>
                                             <div class="form-group">
                                                 <label for="phone"><i class="bi bi-telephone"></i> Phone</label>
                                                 <input type="text" class="form-control" name="phone" id="phone"
                                                     placeholder="Your phone" required>
-                                                <small id="phoneError" class="text-danger"></small>
+                                                <small id="phoneError" class="error-message"></small>
                                             </div>
                                             <div class="form-group">
                                                 <label for="postal_address"><i class="bi bi-house-door"></i> Postal
                                                     Address</label>
                                                 <input type="text" class="form-control" name="postal_address"
                                                     id="postal_address" placeholder="Postal address" required>
+                                                <small id="postalAddressError" class="error-message"></small>
                                             </div>
                                             <div class="form-group">
                                                 <label for="birth_date"><i class="bi bi-calendar"></i> Birth
                                                     date</label>
                                                 <input type="text" class="form-control" name="birth_date"
                                                     id="birth_date" placeholder="Birthdate" required>
+                                                <small id="birthDateError" class="error-message"></small>
                                             </div>
 
                                             <div class="form-group">
@@ -147,67 +155,11 @@
                                                     CV</label>
                                                 <input type="file" class="form-control" name="cv" id="cv"
                                                     placeholder="Upload your cv" accept=".pdf,.doc,.docx" required>
-                                                <small class="text-muted">Accepted file formats: PDF, DOC, DOCX</small>
+                                                <small id="cvError" class="error-message"></small>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="physical_address"><i class="bi bi-house"></i> Physical
-                                                    Address</label>
-                                                <input type="text" class="form-control" name="physical_address"
-                                                    id="physical_address" placeholder="Physical address" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="membership_type">Select Membership category</label>
-                                                <select class="form-control" id="membership_type" name="membership_type"
-                                                    required>
-                                                    <option value="" disabled selected>Select membership category
-                                                    </option>
-                                                    <option value="full_member">Full Member</option>
-                                                    <option value="associate_one">Associate Member I</option>
-                                                    <option value="associate_two">Associate Member II</option>
-                                                    <option value="student">Student Member</option>
-                                                    <option value="local_affiliate">Local Affiliate Member</option>
-                                                    <option value="foreign_affiliate">Foreign Affiliate Member</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="licensure">Licensure/Ethics</label>
-                                                <div>
-                                                    <input type="radio" name="licensure" value="yes" id="licensure_yes"
-                                                        required>
-                                                    <label for="licensure_yes">Yes</label>
-                                                </div>
-                                                <div>
-                                                    <input type="radio" name="licensure" value="no" id="licensure_no"
-                                                        required>
-                                                    <label for="licensure_no">No</label>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="yes_licensure"><i class="bi bi-check2"></i> If Yes, Mention
-                                                    below</label>
-                                                <input type="text" name="yes_licensure" class="form-control"
-                                                    id="yes_licensure" placeholder="Your licensure">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="crimes">Crimes</label>
-                                                <div>
-                                                    <input type="radio" name="crime" value="yes" id="crime_yes"
-                                                        required>
-                                                    <label for="crime_yes">Yes</label>
-                                                </div>
-                                                <div>
-                                                    <input type="radio" name="crime" value="no" id="crime_no" required>
-                                                    <label for="crime_no">No</label>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="yes_crime"><i class="bi bi-exclamation-triangle"></i> If
-                                                    Yes, please explain below</label>
-                                                <textarea class="form-control" name="yes_crime" rows="3"
-                                                    placeholder="Explain your crime situation"></textarea>
-                                            </div>
+                                            <!-- Additional form fields here -->
                                         </div>
                                     </div>
 
@@ -236,41 +188,59 @@
         <!-- End Registration Section -->
     </main>
 
-    <!-- Terms and Conditions Modal -->
-    <div class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="termsModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="termsModalLabel">Terms and Conditions</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <!-- Include your terms and conditions here -->
-                    <p>Terms and conditions content goes here...</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- JavaScript Validation -->
+    <!-- JavaScript for real-time validation -->
     <script>
-    function validateForm() {
+    document.getElementById("fullname").addEventListener("input", function() {
+        var fullname = document.getElementById("fullname").value;
+        var nameError = document.getElementById("nameError");
+        if (fullname.length < 3) {
+            nameError.textContent = "Full name must be at least 3 characters.";
+        } else {
+            nameError.textContent = "";
+        }
+    });
+
+    document.getElementById("email").addEventListener("input", function() {
+        var email = document.getElementById("email").value;
+        var emailError = document.getElementById("emailError");
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            emailError.textContent = "Please enter a valid email address.";
+        } else {
+            emailError.textContent = "";
+        }
+    });
+
+    document.getElementById("phone").addEventListener("input", function() {
         var phone = document.getElementById("phone").value;
         var phoneError = document.getElementById("phoneError");
-
-        if (phone.length != 10 || isNaN(phone)) {
+        if (phone.length !== 10 || isNaN(phone)) {
             phoneError.textContent = "Phone number must be exactly 10 digits.";
-            return false;
+        } else {
+            phoneError.textContent = "";
         }
+    });
 
-        return true;
-    }
+    document.getElementById("postal_address").addEventListener("input", function() {
+        var postalAddress = document.getElementById("postal_address").value;
+        var postalAddressError = document.getElementById("postalAddressError");
+        if (postalAddress.length < 5) {
+            postalAddressError.textContent = "Postal address must be at least 5 characters.";
+        } else {
+            postalAddressError.textContent = "";
+        }
+    });
+
+    document.getElementById("cv").addEventListener("change", function() {
+        var cv = document.getElementById("cv").files[0];
+        var cvError = document.getElementById("cvError");
+        var allowedExtensions = /(\.pdf|\.doc|\.docx)$/i;
+        if (!allowedExtensions.exec(cv.name)) {
+            cvError.textContent = "Please upload a valid CV file (.pdf, .doc, .docx).";
+        } else {
+            cvError.textContent = "";
+        }
+    });
     </script>
 
     <!-- Bootstrap and jQuery JS -->
