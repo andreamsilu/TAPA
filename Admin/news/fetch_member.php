@@ -46,10 +46,10 @@ if (isset($_GET['action']) && $_GET['action'] == 'fetchData') {
             'payment_date' => $paymentDate,
             'status' => $row['status'],
             'amount' => $row['amount'],
-            'actions' => "<a href='view_member.php?id=" . $row['id'] . "' class='btn btn-sm btn-secondary'><i class='bi bi-eye'></i> View</a> " .
-                         ($row['status'] == 'unpaid' ? "<button class='btn btn-sm btn-primary add-payment' data-user-id='" . $row['id'] . "'><i class='bi bi-plus'></i> Add</button>" : "") .
-                         ($row['status'] == 'pending' ? "<a href='edit_payment.php?id=" . $row['id'] . "&status=" . $row['status'] . "&amount=" . $row['amount'] . "' class='btn btn-sm btn-warning'><i class='bi bi-pencil'></i> Edit</a>" : "") .
-                         ($row['status'] == 'paid' ? "<button class='btn btn-sm btn-success' disabled><i class='bi bi-check'></i> Done</button> <a href='edit_payment.php?id=" . $row['id'] . "&status=" . $row['status'] . "&amount=" . $row['amount'] . "' class='btn btn-sm btn-warning mx-1'><i class='bi bi-pencil'></i> Edit</a>" : "")
+            'actions' => "<a href='view_member.php?id=" . $row['id'] . "' class='btn btn-sm btn-secondary'>View</a> " .
+                         ($row['status'] == 'unpaid' ? "<button class='btn btn-sm btn-primary add-payment' data-user-id='" . $row['id'] . "'>Add</button>" : "") .
+                         ($row['status'] == 'pending' ? "<a href='edit_payment.php?id=" . $row['id'] . "&status=" . $row['status'] . "&amount=" . $row['amount'] . "' class='btn btn-sm btn-warning'>Edit</a>" : "") .
+                         ($row['status'] == 'paid' ? "<button class='btn btn-sm btn-success' disabled>Done</button> <a href='edit_payment.php?id=" . $row['id'] . "&status=" . $row['status'] . "&amount=" . $row['amount'] . "' class='btn btn-sm btn-warning mx-1'>Edit</a>" : "")
         ];
     }
 
