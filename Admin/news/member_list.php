@@ -9,7 +9,9 @@ if (!isset($_SESSION['email'])) {
 ?>
 
 <?php include 'navigation.php'; ?>
-
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+<!-- DataTables Buttons CSS -->
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.1/css/buttons.dataTables.min.css">
 <div class="container mt-4">
     <h2>User Information</h2>
     <table id="userTable" class="table table-striped">
