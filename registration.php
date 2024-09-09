@@ -234,7 +234,7 @@
                                                 <small id="termsError" class="text-danger"></small>
                                             </div>
                                             <div class="form-group text-center">
-                                                <button type="submit" class="btn btn-primary">Register</button>
+                                                <button type="submit" class="btn btn-sm">Register</button>
                                             </div>
                                         </div>
                                     </div>
