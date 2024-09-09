@@ -45,6 +45,7 @@ if (!isset($_SESSION['email'])) {
 
 <script>
 $(document).ready(function() {
+    let serialNumber = 1; // Initialize serial number
     $('#userTable').DataTable({
         processing: true,
         serverSide: true,
@@ -53,8 +54,11 @@ $(document).ready(function() {
             type: 'GET'
         },
         columns: [{
-                title: 'ID',
-                data: 'id'
+                title: 'S/N',
+                data: null,
+                render: function(data, type, row, meta) {
+                    return serialNumber++; // Render serial number
+                }
             },
             {
                 title: 'Fullname',
@@ -101,7 +105,10 @@ $(document).ready(function() {
                 text: 'Print',
                 className: 'btn btn-sm btn-info'
             }
-        ]
+        ],
+        drawCallback: function() {
+            serialNumber = 1; // Reset serial number on page change
+        }
     });
 });
 </script>
