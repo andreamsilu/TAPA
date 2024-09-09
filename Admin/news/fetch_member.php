@@ -34,9 +34,9 @@ if (isset($_GET['action']) && $_GET['action'] == 'fetchData') {
             'status' => $row['status'],
             'amount' => $row['amount'],
             'actions' => "<a href='view_member.php?id=" . $row['id'] . "' class='btn btn-secondary'><i class='bi bi-eye bi-fw'></i> View</a> " .
-                         ($row['status'] == 'unpaid' ? "<button class='btn btn-primary add-payment' data-user-id='" . $row['id'] . "'><i class='bi bi-plus bi-fw'></i> Add</button>" : "") .
-                         ($row['status'] == 'pending' ? "<a href='edit_payment.php?id=" . $row['id'] . "&status=" . $row['status'] . "&amount=" . $row['amount'] . "' class='btn btn-info bg-warning'><i class='bi bi-pencil bi-fw'></i> Edit</a>" : "") .
-                         ($row['status'] == 'paid' ? "<button class='btn btn-info bg-success' disabled><i class='bi bi-check bi-fw'></i> Done</button> <a href='edit_payment.php?id=" . $row['id'] . "&status=" . $row['status'] . "&amount=" . $row['amount'] . "' class='btn btn-info bg-warning mx-1'><i class='bi bi-pencil bi-fw'></i> Edit</a>" : "")
+                         ($row['status'] == 'unpaid' ? "<button class='btn btn-sm btn-primary add-payment' data-user-id='" . $row['id'] . "'><i class='bi bi-plus bi-fw'></i> Add</button>" : "") .
+                         ($row['status'] == 'pending' ? "<a href='edit_payment.php?id=" . $row['id'] . "&status=" . $row['status'] . "&amount=" . $row['amount'] . "' class='btn btn-sm btn-info bg-warning'><i class='bi bi-pencil bi-fw'></i> Edit</a>" : "") .
+                         ($row['status'] == 'paid' ? "<button class='btn btn-info btn-sm bg-success' disabled><i class='bi bi-check bi-fw'></i> Done</button> <a href='edit_payment.php?id=" . $row['id'] . "&status=" . $row['status'] . "&amount=" . $row['amount'] . "' class='btn btn-info bg-warning mx-1'><i class='bi bi-pencil bi-fw'></i> Edit</a>" : "")
         ];
     }
 

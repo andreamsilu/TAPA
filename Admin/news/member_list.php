@@ -75,12 +75,12 @@ $(document).ready(function() {
         buttons: [{
                 extend: 'excelHtml5',
                 text: 'Export Excel',
-                className: 'btn btn-success'
+                className: 'btn btn-sm btn-success'
             },
             {
                 extend: 'pdfHtml5',
                 text: 'Export PDF',
-                className: 'btn btn-danger'
+                className: 'btn btn-sm btn-danger'
             }
         ]
     });
