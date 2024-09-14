@@ -84,12 +84,17 @@ if (isset($_GET['id'])) {
         echo "<tr><th>Email</th><td>" . htmlspecialchars($member['email']) . "</td></tr>";
         echo "<tr><th>Phone</th><td>" . htmlspecialchars($member['phone']) . "</td></tr>";
         echo "<tr><th>Postal Address</th><td>" . htmlspecialchars($member['postal_address']) . "</td></tr>";
-        echo "<tr><th>Physical Address</th><td>" . htmlspecialchars($member['postal_address']) . "</td></tr>";
+        echo "<tr><th>Physical Address</th><td>" . htmlspecialchars($member['physical_address']) . "</td></tr>";
         echo "<tr><th>Membership</th><td>" . htmlspecialchars($member['membership_type']) . "</td></tr>";
-        echo "<tr><th>Annual Fees status</th><td>" . htmlspecialchars($member['pay_status']) . "</td></tr>";
+        echo "<tr><th>Annual Fees Status</th><td>" . htmlspecialchars($member['pay_status']) . "</td></tr>";
 
-        
-        
+        // Check if the receipt path exists
+        if (!empty($member['receipt_path'])) {
+            echo "<tr><th>Receipt</th><td><a href='" . htmlspecialchars($member['receipt_path']) . "' target='_blank'>View Receipt</a></td></tr>";
+        } else {
+            echo "<tr><th>Receipt</th><td>No receipt available</td></tr>";
+        }
+
         echo "</table>";
     } else {
         echo "No member found with the provided ID.";
