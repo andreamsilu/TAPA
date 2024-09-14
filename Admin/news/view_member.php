@@ -1,8 +1,16 @@
-<?php 
+<?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 session_start();
-include "navigation.php"; 
+include "navigation.php";
+require '../../vendor/autoload.php'; // Autoload for the QR code library
+
+use Endroid\QrCode\Builder\Builder;
+use Endroid\QrCode\Encoding\Encoding;
+use Endroid\QrCode\ErrorCorrectionLevel\ErrorCorrectionLevelHigh;
+use Endroid\QrCode\Label\Alignment\LabelAlignmentCenter;
+use Endroid\QrCode\RoundBlockSizeMode\RoundBlockSizeModeMargin;
+use Endroid\QrCode\Writer\PngWriter;
 
 ?>
 
@@ -24,17 +32,14 @@ td {
 
 th {
     background-color: #f2f2f2;
-    /* Background color for table headers */
 }
 
 tr:nth-child(even) {
     background-color: #f9f9f9;
-    /* Background color for even rows */
 }
 
 tr:hover {
     background-color: #f5f5f5;
-    /* Background color on hover */
 }
 
 h1 {
@@ -58,7 +63,7 @@ if (isset($_GET['id'])) {
     $member_id = $_GET['id'];
 
     // Prepare a SELECT query to fetch specific member information by ID
-    $stmt = $conn->prepare("SELECT * FROM users WHERE id = ?");
+    $stmt = $conn->prepare("SELECT fullname, email, phone FROM users WHERE id = ?");
     if (!$stmt) {
         die("Prepare failed: " . $conn->error);
     }
@@ -83,19 +88,48 @@ if (isset($_GET['id'])) {
         echo "<tr><th>Name</th><td>" . htmlspecialchars($member['fullname']) . "</td></tr>";
         echo "<tr><th>Email</th><td>" . htmlspecialchars($member['email']) . "</td></tr>";
         echo "<tr><th>Phone</th><td>" . htmlspecialchars($member['phone']) . "</td></tr>";
-        echo "<tr><th>Postal Address</th><td>" . htmlspecialchars($member['postal_address']) . "</td></tr>";
-        echo "<tr><th>Physical Address</th><td>" . htmlspecialchars($member['physical_address']) . "</td></tr>";
-        echo "<tr><th>Membership</th><td>" . htmlspecialchars($member['membership_type']) . "</td></tr>";
-        echo "<tr><th>Annual Fees Status</th><td>" . htmlspecialchars($member['pay_status']) . "</td></tr>";
-
-        // Check if the receipt path exists
-        if (!empty($member['receipt_path'])) {
-            echo "<tr><th>Receipt</th><td><a href='" . htmlspecialchars($member['receipt_path']) . "' target='_blank'>View Receipt</a></td></tr>";
-        } else {
-            echo "<tr><th>Receipt</th><td>No receipt available</td></tr>";
-        }
-
         echo "</table>";
+
+        // Add a form to trigger QR code generation
+        echo '<form method="POST">';
+        echo '<input type="hidden" name="member_id" value="' . $member_id . '">';
+        echo '<button type="submit" name="generate_qr" class="btn btn-primary">Generate QR Code</button>';
+        echo '</form>';
+
+        // Check if the "Generate QR Code" button was clicked
+        if (isset($_POST['generate_qr'])) {
+            // Generate the QR code if the button is clicked
+            $userInfo = "Name: " . $member['fullname'] . "\n" .
+                        "Email: " . $member['email'] . "\n" .
+                        "Phone: " . $member['phone'];
+
+            // Generate the QR code
+            $qrCode = Builder::create()
+                ->writer(new PngWriter())
+                ->data($userInfo)
+                ->encoding(new Encoding('UTF-8'))
+                ->errorCorrectionLevel(new ErrorCorrectionLevelHigh())
+                ->size(300)
+                ->margin(10)
+                ->roundBlockSizeMode(new RoundBlockSizeModeMargin())
+                ->labelText('Scan to view info')
+                ->labelAlignment(new LabelAlignmentCenter())
+                ->build();
+
+            // Create a directory for QR codes if it doesn't exist
+            $qrCodeDirectory = __DIR__ . '/qrcodes/';
+            if (!is_dir($qrCodeDirectory)) {
+                mkdir($qrCodeDirectory, 0777, true);
+            }
+
+            // Save QR code to file
+            $qrCodePath = $qrCodeDirectory . 'user_' . $member_id . '.png';
+            $qrCode->saveToFile($qrCodePath);
+
+            // Display the QR code
+            echo '<h2>QR Code</h2>';
+            echo '<img src="qrcodes/user_' . $member_id . '.png" alt="User QR Code">';
+        }
     } else {
         echo "No member found with the provided ID.";
     }
@@ -108,6 +142,7 @@ if (isset($_GET['id'])) {
 } else {
     echo "No member ID provided.";
 }
+
 ?>
 
 <?php include "footer.php"; ?>
