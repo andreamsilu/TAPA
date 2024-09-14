@@ -80,10 +80,16 @@ if (isset($_GET['id'])) {
 
         // Display specific fields
         echo "<table>";
-        echo "<tr><th>Name</th><td>" . htmlspecialchars($member['name']) . "</td></tr>";
+        echo "<tr><th>Name</th><td>" . htmlspecialchars($member['fullname']) . "</td></tr>";
         echo "<tr><th>Email</th><td>" . htmlspecialchars($member['email']) . "</td></tr>";
         echo "<tr><th>Phone</th><td>" . htmlspecialchars($member['phone']) . "</td></tr>";
-        echo "<tr><th>Address</th><td>" . htmlspecialchars($member['address']) . "</td></tr>";
+        echo "<tr><th>Postal Address</th><td>" . htmlspecialchars($member['postal_address']) . "</td></tr>";
+        echo "<tr><th>Physical Address</th><td>" . htmlspecialchars($member['postal_address']) . "</td></tr>";
+        echo "<tr><th>Membership</th><td>" . htmlspecialchars($member['membership_type']) . "</td></tr>";
+        echo "<tr><th>Annual Fees status</th><td>" . htmlspecialchars($member['pay_status']) . "</td></tr>";
+
+        
+        
         echo "</table>";
     } else {
         echo "No member found with the provided ID.";
