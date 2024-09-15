@@ -94,11 +94,11 @@ if (isset($_GET['id'])) {
         // Display specific fields in a Bootstrap card
         echo '<div class="container mt-4">';
         echo '<div class="card">';
-        echo '<img src="../../forms/uploads/' . $profilePicUrl . '" class="card-img-top" alt="Profile Picture">';
         echo '<div class="card-body">';
         echo '<div class="row">';
         echo '<div class="col-md-6">';
         echo '<h5 class="card-title">Member Details</h5>';
+        echo '<img src="../../forms/uploads/' . $profilePicUrl . '" class="card-img-top" alt="Profile Picture">';
         echo '<ul class="list-unstyled">';
         echo '<li><strong>Name:</strong> ' . htmlspecialchars($member['fullname']) . '</li>';
         echo '<li><strong>Email:</strong> ' . htmlspecialchars($member['email']) . '</li>';
