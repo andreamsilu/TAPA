@@ -131,7 +131,9 @@ if (isset($_GET['id'])) {
                // Generate the QR code if the button is clicked
                $userInfo = "Name: " . $member['fullname'] . "\n" .
                    "Email: " . $member['email'] . "\n" .
-                   "Phone: " . $member['phone'];
+                   "Phone: " . $member['phone'] . "\n" .
+                   "Membership: " . $member['membership_type'] . "\n" .
+                   "Annual Fees: " . $member['pay_status'];
    
                // Generate the QR code
                $qrCode = Builder::create()
