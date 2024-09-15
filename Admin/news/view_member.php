@@ -127,7 +127,7 @@ if (isset($_GET['id'])) {
             echo '<img src="qrcodes/user_' . $member_id . '.png" alt="User QR Code">';
             
             // Add buttons for downloading and sharing the QR code
-            echo '<br><a href="qrcodes/user_' . $member_id . '.png" download="user_qr_code.png" class="btn btn-success">Download QR Code</a>';
+            echo '<br><a href="qrcodes/user_' . $member_id . '.png" download="user_qr_code.png" class="btn btn-sm btn-success">Download QR Code</a>';
             echo '<br><button id="shareBtn" class="btn btn-info">Share QR Code</button>';
             
             // Add JavaScript for the Share functionality
