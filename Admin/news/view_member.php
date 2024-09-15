@@ -119,7 +119,7 @@ if (isset($_GET['id'])) {
         echo '</div>'; // Close row1
         
         echo '<div class="row mt-4">';
-        echo '<div class="col-md-6">';
+        echo '<div class="col-md-12">';
         echo '<div class"d-flex">';
            // Add a form to trigger QR code generation
            echo '<form method="POST">';
