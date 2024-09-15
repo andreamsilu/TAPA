@@ -102,8 +102,8 @@ if (isset($_GET['id'])) {
         if (isset($_POST['generate_qr'])) {
             // Generate the QR code if the button is clicked
             $userInfo = "Name: " . $member['fullname'] . "\n" .
-                        "Email: " . $member['email'] . "\n" .
-                        "Phone: " . $member['phone'];
+                "Email: " . $member['email'] . "\n" .
+                "Phone: " . $member['phone'];
 
             // Generate the QR code
             $qrCode = Builder::create()
@@ -131,7 +131,7 @@ if (isset($_GET['id'])) {
 
     // Close statement
     $stmt->close();
-    
+
     // Close database connection
     $conn->close();
 } else {
