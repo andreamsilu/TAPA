@@ -79,9 +79,10 @@ if (isset($_GET['id'])) {
         echo '<li><strong>Postal Address:</strong> ' . htmlspecialchars($member['postal_address']) . '</li>';
         echo '<li><strong>Physical Address:</strong> ' . htmlspecialchars($member['physical_address']) . '</li>';
         echo '<li><strong>Membership:</strong> ' . htmlspecialchars($member['membership_type']) . '</li>';
-        echo '<li><strong>Membership:</strong> ' . htmlspecialchars($member['membership_type']) . '</li>';
+        echo '<li><strong>Annual fees:</strong> ' . htmlspecialchars($member['pay_status']) . '</li>';
         echo '<li><strong>Profile:</strong> ' . htmlspecialchars($member['profile_pic']) . '</li>';
         echo '<li><strong>CV:</strong> ' . htmlspecialchars($member['cv_file']) . '</li>';
+        echo '<li><strong>Annual receipt:</strong> ' . htmlspecialchars($member['receipt']) . '</li>';
         
         echo '</ul>';
         echo '</div>';
