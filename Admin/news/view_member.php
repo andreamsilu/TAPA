@@ -45,7 +45,7 @@ if (isset($_GET['id'])) {
     $member_id = $_GET['id'];
 
     // Prepare a SELECT query to fetch specific member information by ID
-    $stmt = $conn->prepare("SELECT fullname, email, phone FROM users WHERE id = ?");
+    $stmt = $conn->prepare("SELECT*FROM users WHERE id = ?");
     if (!$stmt) {
         die("Prepare failed: " . $conn->error);
     }
