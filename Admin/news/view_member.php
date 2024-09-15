@@ -105,55 +105,61 @@ if (isset($_GET['id'])) {
         echo '<li><strong>Phone:</strong> ' . htmlspecialchars($member['phone']) . '</li>';
         echo '<li><strong>Postal Address:</strong> ' . htmlspecialchars($member['postal_address']) . '</li>';
         echo '<li><strong>Physical Address:</strong> ' . htmlspecialchars($member['physical_address']) . '</li>';
+        echo '</ul>';
+        echo '</div>';
+        echo '<div class="col-md-6 text-center">';
+        echo '<ul class="list-unstyled">';
+        
         echo '<li><strong>Membership:</strong> ' . htmlspecialchars($member['membership_type']) . '</li>';
         echo '<li><strong>Annual Fees:</strong> ' . $paymentStatus . '</li>';
         echo '<li><strong>CV:</strong> <a href="' . htmlspecialchars($member['cv_file']) . '" target="_blank">View CV</a></li>';
         echo '<li><strong>Annual Receipt:</strong> <a href="../../forms/uploads/' . htmlspecialchars($member['receipt']) . '" target="_blank">View Receipt</a></li>';
         echo '</ul>';
-        echo '</div>';
-        echo '<div class="col-md-6 text-center">';
-        
-        // Add a form to trigger QR code generation
-        echo '<form method="POST">';
-        echo '<input type="hidden" name="member_id" value="' . $member_id . '">';
-        echo '<button type="submit" name="generate_qr" class="btn btn-sm btn-primary">Generate QR Code</button>';
-        echo '</form>';
-
-        // Check if the "Generate QR Code" button was clicked
-        if (isset($_POST['generate_qr'])) {
-            // Generate the QR code if the button is clicked
-            $userInfo = "Name: " . $member['fullname'] . "\n" .
-                "Email: " . $member['email'] . "\n" .
-                "Phone: " . $member['phone'];
-
-            // Generate the QR code
-            $qrCode = Builder::create()
-                ->writer(new PngWriter())
-                ->data($userInfo)
-                ->encoding(new Encoding('UTF-8'))
-                ->errorCorrectionLevel(ErrorCorrectionLevel::High)
-                ->size(200)
-                ->margin(10)
-                ->roundBlockSizeMode(RoundBlockSizeMode::Margin)
-                ->labelText('Scan to view info')
-                ->labelAlignment(LabelAlignment::Center)
-                ->build();
-
-            // Save QR code to file
-            $qrCodePath = __DIR__ . '/qrcodes/user_' . $member_id . '.png';
-            $qrCode->saveToFile($qrCodePath);
-
-            // Display the QR code
-            echo '<h5 class="mt-3">QR Code</h5>';
-            echo '<img src="qrcodes/user_' . $member_id . '.png" alt="User QR Code" class="img-fluid">';
-            
-            // Add buttons for downloading and sharing the QR code
-            echo '<br><a href="qrcodes/user_' . $member_id . '.png" download="user_qr_code.png" class="btn btn-success mt-2">Download QR Code</a>';
-            
-        }
-
         echo '</div>'; // Close col-md-6
-        echo '</div>'; // Close row
+        echo '</div>'; // Close row1
+        
+        echo '<div class="row mt-4">';
+        echo '<div class="col-md-6">';
+           // Add a form to trigger QR code generation
+           echo '<form method="POST">';
+           echo '<input type="hidden" name="member_id" value="' . $member_id . '">';
+           echo '<button type="submit" name="generate_qr" class="btn btn-sm btn-primary">Generate QR Code</button>';
+           echo '</form>';
+   
+           // Check if the "Generate QR Code" button was clicked
+           if (isset($_POST['generate_qr'])) {
+               // Generate the QR code if the button is clicked
+               $userInfo = "Name: " . $member['fullname'] . "\n" .
+                   "Email: " . $member['email'] . "\n" .
+                   "Phone: " . $member['phone'];
+   
+               // Generate the QR code
+               $qrCode = Builder::create()
+                   ->writer(new PngWriter())
+                   ->data($userInfo)
+                   ->encoding(new Encoding('UTF-8'))
+                   ->errorCorrectionLevel(ErrorCorrectionLevel::High)
+                   ->size(200)
+                   ->margin(10)
+                   ->roundBlockSizeMode(RoundBlockSizeMode::Margin)
+                   ->labelText('Scan to view info')
+                   ->labelAlignment(LabelAlignment::Center)
+                   ->build();
+   
+               // Save QR code to file
+               $qrCodePath = __DIR__ . '/qrcodes/user_' . $member_id . '.png';
+               $qrCode->saveToFile($qrCodePath);
+   
+               // Display the QR code
+               echo '<h5 class="mt-3">QR Code</h5>';
+               echo '<img src="qrcodes/user_' . $member_id . '.png" alt="User QR Code" class="img-fluid">';
+               
+               // Add buttons for downloading and sharing the QR code
+               echo '<br><a href="qrcodes/user_' . $member_id . '.png" download="user_qr_code.png" class="btn btn-success mt-2">Download QR Code</a>';
+               
+           }
+        echo '</div>'; // Close col-md-6
+        echo '</div>'; // Close row2
         echo '</div>'; // Close card-body
         echo '</div>'; // Close card
         echo '</div>'; // Close container
