@@ -129,7 +129,9 @@ if (isset($_GET['id'])) {
            // Check if the "Generate QR Code" button was clicked
            if (isset($_POST['generate_qr'])) {
                // Generate the QR code if the button is clicked
-               $userInfo = "Name: " . $member['fullname'] . "\n" .
+               $userInfo = "TANZANIAN PSYCHOLOGICAL ASSOCIATION "   . "\n" .
+                  "Membership information"   . "\n" .
+                  "Name: " . $member['fullname'] . "\n" .
                    "Email: " . $member['email'] . "\n" .
                    "Phone: " . $member['phone'] . "\n" .
                    "Membership: " . $member['membership_type'] . "\n" .
