@@ -33,7 +33,7 @@ use Endroid\QrCode\RoundBlockSizeMode;
     width: 150px;
     height: 150px;
     object-fit: cover;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 ul.list-unstyled li {
