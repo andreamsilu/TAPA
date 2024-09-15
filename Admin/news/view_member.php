@@ -120,6 +120,7 @@ if (isset($_GET['id'])) {
         
         echo '<div class="row mt-4">';
         echo '<div class="col-md-6">';
+        echo '<div class"d-flex">';
            // Add a form to trigger QR code generation
            echo '<form method="POST">';
            echo '<input type="hidden" name="member_id" value="' . $member_id . '">';
@@ -159,9 +160,10 @@ if (isset($_GET['id'])) {
                echo '<img src="qrcodes/user_' . $member_id . '.png" alt="User QR Code" class="img-fluid">';
                
                // Add buttons for downloading and sharing the QR code
-               echo '<br><a href="qrcodes/user_' . $member_id . '.png" download="user_qr_code.png" class="btn btn-success mt-2">Download QR Code</a>';
+               echo '<br><a href="qrcodes/user_' . $member_id . '.png" download="user_qr_code.png" class="btn btn-sm btn-success mt-2">Download QR Code</a>';
                
            }
+        echo '</div>'; // Close col-md-6
         echo '</div>'; // Close col-md-6
         echo '</div>'; // Close row2
         echo '</div>'; // Close card-body
