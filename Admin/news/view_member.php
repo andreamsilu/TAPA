@@ -85,10 +85,16 @@ if (isset($_GET['id'])) {
     if ($result->num_rows > 0) {
         $member = $result->fetch_assoc();
 
+        // Determine the profile picture URL
+        $profilePicUrl = !empty($member['profile_pic']) ? htmlspecialchars($member['profile_pic']) : 'path/to/default-avatar.png';
+
+        // Determine the payment status
+        $paymentStatus = $member['pay_status'] == 1 ? 'Paid' : 'Not Paid';
+
         // Display specific fields in a Bootstrap card
         echo '<div class="container mt-4">';
         echo '<div class="card">';
-        echo '<img src="' . htmlspecialchars($member['profile_pic']) . '" class="card-img-top" alt="Profile Picture">';
+        echo '<img src="' . $profilePicUrl . '" class="card-img-top" alt="Profile Picture">';
         echo '<div class="card-body">';
         echo '<div class="row">';
         echo '<div class="col-md-6">';
@@ -100,9 +106,9 @@ if (isset($_GET['id'])) {
         echo '<li><strong>Postal Address:</strong> ' . htmlspecialchars($member['postal_address']) . '</li>';
         echo '<li><strong>Physical Address:</strong> ' . htmlspecialchars($member['physical_address']) . '</li>';
         echo '<li><strong>Membership:</strong> ' . htmlspecialchars($member['membership_type']) . '</li>';
-        echo '<li><strong>Annual fees:</strong> ' . htmlspecialchars($member['pay_status']) . '</li>';
+        echo '<li><strong>Annual Fees:</strong> ' . $paymentStatus . '</li>';
         echo '<li><strong>CV:</strong> <a href="' . htmlspecialchars($member['cv_file']) . '" target="_blank">View CV</a></li>';
-        echo '<li><strong>Annual receipt:</strong> <a href="' . htmlspecialchars($member['receipt']) . '" target="_blank">View Receipt</a></li>';
+        echo '<li><strong>Annual Receipt:</strong> <a href="' . htmlspecialchars($member['receipt']) . '" target="_blank">View Receipt</a></li>';
         echo '</ul>';
         echo '</div>';
         echo '<div class="col-md-6 text-center">';
