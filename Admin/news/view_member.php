@@ -7,11 +7,10 @@ require '../../vendor/autoload.php'; // Autoload for the QR code library
 
 use Endroid\QrCode\Builder\Builder;
 use Endroid\QrCode\Encoding\Encoding;
-use Endroid\QrCode\ErrorCorrectionLevel\ErrorCorrectionLevelHigh;
-use Endroid\QrCode\Label\Alignment\LabelAlignmentCenter;
-use Endroid\QrCode\RoundBlockSizeMode\RoundBlockSizeModeMargin;
+use Endroid\QrCode\ErrorCorrectionLevel;
+use Endroid\QrCode\Label\LabelAlignment;
 use Endroid\QrCode\Writer\PngWriter;
-
+use Endroid\QrCode\RoundBlockSizeMode;
 ?>
 
 <style>
@@ -32,14 +31,17 @@ td {
 
 th {
     background-color: #f2f2f2;
+    /* Background color for table headers */
 }
 
 tr:nth-child(even) {
     background-color: #f9f9f9;
+    /* Background color for even rows */
 }
 
 tr:hover {
     background-color: #f5f5f5;
+    /* Background color on hover */
 }
 
 h1 {
@@ -108,23 +110,16 @@ if (isset($_GET['id'])) {
                 ->writer(new PngWriter())
                 ->data($userInfo)
                 ->encoding(new Encoding('UTF-8'))
-                ->errorCorrectionLevel(new ErrorCorrectionLevelHigh())
+                ->errorCorrectionLevel(ErrorCorrectionLevel::High) // Changed to use the static method
                 ->size(300)
                 ->margin(10)
-                ->roundBlockSizeMode(new RoundBlockSizeModeMargin())
+                ->roundBlockSizeMode(RoundBlockSizeMode::Margin)
                 ->labelText('Scan to view info')
-                ->labelAlignment(new LabelAlignmentCenter())
+                ->labelAlignment(LabelAlignment::Center)
                 ->build();
 
-            // Create a directory for QR codes if it doesn't exist
-            $qrCodeDirectory = __DIR__ . '/qrcodes/';
-            if (!is_dir($qrCodeDirectory)) {
-                mkdir($qrCodeDirectory, 0777, true);
-            }
-
             // Save QR code to file
-            $qrCodePath = $qrCodeDirectory . 'user_' . $member_id . '.png';
-            $qrCode->saveToFile($qrCodePath);
+            $qrCode->saveToFile(__DIR__ . '/qrcodes/user_' . $member_id . '.png');
 
             // Display the QR code
             echo '<h2>QR Code</h2>';
