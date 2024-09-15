@@ -86,7 +86,7 @@ if (isset($_GET['id'])) {
         $member = $result->fetch_assoc();
 
         // Determine the profile picture URL
-        $profilePicUrl = !empty($member['profile_pic']) ? htmlspecialchars($member['profile_pic']) : 'path/to/default-avatar.png';
+        $profilePicUrl = !empty($member['profile_pic']) ? htmlspecialchars($member['profile_pic']) : '../../assets/img/tapa/person1.png';
 
         // Determine the payment status
         $paymentStatus = $member['pay_status'] == 1 ? 'Paid' : 'Not Paid';
