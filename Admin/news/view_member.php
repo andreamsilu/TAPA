@@ -117,7 +117,7 @@ if (isset($_GET['id'])) {
         echo '</div>'; // Close col-md-6
         echo '</div>'; // Close row
 
-        echo '<div class="row mt-4">';
+        echo '<div class="row bg-light mt-4">';
         echo '<div class="col-md-4 d-flex align-items-center">';
         // Add a form to trigger QR code generation
         echo '<form method="POST">';
