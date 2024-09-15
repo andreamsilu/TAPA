@@ -141,7 +141,7 @@ if (isset($_GET['id'])) {
                    ->data($userInfo)
                    ->encoding(new Encoding('UTF-8'))
                    ->errorCorrectionLevel(ErrorCorrectionLevel::High)
-                   ->size(200)
+                   ->size(300)
                    ->margin(10)
                    ->roundBlockSizeMode(RoundBlockSizeMode::Margin)
                    ->labelText('Scan to view info')
