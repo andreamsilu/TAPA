@@ -119,11 +119,38 @@ if (isset($_GET['id'])) {
                 ->build();
 
             // Save QR code to file
-            $qrCode->saveToFile(__DIR__ . '/qrcodes/user_' . $member_id . '.png');
+            $qrCodePath = __DIR__ . '/qrcodes/user_' . $member_id . '.png';
+            $qrCode->saveToFile($qrCodePath);
 
             // Display the QR code
             echo '<h2>QR Code</h2>';
             echo '<img src="qrcodes/user_' . $member_id . '.png" alt="User QR Code">';
+            
+            // Add buttons for downloading and sharing the QR code
+            echo '<br><a href="qrcodes/user_' . $member_id . '.png" download="user_qr_code.png" class="btn btn-success">Download QR Code</a>';
+            echo '<br><button id="shareBtn" class="btn btn-info">Share QR Code</button>';
+            
+            // Add JavaScript for the Share functionality
+            echo '
+            <script>
+                const shareBtn = document.getElementById("shareBtn");
+                shareBtn.addEventListener("click", async () => {
+                    if (navigator.share) {
+                        try {
+                            await navigator.share({
+                                title: "QR Code",
+                                text: "Check out this QR code.",
+                                files: [new File([await fetch("qrcodes/user_' . $member_id . '.png").then(r => r.blob())], "user_qr_code.png", { type: "image/png" })]
+                            });
+                            console.log("QR Code shared successfully.");
+                        } catch (error) {
+                            console.error("Error sharing QR Code: ", error);
+                        }
+                    } else {
+                        alert("Sharing is not supported on your browser.");
+                    }
+                });
+            </script>';
         }
     } else {
         echo "No member found with the provided ID.";
