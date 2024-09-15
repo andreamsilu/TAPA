@@ -76,6 +76,13 @@ if (isset($_GET['id'])) {
         echo '<li><strong>Name:</strong> ' . htmlspecialchars($member['fullname']) . '</li>';
         echo '<li><strong>Email:</strong> ' . htmlspecialchars($member['email']) . '</li>';
         echo '<li><strong>Phone:</strong> ' . htmlspecialchars($member['phone']) . '</li>';
+        echo '<li><strong>Postal Address:</strong> ' . htmlspecialchars($member['postal_address']) . '</li>';
+        echo '<li><strong>Physical Address:</strong> ' . htmlspecialchars($member['physical_address']) . '</li>';
+        echo '<li><strong>Membership:</strong> ' . htmlspecialchars($member['membership_type']) . '</li>';
+        echo '<li><strong>Membership:</strong> ' . htmlspecialchars($member['membership_type']) . '</li>';
+        echo '<li><strong>Profile:</strong> ' . htmlspecialchars($member['profile_pic']) . '</li>';
+        echo '<li><strong>CV:</strong> ' . htmlspecialchars($member['cv_file']) . '</li>';
+        
         echo '</ul>';
         echo '</div>';
         echo '<div class="col-md-6 text-center">';
@@ -83,7 +90,7 @@ if (isset($_GET['id'])) {
         // Add a form to trigger QR code generation
         echo '<form method="POST">';
         echo '<input type="hidden" name="member_id" value="' . $member_id . '">';
-        echo '<button type="submit" name="generate_qr" class="btn btn-primary">Generate QR Code</button>';
+        echo '<button type="submit" name="generate_qr" class="btn btn-sm btn-primary">Generate QR Code</button>';
         echo '</form>';
 
         // Check if the "Generate QR Code" button was clicked
