@@ -135,7 +135,7 @@ if (isset($_GET['id'])) {
                    "Email: " . $member['email'] . "\n" .
                    "Phone: " . $member['phone'] . "\n" .
                    "Membership: " . $member['membership_type'] . "\n" .
-                   "Annual Fees: " . $member['pay_status'];
+                   "Annual Fees: " . $paymentStatus ;
    
                // Generate the QR code
                $qrCode = Builder::create()
