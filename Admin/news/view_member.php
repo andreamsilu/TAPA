@@ -41,7 +41,7 @@ ul.list-unstyled li {
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9; */
 }
 
 ul.list-unstyled li a {
