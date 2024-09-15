@@ -92,8 +92,8 @@ if (isset($_GET['id'])) {
         $paymentStatus = $member['pay_status'] == 1 ? 'Paid' : 'Not Paid';
 
         // Display specific fields in a Bootstrap card
-        echo '<div class="container mt-4 bg-light">';
-        echo '<div class="card">';
+        echo '<div class="container mt-4  ">';
+        echo '<div class="card bg-light">';
         echo '<div class="card-body">';
         echo '<div class="row">';
         echo '<div class="col-md-6">';
