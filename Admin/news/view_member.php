@@ -13,43 +13,23 @@ use Endroid\QrCode\Writer\PngWriter;
 use Endroid\QrCode\RoundBlockSizeMode;
 ?>
 
+<!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
 <style>
-/* Updated table styles */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid #ddd;
-    margin: 20px auto;
+/* Custom styles if needed */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-th,
-td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
-}
-
-th {
-    background-color: #f2f2f2;
-    /* Background color for table headers */
-}
-
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-    /* Background color for even rows */
-}
-
-tr:hover {
-    background-color: #f5f5f5;
-    /* Background color on hover */
-}
-
-h1 {
-    text-align: center;
+.card-columns {
+    column-count: 2;
 }
 </style>
 
-<h1>Member Information</h1>
+<h1 class="text-center">Member Information</h1>
 
 <?php
 // Database connection
@@ -85,13 +65,21 @@ if (isset($_GET['id'])) {
     if ($result->num_rows > 0) {
         $member = $result->fetch_assoc();
 
-        // Display specific fields
-        echo "<table>";
-        echo "<tr><th>Name</th><td>" . htmlspecialchars($member['fullname']) . "</td></tr>";
-        echo "<tr><th>Email</th><td>" . htmlspecialchars($member['email']) . "</td></tr>";
-        echo "<tr><th>Phone</th><td>" . htmlspecialchars($member['phone']) . "</td></tr>";
-        echo "</table>";
-
+        // Display specific fields in a Bootstrap card
+        echo '<div class="container mt-4">';
+        echo '<div class="card">';
+        echo '<div class="card-body">';
+        echo '<div class="row">';
+        echo '<div class="col-md-6">';
+        echo '<h5 class="card-title">Member Details</h5>';
+        echo '<ul class="list-unstyled">';
+        echo '<li><strong>Name:</strong> ' . htmlspecialchars($member['fullname']) . '</li>';
+        echo '<li><strong>Email:</strong> ' . htmlspecialchars($member['email']) . '</li>';
+        echo '<li><strong>Phone:</strong> ' . htmlspecialchars($member['phone']) . '</li>';
+        echo '</ul>';
+        echo '</div>';
+        echo '<div class="col-md-6 text-center">';
+        
         // Add a form to trigger QR code generation
         echo '<form method="POST">';
         echo '<input type="hidden" name="member_id" value="' . $member_id . '">';
@@ -110,7 +98,7 @@ if (isset($_GET['id'])) {
                 ->writer(new PngWriter())
                 ->data($userInfo)
                 ->encoding(new Encoding('UTF-8'))
-                ->errorCorrectionLevel(ErrorCorrectionLevel::High) // Changed to use the static method
+                ->errorCorrectionLevel(ErrorCorrectionLevel::High)
                 ->size(200)
                 ->margin(10)
                 ->roundBlockSizeMode(RoundBlockSizeMode::Margin)
@@ -123,37 +111,22 @@ if (isset($_GET['id'])) {
             $qrCode->saveToFile($qrCodePath);
 
             // Display the QR code
-            echo '<h2>QR Code</h2>';
-            echo '<img src="qrcodes/user_' . $member_id . '.png" alt="User QR Code">';
+            echo '<h5 class="mt-3">QR Code</h5>';
+            echo '<img src="qrcodes/user_' . $member_id . '.png" alt="User QR Code" class="img-fluid">';
             
             // Add buttons for downloading and sharing the QR code
-            echo '<br><a href="qrcodes/user_' . $member_id . '.png" download="user_qr_code.png" class="btn btn-sm btn-success">Download QR Code</a>';
-            echo '<br><button id="shareBtn" class="btn btn-info">Share QR Code</button>';
+            echo '<br><a href="qrcodes/user_' . $member_id . '.png" download="user_qr_code.png" class="btn btn-success mt-2">Download QR Code</a>';
             
-            // Add JavaScript for the Share functionality
-            echo '
-            <script>
-                const shareBtn = document.getElementById("shareBtn");
-                shareBtn.addEventListener("click", async () => {
-                    if (navigator.share) {
-                        try {
-                            await navigator.share({
-                                title: "QR Code",
-                                text: "Check out this QR code.",
-                                files: [new File([await fetch("qrcodes/user_' . $member_id . '.png").then(r => r.blob())], "user_qr_code.png", { type: "image/png" })]
-                            });
-                            console.log("QR Code shared successfully.");
-                        } catch (error) {
-                            console.error("Error sharing QR Code: ", error);
-                        }
-                    } else {
-                        alert("Sharing is not supported on your browser.");
-                    }
-                });
-            </script>';
         }
+
+        echo '</div>'; // Close col-md-6
+        echo '</div>'; // Close row
+        echo '</div>'; // Close card-body
+        echo '</div>'; // Close card
+        echo '</div>'; // Close container
+
     } else {
-        echo "No member found with the provided ID.";
+        echo "<div class='alert alert-danger' role='alert'>No member found with the provided ID.</div>";
     }
 
     // Close statement
@@ -162,9 +135,13 @@ if (isset($_GET['id'])) {
     // Close database connection
     $conn->close();
 } else {
-    echo "No member ID provided.";
+    echo "<div class='alert alert-danger' role='alert'>No member ID provided.</div>";
 }
-
 ?>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <?php include "footer.php"; ?>
