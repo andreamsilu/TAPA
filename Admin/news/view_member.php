@@ -102,12 +102,12 @@ if (isset($_GET['id'])) {
         echo '<ul class="list-unstyled">';
         echo '<li><strong>Name:</strong> ' . htmlspecialchars($member['fullname']) . '</li>';
         echo '<li><strong>Email:</strong> ' . htmlspecialchars($member['email']) . '</li>';
+        echo '<li><strong>Phone:</strong> ' . htmlspecialchars($member['phone']) . '</li>';
        
         echo '</ul>';
         echo '</div>';
         echo '<div class="col-md-6 text-center">';
         echo '<ul class="list-unstyled">';
-        echo '<li><strong>Phone:</strong> ' . htmlspecialchars($member['phone']) . '</li>';
         echo '<li><strong>Postal Address:</strong> ' . htmlspecialchars($member['postal_address']) . '</li>';
         echo '<li><strong>Physical Address:</strong> ' . htmlspecialchars($member['physical_address']) . '</li>';
         echo '<li><strong>Membership:</strong> ' . htmlspecialchars($member['membership_type']) . '</li>';
