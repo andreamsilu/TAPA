@@ -94,7 +94,7 @@ if (isset($_GET['id'])) {
         // Display specific fields in a Bootstrap card
         echo '<div class="container mt-4">';
         echo '<div class="card">';
-        echo '<img src="' . $profilePicUrl . '" class="card-img-top" alt="Profile Picture">';
+        echo '<img src="../../forms/uploads/' . $profilePicUrl . '" class="card-img-top" alt="Profile Picture">';
         echo '<div class="card-body">';
         echo '<div class="row">';
         echo '<div class="col-md-6">';
@@ -108,7 +108,7 @@ if (isset($_GET['id'])) {
         echo '<li><strong>Membership:</strong> ' . htmlspecialchars($member['membership_type']) . '</li>';
         echo '<li><strong>Annual Fees:</strong> ' . $paymentStatus . '</li>';
         echo '<li><strong>CV:</strong> <a href="' . htmlspecialchars($member['cv_file']) . '" target="_blank">View CV</a></li>';
-        echo '<li><strong>Annual Receipt:</strong> <a href="' . htmlspecialchars($member['receipt']) . '" target="_blank">View Receipt</a></li>';
+        echo '<li><strong>Annual Receipt:</strong> <a href="../../forms/uploads/' . htmlspecialchars($member['receipt']) . '" target="_blank">View Receipt</a></li>';
         echo '</ul>';
         echo '</div>';
         echo '<div class="col-md-6 text-center">';
