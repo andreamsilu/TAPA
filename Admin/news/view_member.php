@@ -17,7 +17,7 @@ use Endroid\QrCode\RoundBlockSizeMode;
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
-/* Custom styles if needed */
+/* Custom styles for card and list */
 .card-body {
     display: flex;
     flex-direction: column;
@@ -26,6 +26,26 @@ use Endroid\QrCode\RoundBlockSizeMode;
 
 .card-columns {
     column-count: 2;
+}
+
+.card-img-top {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+ul.list-unstyled li {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+ul.list-unstyled li a {
+    color: #007bff;
 }
 </style>
 
@@ -45,7 +65,7 @@ if (isset($_GET['id'])) {
     $member_id = $_GET['id'];
 
     // Prepare a SELECT query to fetch specific member information by ID
-    $stmt = $conn->prepare("SELECT*FROM users WHERE id = ?");
+    $stmt = $conn->prepare("SELECT * FROM users WHERE id = ?");
     if (!$stmt) {
         die("Prepare failed: " . $conn->error);
     }
@@ -68,6 +88,7 @@ if (isset($_GET['id'])) {
         // Display specific fields in a Bootstrap card
         echo '<div class="container mt-4">';
         echo '<div class="card">';
+        echo '<img src="' . htmlspecialchars($member['profile_pic']) . '" class="card-img-top" alt="Profile Picture">';
         echo '<div class="card-body">';
         echo '<div class="row">';
         echo '<div class="col-md-6">';
@@ -80,10 +101,8 @@ if (isset($_GET['id'])) {
         echo '<li><strong>Physical Address:</strong> ' . htmlspecialchars($member['physical_address']) . '</li>';
         echo '<li><strong>Membership:</strong> ' . htmlspecialchars($member['membership_type']) . '</li>';
         echo '<li><strong>Annual fees:</strong> ' . htmlspecialchars($member['pay_status']) . '</li>';
-        echo '<li><strong>Profile:</strong> ' . htmlspecialchars($member['profile_pic']) . '</li>';
-        echo '<li><strong>CV:</strong> ' . htmlspecialchars($member['cv_file']) . '</li>';
-        echo '<li><strong>Annual receipt:</strong> ' . htmlspecialchars($member['receipt']) . '</li>';
-        
+        echo '<li><strong>CV:</strong> <a href="' . htmlspecialchars($member['cv_file']) . '" target="_blank">View CV</a></li>';
+        echo '<li><strong>Annual receipt:</strong> <a href="' . htmlspecialchars($member['receipt']) . '" target="_blank">View Receipt</a></li>';
         echo '</ul>';
         echo '</div>';
         echo '<div class="col-md-6 text-center">';
