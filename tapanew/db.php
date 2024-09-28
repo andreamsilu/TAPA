@@ -1,9 +1,9 @@
 <?php
 // Database configuration
 $host = "localhost";
-$db_name = "TAPA_MOD";
-$username = "msilu";
-$password = "passw0rd";
+$db_name = "tapaortz_TAPA_MOD";
+$username = "tapaortz_msilu";
+$password = "XfNSnk3Z3@mrtYJ";
 
 // Create a connection
 $conn = mysqli_connect($host, $username, $password, $db_name);
