@@ -1,7 +1,17 @@
-# Ignore connection.php
-forms/connection.php
-Admin/news/connection.php
+# Ignore specific connection.php files
+# forms/connection.php
+# Admin/news/connection.php
+
+# Ignore all test files
 test.php
-forms/connection.php
+
+# Ignore specific SQL files
 tapanew/TAPA_MOD.sql
+
+# Ignore .env file
 .env
+/var/www/html/web/TAPA/.env
+
+# Optionally, ignore all connection.php files project-wide
+# Uncomment this if you want to exclude all such files:
+# **/connection.php
