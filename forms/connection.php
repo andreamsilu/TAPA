@@ -9,9 +9,9 @@
 
 // Establish a database connection (replace with your database details)
 $servername = "localhost";
-$username = "root";
-$password = "passw0rd";
-$dbname = "TAPA_DB";
+$username = "u976524705_tapaortz";
+$password = "Tapaortz@2024";
+$dbname = "u976524705_TAPA_DB";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 //  echo  "connection successifully";
