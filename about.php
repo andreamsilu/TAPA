@@ -85,7 +85,7 @@
         <!-- ======= Doctors Section ======= -->
         <style>
         .member-img img {
-            width: 100%;
+            width: 75%;
             /* Ensures responsiveness */
             height: 200px;
             /* Set a fixed height */
@@ -132,10 +132,7 @@
                         <div class="member" data-aos="fade-up" data-aos-delay="100">
                             <div class="member-img">
                                 <img src="adminpanel/<?php echo $image; ?>" class="img-fluid" alt="">
-                                <div class="member-info">
-                                    <h4><?php echo $name; ?></h4>
-                                    <span><?php echo $role; ?></span>
-                                </div>
+
                                 <div class="social">
                                     <?php if ($twitter) { ?><a href="<?php echo $twitter; ?>"><i
                                             class="bi bi-twitter"></i></a><?php } ?>
@@ -146,7 +143,11 @@
                                     <?php if ($linkedin) { ?><a href="<?php echo $linkedin; ?>"><i
                                             class="bi bi-linkedin"></i></a><?php } ?>
                                 </div>
-                            </div>
+
+                                </d<div class="member-info">
+                                <h4><?php echo $name; ?></h4>
+                                <span><?php echo $role; ?></span>
+                            </div>iv>
 
                         </div>
                     </div>
