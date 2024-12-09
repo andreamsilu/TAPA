@@ -51,6 +51,85 @@
     border-radius: 50%;
     /* Makes images circular, optional */
 }
+
+.member {
+    background: #f7f9fc;
+    /* Light background for contrast */
+    border: 1px solid #e1e4e8;
+    /* Slight border */
+    border-radius: 10px;
+    /* Rounded corners */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Smooth animation on hover */
+}
+
+.member:hover {
+    transform: translateY(-5px);
+    /* Slight lift on hover */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
+    /* Enhanced shadow */
+}
+
+.member-img {
+    margin-bottom: 20px;
+}
+
+.member-img img {
+    width: 100%;
+    height: 250px;
+    /* Fixed height for consistency */
+    object-fit: cover;
+    /* Crop image if needed */
+    border-radius: 50%;
+    /* Circle effect */
+    border: 4px solid #fff;
+    /* White border around image */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Shadow for the image */
+}
+
+.member-info h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.member-info h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #34495e;
+    margin-bottom: 5px;
+}
+
+.member-info span {
+    font-size: 14px;
+    color: #7f8c8d;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.member-info p {
+    font-size: 14px;
+    color: #95a5a6;
+    line-height: 1.5;
+}
+
+.social a {
+    font-size: 16px;
+    color: #34495e;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.social a:hover {
+    color: #3498db;
+    /* Change to a highlight color on hover */
+}
 </style>
 
 <!-- ======= zone Section ======= -->
