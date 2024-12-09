@@ -83,6 +83,18 @@
         </section>
         <!-- End About Section -->
         <!-- ======= Doctors Section ======= -->
+        <style>
+        .member-img img {
+            width: 100%;
+            /* Ensures responsiveness */
+            height: 200px;
+            /* Set a fixed height */
+            object-fit: cover;
+            /* Crops the image to fit the dimensions without distortion */
+            border-radius: 50%;
+            /* Makes images circular, optional */
+        }
+        </style>
         <section id="doctors" class="doctors section-bg">
             <div class="container" data-aos="fade-up">
 
@@ -156,7 +168,7 @@
     include 'zones.php';
     ?>
 
-    </main>
-    <!-- End #main -->
 
-    <?php include "footer.php" ?>
+        <!-- End #main -->
+
+        <?php include "footer.php" ?>
