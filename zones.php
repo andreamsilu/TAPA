@@ -47,13 +47,13 @@
 
 .member-img img {
     width: 100%;
-    height: 250px;
+    height: 200px;
     /* Fixed height for consistency */
     object-fit: cover;
     /* Crop image if needed */
-    border-radius: 10%;
+    border-radius: 1%;
     /* Circle effect */
-    border: 4px solid #fff;
+    /* border: 4px solid #fff; */
     /* White border around image */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     /* Shadow for the image */
