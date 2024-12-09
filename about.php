@@ -108,13 +108,13 @@
           if ($result) {
             // Loop through the result and display each leader
             while ($row = mysqli_fetch_assoc($result)) {
-              $image = $row['image_url']; // Assuming 'image_url' is the column for the leader's image
-              $name = $row['name']; // Assuming 'name' is the column for the leader's name
-              $role = $row['role']; // Assuming 'role' is the column for the leader's role
-              $twitter = $row['twitter']; // Assuming 'twitter' is the column for Twitter link
-              $facebook = $row['facebook']; // Assuming 'facebook' is the column for Facebook link
-              $instagram = $row['instagram']; // Assuming 'instagram' is the column for Instagram link
-              $linkedin = $row['linkedin']; // Assuming 'linkedin' is the column for LinkedIn link
+              $image = $row['image_url'];  
+              $name = $row['name'];  
+              $role = $row['position'];  
+              $twitter = $row['twitter_link'];  
+              $facebook = $row['facebook_link'];  
+              $instagram = $row['instagram_link'];  
+              $linkedin = $row['linkedin_link']; 
           ?>
 
                     <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
