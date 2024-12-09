@@ -41,39 +41,6 @@
     </section> -->
 <!-- End Breadcrumbs -->
 <style>
-.member-img img {
-    width: 80%;
-    /* Ensures responsiveness */
-    height: 200px;
-    /* Set a fixed height */
-    object-fit: cover;
-    /* Crops the image to fit the dimensions without distortion */
-    border-radius: 50%;
-    /* Makes images circular, optional */
-}
-
-.member {
-    background: #f7f9fc;
-    /* Light background for contrast */
-    border: 1px solid #e1e4e8;
-    /* Slight border */
-    border-radius: 10px;
-    /* Rounded corners */
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow */
-    transition: transform 0.3s, box-shadow 0.3s;
-    /* Smooth animation on hover */
-}
-
-.member:hover {
-    transform: translateY(-5px);
-    /* Slight lift on hover */
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
-    /* Enhanced shadow */
-}
-
 .member-img {
     margin-bottom: 20px;
 }
@@ -84,7 +51,7 @@
     /* Fixed height for consistency */
     object-fit: cover;
     /* Crop image if needed */
-    border-radius: 50%;
+    border-radius: 10%;
     /* Circle effect */
     border: 4px solid #fff;
     /* White border around image */
