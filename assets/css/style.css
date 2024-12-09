@@ -1052,11 +1052,11 @@ width: 450px;
   bottom: 60px;
   transition: bottom 0.4s;
 }
-
+/* 
 .team .member:hover .social {
   bottom: 0;
   transition: bottom ease-in-out 0.4s;
-}
+} */
 
 /*--------------------------------------------------------------
 ==============# zones/branches=========================
