@@ -39,7 +39,7 @@
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div class="member" data-aos="fade-up" data-aos-delay="100">
                     <div class="member-img">
-                        <img src="<?php echo $image; ?>" class="img-fluid" alt="">
+                        <img src="adminpanel/<?php echo $image; ?>" class="img-fluid" alt="">
                         <div class="social">
                             <?php if ($twitter) { ?><a href="<?php echo $twitter; ?>"><i
                                     class="bi bi-twitter"></i></a><?php } ?>
