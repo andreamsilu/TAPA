@@ -14,7 +14,7 @@
             error_reporting(E_ALL);
 
             // Include your database connection file
-            include('../adminpanel/db.php'); // Adjust the path as needed
+            include('adminpanel/db.php'); // Adjust the path as needed
 
             // Check if the connection is successful
             if (!$conn) {
