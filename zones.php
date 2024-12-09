@@ -125,7 +125,7 @@
                         <h3>Southern Branch</h3>
                         <h4>Yisambi Mbuwi</h4>
                         <span>Branch leader</span>
-                        <p>Iringa, Njombe, Mbeya, Rukwa, Songwe, Ruvuma</p>
+                        <p>Iringa, Njombe, Mbeya, Rukwa, Ruvuma</p>
                     </div>
                 </div>
             </div>
