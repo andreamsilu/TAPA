@@ -85,7 +85,7 @@
         <!-- ======= Doctors Section ======= -->
         <style>
         .member-img img {
-            width: 75%;
+            width: 80%;
             /* Ensures responsiveness */
             height: 200px;
             /* Set a fixed height */
@@ -147,7 +147,7 @@
                                 </d<div class="member-info">
                                 <h4><?php echo $name; ?></h4>
                                 <span><?php echo $role; ?></span>
-                            </div>iv>
+                            </div>
 
                         </div>
                     </div>
