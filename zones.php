@@ -47,7 +47,7 @@
 
 .member-img img {
     width: 100%;
-    height: 320px;
+    height: 100%;
     /* Fixed height for consistency */
     object-fit: cover;
     /* Crop image if needed */
