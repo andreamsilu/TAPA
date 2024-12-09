@@ -133,7 +133,7 @@
                             <div class="member-img">
                                 <img src="adminpanel/<?php echo $image; ?>" class="img-fluid p-2 m-2" alt="">
 
-                                <div class="social">
+                                <div class="social mb-2">
                                     <?php if ($twitter) { ?><a href="<?php echo $twitter; ?>"><i
                                             class="bi bi-twitter"></i></a><?php } ?>
                                     <?php if ($facebook) { ?><a href="<?php echo $facebook; ?>"><i
