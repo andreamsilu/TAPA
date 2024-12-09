@@ -98,7 +98,7 @@
                     ini_set('display_errors', 1);
                     error_reporting(-1);
           // Include your database connection file
-          include('adminpanel/db.php');
+          include('https://admin.tapa.or.tz/db.php');
 
           // Fetch leaders from the executive_committee table
           $query = "SELECT * FROM executive_committee";
@@ -120,7 +120,7 @@
                     <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                         <div class="member" data-aos="fade-up" data-aos-delay="100">
                             <div class="member-img">
-                                <img src="adminpanel/<?php echo $image; ?>" class="img-fluid" alt="">
+                                <img src="https://admin.tapa.or.tz/<?php echo $image; ?>" class="img-fluid" alt="">
                                 <div class="social">
                                     <a href="<?php echo $twitter; ?>"><i class="bi bi-twitter"></i></a>
                                     <a href="<?php echo $facebook; ?>"><i class="bi bi-facebook"></i></a>
