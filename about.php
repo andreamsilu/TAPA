@@ -84,16 +84,16 @@
         <!-- End About Section -->
         <!-- ======= Doctors Section ======= -->
         <style>
-        .member-img img {
-            width: 80%;
-            /* Ensures responsiveness */
-            height: 200px;
-            /* Set a fixed height */
-            object-fit: cover;
-            /* Crops the image to fit the dimensions without distortion */
-            border-radius: 50%;
-            /* Makes images circular, optional */
-        }
+            .member-img img {
+                width: 80%;
+                /* Ensures responsiveness */
+                height: 200px;
+                /* Set a fixed height */
+                object-fit: cover;
+                /* Crops the image to fit the dimensions without distortion */
+                border-radius: 50%;
+                /* Makes images circular, optional */
+            }
         </style>
         <section id="doctors" class="doctors section-bg">
             <div class="container" data-aos="fade-up">
@@ -105,70 +105,70 @@
                 <div class="row">
                     <?php
 
-            // Include your database connection file
-            include('adminpanel/db.php'); // Adjust the path as needed
+                    // Include your database connection file
+                    include('adminpanel/db.php'); // Adjust the path as needed
 
-            try {
-                // Prepare and execute the query
-                $query = "SELECT * FROM executive_committee";
-                $stmt = $conn->prepare($query);
-                $stmt->execute();
+                    try {
+                        // Prepare and execute the query
+                        $query = "SELECT * FROM executive_committee";
+                        $stmt = $conn->prepare($query);
+                        $stmt->execute();
 
-                // Fetch all results
-                $leaders = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                        // Fetch all results
+                        $leaders = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                // Check if leaders exist
-                if ($leaders) {
-                    foreach ($leaders as $row) {
-                        $image = $row['image_url'];
-                        $name = $row['name'];
-                        $role = $row['position'];
-                        $twitter = $row['twitter_link'];
-                        $facebook = $row['facebook_link'];
-                        $instagram = $row['instagram_link'];
-                        $linkedin = $row['linkedin_link'];
-            ?>
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                        <div class="member" data-aos="fade-up" data-aos-delay="100">
-                            <div class="member-img">
-                                <img src="adminpanel/<?php echo $image; ?>" class="img-fluid p-2 m-2" alt="">
+                        // Check if leaders exist
+                        if ($leaders) {
+                            foreach ($leaders as $row) {
+                                $image = $row['image_url'];
+                                $name = $row['name'];
+                                $role = $row['position'];
+                                $twitter = $row['twitter_link'];
+                                $facebook = $row['facebook_link'];
+                                $instagram = $row['instagram_link'];
+                                $linkedin = $row['linkedin_link'];
+                    ?>
+                                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                                    <div class="member" data-aos="fade-up" data-aos-delay="100">
+                                        <div class="member-img">
+                                            <img src="adminpanel/<?php echo $image; ?>" class="img-fluid p-2 m-2" alt="">
 
-                                <div class="social mb-2">
-                                    <?php if ($twitter) { ?><a href="<?php echo $twitter; ?>"><i
-                                            class="bi bi-twitter"></i></a><?php } ?>
-                                    <?php if ($facebook) { ?><a href="<?php echo $facebook; ?>"><i
-                                            class="bi bi-facebook"></i></a><?php } ?>
-                                    <?php if ($instagram) { ?><a href="<?php echo $instagram; ?>"><i
-                                            class="bi bi-instagram"></i></a><?php } ?>
-                                    <?php if ($linkedin) { ?><a href="<?php echo $linkedin; ?>"><i
-                                            class="bi bi-linkedin"></i></a><?php } ?>
+                                            <div class="social mb-2">
+                                                <?php if ($twitter) { ?><a href="<?php echo $twitter; ?>"><i
+                                                            class="bi bi-twitter"></i></a><?php } ?>
+                                                <?php if ($facebook) { ?><a href="<?php echo $facebook; ?>"><i
+                                                            class="bi bi-facebook"></i></a><?php } ?>
+                                                <?php if ($instagram) { ?><a href="<?php echo $instagram; ?>"><i
+                                                            class="bi bi-instagram"></i></a><?php } ?>
+                                                <?php if ($linkedin) { ?><a href="<?php echo $linkedin; ?>"><i
+                                                            class="bi bi-linkedin"></i></a><?php } ?>
+                                            </div>
+
+                                            </d<div class="member-info">
+                                            <h4><?php echo $name; ?></h4>
+                                            <span><?php echo $role; ?></span>
+                                        </div>
+
+                                    </div>
                                 </div>
-
-                                </d<div class="member-info">
-                                <h4><?php echo $name; ?></h4>
-                                <span><?php echo $role; ?></span>
-                            </div>
-
-                        </div>
-                    </div>
                     <?php
+                            }
+                        } else {
+                            echo "<p>No leaders found.</p>";
+                        }
+                    } catch (PDOException $e) {
+                        echo "Error fetching data: " . $e->getMessage();
                     }
-                } else {
-                    echo "<p>No leaders found.</p>";
-                }
-            } catch (PDOException $e) {
-                echo "Error fetching data: " . $e->getMessage();
-            }
-            ?>
+                    ?>
                 </div>
 
             </div>
         </section>
         <!-- End Doctors Section -->
         <?php
-    include 'commitees.php';
-    include 'zones.php';
-    ?>
+        include 'commitees.php';
+        include 'zones.php';
+        ?>
 
 
         <!-- End #main -->

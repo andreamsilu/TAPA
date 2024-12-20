@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 error_reporting(-1);
 
 // Database connection
-include 'db.php';
+include 'adminpanel/db.php';
 ?>
 
  
