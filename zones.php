@@ -1,3 +1,34 @@
+<?php
+// Enable error reporting for debugging
+ini_set('display_startup_errors', 1);
+ini_set('display_errors', 1);
+error_reporting(-1);
+
+// Database connection
+include 'adminpanel/db.php';
+
+// Fetch branches data from the database
+$sql = "SELECT * FROM branches";
+$stmt = $conn->prepare($sql);
+$stmt->execute();
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// Initialize an array to store the branch data
+$branches = [];
+foreach ($result as $row) {
+    // Store each branch's data into variables
+    $branch = [
+        'image_url' => htmlspecialchars($row['image_url']),
+        'branch_name' => htmlspecialchars($row['branch_name']),
+        'leader_name' => htmlspecialchars($row['leader_name']),
+        'leader_role' => htmlspecialchars($row['leader_role']),
+        'region_coverage' => htmlspecialchars($row['region_coverage']),
+    ];
+    // Append the branch data to the $branches array
+    $branches[] = $branch;
+}
+?>
+
 <!-- ======= zone Section ======= -->
 <style>
     /* General container styles */
