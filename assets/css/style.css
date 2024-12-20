@@ -1081,14 +1081,14 @@ width: 450px;
 }
 
 /* Image Styling */
-/* .zone .member .member-img { */
-  /* position: relative; */
-  /* overflow: hidden; */
-  /* height: 250px; */
-  /* background-color: #D4DCE1;  
-  /* padding-right: 100px; */
-  /* transition: transform 0.5s ease;   */
-/* } */
+.zone .member .member-img { 
+  position: relative; 
+   overflow: hidden; 
+   height: 250px; 
+   background-color: #D4DCE1;  
+   padding-right: 100px;
+  transition: transform 0.5s ease;  
+ }
 
 /* Social Icons Styling */
 .zone .member .social {
