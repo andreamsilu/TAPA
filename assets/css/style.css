@@ -1082,9 +1082,9 @@ width: 450px;
 
 /* Image Styling */
 .zone .member .member-img {
-  position: relative;
+  /* position: relative; */
   overflow: hidden;
-  height: 250px;
+  /* height: 250px; */
   background-color: #D4DCE1;  /* Background color fallback for images */
   padding-right: 100px;
   transition: transform 0.5s ease;  /* Added transition for image hover effect */
