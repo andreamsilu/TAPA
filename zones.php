@@ -64,7 +64,7 @@ foreach ($result as $row) {
     .member-img {
         position: relative;
         overflow: hidden;
-        height: 250px;
+        height: 550px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -82,7 +82,7 @@ foreach ($result as $row) {
         left: 50%;
         transform: translateX(-50%);
         display: flex;
-        gap: 10px;
+        gap: 100px;
         opacity: 0;
         transition: opacity 0.3s ease;
     }
@@ -95,7 +95,7 @@ foreach ($result as $row) {
         background: #007bff;
         color: #fff;
         width: 30px;
-        height: 30px;
+        height: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -105,7 +105,7 @@ foreach ($result as $row) {
     }
 
     .social a:hover {
-        background: #0056b3;
+        background: #fff;
     }
 
     /* Member info styles */
