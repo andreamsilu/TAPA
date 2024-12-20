@@ -1084,7 +1084,7 @@ width: 450px;
 .zone .member .member-img { 
   position: relative; 
    overflow: hidden; 
-   height: 250px; 
+   height: 550px; 
    background-color: #D4DCE1;  
    padding-right: 100px;
   transition: transform 0.5s ease;  
