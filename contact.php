@@ -56,7 +56,7 @@
                   <i class="bi bi-geo-alt flex-shrink-0"></i>
                   <div>
                     <h4>Location:</h4>
-                    <p>Esaurp Village, Near Mlimani City <br>Dar es Salaam, Tanzania</p>
+                    <p>COSS TOWER<br>University of Dar es Salaam, Tanzania</p>
                   </div>
                 </div>
                 <!-- End Info Item -->
@@ -83,7 +83,7 @@
                   <i class="bi bi-clock flex-shrink-0"></i>
                   <div>
                     <h4>Open Hours:</h4>
-                    <p>Mon-Sat: 08:00AM - 05:00PM</p>
+                    <p>Mon-Fri: 08:00AM - 04:00PM  (BY APPOINTMENT)</p>
                   </div>
                 </div>
                 <!-- End Info Item -->
