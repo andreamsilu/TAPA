@@ -88,7 +88,7 @@
                 object-fit: cover;
                 /* Crops the image to fit the dimensions without distortion */
                 border-radius: 50%;
-                border-spacing: 20px;
+                border-spacing: 100px;
                 /* Makes images circular, optional */
             }
         </style>
