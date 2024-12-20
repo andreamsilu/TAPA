@@ -72,7 +72,7 @@ foreach ($result as $row) {
 }
 
 .zone-img img {
-    width: 50%;
+    width: 100%;
     /* height: 70%; */
     object-fit:cover;
 }
