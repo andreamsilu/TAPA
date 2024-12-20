@@ -1059,60 +1059,52 @@ width: 450px;
 } */
 
 /*--------------------------------------------------------------
-==============# zones/branches=========================
---------------------------------------------------------------*/
- .zone {
+/* ===================== # zones/branches ========================= */
+
+/* General Section Styling */
+.zone {
   background: #f5f5f5;
   padding: 60px 0;
 }
 
+/* Card Styling */
 .zone .member {
   overflow: hidden;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 10px;  /* Adjusted for a smoother rounded look */
   background: #fff;
-  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
-  transition: 0.3s;
-  margin: 10px;
-  margin-bottom: 15px;
+  box-shadow: 0px 4px 30px rgba(1, 41, 112, 0.08);  /* Slightly softer shadow */
+  transition: 0.3s ease-in-out;
+  margin: 15px;  /* Increased margin for spacing */
+  margin-bottom: 20px;  /* Added more space at the bottom */
+  position: relative;  /* Added relative positioning for absolute children */
 }
 
-/* .zone .member .member-img {
+/* Image Styling */
+.zone .member .member-img {
   position: relative;
   overflow: hidden;
   height: 250px;
-  background-color: #D4DCE1;
-  padding-right:100px;
-} */
+  background-color: #D4DCE1;  /* Background color fallback for images */
+  padding-right: 100px;
+  transition: transform 0.5s ease;  /* Added transition for image hover effect */
+}
 
-
-
-
-/* .zone .member .member-img:after {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  background: url('../img/zone-shape.svg') no-repeat center bottom;
-  background-size: contain;
-  z-index: 1;
-} */
-
+/* Social Icons Styling */
 .zone .member .social {
   position: absolute;
   right: -100%;
   top: 30px;
   opacity: 0;
   border-radius: 4px;
-  transition: 0.5s;
-  background: rgba(255, 255, 255, 0.3);
+  transition: 0.5s ease;
+  background: rgba(255, 255, 255, 0.5);  /* Increased transparency for a more subtle effect */
   z-index: 2;
 }
 
+/* Social Icons Links Styling */
 .zone .member .social a {
-  transition: color 0.3s;
+  transition: color 0.3s ease;
   color: #0F718A;
   margin: 15px 12px;
   display: block;
@@ -1121,31 +1113,37 @@ width: 450px;
 }
 
 .zone .member .social a:hover {
-  color: #0F718A;
+  color: #005e73;  /* Adjusted hover color for better contrast */
 }
 
+/* Social Icons Font Size */
 .zone .member .social i {
-  font-size: 18px;
+  font-size: 20px;  /* Increased size for better visibility */
 }
 
+/* Info Section Styling */
 .zone .member .member-info {
-  padding: 10px 15px 20px 15px;
+  padding: 10px 20px 20px 20px;  /* Added padding for a cleaner layout */
+  background-color: #fff;
 }
 
+/* Member Name Styling */
 .zone .member .member-info h4 {
   font-weight: 700;
   margin-bottom: 5px;
-  font-size: 20px;
+  font-size: 22px;  /* Slightly larger for better readability */
   color: #0F718A;
 }
 
+/* Member Role Styling */
 .zone .member .member-info span {
   display: block;
-  font-size: 16px;
+  font-size: 18px;  /* Increased font size */
   font-weight: 400;
   color: #aaaaaa;
 }
 
+/* Description Styling */
 .zone .member .member-info p {
   font-style: italic;
   font-size: 16px;
@@ -1154,15 +1152,44 @@ width: 450px;
   color: #5e5e5e;
 }
 
+/* Hover Effect on Card */
 .zone .member:hover {
-  transform: scale(1.08);
-  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+  transform: scale(1.05);  /* Slight scale effect for hover */
+  box-shadow: 0px 4px 30px rgba(1, 41, 112, 0.2);  /* Darker shadow on hover */
 }
 
 .zone .member:hover .social {
-  right: 8px;
+  right: 10px;  /* Adjusted social icon position */
   opacity: 1;
 }
+
+/* Responsive Styling for Smaller Screens */
+@media (max-width: 768px) {
+  .zone .member {
+    margin: 10px;  /* Adjusted margin for smaller screens */
+  }
+
+  .zone .member .member-info h4 {
+    font-size: 20px;  /* Reduced font size for mobile */
+  }
+
+  .zone .member .member-info span {
+    font-size: 16px;  /* Reduced font size for mobile */
+  }
+
+  .zone .member .member-info p {
+    font-size: 14px;  /* Reduced font size for mobile */
+  }
+
+  .zone .member .social a {
+    margin: 10px;  /* Adjusted icon spacing for mobile */
+  }
+
+  .zone .member:hover {
+    transform: scale(1);  /* Removed hover effect on mobile for better touch interaction */
+  }
+}
+
 
  /*==== Publication&& resources ====*/
 
