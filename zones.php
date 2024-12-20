@@ -45,8 +45,8 @@ foreach ($result as $row) {
     margin-bottom: 20px;
 }
 
-/* Member card styles */
-.member {
+/* zone card styles */
+.zone {
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 15px;
@@ -55,13 +55,13 @@ foreach ($result as $row) {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.member:hover {
+.zone:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Member image styles */
-.member-img {
+/* zone image styles */
+.zone-img {
     position: relative;
     overflow: hidden;
     height: 550px; /* Updated image height */
@@ -70,13 +70,13 @@ foreach ($result as $row) {
     justify-content: center;
 }
 
-.member-img img {
+.zone-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.member-img .social {
+.zone-img .social {
     position: absolute;
     bottom: 10px;
     left: 50%;
@@ -87,7 +87,7 @@ foreach ($result as $row) {
     transition: opacity 0.3s ease;
 }
 
-.member-img:hover .social {
+.zone-img:hover .social {
     opacity: 1;
 }
 
@@ -108,32 +108,32 @@ foreach ($result as $row) {
     background: #0056b3;
 }
 
-/* Member info styles */
-.member-info {
+/* zone info styles */
+.zone-info {
     text-align: center;
     padding: 20px;
 }
 
-.member-info h3 {
+.zone-info h3 {
     font-size: 1.5rem;
     color: #333;
     margin-bottom: 10px;
 }
 
-.member-info h4 {
+.zone-info h4 {
     font-size: 1.2rem;
     color: #555;
     margin-bottom: 5px;
 }
 
-.member-info span {
+.zone-info span {
     display: block;
     font-size: 1rem;
     color: #777;
     margin-bottom: 15px;
 }
 
-.member-info p {
+.zone-info p {
     font-size: 0.9rem;
     color: #666;
 }
@@ -152,8 +152,8 @@ foreach ($result as $row) {
             foreach ($branches as $branch) {
                 echo '
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                    <div class="member">
-                        <div class="member-img">
+                    <div class="zone">
+                        <div class="zone-img">
                             <img src="adminpanel/' . $branch['image_url'] . '" class="img-fluid" alt="' . $branch['branch_name'] . '">
                             <div class="social">
                                 <a href="#"><i class="bi bi-twitter"></i></a>
@@ -162,7 +162,7 @@ foreach ($result as $row) {
                                 <a href="#"><i class="bi bi-linkedin"></i></a>
                             </div>
                         </div>
-                        <div class="member-info">
+                        <div class="zone-info">
                             <h3>' . $branch['branch_name'] . '</h3>
                             <h4>' . $branch['leader_name'] . '</h4>
                             <span>' . $branch['leader_role'] . '</span>
