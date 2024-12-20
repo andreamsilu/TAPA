@@ -1086,7 +1086,7 @@ width: 450px;
   overflow: hidden;
   /* height: 250px; */
   background-color: #D4DCE1;  /* Background color fallback for images */
-  padding-right: 100px;
+  /* padding-right: 100px; */
   transition: transform 0.5s ease;  /* Added transition for image hover effect */
 }
 
