@@ -64,7 +64,7 @@ foreach ($result as $row) {
 .zone-img {
     position: relative;
     overflow: hidden;
-    /* height: 250px;   */
+    height: 200px;  
     display: flex;
     align-items: center;
     justify-content: center;
