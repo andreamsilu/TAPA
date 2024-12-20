@@ -1088,7 +1088,7 @@ width: 450px;
 
 
 
-.zone .member .member-img:after {
+/* .zone .member .member-img:after {
   position: absolute;
   content: "";
   left: 0;
@@ -1098,7 +1098,7 @@ width: 450px;
   background: url('../img/zone-shape.svg') no-repeat center bottom;
   background-size: contain;
   z-index: 1;
-}
+} */
 
 .zone .member .social {
   position: absolute;
