@@ -5,9 +5,30 @@ error_reporting(-1);
 
 // Database connection
 include 'adminpanel/db.php';
-?>
 
- 
+// Fetch branches data from the database
+$sql = "SELECT * FROM branches";
+$stmt = $conn->prepare($sql);
+$stmt->execute();
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// Initialize an array to store the branch data
+$branches = [];
+
+foreach ($result as $row) {
+    // Store each branch's data into variables
+    $branch = [
+        'image_url' => htmlspecialchars($row['image_url']),
+        'branch_name' => htmlspecialchars($row['branch_name']),
+        'leader_name' => htmlspecialchars($row['leader_name']),
+        'leader_role' => htmlspecialchars($row['leader_role']),
+        'region_coverage' => htmlspecialchars($row['region_coverage']),
+    ];
+
+    // Append the branch data to the $branches array
+    $branches[] = $branch;
+}
+?>
 
 <!-- ======= zone Section ======= -->
 <section id="zone" class="zone">
@@ -18,19 +39,13 @@ include 'adminpanel/db.php';
 
         <div class="row gy-4">
             <?php
-            // Fetch branches data from the database
-            $sql = "SELECT * FROM branches";
-            $stmt = $conn->prepare($sql);
-            $stmt->execute();
-            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-            // Loop through each branch and display the data
-            foreach ($result as $row) {
+            // Loop through each branch stored in the $branches array and render the HTML
+            foreach ($branches as $branch) {
                 echo '
                 <div class="col-lg-4 col-md-6 d-flex align-items-center" data-aos="fade-up" data-aos-delay="100">
                     <div class="member">
                         <div class="member-img">
-                            <img src="adminpanel/' . htmlspecialchars($row['image_url']) . '" class="img-fluid" alt="' . htmlspecialchars($row['branch_name']) . '">
+                            <img src="adminpanel/' . $branch['image_url'] . '" class="img-fluid" alt="' . $branch['branch_name'] . '">
                             <div class="social">
                                 <a href=""><i class="bi bi-twitter"></i></a>
                                 <a href=""><i class="bi bi-facebook"></i></a>
@@ -39,10 +54,10 @@ include 'adminpanel/db.php';
                             </div>
                         </div>
                         <div class="member-info">
-                            <h3>' . htmlspecialchars($row['branch_name']) . '</h3>
-                            <h4>' . htmlspecialchars($row['leader_name']) . '</h4>
-                            <span>' . htmlspecialchars($row['leader_role']) . '</span>
-                            <p>' . htmlspecialchars($row['region_coverage']) . '</p>
+                            <h3>' . $branch['branch_name'] . '</h3>
+                            <h4>' . $branch['leader_name'] . '</h4>
+                            <span>' . $branch['leader_role'] . '</span>
+                            <p>' . $branch['region_coverage'] . '</p>
                         </div>
                     </div>
                 </div>';
@@ -52,4 +67,3 @@ include 'adminpanel/db.php';
     </div>
 </section>
 <!-- End zone Section -->
- 
