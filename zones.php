@@ -30,9 +30,6 @@ foreach ($result as $row) {
 }
 ?>
 
-  
- 
-
     <!-- ======= zone Section ======= -->
     <section id="zone" class="zone">
         <div class="container" data-aos="fade-up">
