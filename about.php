@@ -71,10 +71,6 @@
                             To promote the common interests of the members of the Association, who are
                             practitioners of or who are involved in the field of psychology.
                         </p>
-
-                        <h3><i class="bi bi-eye"></i> Vision</h3>
-                        <p>A mentally healthy Tanzania, where everyone has access to quality psychological care,
-                            empowering them to thrive.</p>
                     </div>
 
                 </div>
