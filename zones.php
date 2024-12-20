@@ -30,7 +30,7 @@ foreach ($result as $row) {
 }
 ?>
 
-    <style>
+    <!-- <style>
         /* Custom Styles */
         .zone {
             padding: 60px 0;
@@ -121,7 +121,7 @@ foreach ($result as $row) {
             color: #555;
             line-height: 1.5;
         }
-    </style>
+    </style> -->
  
 
     <!-- ======= zone Section ======= -->
