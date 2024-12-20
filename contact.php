@@ -44,8 +44,9 @@
           <div class="col-sm-12">
             <div class="contact-map box">
               <div id="map" class="contact-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.005567122966!2d39.21630767427017!3d-6.769173893227598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4e8c8e62e115%3A0x93230e52ebf04335!2sEtina%20Bar%20%26%20Restaurant!5e0!3m2!1sen!2sus!4v1704719859599!5m2!1sen!2sus" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-              </div>
+                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.005567122966!2d39.21630767427017!3d-6.769173893227598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4e8c8e62e115%3A0x93230e52ebf04335!2sEtina%20Bar%20%26%20Restaurant!5e0!3m2!1sen!2sus!4v1704719859599!5m2!1sen!2sus" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.9153780100164!2d39.203432!3d-6.780153100000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4ee6f9f66ae1%3A0x6108fe0c3a4ebfe3!2sCollege%20of%20Arts%20and%20Social%20Sciences!5e0!3m2!1sen!2stz!4v1734699801281!5m2!1sen!2stz" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
           </div>
           <div class="row gx-lg-0 gy-4">
