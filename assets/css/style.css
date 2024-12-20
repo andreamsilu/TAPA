@@ -1071,13 +1071,13 @@ width: 450px;
 .zone .member {
   overflow: hidden;
   text-align: center;
-  border-radius: 10px;  /* Adjusted for a smoother rounded look */
+  border-radius: 10px;   
   background: #fff;
-  box-shadow: 0px 4px 30px rgba(1, 41, 112, 0.08);  /* Slightly softer shadow */
+  box-shadow: 0px 4px 30px rgba(1, 41, 112, 0.08);  
   transition: 0.3s ease-in-out;
-  margin: 15px;  /* Increased margin for spacing */
-  margin-bottom: 20px;  /* Added more space at the bottom */
-  position: relative;  /* Added relative positioning for absolute children */
+  margin: 15px;   
+  margin-bottom: 20px;  
+  position: relative;   
 }
 
 /* Image Styling */
@@ -1085,9 +1085,9 @@ width: 450px;
   /* position: relative; */
   /* overflow: hidden; */
   /* height: 250px; */
-  /* background-color: #D4DCE1;  Background color fallback for images */
+  /* background-color: #D4DCE1;  
   /* padding-right: 100px; */
-  transition: transform 0.5s ease;  /* Added transition for image hover effect */
+  /* transition: transform 0.5s ease;   */
 }
 
 /* Social Icons Styling */
