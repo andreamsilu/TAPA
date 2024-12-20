@@ -316,7 +316,7 @@
     <div id="topbar" class="d-flex align-items-center fixed-top">
         <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
             <div class="align-items-center d-none d-md-flex">
-                <i class="bi bi-clock"></i> Monday - Saturday, 8AM to 5PM
+                <i class="bi bi-clock"></i> Monday - Friday, 8AM to 4PM <span>(BY APPOIN)</span>
             </div>
             <div class="d-flex align-items-center">
                 <img src="assets/img/conference-poster/whatsap.png" alt="WhatsApp Icon"
