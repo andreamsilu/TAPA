@@ -1350,7 +1350,7 @@ width: 450px;
 # About
 --------------------------------------------------------------*/
 .about {
-  background: url("../img/about-bg.jpg") center center;
+  /* background: url("../img/about-bg.jpg") center center; */
   background-size: cover;
   position: relative;
   padding: 80px 0;
