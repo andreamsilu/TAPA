@@ -31,7 +31,7 @@ foreach ($result as $row) {
 
 <!-- ======= zone Section ======= -->
 <style>
-/* General container styles */
+   /* General container styles */
 #zone .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -39,7 +39,7 @@ foreach ($result as $row) {
 
 .section-title h2 {
     text-align: center;
-    font-size: 2rem; /* Smaller font size */
+    font-size: 2.5rem;
     font-weight: bold;
     color: #333;
     margin-bottom: 20px;
@@ -49,20 +49,23 @@ foreach ($result as $row) {
 .zone {
     background: #fff;
     border: 1px solid #ddd;
-    border-radius: 10px; /* Reduced border radius */
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .zone:hover {
-    transform: translateY(-5px); /* Slightly less hover effect */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* zone image styles */
 .zone-img {
-    height: 250px; /* Smaller height */
+    position: relative;
+    overflow: hidden;
+    height: 550px;  
+    width: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,8 +73,8 @@ foreach ($result as $row) {
 
 .zone-img img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure image covers the area */
+    /* height: 70%; */
+    object-fit:cover;
 }
 
 .zone-img .social {
@@ -80,7 +83,7 @@ foreach ($result as $row) {
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 8px;
+    gap: 10px;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -92,13 +95,13 @@ foreach ($result as $row) {
 .social a {
     background: #007bff;
     color: #fff;
-    width: 25px; /* Smaller icons */
-    height: 25px;
+    width: 30px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    font-size: 14px;
+    font-size: 16px;
     transition: background 0.3s ease;
 }
 
@@ -109,34 +112,32 @@ foreach ($result as $row) {
 /* zone info styles */
 .zone-info {
     text-align: center;
-    padding: 15px; /* Reduced padding */
+    padding: 20px;
 }
 
 .zone-info h3 {
-    font-size: 1.2rem; /* Smaller font size */
+    font-size: 1.5rem;
     color: #333;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .zone-info h4 {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #555;
     margin-bottom: 5px;
 }
 
 .zone-info span {
     display: block;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #777;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .zone-info p {
-    font-size: 0.8rem; /* Reduced paragraph font size */
+    font-size: 0.9rem;
     color: #666;
-    margin: 0;
 }
-
 
 </style>
 
