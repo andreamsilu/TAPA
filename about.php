@@ -80,18 +80,77 @@
         <!-- End About Section -->
         <!-- ======= Doctors Section ======= -->
         <style>
+            .member {
+                border: 2px solid #ddd;
+                /* Border around the card */
+                padding: 15px;
+                /* Space between the image and the border */
+                border-radius: 10px;
+                /* Rounded corners for the card */
+                text-align: center;
+                height: 350px;
+                /* Fixed height for consistent card size */
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                /* Ensure the content is spaced evenly */
+            }
+
+            .member_img {
+                width: 100%;
+                /* Ensure the image container takes the full width of the card */
+                height: 200px;
+                /* Fixed height for the image */
+                overflow: hidden;
+                /* Hide overflow for the image */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 15px;
+                /* Space between the image and the next content */
+            }
+
             .member_img img {
                 width: 80%;
-                /* Ensures responsiveness */
-                height: 200px;
-                /* Set a fixed height */
+                /* Ensure the image is responsive */
+                height: 100%;
+                /* Full height for the container */
                 object-fit: cover;
-                /* Crops the image to fit the dimensions without distortion */
+                /* Maintain aspect ratio and cover the area */
                 border-radius: 50%;
-                border-spacing: 100px;
-                /* Makes images circular, optional */
+                /* Circular images */
+                border: 5px solid #fff;
+                /* White border around the image */
+            }
+
+            .social {
+                margin-top: auto;
+                /* Ensure social icons are at the bottom */
+            }
+
+            .member-info h4 {
+                margin-top: 10px;
+                /* Space between name and position */
+                font-size: 1.2rem;
+            }
+
+            .member-info span {
+                color: #777;
+                /* Color for the position */
+            }
+
+            .social a {
+                margin-right: 10px;
+                color: #333;
+                /* Icon color */
+            }
+
+            .social a:hover {
+                color: #007bff;
+                /* Hover color for icons */
             }
         </style>
+
         <section id="doctors" class="doctors section-bg">
             <div class="container" data-aos="fade-up">
 
@@ -101,10 +160,9 @@
 
                 <div class="row">
                     <?php
-
                     // Include your database connection file
                     include('adminpanel/db.php'); // Adjust the path as needed
-
+                    
                     try {
                         // Prepare and execute the query
                         $query = "SELECT * FROM executive_committee";
@@ -124,31 +182,32 @@
                                 $facebook = $row['facebook_link'];
                                 $instagram = $row['instagram_link'];
                                 $linkedin = $row['linkedin_link'];
-                    ?>
+                                ?>
                                 <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                                     <div class="member" data-aos="fade-up" data-aos-delay="100">
                                         <div class="member_img">
                                             <img src="adminpanel/<?php echo $image; ?>" class="img-fluid p-2 m-2" alt="">
+                                        </div>
 
-                                            <div class="social mb-2">
-                                                <?php if ($twitter) { ?><a href="<?php echo $twitter; ?>"><i
-                                                            class="bi bi-twitter"></i></a><?php } ?>
-                                                <?php if ($facebook) { ?><a href="<?php echo $facebook; ?>"><i
-                                                            class="bi bi-facebook"></i></a><?php } ?>
-                                                <?php if ($instagram) { ?><a href="<?php echo $instagram; ?>"><i
-                                                            class="bi bi-instagram"></i></a><?php } ?>
-                                                <?php if ($linkedin) { ?><a href="<?php echo $linkedin; ?>"><i
-                                                            class="bi bi-linkedin"></i></a><?php } ?>
-                                            </div>
+                                        <div class="social mb-2">
+                                            <?php if ($twitter) { ?><a href="<?php echo $twitter; ?>"><i
+                                                        class="bi bi-twitter"></i></a><?php } ?>
+                                            <?php if ($facebook) { ?><a href="<?php echo $facebook; ?>"><i
+                                                        class="bi bi-facebook"></i></a><?php } ?>
+                                            <?php if ($instagram) { ?><a href="<?php echo $instagram; ?>"><i
+                                                        class="bi bi-instagram"></i></a><?php } ?>
+                                            <?php if ($linkedin) { ?><a href="<?php echo $linkedin; ?>"><i
+                                                        class="bi bi-linkedin"></i></a><?php } ?>
+                                        </div>
 
-                                            </d<div class="member-info">
+                                        <div class="member-info">
                                             <h4><?php echo $name; ?></h4>
                                             <span><?php echo $role; ?></span>
                                         </div>
 
                                     </div>
                                 </div>
-                    <?php
+                                <?php
                             }
                         } else {
                             echo "<p>No leaders found.</p>";
@@ -162,6 +221,7 @@
             </div>
         </section>
         <!-- End Doctors Section -->
+
         <?php
         include 'commitees.php';
         include 'zones.php';
