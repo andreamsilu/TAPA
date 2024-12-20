@@ -84,7 +84,7 @@
         <!-- End About Section -->
         <!-- ======= Doctors Section ======= -->
         <style>
-            .member-img img {
+            .member_img img {
                 width: 80%;
                 /* Ensures responsiveness */
                 height: 200px;
@@ -130,7 +130,7 @@
                     ?>
                                 <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                                     <div class="member" data-aos="fade-up" data-aos-delay="100">
-                                        <div class="member-img">
+                                        <div class="member_img">
                                             <img src="adminpanel/<?php echo $image; ?>" class="img-fluid p-2 m-2" alt="">
 
                                             <div class="social mb-2">
