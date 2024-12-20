@@ -89,7 +89,7 @@ foreach ($result as $row) {
         }
 
         .zone .social a:hover {
-            background-color: #0F718A;
+            background-color:rgb(141, 170, 177);
             color: #fff;
         }
 
