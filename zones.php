@@ -31,112 +31,113 @@ foreach ($result as $row) {
 
 <!-- ======= zone Section ======= -->
 <style>
-    /* General container styles */
-    #zone .container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
+   /* General container styles */
+#zone .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-    .section-title h2 {
-        text-align: center;
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: #333;
-        margin-bottom: 20px;
-    }
+.section-title h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
 
-    /* Member card styles */
-    .member {
-        background: #fff;
-        border: 1px solid #ddd;
-        border-radius: 15px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+/* Member card styles */
+.member {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .member:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    }
+.member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
 
-    /* Member image styles */
-    .member-img {
-        position: relative;
-        overflow: hidden;
-        height: 550px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+/* Member image styles */
+.member-img {
+    position: relative;
+    overflow: hidden;
+    height: 550px; /* Updated image height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    .member-img img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+.member-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-    .member-img .social {
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 100px;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
+.member-img .social {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
 
-    .member-img:hover .social {
-        opacity: 1;
-    }
+.member-img:hover .social {
+    opacity: 1;
+}
 
-    .social a {
-        background: #007bff;
-        color: #fff;
-        width: 30px;
-        height: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        font-size: 16px;
-        transition: background 0.3s ease;
-    }
+.social a {
+    background: #007bff;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
 
-    .social a:hover {
-        background: #fff;
-    }
+.social a:hover {
+    background: #0056b3;
+}
 
-    /* Member info styles */
-    .member-info {
-        text-align: center;
-        padding: 20px;
-    }
+/* Member info styles */
+.member-info {
+    text-align: center;
+    padding: 20px;
+}
 
-    .member-info h3 {
-        font-size: 1.5rem;
-        color: #333;
-        margin-bottom: 10px;
-    }
+.member-info h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
 
-    .member-info h4 {
-        font-size: 1.2rem;
-        color: #555;
-        margin-bottom: 5px;
-    }
+.member-info h4 {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 5px;
+}
 
-    .member-info span {
-        display: block;
-        font-size: 1rem;
-        color: #777;
-        margin-bottom: 15px;
-    }
+.member-info span {
+    display: block;
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 15px;
+}
 
-    .member-info p {
-        font-size: 0.9rem;
-        color: #666;
-    }
+.member-info p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
 </style>
 
 <section id="zone" class="zone">
