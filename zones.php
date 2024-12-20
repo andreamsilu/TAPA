@@ -30,7 +30,7 @@ include 'adminpanel/db.php';
                 <div class="col-lg-4 col-md-6 d-flex align-items-center" data-aos="fade-up" data-aos-delay="100">
                     <div class="member">
                         <div class="member-img">
-                            <img src="' . htmlspecialchars($row['image_url']) . '" class="img-fluid" alt="' . htmlspecialchars($row['branch_name']) . '">
+                            <img src="adminpanel/' . htmlspecialchars($row['image_url']) . '" class="img-fluid" alt="' . htmlspecialchars($row['branch_name']) . '">
                             <div class="social">
                                 <a href=""><i class="bi bi-twitter"></i></a>
                                 <a href=""><i class="bi bi-facebook"></i></a>
