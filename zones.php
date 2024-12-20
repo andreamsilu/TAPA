@@ -65,7 +65,7 @@ foreach ($result as $row) {
     position: relative;
     overflow: hidden;
     height: 200px;  
-    width: 250px;
+    width: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
