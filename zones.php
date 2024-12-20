@@ -29,6 +29,29 @@ foreach ($result as $row) {
     $branches[] = $branch;
 }
 ?>
+<style>
+    .member-img {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s ease; /* Smooth transition for the rotation */
+}
+
+.member-img:hover {
+    transform: rotate(10deg); /* Adjust the rotation angle as needed */
+}
+
+.member-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease; /* Smooth transition for the image */
+}
+
+.member-img:hover img {
+    transform: scale(1.1); /* Slightly zoom in the image on hover */
+}
+
+</style>
 
     <!-- ======= zone Section ======= -->
     <section id="zone" class="zone">
