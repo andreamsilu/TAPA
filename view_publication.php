@@ -146,7 +146,7 @@ if (isset($_GET['id'])) {
             <p><strong>Tags:</strong> <?= htmlspecialchars($publication['tags'] ?? 'No Tags') ?></p>
             <p><?= nl2br(htmlspecialchars($publication['description'] ?? 'No Description Available')) ?></p>
 
-            <a href="publication.php" class="btn btn-secondary download-btn">
+            <a href="publication-resources.php" class="btn btn-secondary download-btn">
                 <i class="bi bi-arrow-left-circle"></i> Back to Publications
             </a>
             <a href="adminpanel/<?= htmlspecialchars($publication['file_url'] ?? '#') ?>" 
