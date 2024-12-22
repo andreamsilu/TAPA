@@ -2,149 +2,170 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Publications- TAPA </title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <title>Publications- TAPA </title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
 
-  <?php include "titleIcon.php" ?>
+    <?php include "titleIcon.php" ?>
 
 </head>
 
 <body>
-  <?php include "header.php" ?>
+    <?php include "header.php" ?>
 
 
-  <main id="main">
+    <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
+        <!-- ======= Breadcrumbs ======= -->
+        <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
 
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Publication & Resources</h2>
-          <ol>
-            <li><a href="index.php">Home</a></li>
-            <li>Publications & Resources</li>
-          </ol>
-        </div>
-
-      </div>
-    </section>
-    <!-- End Breadcrumbs -->
-
-  
-    <!-- ======= publication======= -->
-    <section id="publication" class="publication">
-      <div class="container" data-aos="fade-up">
-        <div class="row g-0" data-aos="fade-up" data-aos-delay="200">
-          <div class="col-xl-6 img-bg" style="background-image: url('assets/img/tapaImages/Sustain Digital-21.jpg')"></div>
-          <div class="col-xl-6 slides  position-relative">
-            <div class="slides-1 swiper">
-              <div class="swiper-wrapper">
-
-                <div class="swiper-slide">
-                  <div class="item">
-                    <h3 class="mb-0">TAPA CONSTITUTION</h3>
-                     <br>
-                    <p>TAPA Constitution is a foundational document that outlines the organization's structure, governance, and mission, ensuring transparent and accountable operations.</p>
-                    <div class="btn-wrap">
-                      <a href="assets/TAPA CONSTITUTION JUNE 2022 VERSION.pdf" style="border: 2px #0F718A solid;padding:10px;border-radius:5px;" text-center" target="_blank">Read now</a>
-                    </div>
-                  </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>Publication & Resources</h2>
+                    <ol>
+                        <li><a href="index.php">Home</a></li>
+                        <li>Publications & Resources</li>
+                    </ol>
                 </div>
 
-                <div class="swiper-slide">
-                  <div class="item">
-                    <h3 class="mb-0">CODE OF CONDUCT</h3>
-                    <p>The TAPA Code of Ethics sets ethical standards for members, prioritizing professionalism, integrity, and client well-being in Tanzanian psychology and mental health services. </p>
-                    <br>
-                    <div class="btn-wrap">
-                      <a href="assets/ethics-code.pdf" style="border: 2px #0F718A solid;padding:10px;border-radius:5px;" target="_blank">Read Now</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="item">
-                    <h3 class="mb-0">TAPA  8TH ANNUAL GENERAL MEETING AND
-                    FIRST SCIENTIFIC CONFERENCE 2024</h3>
-                    <p><strong>Theme:</strong>The Role of Psychologists in Enhancing Mental Health and Psychosocial Wellbeing in Tanzania</p>
-                    <br>
-                    <div class="btn-wrap">
-                      <a href="assets/AGM_8TH.pdf" style="border: 2px #0F718A solid;padding:10px;border-radius:5px;" target="_blank">Read Now</a>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- addd more slides for publications here -->
-              </div>
-              <div class="swiper-pagination"></div>
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          </div>
+        </section>
+        <!-- End Breadcrumbs -->
+        <?php include 'adminpanel/db.php'; ?>
 
+        <div class="container mt-5">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">Publications</h4>
+                </div>
+                <div class="card-body">
+                    <!-- <a href="create_publication.php" class="btn btn-success mb-3">Add New Publication</a> -->
+
+                    <!-- Search and Sorting Controls -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <input type="text" id="searchInput" class="form-control"
+                                placeholder="Search by title or author...">
+                        </div>
+                        <div class="col-md-6 text-end">
+                            <select id="sortSelect" class="form-select w-auto d-inline-block">
+                                <option value="date_desc">Sort by Date (Newest)</option>
+                                <option value="date_asc">Sort by Date (Oldest)</option>
+                                <option value="title_asc">Sort by Title (A-Z)</option>
+                                <option value="title_desc">Sort by Title (Z-A)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Publications Display -->
+                    <div id="publicationsContainer" class="row">
+
+                        <?php
+                        $sql = "SELECT * FROM publications ORDER BY publication_date DESC";
+                        $stmt = $conn->prepare($sql);
+                        $stmt->execute();
+                        $publications = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                        foreach ($publications as $publication) {
+                            // Get the file and thumbnail paths
+                            $thumbnail_path = $publication['thumbnail_url'];
+                            $file_path = $publication['file_url'];
+
+                            // Check if a thumbnail exists, if not, show a placeholder
+                            if ($thumbnail_path) {
+                                $extension = pathinfo($thumbnail_path, PATHINFO_EXTENSION);
+                                if (in_array(strtolower($extension), ['jpg', 'jpeg', 'png', 'gif'])) {
+                                    $thumbnail_display = "<img src='{$thumbnail_path}' class='card-img-top' alt='Publication Thumbnail'>";
+                                } elseif (in_array(strtolower($extension), ['mp4', 'webm', 'ogv'])) {
+                                    $thumbnail_display = "<video class='card-img-top' controls><source src='{$thumbnail_path}' type='video/" . strtolower($extension) . "'>Your browser does not support the video tag.</video>";
+                                }
+                            } else {
+                                $thumbnail_display = "<img src='path/to/placeholder-image.jpg' class='card-img-top' alt='No Thumbnail'>";
+                            }
+
+                            // Fetch the description (truncate it for preview)
+                            $description = strlen($publication['description']) > 10 ? substr($publication['description'], 0, 50) . '...' : $publication['description'];
+
+                            echo "
+                    <div class='col-md-4 mb-4 publication-card' data-title='{$publication['title']}' data-author='{$publication['author']}' data-date='{$publication['publication_date']}'>
+                        <div class='card h-100'>
+                            {$thumbnail_display}
+                            <div class='card-body'>
+                                <h5 class='card-title'>{$publication['title']}</h5>
+                                <p class='card-text'>Author: {$publication['author']}</p>
+                                <p class='card-text'>Date: {$publication['publication_date']}</p>
+                                <p class='card-text'>Description:{$description}</p>
+                            </div>
+                            <div class='card-footer'>
+                                <a href='view_publication.php?id={$publication['publication_id']}' class='btn btn-info btn-sm'>Read More</a>
+                                <a href='edit_publication.php?id={$publication['publication_id']}' class='btn btn-primary btn-sm'>Edit</a>
+                                <a href='delete_publication.php?id={$publication['publication_id']}' class='btn btn-danger btn-sm'>Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                    ";
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
         </div>
 
-      </div>
-    </section>
-    <br>
-    <br>
-    <!-- End publication Section -->
+        <?php include 'footer.php' ?>
 
-    <?php include "footer.php" ?>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const searchInput = document.getElementById('searchInput');
+                const sortSelect = document.getElementById('sortSelect');
+                const publicationsContainer = document.getElementById('publicationsContainer');
 
+                // Filter Publications by Search
+                searchInput.addEventListener('input', function () {
+                    const searchText = searchInput.value.toLowerCase();
+                    const cards = document.querySelectorAll('.publication-card');
+                    cards.forEach(card => {
+                        const title = card.getAttribute('data-title').toLowerCase();
+                        const author = card.getAttribute('data-author').toLowerCase();
+                        if (title.includes(searchText) || author.includes(searchText)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
 
-    <script>
-      var swiper = new Swiper('.swiper', {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-      });
+                // Sort Publications
+                sortSelect.addEventListener('change', function () {
+                    const sortValue = sortSelect.value;
+                    const cards = Array.from(document.querySelectorAll('.publication-card'));
+                    cards.sort((a, b) => {
+                        let valueA, valueB;
 
+                        switch (sortValue) {
+                            case 'date_asc':
+                                valueA = a.getAttribute('data-date');
+                                valueB = b.getAttribute('data-date');
+                                return new Date(valueA) - new Date(valueB);
+                            case 'date_desc':
+                                valueA = a.getAttribute('data-date');
+                                valueB = b.getAttribute('data-date');
+                                return new Date(valueB) - new Date(valueA);
+                            case 'title_asc':
+                                valueA = a.getAttribute('data-title').toLowerCase();
+                                valueB = b.getAttribute('data-title').toLowerCase();
+                                return valueA.localeCompare(valueB);
+                            case 'title_desc':
+                                valueA = a.getAttribute('data-title').toLowerCase();
+                                valueB = b.getAttribute('data-title').toLowerCase();
+                                return valueB.localeCompare(valueA);
+                        }
+                    });
 
-      /**
-       * Init swiper slider with 3 slides at once in desktop view
-       */
-      new Swiper('.slides-3', {
-        speed: 600,
-        loop: true,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false
-        },
-        slidesPerView: 'auto',
-        pagination: {
-          el: '.swiper-pagination',
-          type: 'bullets',
-          clickable: true
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 40
-          },
-          1200: {
-            slidesPerView: 3,
-          }
-        }
-      });
-    </script>
-
-    <!-- ======= End of publication Section ======= -->
-
-    <!-- End #main -->
+                    publicationsContainer.innerHTML = '';
+                    cards.forEach(card => publicationsContainer.appendChild(card));
+                });
+            });
+        </script>
