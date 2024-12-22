@@ -25,7 +25,42 @@ if (isset($_GET['id'])) {
 }
 ?>
 
-<?php include 'header.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Publications- TAPA </title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <?php include "titleIcon.php" ?>
+
+</head>
+
+<body>
+    <?php include "header.php" ?>
+
+
+    <main id="main">
+
+        <!-- ======= Breadcrumbs ======= -->
+        <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>Publication & Resources</h2>
+                    <ol>
+                        <li><a href="index.php">Home</a></li>
+                        <li>Publications & Resources</li>
+                    </ol>
+                </div>
+
+            </div>
+        </section>
+        <!-- End Breadcrumbs -->
 
 <style>
     .publication-card {
