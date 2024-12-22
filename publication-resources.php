@@ -78,7 +78,7 @@
                             if ($thumbnail_path) {
                                 $extension = pathinfo($thumbnail_path, PATHINFO_EXTENSION);
                                 if (in_array(strtolower($extension), ['jpg', 'jpeg', 'png', 'gif'])) {
-                                    $thumbnail_display = "<img src='{$thumbnail_path}' class='card-img-top' alt='Publication Thumbnail'>";
+                                    $thumbnail_display = "<img src='adminpanel/{$thumbnail_path}' class='card-img-top' alt='Publication Thumbnail'>";
                                 } elseif (in_array(strtolower($extension), ['mp4', 'webm', 'ogv'])) {
                                     $thumbnail_display = "<video class='card-img-top' controls><source src='{$thumbnail_path}' type='video/" . strtolower($extension) . "'>Your browser does not support the video tag.</video>";
                                 }
