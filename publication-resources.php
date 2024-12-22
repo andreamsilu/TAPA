@@ -36,7 +36,7 @@
         <!-- End Breadcrumbs -->
         <?php include 'adminpanel/db.php'; ?>
 
-        <div class="container mt-3 mb-5">
+        <!-- <div class="container mt-3 mb-5"> -->
             <div class="card shadow">
                 <div class="card-header bg-primary text-white">
                     <h4 class="mb-0">Publications</h4>
@@ -110,7 +110,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        <!-- </div> -->
 
         <?php include 'footer.php' ?>
 
