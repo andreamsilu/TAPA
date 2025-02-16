@@ -10,10 +10,10 @@
   error_reporting(E_ALL);
   include "titleIcon.php"; 
   ?>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> -->
 </head>
 <body>
-<?php //include "header.php"; ?>
+<?php include "header.php"; ?>
 <main id="main">
   <section id="portfolio" class="portfolio">
     <div class="container">
@@ -80,7 +80,7 @@
   </section>
 </main>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
 <?php include "footer.php"; ?>
 </body>
 </html>
