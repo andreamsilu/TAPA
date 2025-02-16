@@ -31,114 +31,81 @@ foreach ($result as $row) {
 
 <!-- ======= zone Section ======= -->
 <style>
-   /* General container styles */
-#zone .container {
-    /* max-width: 1200px; */
-    margin: 0 auto;
-}
+    /* General container styles */
+    #zone .container {
+        margin: 0 auto;
+    }
 
-.section-title h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-}
+    .section-title h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+    }
 
-/* zone card styles */
-.zone {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    /* zone card styles */
+    .zone {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+    }
 
-.zone:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
+    .zone:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
 
-/* zone image styles */
-.zone-img {
-    position: relative;
-    overflow: hidden;
-    height: 550px;  
-    width: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    /* zone image styles */
+    .zone-img {
+        position: relative;
+        overflow: hidden;
+        height: 250px;  /* Fixed height for all images */
+        width: 100%; /* Make image width responsive */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.zone-img img {
-    /* width: 100%; */
-    /* height: 70%; */
-    object-fit:cover;
-}
+    .zone-img img {
+        object-fit: cover; /* Make images cover the container while maintaining aspect ratio */
+        width: 100%;
+        height: 100%;  /* Make images fill the fixed container height */
+    }
 
-.zone-img .social {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
+    /* zone info styles */
+    .zone-info {
+        text-align: center;
+        padding: 20px;
+    }
 
-.zone-img:hover .social {
-    opacity: 1;
-}
+    .zone-info h3 {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 10px;
+    }
 
-.social a {
-    background: #007bff;
-    color: #fff;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    font-size: 16px;
-    transition: background 0.3s ease;
-}
+    .zone-info h4 {
+        font-size: 1.2rem;
+        color: #555;
+        margin-bottom: 5px;
+    }
 
-.social a:hover {
-    background: #0056b3;
-}
+    .zone-info span {
+        display: block;
+        font-size: 1rem;
+        color: #777;
+        margin-bottom: 15px;
+    }
 
-/* zone info styles */
-.zone-info {
-    text-align: center;
-    padding: 20px;
-}
-
-.zone-info h3 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.zone-info h4 {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 5px;
-}
-
-.zone-info span {
-    display: block;
-    font-size: 1rem;
-    color: #777;
-    margin-bottom: 15px;
-}
-
-.zone-info p {
-    font-size: 0.9rem;
-    color: #666;
-}
-
+    .zone-info p {
+        font-size: 0.9rem;
+        color: #666;
+    }
 </style>
 
 <section id="zone" class="zone">
