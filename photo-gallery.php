@@ -63,7 +63,7 @@
         if (!empty($images)) {
             foreach ($images as $row) {
                 echo '<div class="col-lg-4 col-md-6 portfolio-item">
-                        <img src="' . $row['image_path'] . '" class="img-fluid" alt="">
+                        <img src="adminpanel/' . $row['image_path'] . '" class="img-fluid" alt="">
                         <div class="portfolio-info">
                           <h4>AGM ' . $row['event_year'] . '</h4>
                           <p>Images</p>
