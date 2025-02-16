@@ -74,7 +74,7 @@
                <i> <img src="assets/img/conference-poster/whatsap.png" alt="WhatsApp Icon" style="width: 24px; height: 24px; margin-right: 5px;"></i>
                   <div>
                     <h4>Whatsap:</h4>
-                    <p>+255 719 911 575</p>
+                    <p>+255 679 256 256</p>
                   </div>
                 </div>
                 <!-- End Info Item -->

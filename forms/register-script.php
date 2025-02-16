@@ -103,7 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         Regards,<br>
         Administrative Assistant,<br>
         Tanzanian Psychological Association (TAPA)<br>
-        +255 719 911 575
+        +255 679 256 256
     </div>
 </body>
 </html>

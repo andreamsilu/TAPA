@@ -322,7 +322,7 @@
                 <img src="assets/img/conference-poster/whatsap.png" alt="WhatsApp Icon"
                     style="width: 24px; height: 24px; margin-right: 5px;">
                 <!-- Replace whatsapp_icon.png with the actual path to your WhatsApp icon -->
-                <span> +255 719 911 575</span>
+                <span> +255 679 256 256</span>
             </div>
 
         </div>
