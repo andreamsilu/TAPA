@@ -29,7 +29,21 @@
     error_reporting(E_ALL);
     include('header.php');
   ?>
+ <!-- ======= Breadcrumbs ======= -->
+ <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
 
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>About</h2>
+                    <ol>
+                        <li><a href="index.php">Home</a></li>
+                        <li>About</li>
+                    </ol>
+                </div>
+
+            </div>
+        </section>
+        <!-- End Breadcrumbs -->
   <section class="section">
     <div class="section-title">
       <h2 class="pt-1"> TAPA NEWS AND TOPICS</h2>
