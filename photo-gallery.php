@@ -50,7 +50,7 @@
           <li class="nav-item">
             <a class="nav-link <?= (isset($_GET['event_year']) && $_GET['event_year'] == $year['event_year']) ? 'active' : '' ?>" 
                href="photo-gallery.php?event_year=<?= $year['event_year'] ?>">
-              AGM <?= $year['event_year'] ?>
+              Events in   <?= $year['event_year'] ?>
             </a>
           </li>
         <?php endforeach; ?>
@@ -82,7 +82,7 @@
                 echo '<div class="col-lg-4 col-md-6 portfolio-item">
                         <img src="adminpanel/' . $row['image_path'] . '" class="img-fluid" alt="">
                         <div class="portfolio-info">
-                          <h4>AGM ' . $row['event_year'] . '</h4>
+                          <h4>Events in   ' . $row['event_year'] . '</h4>
                           <p>Images</p>
                           <a href="adminpanel/' . $row['image_path'] . '" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bi bi-camera"></i></a>
                         </div>
