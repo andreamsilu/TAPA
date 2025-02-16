@@ -140,33 +140,33 @@
     </script>
 
     <!-- Comments Section -->
-    <div class="mt-4 text-center">
+    <!-- <div class="mt-4 text-center">
         <h3>Comments</h3>
 
         <?php
-        $news_id = $_GET['id'];
+        // $news_id = $_GET['id'];
 
-        $sql = "SELECT * FROM comments WHERE news_id = :news_id";
-        $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':news_id', $news_id, PDO::PARAM_INT);
-        $stmt->execute();
-        $comments = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        // $sql = "SELECT * FROM comments WHERE news_id = :news_id";
+        // $stmt = $conn->prepare($sql);
+        // $stmt->bindParam(':news_id', $news_id, PDO::PARAM_INT);
+        // $stmt->execute();
+        // $comments = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        if ($comments) {
-            foreach ($comments as $row) {
-                echo "<div class='comment-container'>";
-                echo "<div class='comment-header'>";
-                echo "<strong>{$row['user_name']}:</strong>";
-                echo "<span class='comment-date'>{$row['created_at']}</span>";
-                echo "</div>";
-                echo "<p class='comment-text'>{$row['comment_text']}</p>";
-                echo "</div>";
-            }
-        } else {
-            echo "<p>No comments yet.</p>";
-        }
+        // if ($comments) {
+        //     foreach ($comments as $row) {
+        //         echo "<div class='comment-container'>";
+        //         echo "<div class='comment-header'>";
+        //         echo "<strong>{$row['user_name']}:</strong>";
+        //         echo "<span class='comment-date'>{$row['created_at']}</span>";
+        //         echo "</div>";
+        //         echo "<p class='comment-text'>{$row['comment_text']}</p>";
+        //         echo "</div>";
+        //     }
+        // } else {
+        //     echo "<p>No comments yet.</p>";
+        // }
 
-        $stmt->closeCursor();
+        // $stmt->closeCursor();
         ?>
     </div>
 
@@ -186,7 +186,7 @@
 
             <button type="submit" class="btn btn-primary">Post Comment</button>
         </form>
-    </div>
+    </div> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
