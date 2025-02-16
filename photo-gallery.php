@@ -67,7 +67,7 @@
                         <div class="portfolio-info">
                           <h4>AGM ' . $row['event_year'] . '</h4>
                           <p>Images</p>
-                          <a href="' . $row['image_path'] . '" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bi bi-camera"></i></a>
+                          <a href="adminpanel/' . $row['image_path'] . '" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bi bi-camera"></i></a>
                         </div>
                       </div>';
             }
