@@ -102,12 +102,12 @@
     }
 
     .member_img img {
-        margin: auto; /* Center the image */
-        width: 100%; /* Ensure the image is responsive */
+        width: 80%; /* Ensure the image is responsive */
         height: 100%; /* Full height for the container */
-        object-fit: cover; /* Maintain aspect ratio and cover the container */
-        border-radius: 10%; /* Circular images */
+        object-fit: cover; /* Maintain aspect ratio and cover the area */
+        border-radius: 50%; /* Circular images */
         border: 5px solid #fff; /* White border around the image */
+        padding: 10px;
     }
 
     .social {
