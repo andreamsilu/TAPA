@@ -103,7 +103,7 @@
 
     .member_img img {
         margin: auto; /* Center the image */
-        width: 80%; /* Ensure the image is responsive */
+        width: 100%; /* Ensure the image is responsive */
         height: 100%; /* Full height for the container */
         object-fit: cover; /* Maintain aspect ratio and cover the container */
         border-radius: 10%; /* Circular images */
