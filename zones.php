@@ -41,7 +41,7 @@ foreach ($result as $row) {
             // Loop through each branch stored in the $branches array and render the HTML using Bootstrap card
             foreach ($branches as $branch) {
                 echo '
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                <div class=" col-md-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
                     <div class="card" style="width: 18rem;">
                         <img class="card-img-top" src="adminpanel/' . $branch['image_url'] . '" alt="' . $branch['branch_name'] . '">
                         <div class="card-body">
