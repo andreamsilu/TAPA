@@ -123,12 +123,7 @@ foreach ($result as $row) {
                     <div class="zone">
                         <div class="zone-img">
                             <img src="adminpanel/' . $branch['image_url'] . '" class="img-fluid" alt="' . $branch['branch_name'] . '">
-                            <div class="social">
-                                <a href="#"><i class="bi bi-twitter"></i></a>
-                                <a href="#"><i class="bi bi-facebook"></i></a>
-                                <a href="#"><i class="bi bi-instagram"></i></a>
-                                <a href="#"><i class="bi bi-linkedin"></i></a>
-                            </div>
+                           
                         </div>
                         <div class="zone-info">
                             <h3>' . $branch['branch_name'] . '</h3>
