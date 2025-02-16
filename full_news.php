@@ -75,10 +75,10 @@
             <div class="container">
 
                 <div class="d-flex justify-content-between align-items-center">
-                    <h2>About</h2>
+                    <h2>NEWS</h2>
                     <ol>
-                        <li><a href="index.php">Home</a></li>
-                        <li>About</li>
+                        <li><a href="news-page.php">NEWS PAGE</a></li>
+                        <li>ANEWS</li>
                     </ol>
                 </div>
 
