@@ -1,3 +1,7 @@
+<?php
+include "db_connection.php"; // Ensure you have a proper DB connection
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,138 +10,62 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Photo gallery - TAPA</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <?php include "titleIcon.php" ?>
+  <?php include "titleIcon.php"; ?>
 </head>
 
 <body>
-<?php include "header.php" ?>
+<?php include "header.php"; ?>
 
-  <main id="main">
-
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Photo gallery</h2>
-          <ol>
-            <li><a href="index.php">Home</a></li>
-            <li>Photo gallery</li>
-          </ol>
-        </div>
-
+<main id="main">
+  <section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <h2>Photo Gallery</h2>
+        <ol>
+          <li><a href="index.php">Home</a></li>
+          <li>Photo Gallery</li>
+        </ol>
       </div>
-    </section>
-    <!-- End Breadcrumbs -->
+    </div>
+  </section>
 
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-
-        <div class="row" data-aos="fade-up">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">AGM 2021</li>
-              <li data-filter=".filter-card">AGM 2022</li>
-              <li data-filter=".filter-web">AGM 2023</li>
-            </ul>
-          </div>
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <div class="row" data-aos="fade-up">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-agm2021">AGM 2021</li>
+            <li data-filter=".filter-agm2022">AGM 2022</li>
+            <li data-filter=".filter-agm2023">AGM 2023</li>
+          </ul>
         </div>
-
-        <div class="row portfolio-container" data-aos="fade-up">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/tapaImages/Sustain Digital-11.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>AGM 2023</h4>
-              <p>Images</p>
-              <a href="assets/img/tapaImages/Sustain Digital-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bi bi-camera"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/tapaImages/Sustain Digital-3.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>AGM 2022</h4>
-              <p>Images</p>
-              <a href="assets/img/tapaImages/Sustain Digital-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bi bi-camera"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/tapaImages/Sustain Digital-10.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>AGM 2023</h4>
-              <p>Images</p>
-              <a href="assets/img/tapaImages/Sustain Digital-11.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bi bi-camera"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/tapaImages/Sustain Digital-15 (1).jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>AGM 2022</h4>
-              <p>Images</p>
-              <a href="assets/img/tapaImages/Sustain Digital-24.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bi bi-camera"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/tapaImages/Sustain Digital-31.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>AGM 2021</h4>
-              <p>Images</p>
-              <a href="assets/img/tapaImages/Sustain Digital-32.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bi bi-camera"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/tapaImages/Sustain Digital-30.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>AGM 2020</h4>
-              <p>Images</p>
-              <a href="assets/img/tapaImages/Sustain Digital-38.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bi bi-camera"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/tapaImages/Sustain Digital-15.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>AGM 2020</h4>
-              <p>Images</p>
-              <a href="assets/img/tapaImages/Sustain Digital-15 (1).jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link""><i class="bi bi-camera"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/tapaImages/Sustain Digital-5.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>AGM 2019</h4>
-              <p>Images</p>
-              <a href="assets/img/tapaImages/Sustain Digital-11.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link""><i class="bi bi-camera"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/tapaImages/slide-3.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>AGM 2018</h4>
-              <p>Images</p>
-              <a href="assets/img/tapaImages/slide-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><i class="bi bi-camera"></i></a>
-            </div>
-          </div>
-
-        </div>
-
       </div>
-    </section>
-    <!-- End Portfolio Section -->
 
-  </main>
-  <!-- End #main -->
+      <div class="row portfolio-container" data-aos="fade-up">
+        <?php
+        $query = "SELECT image_path, category FROM gallery";
+        $result = mysqli_query($conn, $query);
+        
+        while ($row = mysqli_fetch_assoc($result)) {
+          $categoryClass = strtolower(str_replace(' ', '', $row['category']));
+          echo '<div class="col-lg-4 col-md-6 portfolio-item filter-' . $categoryClass . '">
+                  <img src="' . $row['image_path'] . '" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>' . htmlspecialchars($row['category']) . '</h4>
+                    <p>Images</p>
+                    <a href="' . $row['image_path'] . '" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link">
+                      <i class="bi bi-camera"></i>
+                    </a>
+                  </div>
+                </div>';
+        }
+        ?>
+      </div>
+    </div>
+  </section>
+</main>
 
-  <?php include "footer.php" ?>
+<?php include "footer.php"; ?>
+</body>
+</html>
