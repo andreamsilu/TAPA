@@ -15,6 +15,21 @@
 <body>
 <?php include "header.php"; ?>
 <main id="main">
+      <!-- ======= Breadcrumbs ======= -->
+      <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>About</h2>
+                    <ol>
+                        <li><a href="index.php">Home</a></li>
+                        <li>About</li>
+                    </ol>
+                </div>
+
+            </div>
+        </section>
+        <!-- End Breadcrumbs -->
   <section id="portfolio" class="portfolio">
     <div class="container">
       <?php
