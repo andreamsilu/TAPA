@@ -30,84 +30,6 @@ foreach ($result as $row) {
 ?>
 
 <!-- ======= zone Section ======= -->
-<style>
-    /* General container styles */
-    #zone .container {
-        margin: 0 auto;
-    }
-
-    .section-title h2 {
-        text-align: center;
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: #333;
-        margin-bottom: 20px;
-    }
-
-    /* zone card styles */
-    .zone {
-        background: #fff;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        height: 100%;
-    }
-
-    .zone:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    /* zone image styles */
-    .zone-img {
-        position: relative;
-        overflow: hidden;
-        height: 250px;  /* Fixed height for all images */
-        width: 100%; /* Make image width responsive */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .zone-img img {
-        object-fit: cover; /* Make images cover the container while maintaining aspect ratio */
-        width: 100%;
-        height: 100%;  /* Make images fill the fixed container height */
-    }
-
-    /* zone info styles */
-    .zone-info {
-        text-align: center;
-        padding: 20px;
-    }
-
-    .zone-info h3 {
-        font-size: 1.5rem;
-        color: #333;
-        margin-bottom: 10px;
-    }
-
-    .zone-info h4 {
-        font-size: 1.2rem;
-        color: #555;
-        margin-bottom: 5px;
-    }
-
-    .zone-info span {
-        display: block;
-        font-size: 1rem;
-        color: #777;
-        margin-bottom: 15px;
-    }
-
-    .zone-info p {
-        font-size: 0.9rem;
-        color: #666;
-    }
-</style>
-
 <section id="zone" class="zone">
     <div class="container" data-aos="fade-up">
         <div class="section-title">
@@ -116,26 +38,16 @@ foreach ($result as $row) {
 
         <div class="row gy-4">
             <?php
-            // Loop through each branch stored in the $branches array and render the HTML
+            // Loop through each branch stored in the $branches array and render the HTML using Bootstrap card
             foreach ($branches as $branch) {
                 echo '
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                    <div class="zone">
-                        <div class="zone-img">
-                            <img src="adminpanel/' . $branch['image_url'] . '" class="img-fluid" alt="' . $branch['branch_name'] . '">
-                           
-                        </div>
-                         <div class="social">
-                                <a href="#"><i class="bi bi-twitter"></i></a>
-                                <a href="#"><i class="bi bi-facebook"></i></a>
-                                <a href="#"><i class="bi bi-instagram"></i></a>
-                                <a href="#"><i class="bi bi-linkedin"></i></a>
-                            </div>
-                        <div class="zone-info">
-                            <h3>' . $branch['branch_name'] . '</h3>
-                            <h4>' . $branch['leader_name'] . '</h4>
-                            <span>' . $branch['leader_role'] . '</span>
-                            <p>' . $branch['region_coverage'] . '</p>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="adminpanel/' . $branch['image_url'] . '" alt="' . $branch['branch_name'] . '">
+                        <div class="card-body">
+                            <h5 class="card-title">' . $branch['branch_name'] . '</h5>
+                            <p class="card-text">Leader: ' . $branch['leader_name'] . ' (' . $branch['leader_role'] . ')</p>
+                            <p class="card-text">Region: ' . $branch['region_coverage'] . '</p>
                         </div>
                     </div>
                 </div>';
