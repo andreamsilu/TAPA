@@ -65,14 +65,14 @@
             $image = $row['image_url'];
             echo '<div class="col-md-4">
                     <div class="post-entry">
-                        <a href="Admin/news/full_news.php?id=' . $row['id'] . '" class="d-block mb-4">
+                        <a href="full_news.php?id=' . $row['id'] . '" class="d-block mb-4">
                             <img src="adminpanel/' . $image . '" alt="Image" class="img-fluid">
                         </a>
                         <div class="post-text">
                             <span class="post-meta">' . $date . ' &bullet; By <a href="#">Admin</a></span>
-                            <h3><a href="Admin/news/full_news.php?id=' . $row['id'] . '">' . $title . '</a></h3>
+                            <h3><a href="full_news.php?id=' . $row['id'] . '">' . $title . '</a></h3>
                             <p>' . $content . '...</p>
-                            <p><a href="Admin/news/full_news.php?id=' . $row['id'] . '" class="readmore">Read more</a></p>
+                            <p><a href="full_news.php?id=' . $row['id'] . '" class="readmore">Read more</a></p>
                         </div>
                     </div>
                 </div>';

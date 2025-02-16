@@ -1,6 +1,6 @@
 <?php
 // Database connection
-include "../../forms/connection.php";
+include 'adminpanel/db.php'; 
 
 // Check if the user is authenticated
 // if (!isset($_SESSION['email'])) {
@@ -76,14 +76,14 @@ if (isset($_GET['id'])) {
     </div> -->
 
     <?php
-    include('../../titleIcon.php');
+    include('titleIcon.php');
     ?>
     <section id="breadcrumbs" class="breadcrumbs">
             <div class="container">
                 <div class="d-flex justify-content-between align-items-center">
-                    <a href="../../news-page.php"> <h2>Back</h2></a>
+                    <a href="news-page.php"> <h2>Back</h2></a>
                     <ol>
-                        <li><a href="../../index.php">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li>Full news</li>
                     </ol>
                 </div>
@@ -102,12 +102,12 @@ if (isset($_GET['id'])) {
                     if (!empty($news['video_url'])) {
                         echo "<div class='embed-responsive embed-responsive-16by9 media-container'>
                     <video class='embed-responsive-item' width='550px'   controls>
-                        <source src='{$news['video_url']}' type='video/mp4'>
+                        <source src='adminpanel/{$news['video_url']}' type='video/mp4'>
                         Your browser does not support the video tag.
                     </video>
                 </div>";
                     } elseif (!empty($news['image_url'])) {
-                        echo "<img src='{$news['image_url']}' alt='News Image'  ' class='img-fluid media-container'>";
+                        echo "<img src='adminpanel/{$news['image_url']}' alt='News Image'  ' class='img-fluid media-container'>";
                     }
                     ?>
                 </div>
