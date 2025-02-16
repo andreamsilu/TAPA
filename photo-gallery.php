@@ -42,7 +42,7 @@
       ?>
       
       <!-- Tab Navigation -->
-      <ul class="nav tex-dark nav-tabs mb-3" id="eventTabs">
+      <ul class="nav  nav-tabs mb-3" id="eventTabs">
         <li class="nav-item">
           <a class="nav-link   <?= !isset($_GET['event_year']) ? 'active' : '' ?>" href="photo-gallery.php">All</a>
         </li>
