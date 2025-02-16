@@ -44,12 +44,12 @@
       <!-- Tab Navigation -->
       <ul class="nav nav-tabs mb-3" id="eventTabs">
         <li class="nav-item">
-          <a class="nav-link <?= !isset($_GET['event_year']) ? 'active' : '' ?>" href="gallery.php">All</a>
+          <a class="nav-link <?= !isset($_GET['event_year']) ? 'active' : '' ?>" href="photo-gallery.php">All</a>
         </li>
         <?php foreach ($years as $year): ?>
           <li class="nav-item">
             <a class="nav-link <?= (isset($_GET['event_year']) && $_GET['event_year'] == $year['event_year']) ? 'active' : '' ?>" 
-               href="gallery.php?event_year=<?= $year['event_year'] ?>">
+               href="photo-gallery.php?event_year=<?= $year['event_year'] ?>">
               AGM <?= $year['event_year'] ?>
             </a>
           </li>
