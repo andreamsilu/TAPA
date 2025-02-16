@@ -70,8 +70,22 @@
     </style>
 </head>
 <body>
-  <a href="index.php">Home</a>
-    <div class="container" style="margin-top:50px">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>About</h2>
+                    <ol>
+                        <li><a href="index.php">Home</a></li>
+                        <li>About</li>
+                    </ol>
+                </div>
+
+            </div>
+        </section>
+        <!-- End Breadcrumbs -->
+     <div class="container" style="margin-top:50px">
         <h1 class="text-center"><?php echo $news['title']; ?></h1>
         <p class="text-center">Date: <?php echo $news['date']; ?></p>
         <div class="row">
