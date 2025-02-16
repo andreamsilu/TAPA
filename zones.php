@@ -42,7 +42,7 @@ foreach ($result as $row) {
             foreach ($branches as $branch) {
                 echo '
                 <div class=" col-md-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 40rem;">
                         <img class="card-img-top" src="adminpanel/' . $branch['image_url'] . '" alt="' . $branch['branch_name'] . '">
                         <div class="card-body">
                             <h5 class="card-title">' . $branch['branch_name'] . '</h5>
