@@ -15,21 +15,20 @@
 <body>
 <?php include "header.php"; ?>
 <main id="main">
-      <!-- ======= Breadcrumbs ======= -->
-      <section id="breadcrumbs" class="breadcrumbs">
-            <div class="container">
+  <!-- ======= Breadcrumbs ======= -->
+  <section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <h2>About</h2>
+        <ol>
+          <li><a href="index.php">Home</a></li>
+          <li>About</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  <!-- End Breadcrumbs -->
 
-                <div class="d-flex justify-content-between align-items-center">
-                    <h2>About</h2>
-                    <ol>
-                        <li><a href="index.php">Home</a></li>
-                        <li>About</li>
-                    </ol>
-                </div>
-
-            </div>
-        </section>
-        <!-- End Breadcrumbs -->
   <section id="portfolio" class="portfolio">
     <div class="container">
       <?php
@@ -62,12 +61,14 @@
         // Get selected year or show all
         $filterYear = isset($_GET['event_year']) ? $_GET['event_year'] : null;
 
+        // Adjust the query to filter images by event year
         $query = "SELECT * FROM gallery";
         if ($filterYear) {
             $query .= " WHERE event_year = :event_year";
         }
         $query .= " ORDER BY event_year DESC";
-
+        
+        // Prepare and execute the query
         $stmt = $conn->prepare($query);
         if ($filterYear) {
             $stmt->bindParam(':event_year', $filterYear, PDO::PARAM_STR);
@@ -75,6 +76,7 @@
         $stmt->execute();
         $images = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+        // Check if any images are returned
         if (!empty($images)) {
             foreach ($images as $row) {
                 echo '<div class="col-lg-4 col-md-6 portfolio-item">
@@ -88,6 +90,9 @@
             }
         } else {
             echo '<p class="text-center">No images found for the selected year.</p>';
+            if ($filterYear) {
+                echo '<p class="text-center">Year Selected: ' . $filterYear . '</p>';
+            }
         }
         ?>
       </div>
