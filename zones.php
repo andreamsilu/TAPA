@@ -64,7 +64,7 @@ foreach ($result as $row) {
     .zone-img {
         position: relative;
         overflow: hidden;
-        height: 150px;  /* Fixed height for all images */
+        height: 250px;  /* Fixed height for all images */
         width: 100%; /* Make image width responsive */
         display: flex;
         align-items: center;
@@ -125,6 +125,12 @@ foreach ($result as $row) {
                             <img src="adminpanel/' . $branch['image_url'] . '" class="img-fluid" alt="' . $branch['branch_name'] . '">
                            
                         </div>
+                         <div class="social">
+                                <a href="#"><i class="bi bi-twitter"></i></a>
+                                <a href="#"><i class="bi bi-facebook"></i></a>
+                                <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                            </div>
                         <div class="zone-info">
                             <h3>' . $branch['branch_name'] . '</h3>
                             <h4>' . $branch['leader_name'] . '</h4>
