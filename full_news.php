@@ -70,6 +70,7 @@
     </style>
 </head>
 <body>
+    <?php include('header.php'); ?>
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
             <div class="container">
@@ -78,7 +79,7 @@
                     <h2>NEWS</h2>
                     <ol>
                         <li><a href="news-page.php">NEWS PAGE</a></li>
-                        <li>ANEWS</li>
+                        <li>NEWS</li>
                     </ol>
                 </div>
 
