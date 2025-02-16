@@ -4,7 +4,12 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Photo Gallery - TAPA</title>
-  <?php include "titleIcon.php"; ?>
+  <?php 
+  ini_set('display_errors', 1);
+  ini_set('display_startup_errors', 1);
+  error_reporting(E_ALL);
+  include "titleIcon.php"; 
+  ?>
 </head>
 <body>
 <?php include "header.php"; ?>
