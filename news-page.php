@@ -65,8 +65,8 @@
       <div class="container">
         <div class="row mb-5">
           <?php
-           include('./forms/connection.php');
-           $sql = "SELECT * FROM news WHERE status ='1' ORDER BY date DESC";
+      include 'adminpanel/db.php'; 
+      $sql = "SELECT * FROM news WHERE status ='1' ORDER BY date DESC";
           $result = mysqli_query($conn, $sql);
 
            if (mysqli_num_rows($result) > 0) {
@@ -79,7 +79,7 @@
                echo '<div class="col-md-4">
                     <div class="post-entry">
                         <a href="Admin/news/full_news.php?id=' . $row['id'] . '" class="d-block mb-4">
-                            <img src="./Admin/news/' . $image . '" alt="Image" class="img-fluid">
+                            <img src="adminpanel/' . $image . '" alt="Image" class="img-fluid">
                         </a>
                         <div class="post-text">
                             <span class="post-meta">' . $date . ' &bullet; By <a href="#">Admin</a></span>
