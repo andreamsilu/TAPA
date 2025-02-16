@@ -70,6 +70,7 @@
     </style>
 </head>
 <body>
+  <a href="index.php">Home</a>
     <div class="container" style="margin-top:50px">
         <h1 class="text-center"><?php echo $news['title']; ?></h1>
         <p class="text-center">Date: <?php echo $news['date']; ?></p>
@@ -97,7 +98,7 @@
         </div>
     </div>
 
-    <div class="mt-3 text-center">
+    <div class="mt-3 text-center mb-5">
         <button class="btn btn-primary" onclick="shareNews()">
             <i class="bi bi-share"></i> Share
         </button>
