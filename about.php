@@ -55,9 +55,8 @@
                     <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
                         <h3><i class="bi bi-university"></i> Tanzanian Psychological Association</h3>
                         <p class="fs-italic">
-                            TAPA is the leading professional organization representing psychology in the Tanzania, with
-                            a good number of researchers, educators, clinicians, consultants, and students as its
-                            members.
+                            TAPA is a professional association of Tanzanian Psychologists joined with the aim of advancing psychology as a science, profession and as a means of promoting human well being.
+
                         </p>
 
                         <h3><i class="bi bi-bullseye"></i> Mission</h3>
