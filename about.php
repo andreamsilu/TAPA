@@ -162,12 +162,12 @@ ini_set('display_startup_errors', 1);
                                   </div>';
                         } else {
                             $tableCheck = $conn->query("SHOW TABLES LIKE 'team_members'");
-                            if ($tableCheck && $tableCheck->num_rows > 0) {
+                            if ($tableCheck && $tableCheck->rowCount() > 0) {
                                 $query = "SELECT * FROM team_members ORDER BY position_order";
                                 $result = $conn->query($query);
 
-                                if ($result && $result->num_rows > 0) {
-                                    while ($row = $result->fetch_assoc()) {
+                                if ($result && $result->rowCount() > 0) {
+                                    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                                         $image = $row['image_url'] ?? 'default-profile.jpg';
                                         echo '<div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                                                 <div class="member" data-aos="fade-up" data-aos-delay="100">
@@ -228,12 +228,12 @@ ini_set('display_startup_errors', 1);
                                   </div>';
                         } else {
                             $tableCheck = $conn->query("SHOW TABLES LIKE 'zones'");
-                            if ($tableCheck && $tableCheck->num_rows > 0) {
+                            if ($tableCheck && $tableCheck->rowCount() > 0) {
                                 $query = "SELECT * FROM zones ORDER BY zone_name";
                                 $result = $conn->query($query);
 
-                                if ($result && $result->num_rows > 0) {
-                                    while ($zone = $result->fetch_assoc()) {
+                                if ($result && $result->rowCount() > 0) {
+                                    while ($zone = $result->fetch(PDO::FETCH_ASSOC)) {
                                         echo '<div class="col-md-4 mb-4">
                                                 <div class="card h-100">
                                                     <div class="card-body text-center">
