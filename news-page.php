@@ -37,10 +37,10 @@
             <div class="container">
 
                 <div class="d-flex justify-content-between align-items-center">
-                    <h2>About</h2>
+                    <h2>News</h2>
                     <ol>
                         <li><a href="index.php">Home</a></li>
-                        <li>About</li>
+                        <li>News</li>
                     </ol>
                 </div>
 
@@ -58,33 +58,84 @@
       </div>
       <div class="row">
         <?php
-        // Fetch news from database
-        $query = "SELECT * FROM news WHERE status = 'published' ORDER BY created_at DESC";
-        $result = $conn->query($query);
-
-        if ($result && $result->num_rows > 0) {
-          while ($row = $result->fetch_assoc()) {
-            $image = $row['image_url'] ?? '';
-            $date = date('F j, Y', strtotime($row['created_at']));
+        // Check if news table exists and get its structure
+        $table_check = $conn->query("SHOW TABLES LIKE 'news'");
+        
+        if ($table_check && $table_check->num_rows > 0) {
+            // Check what date columns are available
+            $structure_query = "DESCRIBE news";
+            $structure_result = $conn->query($structure_query);
             
-            echo '<div class="col-md-6 mb-4">
-                    <div class="card h-100">
-                        ' . (!empty($image) ? '<img src="uploads/news/' . $image . '" alt="Image" class="img-fluid">' : '') . '
-                        <div class="card-body">
-                            <h5 class="card-title">' . htmlspecialchars($row['title']) . '</h5>
-                            <p class="card-text">' . htmlspecialchars(substr($row['content'], 0, 200)) . '...</p>
-                            <p class="card-text"><small class="text-muted">' . $date . ' &bullet; By <a href="#">TAPA</a></small></p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="full_news.php?id=' . $row['id'] . '" class="btn btn-primary btn-sm">Read More</a>
-                        </div>
-                    </div>
-                </div>';
-          }
+            $date_column = 'id'; // Default fallback
+            $has_status = false;
+            
+            if ($structure_result) {
+                while ($field = $structure_result->fetch_assoc()) {
+                    $field_name = $field['Field'];
+                    $field_type = strtolower($field['Type']);
+                    
+                    // Look for date/time columns
+                    if (strpos($field_type, 'date') !== false || 
+                        strpos($field_type, 'time') !== false ||
+                        strpos($field_type, 'timestamp') !== false) {
+                        $date_column = $field_name;
+                    }
+                    
+                    // Check if status column exists
+                    if ($field_name === 'status') {
+                        $has_status = true;
+                    }
+                }
+            }
+            
+            // Build query based on available columns
+            if ($has_status) {
+                $query = "SELECT * FROM news WHERE status = 'published' ORDER BY $date_column DESC";
+            } else {
+                $query = "SELECT * FROM news ORDER BY $date_column DESC";
+            }
+            
+            $result = $conn->query($query);
+
+            if ($result && $result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    $image = $row['image_url'] ?? '';
+                    
+                    // Handle date formatting based on available columns
+                    $date = 'Recent';
+                    if (isset($row['created_at'])) {
+                        $date = date('F j, Y', strtotime($row['created_at']));
+                    } elseif (isset($row['date'])) {
+                        $date = date('F j, Y', strtotime($row['date']));
+                    } elseif (isset($row['timestamp'])) {
+                        $date = date('F j, Y', strtotime($row['timestamp']));
+                    } elseif (isset($row['id'])) {
+                        $date = 'News #' . $row['id'];
+                    }
+                    
+                    echo '<div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                ' . (!empty($image) ? '<img src="uploads/news/' . htmlspecialchars($image) . '" alt="News Image" class="img-fluid">' : '') . '
+                                <div class="card-body">
+                                    <h5 class="card-title">' . htmlspecialchars($row['title'] ?? 'Untitled') . '</h5>
+                                    <p class="card-text">' . htmlspecialchars(substr($row['content'] ?? $row['description'] ?? 'No content available', 0, 200)) . '...</p>
+                                    <p class="card-text"><small class="text-muted">' . $date . ' &bullet; By <a href="#">TAPA</a></small></p>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="full_news.php?id=' . $row['id'] . '" class="btn btn-primary btn-sm">Read More</a>
+                                </div>
+                            </div>
+                        </div>';
+                }
+            } else {
+                echo '<div class="col-12 text-center">
+                        <p>No news available at the moment.</p>
+                      </div>';
+            }
         } else {
-          echo '<div class="col-12 text-center">
-                  <p>No news available at the moment.</p>
-                </div>';
+            echo '<div class="col-12 text-center">
+                    <p>News system is not available at the moment.</p>
+                  </div>';
         }
         ?>
       </div>
