@@ -102,7 +102,7 @@ if ($zones_count == 0) {
 }
 
 echo "<h3>Setup Complete!</h3>";
-echo "<p>The about page should now work properly. <a href='about.php'>Click here to test the about page</a></p>";
+echo "<p>The about page should now work properly. <a href='about.php'>Click here to view the about page</a></p>";
 
 $conn->close();
 ?> 

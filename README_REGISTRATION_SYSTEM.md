@@ -40,7 +40,6 @@ TAPA/
 ├── profile/index.php            # Profile with renewal banners
 ├── includes/
 │   └── sms_helper.php          # NEXTSMS integration helper
-├── test_sms.php                # SMS testing utility
 └── forms/
     └── connection.php           # Database connection
 ```
@@ -106,9 +105,6 @@ $otp = generateOTP(6);
 
 // Check SMS balance
 $balance = getSMSBalance();
-
-// Test SMS functionality
-testSMS('+255123456789');
 ```
 
 ## Membership Types & Fees
@@ -175,45 +171,16 @@ ALTER TABLE users ADD COLUMN registration_date TIMESTAMP DEFAULT CURRENT_TIMESTA
 - Sign up at [messaging-service.co.tz](https://messaging-service.co.tz)
 - Get your API key and secret
 - Set environment variables
-- Test SMS functionality using `test_sms.php`
 
 ### 3. **File Permissions**
 - Ensure `includes/` directory is writable
 - Check file permissions for uploads
 
 ### 4. **Testing**
-- Run `test_sms.php` to verify NEXTSMS integration
 - Test registration flow
 - Verify OTP delivery
 - Check login functionality
 - Test renewal banner display
-
-## Testing SMS Integration
-
-### **Using test_sms.php**
-1. Set your NEXTSMS credentials as environment variables
-2. Access `test_sms.php` in your browser
-3. Enter your test phone number
-4. Click "Send Test SMS"
-5. Check your phone for the test message
-
-### **Manual Testing**
-```php
-// Test SMS functionality
-require_once 'includes/sms_helper.php';
-
-// Test OTP generation
-$otp = generateOTP();
-echo "Generated OTP: $otp";
-
-// Test SMS sending
-$result = sendSMS('+255123456789', 'Test message from TAPA');
-echo $result ? "SMS sent successfully" : "SMS failed";
-
-// Check balance
-$balance = getSMSBalance();
-echo "SMS Balance: $balance";
-```
 
 ## Troubleshooting
 
@@ -252,32 +219,25 @@ echo "SMS Balance: $balance";
 
 ### **Planned Features**
 - Email verification option
-- Password reset via SMS
-- Bulk SMS for announcements
-- Payment status tracking
-- Membership expiry notifications
-
-### **Integration Opportunities**
+- WhatsApp integration
 - Payment gateway integration
-- Email marketing integration
-- Analytics and reporting
-- Mobile app development
+- Member directory
+- Event management system
+- Newsletter system
+
+### **Security Improvements**
+- Two-factor authentication
+- Advanced password policies
+- Audit logging
+- Rate limiting
 
 ## Support
 
-### **TAPA Support**
-- Email: admin@tapa.or.tz
-- WhatsApp: +255 719911575
-- Website: tapa.or.tz
+For technical support or questions about the registration system, please contact:
+- **Email**: admin@tapa.or.tz
+- **Phone**: +255 XXX XXX XXX
+- **Website**: https://tapa.or.tz
 
-### **NEXTSMS Support**
-- Website: [messaging-service.co.tz](https://messaging-service.co.tz)
-- Email: support@messaging-service.co.tz
-- Phone: +255 22 286 0000
+## License
 
----
-
-**Last Updated**: January 2025
-**Version**: 2.0
-**SMS Provider**: NEXTSMS
-**Developer**: TAPA Web Team 
+This registration system is proprietary software developed for the Tanzanian Psychological Association (TAPA). 
