@@ -13,9 +13,9 @@
 
 // Database configuration
 $servername = 'localhost';
-$username = 'u976524705_tapaortz';
-$password = 'Tapaortz@2024';
-$dbname = 'u976524705_TAPA_DB';
+$username = 'u976524705_msilu';
+$password = 'Tapaortz@2025';
+$dbname = 'u976524705_TAPA_DB_MOD';
 
 // Create connection with error handling
 try {
