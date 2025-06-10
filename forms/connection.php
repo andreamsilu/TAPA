@@ -1,9 +1,9 @@
 <?php
 // db.php: Database connection
 $host = 'localhost';
-$dbname = 'u976524705_TAPA_DB_MOD';  
-$username = 'u976524705_msilu';  
-$password = 'T@p@2025';  
+$dbname = 'u976524705_TAPA_DB_MOD'; 
+$username = 'u976524705_msilu';
+$password = 'T@p@2025';
 
 try {
     $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
