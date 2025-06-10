@@ -1,3 +1,9 @@
+<?php
+// Enable error display for debugging
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -270,7 +276,7 @@ include "header.php";
               </h2>
               <div id="faq2-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
                 <div class="accordion-body">
-                  Psychologists study behavior, which is an interaction of cognitive and affective states. They use various methods to study people’s behaviors and are skilled in reading non-verbal cues. They come to understand what people are experiencing by doing a thorough assessment through interviews, observation, and psychological tests. They can not know what people are thinking by simply looking at them.
+                  Psychologists study behavior, which is an interaction of cognitive and affective states. They use various methods to study people's behaviors and are skilled in reading non-verbal cues. They come to understand what people are experiencing by doing a thorough assessment through interviews, observation, and psychological tests. They can not know what people are thinking by simply looking at them.
                 </div>
               </div>
             </div>
