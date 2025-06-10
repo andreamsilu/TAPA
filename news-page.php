@@ -27,8 +27,11 @@
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
+    include('titleIcon.php');
     include('header.php');
+    include('forms/connection.php');
   ?>
+  <link rel="stylesheet" href="style.css">
  <!-- ======= Breadcrumbs ======= -->
  <section id="breadcrumbs" class="breadcrumbs">
             <div class="container">
@@ -44,59 +47,55 @@
             </div>
         </section>
         <!-- End Breadcrumbs -->
-  <section class="section">
-    <div class="section-title">
-      <h2 class="pt-1"> TAPA NEWS AND TOPICS</h2>
-    </div>
+  <section class="ftco-section">
     <div class="container">
-      <div class="row mb-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6 text-center mb-5">
+          <div class="section-title">
+            <h2 class="pt-1">NEWS & UPDATES</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
         <?php
-        include 'adminpanel/db.php'; 
-        $sql = "SELECT * FROM news WHERE status ='1' ORDER BY date DESC";
-        $stmt = $conn->prepare($sql);  // Use prepare statement for PDO
-        $stmt->execute();  // Execute the query
+        // Fetch news from database
+        $query = "SELECT * FROM news WHERE status = 'published' ORDER BY created_at DESC";
+        $result = $conn->query($query);
 
-        // Check if there are any rows returned
-        if ($stmt->rowCount() > 0) {
-          while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            $date = $row['date'];
-            $title = $row['title'];
-            $content = substr($row['description'], 0, 100);
-            $image = $row['image_url'];
-            echo '<div class="col-md-4">
-                    <div class="post-entry">
-                        <a href="full_news.php?id=' . $row['id'] . '" class="d-block mb-4">
-                            <img src="adminpanel/' . $image . '" alt="Image" class="img-fluid">
-                        </a>
-                        <div class="post-text">
-                            <span class="post-meta">' . $date . ' &bullet; By <a href="#">Admin</a></span>
-                            <h3><a href="full_news.php?id=' . $row['id'] . '">' . $title . '</a></h3>
-                            <p>' . $content . '...</p>
-                            <p><a href="full_news.php?id=' . $row['id'] . '" class="readmore">Read more</a></p>
+        if ($result && $result->num_rows > 0) {
+          while ($row = $result->fetch_assoc()) {
+            $image = $row['image_url'] ?? '';
+            $date = date('F j, Y', strtotime($row['created_at']));
+            
+            echo '<div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        ' . (!empty($image) ? '<img src="uploads/news/' . $image . '" alt="Image" class="img-fluid">' : '') . '
+                        <div class="card-body">
+                            <h5 class="card-title">' . htmlspecialchars($row['title']) . '</h5>
+                            <p class="card-text">' . htmlspecialchars(substr($row['content'], 0, 200)) . '...</p>
+                            <p class="card-text"><small class="text-muted">' . $date . ' &bullet; By <a href="#">TAPA</a></small></p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="full_news.php?id=' . $row['id'] . '" class="btn btn-primary btn-sm">Read More</a>
                         </div>
                     </div>
                 </div>';
           }
         } else {
-          echo "No news found!";
+          echo '<div class="col-12 text-center">
+                  <p>No news available at the moment.</p>
+                </div>';
         }
-
-        $stmt = null;  // Close the statement
         ?>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-12 text-center">
-        <span class="p-3 active text-primary">1</span>
-        <a href="#" class="p-3">2</a>
-        <a href="#" class="p-3">3</a>
-        <a href="#" class="p-3">4</a>
       </div>
     </div>
   </section>
 
   <?php include('footer.php'); ?>
-
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -8,14 +8,17 @@ include('../forms/connection.php');
 
 try {
     // Check if the user is authenticated
-    if (!isset($_SESSION['email'])) {
+    if (!isset($_SESSION['user_id'])) {
         throw new Exception("User is not authenticated.");
     }
 
     // Fetch user profile information including the profile picture
-    $user_email = $_SESSION['email'];
-    $query = "SELECT * FROM users WHERE email = '$user_email'";
-    $result = $conn->query($query);
+    $user_id = $_SESSION['user_id'];
+    $query = "SELECT * FROM users WHERE id = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("i", $user_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
     if ($result === false) {
         throw new Exception("Error executing query: " . $conn->error);
@@ -24,11 +27,48 @@ try {
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         $profile_picture = $row['profile_pic'];
+        
+        // Check membership renewal status
+        $current_year = date('Y');
+        $needs_renewal = false;
+        $renewal_message = '';
+        
+        if ($row['is_active'] == 0 || $row['membership_year'] != $current_year) {
+            $needs_renewal = true;
+            $renewal_message = "Your TAPA membership (ID: {$row['member_id']}) needs renewal for $current_year.";
+        }
+        
         // Display user profile information including the profile picture
 ?>
         <?php
         include "navigation.php";
         ?>
+        
+        <!-- Membership Renewal Banner -->
+        <?php if ($needs_renewal): ?>
+        <div class="container mt-3">
+            <div class="alert alert-warning alert-dismissible fade show" role="alert" style="background: linear-gradient(135deg, #ff6b6b, #ee5a24); color: white; border: none;">
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-exclamation-triangle-fill me-3" style="font-size: 1.5rem;"></i>
+                    <div>
+                        <h5 class="alert-heading mb-1">Membership Renewal Required</h5>
+                        <p class="mb-0"><?php echo $renewal_message; ?></p>
+                        <small>An SMS reminder has been sent to your registered phone number.</small>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <a href="../pay_annual_fees.php" class="btn btn-light btn-sm me-2">
+                        <i class="bi bi-credit-card"></i> Renew Now
+                    </a>
+                    <a href="../membership-benefits.php" class="btn btn-outline-light btn-sm">
+                        <i class="bi bi-info-circle"></i> View Benefits
+                    </a>
+                </div>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+        <?php endif; ?>
+        
         <div class="container mt-5 px-2">
             <div class="row">
                 <div class="col-md-4">
@@ -66,7 +106,7 @@ try {
                             <div class="progress-bar" role="progressbar" style="width: <?php echo $completionPercentage; ?>%;font-size: 25px;" aria-valuenow="<?php echo $completionPercentage; ?>" aria-valuemin="0" aria-valuemax="100"><?php echo $completionPercentage; ?>%</div>
                         </div>
 
-                        <a href="edit_personal_info.php?id=<?php $userID; ?>" class="btn btn-primary  edit-info"><i class="bi bi-pencil-square"></i> Edit profile</a>
+                        <a href="edit_personal_info.php?id=<?php echo $user_id; ?>" class="btn btn-primary  edit-info"><i class="bi bi-pencil-square"></i> Edit profile</a>
                     </div>
 
 

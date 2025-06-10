@@ -74,7 +74,7 @@ University of Dar es Salaam, <br>
 
         <div class="me-md-auto  text-center text-md-right pt-3 pt-md-0">
             <div class="copyright">
-                &copy; <strong><span><a href="tapanew/index.php">TAPA</a></span></strong>. All Rights Reserved
+                &copy; <strong><span>TAPA</span></strong>. All Rights Reserved
             </div>
             <div class="credits">
                 <!-- All the links in the footer should remain intact. -->

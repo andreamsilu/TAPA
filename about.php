@@ -15,6 +15,7 @@
 
 
     <?php include "titleIcon.php" ?>
+    <?php include "forms/connection.php" ?>
 
 
 </head>
@@ -141,56 +142,29 @@
 
         <div class="row">
             <?php
-            // Include your database connection file
-            include('adminpanel/db.php'); // Adjust the path as needed
+            // Fetch team members from database
+            $query = "SELECT * FROM team_members ORDER BY position_order";
+            $result = $conn->query($query);
 
-            try {
-                // Prepare and execute the query
-                $query = "SELECT * FROM executive_committee";
-                $stmt = $conn->prepare($query);
-                $stmt->execute();
-
-                // Fetch all results
-                $leaders = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-                // Check if leaders exist
-                if ($leaders) {
-                    foreach ($leaders as $row) {
-                        $image = $row['image_url'];
-                        $name = $row['name'];
-                        $role = $row['position'];
-                        $twitter = $row['twitter_link'];
-                        $facebook = $row['facebook_link'];
-                        $instagram = $row['instagram_link'];
-                        $linkedin = $row['linkedin_link'];
-            ?>
-                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            if ($result && $result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    $image = $row['image_url'] ?? '';
+                    echo '<div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                             <div class="member" data-aos="fade-up" data-aos-delay="100">
-                                <div class="member_img">
-                                    <img src="adminpanel/<?php echo $image; ?>" class="img-fluid p-2 m-2" alt="">
+                                <div class="member-img">
+                                    <img src="uploads/team/' . $image . '" class="img-fluid p-2 m-2" alt="">
                                 </div>
-
-                                <div class="social mb-2">
-                                    <?php if ($twitter) { ?><a href="<?php echo $twitter; ?>"><i class="bi bi-twitter"></i></a><?php } ?>
-                                    <?php if ($facebook) { ?><a href="<?php echo $facebook; ?>"><i class="bi bi-facebook"></i></a><?php } ?>
-                                    <?php if ($instagram) { ?><a href="<?php echo $instagram; ?>"><i class="bi bi-instagram"></i></a><?php } ?>
-                                    <?php if ($linkedin) { ?><a href="<?php echo $linkedin; ?>"><i class="bi bi-linkedin"></i></a><?php } ?>
-                                </div>
-
                                 <div class="member-info">
-                                    <h4><?php echo $name; ?></h4>
-                                    <span><?php echo $role; ?></span>
+                                    <h4>' . htmlspecialchars($row['name']) . '</h4>
+                                    <span>' . htmlspecialchars($row['position']) . '</span>
                                 </div>
-
                             </div>
-                        </div>
-            <?php
-                    }
-                } else {
-                    echo "<p>No leaders found.</p>";
+                        </div>';
                 }
-            } catch (PDOException $e) {
-                echo "Error fetching data: " . $e->getMessage();
+            } else {
+                echo '<div class="col-12 text-center">
+                        <p>Team information will be available soon.</p>
+                      </div>';
             }
             ?>
         </div>
